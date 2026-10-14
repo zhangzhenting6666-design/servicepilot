@@ -1,0 +1,26 @@
+{
+  "source": "local_mock",
+  "orders": {
+    "A1001": {
+      "order_id": "A1001",
+      "product": "蓝牙耳机",
+      "status": "已发货",
+      "carrier": "模拟物流",
+      "tracking_number": "MOCK1001"
+    },
+    "A1002": {
+      "order_id": "A1002",
+      "product": "台灯",
+      "status": "待发货",
+      "carrier": null,
+      "tracking_number": null
+    },
+    "A1003": {
+      "order_id": "A1003",
+      "product": "键盘",
+      "status": "已取消",
+      "carrier": null,
+      "tracking_number": null
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "source": "local_mock",
+  "policies": [
+    {
+      "policy_id": "RET-001",
+      "category": "return_application",
+      "title": "模拟退货申请规则",
+      "content": "签收后 7 天内可提出退货申请，是否通过需要人工审核。",
+      "match_terms": ["退货", "退换货", "return", "return_application", "RET-001"],
+      "unsupported_terms": ["运费", "邮费", "快递费", "收费", "手续费", "到账", "退款时间", "退款多久", "shipping fee", "refund time"]
+    }
+  ]
+}
