@@ -9,10 +9,11 @@ import streamlit as st
 from servicepilot.web_runtime import acceptance_enabled, new_conversation, server_ready, web_version
 from servicepilot.workbench_ui import heading, show_about, show_architecture, show_events, show_facts, event_summary
 from servicepilot.deployment import bootstrap_from_environment
+from servicepilot.code_guide import show_code_guide
 
 st.set_page_config(page_title="ServicePilot · 模拟电商售后", page_icon="💬", layout="wide")
 st.set_option("client.toolbarMode", "minimal")
-st.markdown("<style>" + (PRODUCT / "assets/workbench.css").read_text(encoding="utf-8") + "</style>", unsafe_allow_html=True)
+st.html("<style>" + (PRODUCT / "assets/workbench.css").read_text(encoding="utf-8") + "</style>")
 st.markdown('<header class="sp-brand"><div class="sp-brand-main"><span class="sp-logo" aria-hidden="true">S</span>'
             '<div><strong>ServicePilot</strong><div class="sp-subtitle">模拟电商售后 · Agent 工作流</div></div>'
             '</div><span class="sp-badge">模拟业务 Demo</span></header>', unsafe_allow_html=True)
@@ -44,7 +45,7 @@ def reset():
     st.session_state.confirm_reset = False
 
 
-chat_tab, architecture_tab, about_tab = st.tabs(["客服体验", "架构总览", "项目介绍"], key="workbench_nav")
+chat_tab, architecture_tab, about_tab, code_tab = st.tabs(["客服体验", "架构总览", "项目介绍", "代码解读"], key="workbench_nav")
 with chat_tab:
     with st.container(key="chat_intro"):
         title, new = st.columns([5, 1], vertical_alignment="center")
@@ -128,6 +129,8 @@ with architecture_tab:
     show_architecture()
 with about_tab:
     show_about()
+with code_tab:
+    show_code_guide()
 st.markdown('<footer class="sp-footer">ServicePilot · 模拟电商售后 · 真实执行与历史验证分开记录</footer>', unsafe_allow_html=True)
 if c is not None:
     @st.fragment(run_every=0.5 if c.busy else None)
