@@ -61,18 +61,19 @@ def show_code_guide():
             return
         version = snapshot["snapshot_id"]
         st.caption(f"来源版本：{snapshot['release_label']} · 内容摘要 SHA256 {version[:16]} · UTF-8/LF快照原文；无源码删节。")
-        for lesson in LESSONS:
-            st.subheader(lesson["title"])
-            st.write("业务问题：" + lesson["question"])
-            st.markdown("**" + lesson["conclusion"] + "**")
-            for name, first, last in lesson["parts"]:
-                part = excerpt(snapshot, name, first, last)
-                st.caption(f"{name} · 原文件 L{part['start']}–L{part['end']} · 快照 {version[:12]}；代码块不另外从1编号。")
-                st.code(part["text"], language=language(name), height=min(340, 42 + 21 * len(part["text"].splitlines())))
-            st.write("白话解释：" + lesson["explanation"])
-            st.write("设计取舍：" + lesson["tradeoff"])
-            st.caption("历史证据：" + lesson["evidence"])
-            st.caption("工作区来源索引：" + lesson["source"])
+        for index, lesson in enumerate(LESSONS):
+            with st.container(key=f"code_panel_{index}"):
+                st.subheader(lesson["title"])
+                st.write("业务问题：" + lesson["question"])
+                st.markdown("**" + lesson["conclusion"] + "**")
+                for name, first, last in lesson["parts"]:
+                    part = excerpt(snapshot, name, first, last)
+                    st.caption(f"{name} · 原文件 L{part['start']}–L{part['end']} · 快照 {version[:12]}；代码块不另外从1编号。")
+                    st.code(part["text"], language=language(name), height=min(340, 42 + 21 * len(part["text"].splitlines())))
+                st.write("白话解释：" + lesson["explanation"])
+                st.write("设计取舍：" + lesson["tradeoff"])
+                st.caption("历史证据：" + lesson["evidence"])
+                st.caption("工作区来源索引：" + lesson["source"])
         with st.expander("完整代码展示", expanded=False, key="full_source"):
             st.write(f"清单内 {len(PUBLIC_FILES)} 个产品文件的完整文本；来源版本 {snapshot['release_label']}，内容摘要 SHA256 {version}。不是整个工作区或第三方SDK源码。")
             st.caption("包含入口、自有运行/展示/部署模块、模拟数据、CSS、依赖声明和平台配置。排除Secrets/密钥值、原始日志、个人文档、测试脚本、第三方SDK仓库、虚拟环境与源码快照自身；无任意路径访问、无源码ZIP下载。")
