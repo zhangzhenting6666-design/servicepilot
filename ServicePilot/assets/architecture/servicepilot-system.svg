@@ -13,7 +13,7 @@
 <text x="66" y="132" font-size="26" font-weight="400" text-anchor="start" style="fill:#5b7180">从用户提问，到有依据的回答：界面 → 会话 → Agent → 工具与数据 → 页面</text>
 <rect x="66" y="152" width="182" height="40" rx="20" fill="#e1f1ea" stroke="#e1f1ea" stroke-width="2"/>
 <text x="157.0" y="180" font-size="21" font-weight="600" text-anchor="middle" style="fill:#147e70">本机已实现</text>
-<text x="270" y="180" font-size="23" font-weight="400" text-anchor="start" style="fill:#5b7180">模拟电商售后 Demo · 逻辑职责分层 · 2026.10.14</text>
+<text x="270" y="180" font-size="23" font-weight="400" text-anchor="start" style="fill:#5b7180">模拟电商售后 Demo · 逻辑职责分层</text>
 <rect x="144" y="222" width="984" height="130" rx="22" fill="#f4f0fa" stroke="#8868b4" stroke-width="2" filter="url(#shadow)"/>
 <rect x="168" y="247" width="52" height="52" rx="15" fill="#8868b4" stroke="#8868b4" stroke-width="2"/>
 <text x="194" y="283" font-size="28" font-weight="700" text-anchor="middle" style="fill:white">01</text>

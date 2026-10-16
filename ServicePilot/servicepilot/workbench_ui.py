@@ -82,7 +82,7 @@ def show_events(turn):
 
 def show_architecture():
     heading("架构总览", "从用户提问，到有依据的回答。", "页面管理交互，会话保留上下文，Runner 串联模型与本地工具。")
-    path = PRODUCT / "assets/architecture/servicepilot-system-2026-10-14.svg"
+    path = PRODUCT / "assets/architecture/servicepilot-system.svg"
     if path.exists():
         svg = path.read_text(encoding="utf-8")
         with st.expander("放大查看完整图"):
@@ -92,7 +92,7 @@ def show_architecture():
                     'src="data:image/svg+xml;base64,' + image + '"></div>')
         st.download_button("下载完整 SVG", svg, file_name=path.name, mime="image/svg+xml")
         st.image(svg, width="stretch")
-        st.caption("架构资产制作于2026-10-14，图内进度为制作时状态；当前界面已接入，公网验证另记。")
+        st.caption("架构示意图；图内进度对应原版本，当前界面与公网验证另有记录。")
     else:
         st.warning("完整架构图暂不可用。")
     st.markdown("- 模型提出交接与查询请求，Runner 执行本地工具。\n"
@@ -127,7 +127,7 @@ def show_about():
                 st.write(question)
                 st.write(text)
         section("02", "实际运行", "看到回答，也能核对它的来源。")
-        st.caption("以下为2026-10-14本机真实历史截图，旧版界面7f9f277（dirty=true，源文件哈希已复核）；不是本次改版或云端验收。")
+        st.caption("以下为本机真实历史截图，旧版界面7f9f277（源文件哈希已复核）；不是当前实时执行或云端验收。")
         images = [("02-a1001-result.jpg", "订单查询：事实来自工具", "A1001 → query_order → 商品、已发货、模拟运单；未补造送达时间。"),
                   ("04-policy-to-order.jpg", "话题切换：同一会话接着处理", "先问政策再查订单，FAQ → Triage → Order，实际调用查询工具。")]
         for column, (filename, title, text) in zip(st.columns(2), images):
@@ -166,12 +166,12 @@ def show_about():
         with st.expander("证据保存失败，也需要作为真实失败处理"):
             st.write("留出首轮因Windows文件保存异常中断。保留原记录，增加有界磁盘重试；修复后回归并完整重测，不将重测包装成首次通过。")
         section("05", "项目过程", "从可运行示例，推进到可展示作品。")
-        journey = [("10.11", "运行与理解", "接入DeepSeek，运行航空客服基线，理解Agent、工具与交接。"),
-                   ("10.13", "售后业务改造", "加入模拟订单、政策工具、多轮补充与边界案例。"),
-                   ("10.14", "验证与展示准备", "完成后台评测及本机页面复查，准备架构图、界面与部署。")]
-        for column, (date, title, text) in zip(st.columns(3), journey):
+        journey = [("阶段 01", "运行与理解", "接入DeepSeek，运行航空客服基线，理解Agent、工具与交接。"),
+                   ("阶段 02", "售后业务改造", "加入模拟订单、政策工具、多轮补充与边界案例。"),
+                   ("阶段 03", "验证与展示准备", "完成后台评测及本机页面复查，准备架构图、界面与部署。")]
+        for column, (stage, title, text) in zip(st.columns(3), journey):
             with column:
-                st.caption(date)
+                st.caption(stage)
                 st.write(title)
                 st.write(text)
         left, right = st.columns(2)
@@ -182,4 +182,3 @@ def show_about():
             st.subheader("实现与协作")
             st.write("Codex协助代码、排错、验证与文档；OpenAI Agents SDK提供执行机制，DeepSeek提供模型服务。")
         st.info("当前工作台已接入现有后台；能否查询取决于服务端配置。公网访问与本次验收以交接记录为准。没有真实退款、工单、真人接入或真实商家接口。")
-        st.caption("个人独立实现与掌握程度按实际经历说明。")
