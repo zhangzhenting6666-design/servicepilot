@@ -1,5 +1,6 @@
 """Light workbench. Replies and events are supplied only by OrderSession."""
 from pathlib import Path
+import hashlib
 import sys
 import uuid
 
@@ -7,9 +8,25 @@ PRODUCT = Path(__file__).resolve().parent
 sys.path.insert(0, str(PRODUCT))
 import streamlit as st
 from servicepilot.web_runtime import acceptance_enabled, new_conversation, server_ready, web_version
-from servicepilot.workbench_ui import heading, show_about, show_architecture, show_events, show_facts, event_summary
 from servicepilot.deployment import bootstrap_from_environment
-from servicepilot.code_guide import show_code_guide
+
+
+@st.cache_resource(show_spinner=False)
+def presentation_functions(source_revision):
+    """Refresh stateless display modules once per source version, across sessions."""
+    from importlib import reload
+    from servicepilot import workbench_ui, code_guide
+    reload(workbench_ui)
+    reload(code_guide)
+    return (workbench_ui.heading, workbench_ui.show_about, workbench_ui.show_architecture,
+            workbench_ui.show_events, workbench_ui.show_facts, workbench_ui.event_summary,
+            code_guide.show_code_guide)
+
+
+presentation_revision = tuple(hashlib.sha256((PRODUCT / name).read_bytes()).hexdigest()
+                              for name in ("servicepilot/workbench_ui.py", "servicepilot/code_guide.py"))
+heading, show_about, show_architecture, show_events, show_facts, event_summary, show_code_guide = \
+    presentation_functions(presentation_revision)
 
 st.set_page_config(page_title="ServicePilot · 模拟电商售后", page_icon="💬", layout="wide")
 st.set_option("client.toolbarMode", "minimal")
