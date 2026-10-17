@@ -26,3 +26,12 @@ header[data-testid="stHeader"]{position:fixed;height:3rem;min-height:3rem;backgr
 .st-key-code_guide .st-key-full_source summary{padding:14px 22px;}
 .st-key-code_guide .st-key-full_source [data-testid="stExpanderDetails"]{padding:8px 22px 22px;min-width:0;}
 @media(max-width:600px){.st-key-about_content [class*="st-key-about_panel_"],.st-key-code_guide [class*="st-key-code_panel_"]{padding:15px;}.st-key-code_guide .st-key-full_source summary{padding:14px 15px;}.st-key-code_guide .st-key-full_source [data-testid="stExpanderDetails"]{padding:8px 15px 15px;}}
+/* Shared B header: retain native tabs and their panels; reserve brand space in flow. */
+.st-key-app_shell{position:relative;gap:0;min-width:0;}
+.st-key-app_shell [data-testid="stMarkdownContainer"]:has(> .sp-brand){margin-bottom:0;}
+.st-key-app_shell .sp-brand{height:72px;box-sizing:border-box;padding:10px 0;border-bottom:1px solid #dfe7e2;}
+.st-key-app_shell .st-key-workbench_nav > div > [role="tablist"]{min-height:48px;}
+.st-key-app_shell .st-key-workbench_nav [role="tabpanel"]{padding-top:20px;}
+@media(min-width:1100px){.st-key-app_shell .st-key-workbench_nav > div > [role="tablist"]{position:absolute;top:0;left:330px;right:160px;height:72px;min-height:72px;gap:24px;background:transparent;box-shadow:none;clip-path:none;border-bottom:0;}.st-key-app_shell .st-key-workbench_nav [role="tab"]{min-height:72px;flex:0 0 auto;padding:0 4px;}}
+@media(max-width:1099px){.st-key-app_shell .sp-brand{height:auto;min-height:64px;}.st-key-app_shell .st-key-workbench_nav [role="tablist"]{gap:20px;}.st-key-app_shell .st-key-workbench_nav [role="tab"]{min-height:48px;}}
+@media(max-width:600px){.st-key-app_shell .sp-brand{padding:10px 0;gap:8px;}.st-key-app_shell .st-key-workbench_nav [role="tablist"]{gap:12px;}.st-key-app_shell .st-key-workbench_nav [role="tab"]{flex:1;padding:10px 0;}}
