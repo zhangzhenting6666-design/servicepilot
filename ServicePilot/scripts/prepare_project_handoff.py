@@ -89,9 +89,13 @@ def main():
     (source / '.gitignore').write_text(
         '**/.venv/\n**/__pycache__/\n*.py[cod]\n**/node_modules/\n.env*\n**/.env*\n'
         '**/*secret*\n**/*credential*\n*.pem\n*.key\n*.log\n**/*.tmp\n'
+        '**/.pytest_cache/\n**/.ruff_cache/\n**/.idea/\n**/.vscode/\n**/tmp/\n**/temp/\n'
+        '**/codex-clipboard-*\n**/*预览.png\n'
         'ServicePilot/artifacts/deployment/\nServicePilot/artifacts/**/web-session-*.json\n'
         'ServicePilot/artifacts/**/eval-run-*.json\nServicePilot/artifacts/**/order-run-*.json\n'
-        '**/*.review-control.json\n', encoding='utf-8')
+        '**/*.review-control.json\nServicePilot/artifacts/workbench/cloud/browser-cases.json\n'
+        'ServicePilot/artifacts/workbench/cloud/startup-check.json\n'
+        'ServicePilot/artifacts/workbench/cloud/01-owner-startup.png\n', encoding='utf-8')
     issues = []
     patterns = [r'\bsk-[A-Za-z0-9_-]{20,}', r'\bgh[pousr]_[A-Za-z0-9]{24,}',
                 r'github_pat_[A-Za-z0-9_]{30,}', r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----',
@@ -111,8 +115,12 @@ def main():
                 'files': {str(path.relative_to(source)).replace('\\', '/'):
                           hashlib.sha256(path.read_bytes()).hexdigest()
                           for path in sorted(source.rglob('*')) if path.is_file()},
+                'files_git_lf_sha256': {path.relative_to(source).as_posix():
+                          hashlib.sha256(path.read_bytes() if path.suffix.lower() in {'.png', '.jpg', '.jpeg'}
+                                         else path.read_bytes().replace(b'\r\n', b'\n')).hexdigest()
+                          for path in sorted(source.rglob('*')) if path.is_file()},
                 'secret_scan': 'passed', 'model_api_requested': False,
-                'manifest_note': 'Hashes cover all exported content except this self-describing manifest.',
+                'manifest_note': 'Hashes exclude this self-describing manifest. files hashes export bytes; files_git_lf_sha256 hashes Git-normalized text with LF and unchanged image bytes.',
                 'excluded': ['keys and authentication', 'venv and caches', 'raw model/session logs',
                              'personal temporary files', 'full third-party SDK download', 'Git internals']}
     manifest_text = json.dumps(manifest, ensure_ascii=False, indent=2) + '\n'
