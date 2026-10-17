@@ -1,0 +1,27 @@
+{
+  "workspace_code_commit": "55564a5d02f70089aae20715858e18427d7ec257",
+  "release_commit": "a5bf69b9672442643088a67875cfc5046b2594a2",
+  "remote_verified_by_ls_remote": true,
+  "public_snapshot_id": "599f010e7cbb6484f42c226caac8b8583603df767d1204e20c54960c104c1c86",
+  "label": "展示版 r5",
+  "public_source_files": 22,
+  "release_files": 29,
+  "offline_tests_passed": 18,
+  "api_request_attempted": false,
+  "cloud_independent_verification": false,
+  "user_cloud_confirmation": "单行顶栏、四栏切换和r5都正常",
+  "cloud_browser_attempt": {
+    "operation": "create public tab for actual page verification",
+    "timeout_ms": 20000,
+    "result": "js execution timed out; kernel reset"
+  },
+  "new_cloud_business_acceptance": false,
+  "temporary_fake_backend_servers_stopped": true,
+  "scope": "Public layout shell and CSS only; native tabs, body content, media and business modules preserved.",
+  "cloud_confirmed_scope": [
+    "desktop brand/native four tabs/Demo badge share a row",
+    "four tabs switch normally",
+    "platform area unobstructed",
+    "code guide r5"
+  ]
+}

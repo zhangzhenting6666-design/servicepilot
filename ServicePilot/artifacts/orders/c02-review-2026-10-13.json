@@ -1,0 +1,131 @@
+{
+  "reviewed_at": "2026-10-13T20:34:21+08:00",
+  "reviewer": "Development assistant inspected actual recorded route, tool result and final reply",
+  "evidence_kind": "review_of_live_api_run",
+  "run_evidence": "order-run-2026-10-13T202738_0800-a2642722.json",
+  "run_evidence_sha256": "b1b394899370e99f6d30a01cc5f30887ad7c805b114e476d826ef5a2aa3a1065",
+  "tested_version": {
+    "commit": "bb2a8e4fb011646e96bf2bb10acdd37633f27235",
+    "branch": "feature/order-query",
+    "worktree_dirty": false,
+    "hash_mode": "SHA256 after CRLF to LF normalization",
+    "business_source_hashes": {
+      "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+      "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+      "ServicePilot/servicepilot/agent_config.py": "5a888cff713dfb6385afeda107dcb7be40570ef4eb520c58472ac1d13d0e9f7c",
+      "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+      "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+      "ServicePilot/servicepilot/session.py": "c5759388e80235f69d2fb4ba57efffff533cd2e1057924bd8c97248e4c0530df",
+      "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+      "ServicePilot/scripts/run_order_customer_service.py": "940dc6639af2e8578c3d77adfd7d186fb0a12cf73b3a41bd3483a0f14546bbb2",
+      "ServicePilot/scripts/run_deepseek_customer_service.py": "deb99dc495007e945104d0e213245dd4f82b0b3ac226a1d1a18f18df97075b24"
+    }
+  },
+  "launch_argv": [
+    "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\Users\\Lenovo\\Desktop\\vibe coding\\ServicePilot\\scripts\\run_order_customer_service.py",
+    "--acceptance",
+    "--fresh-key"
+  ],
+  "status": "passed",
+  "current_business_hashes_match_tested_version": true,
+  "raw_run_evidence_preserved": true,
+  "cases": [
+    {
+      "case_id": "C02",
+      "session_id": "1620516690e14ac1ad4a9dd35bf1135f",
+      "input": "我的订单 A1001 到哪了？",
+      "verdict": "passed",
+      "checks": {
+        "completed": true,
+        "fresh_session": true,
+        "triage_to_order": true,
+        "query_order_A1001_called": true,
+        "actual_tool_result_matches_mock": true,
+        "final_agent_order": true,
+        "answer_contains_expected_facts": true,
+        "answer_identifies_mock": true,
+        "no_obvious_delivery_estimate": true
+      },
+      "review": {
+        "order_facts_match_current_mock": true,
+        "no_unsupported_delivery_date_or_guarantee": true,
+        "mock_logistics_boundary_explicit": true,
+        "no_claim_of_actual_refund_ticket_or_human_transfer": true
+      },
+      "tool_arguments": {
+        "order_id": "A1001"
+      },
+      "tool_result": {
+        "status": "ok",
+        "source": "local_mock",
+        "order": {
+          "carrier": "模拟物流",
+          "order_id": "A1001",
+          "product": "蓝牙耳机",
+          "status": "已发货",
+          "tracking_number": "MOCK1001"
+        }
+      },
+      "final_answer": "以下是模拟订单的查询结果（数据为本地模拟记录，非真实业务数据）：\n\n- **订单号**：A1001\n- **商品**：蓝牙耳机\n- **订单状态**：已发货\n- **物流信息**：承运商「模拟物流」，运单号 MOCK1001\n\n说明：承运商与运单号均为演示值，**不能用于真实物流查询**，因此我无法提供实际运输轨迹，也不建议您拿这个模拟单号去承运商或物流网站查询。\n\n另外，本次查询结果中未包含预计送达时间，我无法为您推测或保证到货日期。如果您需要更新更准确的物流进展，建议稍后重试查询或联系人工客服核实。还有其他需要帮忙的吗？",
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2207,
+        "output_tokens": 220,
+        "total_tokens": 2427
+      },
+      "elapsed_seconds": 2.909
+    },
+    {
+      "case_id": "C02-paraphrase",
+      "session_id": "e409c97641c449e7988c0f4330df0f68",
+      "input": "A1001 发货了吗？",
+      "verdict": "passed",
+      "checks": {
+        "completed": true,
+        "fresh_session": true,
+        "triage_to_order": true,
+        "query_order_A1001_called": true,
+        "actual_tool_result_matches_mock": true,
+        "final_agent_order": true,
+        "answer_contains_expected_facts": true,
+        "answer_identifies_mock": true,
+        "no_obvious_delivery_estimate": true
+      },
+      "review": {
+        "order_facts_match_current_mock": true,
+        "no_unsupported_delivery_date_or_guarantee": true,
+        "mock_logistics_boundary_explicit": true,
+        "no_claim_of_actual_refund_ticket_or_human_transfer": true
+      },
+      "tool_arguments": {
+        "order_id": "A1001"
+      },
+      "tool_result": {
+        "status": "ok",
+        "source": "local_mock",
+        "order": {
+          "carrier": "模拟物流",
+          "order_id": "A1001",
+          "product": "蓝牙耳机",
+          "status": "已发货",
+          "tracking_number": "MOCK1001"
+        }
+      },
+      "final_answer": "订单 A1001 的查询结果如下（模拟记录）：\n\n- 商品：蓝牙耳机\n- 订单状态：已发货\n- 物流信息：承运商「模拟物流」，运单号「MOCK1001」\n\n需要说明的是，这里的承运商和运单号都是演示用的模拟值，不能用于真实物流查询，也不建议拿它到承运商或物流网站去查；本次结果中也没有提供预计送达时间，所以我无法给出送达日期。\n\n如果你还想了解其他订单，告诉我订单号即可。",
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2198,
+        "output_tokens": 174,
+        "total_tokens": 2372
+      },
+      "elapsed_seconds": 2.344
+    }
+  ],
+  "total_model_requests": 6,
+  "total_tokens": 4799,
+  "scope": "C02 and one paraphrase only. Other seven core cases not live-tested.",
+  "run_evidence_hash_mode": "SHA256 after CRLF to LF normalization"
+}

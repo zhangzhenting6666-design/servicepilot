@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ServicePilot 2026年10月11日：四个分类对话、运行证据、关键概念、排障与下一步的本地复习页。">
+<title>ServicePilot · 10 月 11 日项目复盘</title>
+<style>
+:root{--paper:#f5f3ee;--white:#fff;--ink:#182e3b;--muted:#5c6e75;--line:#dce2df;--green:#167361;--light:#e9f4ee;--amber:#94621e;--sand:#fff5e3;--blue:#eaf0f8;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 "Microsoft YaHei","PingFang SC",sans-serif}a{color:var(--green);text-underline-offset:4px}button,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #52a896;outline-offset:4px}button{border:1px solid var(--line);border-radius:9px;padding:8px 15px;background:white;color:var(--ink)}button:hover{background:var(--light)}.primary{background:var(--green);color:white;border-color:var(--green)}.primary:hover{background:#105b4d}.shell{max-width:1380px;margin:auto;padding:36px 38px 70px;display:grid;grid-template-columns:218px minmax(0,1fr);gap:45px}.side{position:sticky;top:30px;align-self:start}.brand{font-size:19px;font-weight:800;letter-spacing:.2px}.brand small{display:block;color:var(--muted);font-size:12px;letter-spacing:2px;font-weight:400}.date{margin:24px 0 18px;font-size:13px;color:var(--muted)}.side nav{display:grid;gap:3px}.side nav a{font-size:14px;text-decoration:none;color:var(--muted);padding:7px 10px;border-radius:7px}.side nav a:hover,.side nav a.active{background:#e3ece6;color:var(--green)}.side nav span{display:inline-block;width:25px;font-size:11px;color:#82948b}.side-note{font-size:12px;border-top:1px solid var(--line);margin-top:22px;padding-top:16px;color:var(--muted)}.hero{background:var(--ink);color:#fff;border-radius:24px;padding:38px 40px 30px;position:relative;overflow:hidden}.hero:after{content:"A → B";position:absolute;right:28px;top:12px;color:#ffffff08;font-size:124px;font-weight:900;pointer-events:none}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#a8d7c8}.hero h1{font-size:clamp(29px,3.4vw,44px);line-height:1.35;margin:16px 0 15px;position:relative;max-width:650px}.hero p{color:#cfdddf;max-width:660px;margin:0 0 22px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{display:inline-block;font-size:12px;padding:3px 10px;border-radius:50px;background:var(--light);color:var(--green);font-weight:600}.hero .tag{background:#ffffff14;color:#c1eddd}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:25px;padding-top:20px;border-top:1px solid #ffffff26}.stat b{display:block;font-size:28px;font-weight:600;line-height:1.4}.stat span{color:#c2d1d6;font-size:12px}.toolbar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:20px 0 12px}.toolbar .quiet{color:var(--muted);font-size:12px;margin-left:auto}section{margin-top:48px}h2{font-size:26px;line-height:1.5;margin:0 0 5px;letter-spacing:-.5px}.num{font-size:12px;font-weight:600;color:var(--green);display:block;letter-spacing:2px;margin-bottom:7px}.lead{color:var(--muted);margin:0 0 20px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:23px}.card h3{font-size:18px;margin:0 0 9px}.card p{margin:7px 0}.card ul{padding-left:21px;margin:8px 0}.small{font-size:13px;color:var(--muted)}.callout{padding:19px 23px;border-radius:12px;background:var(--light);border-left:4px solid var(--green);margin:16px 0}.callout.warn{background:var(--sand);border-left-color:var(--amber)}.callout p{margin:6px 0}.callout b{color:var(--ink)}.list{display:grid;gap:13px}.timeline{position:relative;padding-left:26px}.timeline:before{content:"";position:absolute;left:6px;top:10px;bottom:12px;width:2px;background:var(--line)}.moment{position:relative;display:grid;grid-template-columns:105px 1fr;gap:14px;margin:0 0 22px}.moment:before{content:"";position:absolute;left:-24px;top:9px;width:10px;height:10px;border:2px solid var(--paper);border-radius:50%;background:var(--green)}.moment time{font-size:13px;color:var(--green);font-weight:bold;padding-top:2px}.moment h3{margin:0;font-size:17px}.moment p{margin:4px 0;color:var(--muted);font-size:14px}.role{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}.role strong{font-size:14px}.amber{color:var(--amber);background:var(--sand)}.thread-name{font-size:17px;font-weight:bold;line-height:1.5;margin-bottom:10px}.card .term{font-size:12px;font-weight:700;letter-spacing:1px;color:var(--green);margin:11px 0 2px}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:white}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:14px 17px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{background:#edf1ec;font-size:13px}tr:last-child td{border-bottom:0}td:first-child{font-weight:600}code{font:13px/1.7 Consolas,monospace;background:#eef2f0;border-radius:4px;padding:2px 5px;overflow-wrap:anywhere}pre{background:#182e3b;color:#e3f1ec;border-radius:12px;padding:18px;overflow:auto;font:13px/1.7 Consolas,monospace;white-space:pre-wrap;word-break:break-word}pre code{background:none;color:inherit;padding:0}details{border:1px solid var(--line);border-radius:12px;background:white;margin-bottom:12px;overflow:hidden}summary{cursor:pointer;padding:16px 20px;font-weight:600;list-style:none;display:flex;gap:11px;align-items:baseline}summary::-webkit-details-marker{display:none}summary:before{content:"+";color:var(--green);font-weight:400;font-size:22px;line-height:1}details[open] summary:before{content:"−"}summary small{color:var(--muted);font-size:12px;font-weight:400;margin-left:auto}.inside{padding:0 20px 20px 44px}.inside p{margin:7px 0}.concepts{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.concepts summary{font-size:15px}.concepts summary small{display:none}.inside .where{font-size:12px;color:var(--muted);margin-top:12px}.flow-view{background:white;border-radius:18px;border:1px solid var(--line);padding:24px}.flow-label{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.flow-label span{font-size:12px;color:var(--muted)}.flow-steps{display:flex;gap:6px;margin:20px 0;flex-wrap:wrap}.flow-steps button{flex:1;min-width:75px;font-size:12px;padding:10px 6px;line-height:1.5;border-radius:10px}.flow-steps button[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:white}.step-body{background:#f3f6f2;border-radius:12px;padding:23px;min-height:210px}.step-body h3{margin:0 0 9px;font-size:21px}.step-body p{margin:7px 0}.step-body .label{font-size:12px;font-weight:bold;color:var(--green)}.step-controls{display:flex;gap:8px;margin-top:16px;justify-content:space-between}.mini-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px;background:#eef2ed;padding:15px;border-radius:10px;margin-top:14px}.mini-flow b{color:var(--green)}.pitfalls details summary small{max-width:150px;text-align:right}.chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}.chips button{font-size:12px;border-radius:50px;padding:5px 12px}.chips button.selected{background:var(--ink);color:white;border-color:var(--ink)}.pitfalls details[hidden]{display:none}.split{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}.checks{display:grid;gap:12px}.check{display:flex;gap:12px;padding:14px;background:#f3f6f2;border-radius:9px;font-size:14px;cursor:pointer}.check input{width:18px;height:18px;accent-color:var(--green);flex:none;margin-top:5px}.check strong{display:block}.check em{font-style:normal;color:var(--muted);font-size:12px}.progress{height:5px;background:#dae5dd;border-radius:5px;margin:16px 0 6px;overflow:hidden}.progress span{display:block;height:100%;background:var(--green);transition:width .2s}.review-count{font-size:12px;color:var(--muted)}textarea{width:100%;min-height:165px;border:1px solid #bacbc3;border-radius:10px;padding:12px;background:#fff;resize:vertical;font-size:14px}.notes-label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}.copy-row{display:flex;gap:8px;margin-top:12px;align-items:center;flex-wrap:wrap}.copy-feedback{font-size:12px;color:var(--green);min-height:22px}.source-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.source{display:block;background:white;padding:17px;border:1px solid var(--line);border-radius:12px;text-decoration:none;font-size:14px;font-weight:bold}.source span{display:block;color:var(--muted);font-size:12px;font-weight:400}.footer{border-top:1px solid var(--line);margin-top:38px;padding-top:20px;color:var(--muted);font-size:12px}.footer p{margin:6px 0}.muted{color:var(--muted)}.tomorrow{border:1px solid #b3d6c7;background:#eef7f1}.nojs{padding:10px;background:var(--sand)}
+@media(min-width:1550px){body{font-size:17px}.shell{gap:55px}}
+@media(max-width:1050px){.shell{padding:25px;grid-template-columns:165px minmax(0,1fr);gap:25px}.hero{padding:30px}.concepts{grid-template-columns:1fr}.hero h1{font-size:33px}.side nav a{font-size:12px}}
+@media(max-width:760px){.shell{display:block;padding:18px}.side{position:static;margin-bottom:22px}.side nav{display:flex;overflow:auto;gap:5px;margin-top:12px;padding-bottom:5px}.side nav a{white-space:nowrap;background:white;padding:7px 10px}.side nav span{display:none}.side-note,.date{display:none}.brand small{display:inline;margin-left:10px}.hero{padding:26px 23px}.hero:after{font-size:90px;right:12px;top:35px}.hero h1{font-size:30px}.stats{grid-template-columns:1fr 1fr;gap:15px}.grid,.split,.source-grid{grid-template-columns:1fr}section{margin-top:35px}h2{font-size:23px}.moment{grid-template-columns:1fr;gap:0}.card{padding:20px}.toolbar .quiet{margin-left:0;width:100%}.pitfalls summary{flex-wrap:wrap}.pitfalls details summary small{max-width:none;margin-left:30px}summary{padding:14px 16px}.inside{padding:0 17px 18px 37px}.flow-view{padding:17px}.flow-steps button{min-width:88px}.step-body{padding:19px}.table-wrap table{min-width:600px}}
+@media print{@page{margin:14mm}body{font-size:10.5pt;background:white;color:#000}.shell{display:block;padding:0;max-width:none}.side,.toolbar,.chips,.step-controls,.flow-steps,.copy-row,#save-status,.no-print{display:none!important}.hero{background:#eef3ef;color:#000;padding:20px;border:1px solid #ccc}.hero:after{display:none}.hero p,.hero .tag,.stat span,.eyebrow{color:#333}.hero h1{font-size:24pt}.stats{border-top:1px solid #bbb}.stat b{font-size:19pt}.grid,.split,.source-grid,.concepts{gap:10px}section{margin-top:23px;break-inside:auto}h2{font-size:17pt}.card,details,.callout,.moment{break-inside:avoid}.inside{display:block!important}details{overflow:visible}summary:before{display:none}summary{padding:10px 15px}.inside{padding:0 15px 12px}.step-body{min-height:0}.table-wrap{overflow:visible}th,td{padding:8px}a{color:#000;text-decoration:none}textarea{min-height:80px}.footer{margin-top:20px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="side" aria-label="复习目录">
+ <div class="brand">ServicePilot<small>LEARNING JOURNAL</small></div>
+ <div class="date">2026 / 10 / 11 · 周日<br>从下午搭环境，到晚上看懂流程</div>
+ <nav>
+ <a href="#outcome"><span>01</span>今天完成了什么</a><a href="#timeline"><span>02</span>下午到晚上的路线</a><a href="#threads"><span>03</span>四个对话的汇总</a><a href="#flow"><span>04</span>一条问题怎样回答</a><a href="#model-requests">↳ 三次模型请求</a><a href="#wifi-ending">↳ Wi-Fi 怎样结束</a><a href="#runtime-framework">↳ 完整项目体系</a><a href="#concepts"><span>05</span>应该理解的概念</a><a href="#pitfalls"><span>06</span>卡点与解决过程</a><a href="#gains"><span>07</span>值得带走的收获</a><a href="#review"><span>08</span>今晚的复习清单</a><a href="#next"><span>09</span>下次从哪里接着做</a><a href="#sources"><span>10</span>证据与文档入口</a>
+ </nav>
+ <div class="side-note">这是项目学习复盘。<br>“已运行”“已理解”“已规划”分别记录。<br><br>本页离线可读；不连接模型，不展示密钥。</div>
+</aside>
+<main>
+<header class="hero">
+ <div class="eyebrow">DAY 01 / 2026.10.11</div>
+ <h1>从“这是什么工具”<br>到看懂一条 Agent 工作流</h1>
+ <p>今天已经完成 A 的真实运行与 B 的流程学习。你搭好了 DeepSeek 接入，看到客服转交和工具调用，并逐段理解了回答背后的代码职责。今晚可以收工，用这份复盘把零散对话串起来。</p>
+ <div class="tags"><span class="tag">A · 运行目标完成</span><span class="tag">B · 流程学习完成</span><span class="tag">下次 · C-00 保存版本基线</span></div>
+ <div class="stats"><div class="stat"><b>4</b><span>分类对话已汇总</span></div><div class="stat"><b>3</b><span>真实航空问题</span></div><div class="stat"><b>12</b><span>模型请求 · 非 token 数</span></div><div class="stat"><b>A + B</b><span>今天完成的两个阶段</span></div></div>
+</header>
+<div class="toolbar"><button id="print">打印 / 保存 PDF</button><button id="expand">展开概念与卡点</button><button id="collapse">收起详情</button><span class="quiet">建议今晚阅读 10–15 分钟 · 不做强制测试</span></div>
+<noscript><p class="nojs">已关闭 JavaScript：正文与折叠说明仍可阅读，流程切换和本地笔记保存不可用。</p></noscript>
+
+<section id="outcome">
+ <span class="num">01 / 今日成果</span><h2>已经有了一个能运行、能解释的学习基线</h2><p class="lead">这一步的价值，是把“下载了代码”推进到“知道它如何产生回答”。</p>
+ <div class="grid">
+ <article class="card"><span class="tag">实际运行</span><h3 style="margin-top:12px">A：DeepSeek 接入与航空流程</h3><ul><li>Python 3.13.16 与项目虚拟环境可用，依赖安装完成。</li><li>有效密钥下，DeepSeek 模型列表检查通过，<code>deepseek-flash</code> 可用。</li><li>行李、选座意图、Wi-Fi 共 3 轮真实对话，合计 12 次模型请求。</li><li>记录中有 6 次 Agent 转交、3 次 <code>faq_lookup_tool</code> 调用。</li></ul><p class="small">运行证据：<a href="../artifacts/airline-baseline-2026-10-11.json">航空基线记录</a>。已接入 DeepSeek 的官方业务示例，包含兼容适配。</p></article>
+ <article class="card"><span class="tag">逐段学习 + 你的确认</span><h3 style="margin-top:12px">B：看懂关键调用路径</h3><ul><li>区分单条输入 <code>question</code> 与历史记录 <code>items</code>。</li><li>区分 Triage 的分流、Runner 的执行、FAQ 的职责。</li><li>找到本地工具返回的示例资料与最终回答的显示位置。</li><li>理解多轮如何保留历史、继续使用上轮最后的 Agent。</li></ul><p class="small">开发对话逐段读了实际代码，你确认已理解；按你的要求没有继续做复述考试。不把学习完成写成独立考试评分。</p></article>
+ </div>
+ <div class="callout"><b>用一句话回顾今天：</b><p>模型依据 Agent 的工作说明选择下一步，Runner 落实转交或工具调用，本地工具给出资料，模型根据资料组织回答，程序再把回答显示给用户。</p></div>
+ <div class="table-wrap"><table><thead><tr><th>真实问题</th><th>观察到的行为</th><th>能证明到哪里</th></tr></thead><tbody>
+ <tr><td>行李能带多少？<br><span class="small">What is the baggage allowance?</span></td><td>Triage → FAQ → FAQ 工具 → 行李回答。</td><td>这条路径已跑通。规则是本地示例文本，不是实际航空政策查询。</td></tr>
+ <tr><td>可以选座吗？<br><span class="small">Can I choose my seat?</span></td><td>承接上轮的 FAQ → Triage → Seat Booking，追问确认号。FAQ 在转回前也尝试了 FAQ 工具。</td><td>验证了选座意图分流与追问；没有实测完成座位更新。</td></tr>
+ <tr><td>飞机上有 Wi-Fi 吗？<br><span class="small">Is Wi-Fi available on the plane?</span></td><td>承接上轮的 Seat Booking → Triage → FAQ → Triage。FAQ 调用工具后表示未找到。</td><td>请求和转交完成，最终答复为“未找到相关信息”。这不是程序异常；答复与源码规则的对应关系尚未核对清楚。</td></tr>
+ </tbody></table></div>
+ <div class="callout"><b>为什么第二轮从 FAQ 开始，第三轮从 Seat Booking 开始？</b><p>这三个问题是在同一个连续会话中输入的。新会话只在开始时指定 Triage；每轮结束后，入口执行 <code>current_agent = result.last_agent</code>，下一句话先交给上轮最后接待的 Agent。第一轮结束在 FAQ，第二轮结束在 Seat Booking，所以后续起点不同；遇到其他职责的问题时，再转回 Triage 分流。</p><p class="small">目标架构图展示的是新请求的主要分流关系，省略了多轮承接与返回箭头。“每轮都重新从 Triage 开始”也是可选设计，但当前代码没有这样重置。本次仅补充说明，没有改变运行行为。</p></div>
+ <div class="callout warn"><b>仍未完成的部分</b><p>Git 可回退版本、模拟电商订单工具、8 条电商案例、Web 界面和效果评测都还没完成。UI 已有文字提案。当前航空基线仍依赖下载仓库的示例定义。</p></div>
+</section>
+
+<section id="timeline">
+ <span class="num">02 / 学习路线</span><h2>今天的过程，按六个转折点记住</h2><p class="lead">时间取自今天的对话记录，为活动时段；不当作程序性能或工时统计。</p>
+ <div class="timeline">
+ <div class="moment"><time>14:46–15:17</time><div><h3>先明确做什么，再选择复用路线</h3><p>确定 ServicePilot 模拟电商售后方向，写 PRD 与首批 8 条案例。把“按一周赶完”调整为按阶段验收：先跑航空示例，再读懂，再小步改造。</p></div></div>
+ <div class="moment"><time>15:22–16:13</time><div><h3>下载只是开始：把本地运行条件搭起来</h3><p>ZIP 下载、Python 64 位安装、PATH、PowerShell、进入目录、创建虚拟环境、安装依赖。遇到激活脚本限制后，直接调用虚拟环境里的 Python。</p></div></div>
+ <div class="moment"><time>16:17–17:57</time><div><h3>DeepSeek 接入：把失败缩小到可检查的一步</h3><p>创建密钥与余额，配置当前会话，修正启动方式，排查空响应 HTTP 400。最后发现密钥输入格式问题，修复 Windows 粘贴与等待逻辑，模型检查通过。</p></div></div>
+ <div class="moment"><time>17:59–18:01</time><div><h3>第一次真实看到“分流 → 工具 → 回答”</h3><p>完成行李、选座意图与 Wi-Fi 三轮。行李成功；选座停在确认号追问；Wi-Fi 客服答复为“未找到相关信息”，随后程序继续等待下一题，没有因此报错退出。这说明请求与交接能运行；答案是否正确，需要另外核对。本轮没有自动评测或转人工。</p></div></div>
+ <div class="moment"><time>18:03–18:23</time><div><h3>重新组织协作：四类对话 + 共享文档</h3><p>将目标与验收、开发、专项排障、界面设计分开。明确拆聊天不隔离文件；项目状态写在看板。界面设计产出提案，排障对话设为备用。</p></div></div>
+ <div class="moment"><time>19:17–20:09</time><div><h3>B-01：慢下来，逐段理解实际代码</h3><p>从输入讲到对话历史，从 Triage 讲到 Runner，再讲 FAQ 工具和答复显示。你提出“不用测试我”，后续改为解释与答疑，最终确认已理解。</p></div></div>
+ </div>
+</section>
+
+<section id="threads">
+ <span class="num">03 / 四类对话</span><h2>每个对话做了什么，以后什么时候用</h2><p class="lead">主要排障发生在拆分对话之前的主线里；不能把这些修复算成备用排障对话已经完成的工作。</p>
+ <div class="grid">
+ <article class="card"><div class="role"><strong>01 / 长期保留</strong><span class="tag">目标与验收</span></div><div class="thread-name">ServicePilot｜项目主线与验收</div><p class="term">今天汇总</p><p>确定模拟电商售后方向、PRD、案例与阶段路线；早期还承接了 Python、密钥、HTTP 400 的排查。后面厘清四个对话的职责，安排 B-01 与本次复盘。</p><p class="term">留下了什么</p><p>项目入口、看板、PRD、推进路线、交接规则、运行证据及本复习页。</p><p class="term">以后回来做什么</p><p>完成一项任务后验收；确定下一项；调整产品范围；回顾“做了什么、凭什么算完成”。默认维护文档。</p></article>
+ <article class="card"><div class="role"><strong>02 / 长期保留</strong><span class="tag">读代码与实现</span></div><div class="thread-name">ServicePilot｜开发实现</div><p class="term">今天汇总</p><p>围绕一条行李请求逐段讲解实际入口、Agent、Runner、工具与多轮。解开“问题和历史”“谁决定和谁执行”“工具事实和模型答复”等混淆。</p><p class="term">留下了什么</p><p>B-01 学习完成记录与具体代码位置。今天这段学习没有新增业务代码，也没有再次调用 API。</p><p class="term">以后回来做什么</p><p>C-00 保存基线与建立 Git，然后改现有业务代码实现订单查询。普通小报错也在这里处理。</p></article>
+ <article class="card"><div class="role"><strong>03 / 按需使用</strong><span class="tag amber">备用 · 今日无独立修复</span></div><div class="thread-name">ServicePilot｜专项排障</div><p class="term">今天汇总</p><p>读取入口、看板和运行说明，确认已记录的 API 成功状态，准备具体问题的复现与交接模板。没有收到新的独立故障任务。</p><p class="term">留下了什么</p><p>排障接手方式：预期、实际、命令、日志、已尝试办法、修改范围与验证。</p><p class="term">以后回来做什么</p><p>同一问题经过两次有证据的修复仍失败，或排查较久没缩小范围时使用。接手写代码前暂停开发对话，结束后交还。</p></article>
+ <article class="card"><div class="role"><strong>04 / 后期按需使用</strong><span class="tag amber">提案 · 尚未实现</span></div><div class="thread-name">ServicePilot｜界面设计</div><p class="term">今天汇总</p><p>读 PRD、看板与案例，提出中文聊天页、输入区、新会话、模拟标识、执行事件及加载、空数据、错误状态。</p><p class="term">留下了什么</p><p><a href="../docs/界面与交互提案.md">界面与交互提案</a>，包括后续接口需求。没有可操作原型、前端页面或电商后台接入。</p><p class="term">以后回来做什么</p><p>核心业务案例稳定后细化 UI，再把实现交给开发对话。真实执行事件与预设演示样例须分清。</p></article>
+ </div>
+ <div class="callout"><b>跨聊天接续靠文件，而不是靠猜历史。</b><p>开工读入口与看板 → 只做一个任务 → 写下证据、失败项和下一步。同一目录只有一个对话在同一时间写代码；对话名称本身不提供文件隔离。</p></div>
+</section>
+
+<section id="flow">
+ <span class="num">04 / 重点复习</span><h2>一条行李问题，经过了哪些人和工具？</h2><p class="lead">这里的“人”只是帮助理解职责的比喻。Agent 是程序配置；模型作决策，Runner 执行流程。</p>
+ <div class="flow-view">
+ <div class="flow-label"><strong>七步读懂回答的产生</strong><span>点击步骤切换 · 这是教学示意，不发 API 请求</span></div>
+ <div class="flow-steps" aria-label="工作流步骤">
+ <button data-step="0" aria-pressed="true">1<br>记录输入</button><button data-step="1" aria-pressed="false">2<br>Triage 分流</button><button data-step="2" aria-pressed="false">3<br>Runner 转交</button><button data-step="3" aria-pressed="false">4<br>FAQ 请求工具</button><button data-step="4" aria-pressed="false">5<br>工具给资料</button><button data-step="5" aria-pressed="false">6<br>模型写回答</button><button data-step="6" aria-pressed="false">7<br>显示与接续</button>
+ </div>
+ <div class="step-body" id="step-body" aria-live="polite"><div class="label">01 / 输入与记录</div><h3>先保存问题，此时还没有回答</h3><p><code>question</code> 是本轮输入；<code>items</code> 是给模型继续处理的对话记录。把问题加入记录后，再交给 Runner。</p><pre><code>items.append({"role": "user", "content": question})</code></pre><p class="small">入口第 274、282 行。下面所有代码都是解释片段，不是需要你现在复制执行的命令。</p></div>
+ <div class="step-controls"><button id="prev">← 上一步</button><span id="step-count" class="small">1 / 7</span><button id="next">下一步 →</button></div>
+ <div class="mini-flow"><span>用户问题</span><b>→</b><span>Triage</span><b>→</b><span>FAQ</span><b>→</b><span>本地工具</span><b>→</b><span>模型答复</span><b>→</b><span>屏幕显示</span></div>
+ </div>
+ <article class="card" id="model-requests" style="margin-top:20px">
+<h3>问题一｜行李问题，到底是哪 3 次模型请求？</h3>
+<p><b>计数看的是“程序向 DeepSeek 要了一次新的模型输出”，不是经过了几个 Agent。</b>这条路径只有 Triage 和 FAQ 两个 Agent；FAQ 在查资料前、拿到资料后，各请求模型一次。三次都使用同一个 <code>deepseek-flash</code>，只是职责配置和本次提供的信息不同。</p>
+<div class="table-wrap"><table><thead><tr><th>顺序 / 请求累计</th><th>谁的配置交给 DeepSeek</th><th>模型返回什么 / 程序接着做什么</th></tr></thead><tbody>
+<tr><td>第 1 次 · 累计 1</td><td>Triage Agent：用户问行李额度，可交给 FAQ</td><td>模型提出转交 FAQ；Runner 执行 handoff，把当前 Agent 换成 FAQ。切换配置本身不另算一次模型请求。</td></tr>
+<tr><td>第 2 次 · 累计 2</td><td>FAQ Agent：问题、历史、查工具的说明和工具定义</td><td>模型提出调用 <code>faq_lookup_tool</code>，给出 <code>question</code> 参数。此时输出的是查资料请求，还不是最终行李答案。</td></tr>
+<tr><td>本地执行 · 仍是 2</td><td>这一步不请求 DeepSeek</td><td>Runner 调用 Python 函数；函数按关键词返回行李资料。本次工具没有调用模型，所以不增加模型请求。</td></tr>
+<tr><td>第 3 次 · 累计 3</td><td>仍是 FAQ Agent：这次还提供了工具返回的行李资料</td><td>模型据资料组织答复；Runner 返回结果，入口把答复显示在终端。这轮结束，没有自动发第 4 次请求。</td></tr>
+</tbody></table></div>
+<div class="mini-flow"><span>① Triage 请求模型：转给 FAQ</span><b>→</b><span>② FAQ 请求模型：查工具</span><b>→</b><span>本地工具：0 次</span><b>→</b><span>③ FAQ 请求模型：据结果答复</span></div>
+<p><b>所以“每碰到一个 Agent 就调用一次”不准确。</b>一个 Agent 可能多次请求模型；本地工具执行、显示文字、等待输入都不自动增加模型请求。某次模型若直接给出最终答复，也可能一轮只用 1 次请求。</p>
+<p class="small">截图记录首轮 3 次、选座轮 4 次、Wi-Fi 轮 5 次；JSON 保存三轮合计 12 次。上表结合已见终端事件和 SDK 执行机制解释，并非逐条 API 请求原文回放；当次工具参数没有保存，不编造其具体内容。请求数不是问题数，也不是 token 数。</p>
+<p class="small">依据：<a href="../scripts/run_deepseek_customer_service.py">入口程序</a>第 284–311 行，以及 <a href="https://developers.openai.com/api/docs/guides/agents/running-agents">官方 Runner 执行说明</a>。</p>
+</article>
+</section>
+
+<article class="card" id="faq-tool-location" style="margin-top:20px"><h3>你图中的工具，在实际代码的哪里？</h3><p>目标架构图把 FAQ 下面的业务工具写成 <code>search_faq()</code>；今天航空示例实际叫 <code>faq_lookup_tool</code>。二者处于同一层，但前者是电商规划名称，后者是已运行的本地函数。</p><p><b>定义：</b>下载仓库 <code>examples/customer_service/main.py</code> 第 43–70 行，函数签名在第 48 行：<code>async def faq_lookup_tool(question: str) -&gt; str:</code>。输入问题，按英文关键词返回写在代码里的示例资料。</p><p><b>绑定：</b>同一文件第 125 行 <code>tools=[faq_lookup_tool]</code>，表示“FAQ Agent 可以请求调用这个业务工具”。第 123 行工作说明要求查工具，不依赖自身知识。</p><p><b>怎么调用：</b>SDK 把可用工具的名称、说明和参数格式提供给模型；模型返回工具名和参数，Runner 执行对应 Python 函数，把结果交回模型，再产生自然语言回答。模型不是临时翻遍你的代码仓库找工具。</p><p><b>为什么改名为“请求工具”：</b>当前 FAQ 只有一个业务查询工具，同时还配置了转回 Triage 的交接入口。“选工具”容易让人误以为今天配置了很多查询工具。行李、座位、Wi-Fi 是同一个 FAQ 函数里的匹配分支，不是三个独立工具。</p><p><b>你今天其实看见过：</b>终端显示 <code>FAQ Agent 调用工具：faq_lookup_tool</code>，随后显示已取得工具结果。这个工具没有独立软件窗口。</p><img src="FAQ工具调用示意.svg" alt="FAQ 工具定义、绑定、模型提出调用、Runner 执行与根据结果答复的示意图" style="display:block;width:100%;height:auto;margin-top:18px;border-radius:12px"><p class="small"><a href="FAQ工具调用示意.png">打开 PNG 图片</a> · <a href="../../openai-agents-python-main/examples/customer_service/main.py">查看实际代码</a> · <a href="https://developers.openai.com/api/docs/guides/tools">官方 OpenAI 工具说明</a>。图二中的 Streamlit、Order Agent 和订单 JSON 是目标规划，尚未实现。</p></article>
+
+
+<article class="card" id="wifi-ending" style="margin-top:20px">
+<h3>问题二｜Wi-Fi 回答“未找到信息”之后，到底发生了什么？</h3>
+<p>你当时问的是 <b>“飞机上有 Wi-Fi 吗？”</b>（Is Wi-Fi available on the plane?），并没有问 Wi-Fi 密码。连续会话从上一轮的 Seat Booking 开始，本轮实际路径如下：</p>
+<div class="mini-flow"><span>Seat Booking</span><b>→</b><span>Triage</span><b>→</b><span>FAQ</span><b>→</b><span>调用 FAQ 工具</span><b>→</b><span>FAQ 表示未找到，转回 Triage</span><b>→</b><span>Triage 最终答复</span></div>
+<p>最后 Triage 表示没找到 Wi-Fi 信息，并问还有没有其他问题。终端显示“本轮完成，共 5 次模型请求”，然后出现下一题输入提示。<b>这一条 Wi-Fi 问题已经结束；程序保持打开，等待你手动输入下一题。</b>等待期间不会继续自动查 Wi-Fi，也不会持续调用模型。</p>
+<p><b>没有转人工。</b>当前航空示例只配置三个 Agent 之间的交接；运行入口和这段样例没有人工客服入口、人工队列或创建人工工单的工具。FAQ 转回 Triage，仍然是模型按另一套 Agent 配置接着处理，不能叫“接通人工”。</p>
+<p><b>“后续质量检查的起点”是复盘中的学习建议，不是系统执行的一步。</b>意思是：以后如果要查清回答为什么这样，就核对工具实际收到什么参数、返回什么资料、模型怎么利用结果。本轮并没有后台自动复查、评测或安排真人。正文已改为直接说明这些事实。</p>
+<p>还要分清：<b>模型说没找到，不证明源码没资料。</b>当前函数有“免费 Wi-Fi，加入 Airline-Wifi”的示例规则，未提供密码。座位分支先匹配 <code>plane</code>，Wi-Fi 分支没有匹配带连字符的 <code>wi-fi</code>，这是排查线索；当次工具参数与返回文本没有记录，因此具体原因仍未确认。这里不是程序报错，也不是你电脑的 Wi-Fi 故障。</p>
+</article>
+<article class="card" id="runtime-framework" style="margin-top:20px">
+<h3>问题四｜ServicePilot 整个项目的完整体系</h3>
+<p><b>这里讲的是整个模拟电商售后项目。</b>以你给的“Streamlit → Triage → FAQ / Order → 工具 → 本地数据”图为骨架，补全输入与会话、模型服务、SDK 调度、工具结果返回、异常、日志和验收。航空示例用于学习其中的机制，不能代替这个完整项目框架。</p>
+<div class="callout"><b>进度与图的含义：</b><p>这是依据 PRD 与界面提案整理的目标体系图，不代表所有框都已实现。今天完成了 Python / SDK / DeepSeek 接入和航空基线学习；电商 Agent、工具、JSON 数据与 Streamlit 页面仍待开发。UI 和模拟工单按已有优先级推进，主图没有新增客服角色。</p></div>
+<figure style="margin:20px 0"><img src="ServicePilot-完整项目体系.svg" alt="ServicePilot 完整项目架构：Streamlit 页面、会话应用层、Agents SDK 与 Runner、共享 DeepSeek、Triage FAQ Order 三角色、本地查询工具和模拟数据、结果返回、配置日志异常评测与 P1 模拟工单" style="display:block;width:100%;height:auto;border-radius:12px"><figcaption class="small">主图：整个项目的结构与主要运行关系。左右不是必须依次经过的步骤；右侧是支撑能力与边界。<a href="ServicePilot-完整项目体系.png">查看 / 保存完整 PNG</a> · <a href="../docs/ServicePilot系统架构.md">架构文字说明</a></figcaption></figure>
+<h3>按层看：每一层为什么需要？</h3>
+<div class="table-wrap"><table><thead><tr><th>层次</th><th>项目中的组件</th><th>它负责什么</th></tr></thead><tbody>
+<tr><td>1 · 用户与界面</td><td>Streamlit 聊天页面（P1）</td><td>收问题、展示答复与实际事件，提供新会话；不自行生成订单事实。Streamlit 是页面框架，不是 Agent。</td></tr>
+<tr><td>2 · 会话与应用入口</td><td>Python 应用逻辑；会话标识、请求标识、历史、当前 Agent</td><td>把用户消息交给工作流，保留追问信息；新会话清空旧上下文，旧请求晚到不能写入新会话。首版可在同一 Python 应用里组织，不要求另建 HTTP 后台服务。</td></tr>
+<tr><td>3 · 编排与执行</td><td>OpenAI Agents SDK / Runner</td><td>按当前 Agent 配置请求 DeepSeek；执行工具或 handoff；有后续步骤就继续，得到最终答复后返回。</td></tr>
+<tr><td>4 · 生成与决策</td><td>DeepSeek API</td><td>依据说明、历史与可用工具，提出转交、工具调用或自然语言答复。三个角色可以使用同一个模型，不必分别训练三个模型。</td></tr>
+<tr><td>5 · 业务角色</td><td>Triage / FAQ / Order Agent</td><td>Triage 分流与任务切换；FAQ 查政策；Order 追问订单号并查订单。Agent 是“说明 + 模型 + 可用工具 + 交接对象”等工作配置。</td></tr>
+<tr><td>6 · 工具</td><td>lookup_faq / query_order</td><td>Python 函数实际查询、规范化输入、返回结构化结果。模型提出调用，Runner 执行；数据校验不能只依靠提示词。</td></tr>
+<tr><td>7 · 事实数据</td><td>模拟 FAQ / 本地订单 JSON</td><td>政策与订单事实来源。对话历史记“用户说过什么”，业务数据记“订单或政策是什么”，两者不能混用。</td></tr>
+<tr><td>8 · 输出与反馈</td><td>最终答复、工具状态、交接事件、页面状态</td><td>工具结果回到工作流，模型据结果答复；应用返回给页面，同时保留本轮历史与当前 Agent。追问时等待用户补充。</td></tr>
+<tr><td>横向支撑</td><td>环境配置、事件日志、异常处理、验收</td><td>让项目可运行、可定位问题、可复现和评估。不是额外 Agent，也不是每条问题都必须经过的客服步骤。</td></tr>
+</tbody></table></div>
+<h3 style="margin-top:24px">把一次订单问题完整走一遍（目标示例，尚未实测）</h3>
+<ol>
+<li>用户在 Streamlit 输入“我的订单 A1001 到哪了？”；页面把原文交给应用逻辑。</li>
+<li>应用保存本轮消息和请求标识，取出当前会话记录，再调用 Runner。新会话从 Triage 开始。</li>
+<li>Runner 将 Triage 的配置与问题发送给 DeepSeek；模型提出交给 Order，Runner 执行 handoff。</li>
+<li>Runner 使用 Order 的配置继续请求模型；信息完整时模型提出 <code>query_order(order_id="A1001")</code>。若没有订单号，则先追问，结束本轮并等待补充。</li>
+<li>Runner 执行本地订单工具。工具规范化编号、校验格式、读取模拟订单记录，返回状态与字段。</li>
+<li>工具结果进入工作流；模型据结果组织答复。模拟 A1001 只支持“蓝牙耳机、已发货、模拟物流、MOCK1001”，不能编预计送达日期。</li>
+<li>Runner 返回结果；应用保存接续历史与实际事件，页面展示答复，恢复输入，等待下一题。</li>
+</ol>
+<p>FAQ 路径对应为：Triage → FAQ → lookup_faq → 模拟政策 → 据结果答复。它不是直接凭模型常识回答商家规则。</p>
+<h3 style="margin-top:24px">多轮、异常与人工边界，也属于完整体系</h3>
+<ul>
+<li><b>补充信息：</b>“帮我查订单” → 追问 → 用户补充 A1002 → 继续查询。这是同一会话，不是另开一个没有历史的新请求。</li>
+<li><b>任务切换：</b>先问政策、再查订单，需要从 FAQ 的职责切换到 Order。可沿用航空示例“FAQ → Triage → Order”的交接设计；具体交接对象与会话策略在电商开发中落地。</li>
+<li><b>会话策略建议：</b>新会话 Triage、后续轮从 last_agent 接续；若确定每轮都重回 Triage，则应在入口显式实现。目标图不意味着后台已采用其中某个策略。</li>
+<li><b>业务结果：</b><code>query_order</code> 区分 ok / invalid_input / not_found / unavailable；<code>lookup_faq</code> 区分 ok / no_match / unavailable。格式错、没数据、工具故障需要不同答复。</li>
+<li><b>服务故障：</b>模型接口未取得回复与业务查询失败分开记录；结束加载并明确提示，不无限重试，不拿旧结果冒充本次成功。</li>
+<li><b>人工边界：</b>P0 只能说明需人工审核或建议联系人工，不能声称已接通真人、已退款或已建工单。</li>
+<li><b>P1 扩展：</b>若做模拟工单，先显示订单号和摘要，让用户确认，再调用 create_mock_ticket；工具层校验确认与去重。这是未来扩展，不是真实人工客服接入。</li>
+</ul>
+<h3 style="margin-top:24px">你原图里的名称，怎样对应完整项目？</h3>
+<p><code>search_faq()</code> 是原图的概念名称；PRD 正式工具约定写作 <code>lookup_faq</code>，职责都是查模拟政策，本图以 PRD 为准。<code>query_order</code> 名称保持一致。航空学习工具 <code>faq_lookup_tool</code> 和 <code>update_seat</code> 是参考实现，后续分别改造成电商政策与订单职责，不能把 Seat Booking 放进电商主图。</p>
+<p><b>整体复述：</b>用户通过页面提问，应用管理会话，Runner 编排 Agent 并请求 DeepSeek；模型选择交接或工具，工具访问模拟事实，模型根据结果回答，应用把答复与事件送回页面。配置、日志、异常和验收支撑整个过程。</p>
+<p class="small">设计依据：<a href="../docs/PRD.md">PRD</a> · <a href="../docs/界面与交互提案.md">界面提案</a> · <a href="../docs/首批验收案例.md">8 条核心验收案例</a>。会话策略与具体实现组织是本次补充的设计建议，不改变已定义业务范围，也不把目标功能记成已完成。</p>
+</article>
+<details style="margin-top:20px"><summary>展开航空示例参照：看懂机制后，再回到上面的完整项目</summary><div style="padding:0 16px 16px"><article class="card" id="airline-runtime-reference" style="margin-top:20px">
+<h3>航空示例参照｜用于理解机制，不代表完整项目架构</h3>
+<p><b>先统一名称：</b>Triage Agent 是分流角色；FAQ Agent 处理航空常见问题；Seat Booking Agent 处理选座。Agents SDK 是程序库，Runner 是里面负责调度的组件，今天没有一个叫“SDK Agent”的客服角色。</p>
+<p>你参考的图属于 ServicePilot 的<b>电商目标架构</b>，里面的 Streamlit、Order Agent、search_faq()、query_order() 和订单 JSON 尚未实现。下面按照今天真正运行的航空代码画，先看“谁负责什么”，再看“程序怎样循环”。</p>
+<figure style="margin:20px 0"><img src="航空实例-职责结构.svg" alt="今日航空实例职责结构：终端输入、运行入口、SDK Runner、Triage 与 FAQ 和 Seat Booking 双向交接、本地工具与同一个 DeepSeek 模型" style="display:block;width:100%;height:auto;border-radius:12px"><figcaption class="small">图 A：角色与工具的结构关系。双向箭头表示允许的交接方向，不表示每个问题都走所有分支。<a href="航空实例-职责结构.png">打开 / 保存 PNG</a></figcaption></figure>
+<figure style="margin:20px 0"><img src="航空实例-执行循环.svg" alt="Runner 执行循环：调用当前 Agent 的模型，按返回内容处理交接、执行工具或最终答复；前两种继续请求模型，最终答复显示并保存历史后等待下一题" style="display:block;width:100%;height:auto;border-radius:12px"><figcaption class="small">图 B：一次 Runner.run 内部可能有多次模型请求。蓝色框是发起模型请求的位置，执行工具和切换 Agent 本身不额外计数。<a href="航空实例-执行循环.png">打开 / 保存 PNG</a></figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>层次</th><th>今天实际是谁</th><th>负责什么 / 代码位置</th></tr></thead><tbody>
+<tr><td>输入与多轮接续</td><td>PowerShell 中运行的 Python 入口</td><td>保存问题到 items；新会话使用 Triage，下轮使用上轮 last_agent。入口第 259、274–282、310–311 行。</td></tr>
+<tr><td>调度与执行</td><td>Agents SDK / Runner</td><td>请求当前 Agent 的模型，按输出执行交接或工具；有后续工作就继续，最终答复后返回。入口第 284–290 行。</td></tr>
+<tr><td>远端生成与决策</td><td>DeepSeek API / deepseek-flash</td><td>三个 Agent 都使用同一模型；本次提供不同工作说明、可用工具和历史。航空示例第 105–116、130、145 行。</td></tr>
+<tr><td>业务角色</td><td>Triage / FAQ / Seat Booking</td><td>分流、查航空资料、追问与更新座位。航空示例第 114–166 行配置职责与可交接对象。</td></tr>
+<tr><td>本地资料与操作</td><td>faq_lookup_tool / update_seat</td><td>前者按关键词返回代码内示例资料；后者修改 AirlineAgentContext 中确认号与座位字段，没有接航空数据库。航空示例第 43–93 行。</td></tr>
+<tr><td>展示与保存</td><td>入口程序打印结果，更新历史与当前 Agent</td><td>显示答复和事件，累计请求次数，保存不含密钥和对话正文的诊断记录，再等待下一题。入口第 292–311 行。</td></tr>
+</tbody></table></div>
+<p><b>把整个流程连成一句话：</b>你输入问题 → 入口保存历史 → Runner 用当前 Agent 的配置请求 DeepSeek → 模型提出交接、工具调用或最终答复 → Runner 落实交接 / 工具并继续请求，或把最终结果交回入口 → 显示并保留历史与最后的 Agent → 等你的下一题。</p>
+<p><b>选座能力的边界：</b>代码已经定义 update_seat，并在交接时生成模拟航班号；工具只改本地会话字段。今天实际只走到追问确认号，没有执行完成座位更新，也没有真实订票系统。</p>
+<p class="small">以上是对现有代码与今日运行记录的教学整理；图不发 API 请求，不修改业务代码。<a href="../../openai-agents-python-main/examples/customer_service/main.py">航空示例源码</a> · <a href="../scripts/run_deepseek_customer_service.py">运行入口</a> · <a href="https://developers.openai.com/api/docs/guides/agents/running-agents">官方执行循环说明</a>。</p>
+</article></div></details>
+
+<section id="concepts">
+ <span class="num">05 / 概念卡片</span><h2>现在应该理解的 12 个概念</h2><p class="lead">先懂职责与关系，不要求今晚背语法或通读整个 SDK。点击卡片查看解释。</p>
+ <div class="concepts">
+ <details><summary>01　示例、SDK 和你的产品</summary><div class="inside"><p><b>SDK：</b>现成的开发工具箱，负责 Agent、工具与运行流程等基础能力。<b>航空示例：</b>用这个工具箱搭出的学习案例。<b>ServicePilot：</b>将逐步改造成模拟电商售后的个人项目。</p><p>今天是复用业务示例和接入模型；后面改 Agent 指令与业务工具。没有必要从空白写一套 SDK。</p><p class="where">依据：PRD、推进路线；现有入口仍导入下载仓库的航空定义。</p></div></details>
+ <details><summary>02　Python 与 PowerShell</summary><div class="inside"><p>Python 是运行 <code>.py</code> 程序的解释器。PowerShell 是你输入命令、让电脑启动程序的终端环境。</p><p>看到 <code>PS C:\…&gt;</code> 说明终端在等命令；看到程序的“请输入问题”才是在跟客服聊天。两种输入位置有不同含义。</p></div></details>
+ <details><summary>03　虚拟环境 .venv</summary><div class="inside"><p><b>venv 是什么？</b><code>venv</code> 是 Python 自带的、用来创建虚拟环境的工具（模块）。名字取自 virtual environment，即“虚拟环境”。安装 Python 后就可以使用它，不需要另外下载一个叫 venv 的软件。</p><p><b>venv 与 .venv 分清：</b><code>venv</code> 是建环境的工具；<code>.venv</code> 是它创建出来的环境文件夹，是常用名称，也可以换别的名字。可以把 venv 想成“建工具箱的方法”，把 .venv 想成“建好的工具箱”。</p><p><b>当时的命令怎样读？</b>下面是已做操作的解释，不需要现在重新执行：</p><pre><code>python -m venv .venv</code></pre><ul><li><code>python</code>：启动已安装的 Python。</li><li><code>-m venv</code>：让 Python 运行它自带的 venv 工具。</li><li><code>.venv</code>：把环境创建在当前目录下这个名称的文件夹里。</li></ul><p><b>依赖是什么？</b>就是项目代码需要的现成库，例如 Agents SDK。venv 负责创建隔离环境，<code>pip</code> 通常负责往环境里安装这些库；venv 本身不负责自动下载全部项目依赖或锁定版本。</p><p><b>小白解释：</b>给这个项目准备一个专用工具箱：单独的 Python 运行入口和依赖安装目录。Python 负责读懂并执行代码，依赖库是代码要用的现成工具。</p><p>比如一个项目需要某个库的 1.0 版，另一个需要 2.0 版；分别装在各自虚拟环境里，可以避免共用安装位置造成版本冲突。它不隔离项目源代码，也不是安全沙箱。</p><p><b>你今天实际做的：</b>先安装 Python 3.13.16，再用 <code>python -m venv .venv</code> 创建环境，把客服所需依赖安装进去。创建环境使用选定的 Python，不会自动下载另一个 Python 版本。</p><p>本次复核：这个环境基于系统安装的 Python 3.13.16；库版本为 Agents SDK 0.23.1、OpenAI 客户端库 3.28.0；<code>include-system-site-packages = false</code>，未启用共享系统第三方库。</p><p>激活只是方便选择运行入口。即使 PowerShell 不允许激活脚本，也可以用 <code>.\.venv\Scripts\python.exe</code> 直接运行。要以后重建同样环境，还需要记录 Python 与依赖版本，单靠 .venv 名称不保证可复现。</p><p><b>用词：</b>这是隔离项目的运行依赖，不是训练模型。你的程序在本机运行，DeepSeek 模型通过远程 API 提供回答；今天没有训练或微调模型。</p><p class="where">实际环境：openai-agents-python-main/.venv。依据 pyvenv.cfg 与该解释器的 sys.prefix、sys.base_prefix、库版本；本次核对未调用 API。</p></div></details>
+ <details><summary>04　API、密钥、地址和模型</summary><div class="inside"><p>API 是程序向外部模型服务发请求的接口；密钥用于鉴权；地址决定发到哪里；模型名决定调用哪个模型。</p><p>今天使用 DeepSeek。代码导入 <code>openai</code> 客户端库，并不说明请求发给 OpenAI；实际客户端地址是 <code>https://api.deepseek.com</code>。</p><p>余额、密钥变量存在、密钥有效、业务调用成功，是四件不同的事。</p></div></details>
+ <details><summary>05　Agent：一套工作配置</summary><div class="inside"><p>Agent 在这里主要包含名称、工作说明、模型、可用工具与可转交对象。FAQ Agent 不是人工客服，也不是另开一台电脑。</p><p>多个 Agent 可以用同一个 DeepSeek 模型，却给它不同职责和工具。角色分工帮助组织流程，不自动保证效果更好。</p></div></details>
+ <details><summary>06　Triage：判断应该交给谁</summary><div class="inside"><p>Triage 是分流角色。模型按它的说明和可转交对象，判断行李问题交 FAQ，选座问题交 Seat Booking。</p><p>它不负责凭空生成业务事实；也不会因为列出了多个 Agent，就把一个问题同时交给全部对象。</p><p class="where">当前航空示例：第 143–158 行。Order Agent 是后续电商规划。</p></div></details>
+ <details><summary>07　Runner：把决定落实成流程</summary><div class="inside"><p>Runner 调用模型，处理返回的消息、工具请求或交接；需要时执行工具、换当前 Agent，再继续请求模型。</p><p>“Triage → FAQ”是业务简图。更精确的执行关系是：模型按 Triage 的配置选择转交，Runner 落实切换并继续。</p><p class="where">入口：第 284–290 行 Runner.run。</p></div></details>
+ <details><summary>08　handoff：Agent 内部转交</summary><div class="inside"><p><b>handoff 就是“把接下来的处理交给另一位已配置的 Agent”。</b>例如 Triage 判断行李问题归 FAQ：模型输出 transfer_to_faq_agent，Runner 按程序配置切换到 FAQ 的说明和工具，然后继续请求 DeepSeek。</p><p>它不是按你假设的第 134 行跳到第 34 行再到第 178 行；发生变化的是“当前 Agent 配置”。SDK 循环依次处理模型输出，执行相应函数。</p><p><b>今天允许的交接：</b>Triage → FAQ 或 Seat Booking；FAQ → Triage；Seat Booking → Triage。没有配置 FAQ 直接转 Seat Booking，也没有人工客服目标。</p><p><b>与普通工具调用的区别：</b>工具调用是“请这个函数提供资料或做操作”，得到结果后原 Agent 通常继续处理；handoff 是“更换负责后续处理的 Agent”。它也由 SDK 以专门的工具形式提供给模型，但目的不同。</p><p>这三个 Agent 共用一个 DeepSeek 模型。转交不意味着启动三套模型、并行讨论或连接真人客服。</p><p class="where">航空示例第 151–166 行配置交接目标。<a href="https://developers.openai.com/api/docs/guides/agents/orchestration">官方编排说明</a>。</p></div></details>
+ <details><summary>09　instructions 与 tools</summary><div class="inside"><p><code>instructions</code> 是工作说明：应该怎么处理问题。<code>tools</code> 是它可请求执行的功能：能够到哪里取得资料或进行操作。</p><p>FAQ 的说明要求调用工具、不要依赖自身知识；工具返回本地资料。光写一句“不要编造”不等于实现业务校验。</p><p class="where">FAQ 配置第 114–125 行；关键工作说明在第 123 行。</p></div></details>
+ <details><summary>10　工具：程序提供的事实或操作</summary><div class="inside"><p><code>@tool</code> 把 Python 函数暴露为模型可请求的工具。模型给出工具名与参数，Runner 执行函数，而不是模型自己在电脑上随意执行代码。</p><p>今天的 FAQ 工具先转小写，再按英文关键词匹配，返回写在代码里的字符串。没有查询航空数据库，也没有搭建 RAG。</p><p class="where">示例第 44–71 行。纯中文参数不直接匹配行李英文关键词。</p></div></details>
+ <details><summary>11　question、items 与 result</summary><div class="inside"><p><code>question</code>：本轮用户输入。<code>items</code>：可接续的对话记录。<code>result</code>：Runner 本轮运行结果，包含新消息、工具事件及最后的 Agent 等。</p><p>输入加入记录后不代表已经回答；运行完成后，程序提取消息文本显示，并将结果更新回下一轮历史。</p></div></details>
+ <details><summary>12　多轮、当前 Agent 与事实依据</summary><div class="inside"><p><code>items = result.to_input_list()</code> 保留可接续的对话记录；<code>current_agent = result.last_agent</code> 保存最后处理的 Agent。</p><p>所以下一轮可能先由 FAQ 接待，而不总从 Triage 重来。需要换职责时，再通过交接返回分流。</p><p>模型组织语言，工具提供事实。以后订单回答必须依据本次订单工具的记录，不能把聊天历史或模型记忆当作订单数据库。</p><p class="where">入口第 310–311 行。history 与 AirlineAgentContext 的结构化字段作用也不同。</p></div></details>
+ </div>
+</section>
+
+<section id="pitfalls" class="pitfalls">
+ <span class="num">06 / 卡点复盘</span><h2>卡壳不是白忙：每个问题留下一个方法</h2><p class="lead">记录当时的误解、有效做法与证据边界。已尝试的猜测不等于已证明的根因。</p>
+ <div class="chips" aria-label="卡点分类"><button data-filter="all" class="selected" aria-pressed="true">全部</button><button data-filter="setup" aria-pressed="false">环境与输入</button><button data-filter="flow" aria-pressed="false">流程理解</button><button data-filter="work" aria-pressed="false">项目与协作</button></div>
+ <details data-category="work"><summary>下载了仓库，却不知道在做什么<small>项目边界</small></summary><div class="inside"><p><b>当时：</b>不清楚下载的是工具、完整应用，还是最终要复刻的产品。</p><p><b>厘清：</b>下载仓库提供 SDK 与示例；先只关注客服示例，把它跑通、读懂，再逐步改成 ServicePilot。航空只是学习场景。</p><p><b>记住：</b>每次行动先回答“为哪个目标做、预期看见什么”。不按仓库大小衡量项目进度。</p></div></details>
+ <details data-category="setup"><summary>Python 找不到，下载选项看不懂<small>解释器与 PATH</small></summary><div class="inside"><p><b>当时：</b><code>py</code> 不存在、<code>python</code> 指向 WindowsApps 占位入口，安装页面有多个包。</p><p><b>解决：</b>选择当时适合这台电脑的 Windows 64 位安装程序，勾选 PATH；安装后新开终端，用 <code>python --version</code> 看到 3.13.16。</p><p><b>记住：</b>命令不存在先查解释器与路径；不是客服业务代码必然出错。这里复盘当时选择，不作为未来所有设备的安装建议。</p></div></details>
+ <details data-category="setup"><summary>创建 .venv 成功，但激活报红字<small>终端脚本限制</small></summary><div class="inside"><p><b>当时：</b><code>Activate.ps1</code> 被 PowerShell 执行策略阻止。</p><p><b>解决：</b>直接调用虚拟环境的 <code>python.exe</code>，版本检查与依赖安装通过。</p><p><b>记住：</b>激活失败不等于环境创建失败。先用明确的解释器路径缩小问题，不需要为此扩大系统权限。</p></div></details>
+ <details data-category="setup"><summary>密钥输入过了，环境变量仍是 False<small>变量存在 ≠ 有效</small></summary><div class="inside"><p><b>当时：</b><code>Read-Host -AsSecureString</code> 只是把输入保存到 <code>$deepseekSecret</code>，尚未放到程序读取的环境变量。</p><p><b>解决：</b>完成当前进程变量赋值后，<code>Test-Path Env:DEEPSEEK_API_KEY</code> 变成 True；随后还要实际做鉴权检查。</p><p><b>记住：</b>True 只证明变量存在，不证明密钥正确，更不证明余额或业务效果。</p></div></details>
+ <details data-category="setup"><summary>密钥粘到了 PS 提示符后，成了“命令”<small>输入位置与粘贴</small></summary><div class="inside"><p><b>当时：</b>密钥输入实际只收到一个不可见控制字符，程序退出；后续粘贴到 PowerShell 被当成命令，并出现在截图中。</p><p><b>解决：</b>本机输入逻辑支持 Ctrl+V、仅显示星号；格式错时继续留在程序里等待。重新输入后模型检查和问答通过。</p><p><b>记住：</b>先看屏幕当前在等“API key”还是终端命令。不要把密钥放入聊天、代码或报告。截图中暴露过的旧密钥应撤销并更换；撤销状态未在项目中确认。</p></div></details>
+ <details data-category="setup"><summary>No module named 'examples'<small>启动方式</small></summary><div class="inside"><p><b>当时：</b>直接以文件路径启动客服 <code>main.py</code>，它导入的 <code>examples.auto_mode</code> 找不到。</p><p><b>解决：</b>在下载仓库根目录通过 <code>-m examples.customer_service.main</code> 启动，进入问题输入环节。后续改用 ServicePilot 的兼容入口。</p><p><b>记住：</b>相同代码用不同启动目录或方式，模块搜索路径可能不同。命令、目录、解释器三者都要记录。</p></div></details>
+ <details data-category="setup"><summary>反复 HTTP 400，没有具体错误内容<small>先定位，后修复</small></summary><div class="inside"><p><b>当时：</b>尝试过工具 strict/schema 和接口兼容方向，但空白 400 没有直接给出根因。</p><p><b>有效缩小：</b>模型列表检查也返回 400，说明不必先把问题归到客服工具调用；再检查密钥输入，发现控制字符。输入修复后有效密钥下通过。</p><p><b>证据边界：</b>没有单独验证早先每次 400 与控制字符之间的因果关系，不能写成“唯一根因已证明”。</p><p><b>记住：</b>错误码是线索。保留命令、响应、最小检查结果，不在无新证据时反复改大段代码。</p></div></details>
+ <details data-category="flow"><summary>question 和 items 混在一起，不知道下一步<small>单次输入与历史</small></summary><div class="inside"><p><b>当时：</b>看到代码变量，但没有理解各自保存什么，以为把问题追加进去就开始回答了。</p><p><b>厘清：</b><code>question</code> 一条输入，<code>items</code> 一组记录；追加后再交 Runner 处理。最终从运行结果提取文本。</p><p><b>记住：</b>看变量先问“它是什么数据、什么时候变化、下一步谁使用”。</p></div></details>
+ <details data-category="flow"><summary>Triage、Runner、FAQ，到底谁送给谁？<small>决策与执行</small></summary><div class="inside"><p><b>当时：</b>把业务简图与程序执行机制混在一起，误以为 Triage 自己运行另一位客服，或同时分给 FAQ 和 Order。</p><p><b>厘清：</b>模型按 Triage 的职责选择目标；Runner 执行交接；FAQ 按自己的说明继续处理。今天的航空对象是 FAQ 与 Seat Booking，Order 是后续产品规划。</p><p><b>记住：</b>“谁决定”与“谁落实”分开讲，一次交接也不等于多个 Agent 并行。</p></div></details>
+ <details data-category="flow"><summary>FAQ 会不会自己凭知识回答？代码在哪里？<small>指令、工具与定位</small></summary><div class="inside"><p><b>当时：</b>工作说明给出的定位范围太宽，看到第 114 行没找到关键句；也不确定工具是联网搜索还是本地函数。</p><p><b>厘清：</b>FAQ 工作说明的具体句子在示例第 123 行；工具第 48–71 行按英文关键词返回本地字符串。模型接到结果后组织自然语言。</p><p><b>记住：</b>解释代码应给出实际文件、精确位置和原句。文件名相同不代表同一个文件；以后理解与修改都认准路径。</p></div></details>
+ <details data-category="flow"><summary>Wi-Fi 回答说“不知道”，就真没有资料吗？<small>本次复查更正</small></summary><div class="inside"><p><b>先回忆当时发生了什么：</b>你在连续会话中问“Is Wi-Fi available on the plane?”（飞机上有 Wi-Fi 吗？）。客服转交并调用了 FAQ 工具，最终回答没有找到 Wi-Fi 信息；屏幕随后显示“本轮完成，共 5 次模型请求”，并继续等待下一题。这里记录的是客服回答内容，不是程序报错，也不是你电脑的 Wi-Fi 出故障。</p><p><b>“未达到预期”指什么？</b>这是汇总时对照源码规则作出的评价，不是当时已经约定的一条 Wi-Fi 验收标准。为了避免误解，正文已改成实际观察：“客服回答未找到信息，程序正常完成这一轮”。它与前面接入阶段的 HTTP 400 是两件不同的事。</p><p><b>原先判断需更正：</b>源码明确有“免费 Wi-Fi，加入 Airline-Wifi”的示例规则，不能把未找到回答等同于源码无资料。</p><p><b>复查线索：</b>座位分支包含 <code>plane</code> 且排在 Wi-Fi 分支前；Wi-Fi 分支匹配 <code>wifi</code>，没有 <code>wi-fi</code>。若传入原问题 <code>Is Wi-Fi available on the plane?</code>，会先匹配座位分支。</p><p><b>尚未确定：</b>模型当次传给工具的实际参数没有保存，可能经过改写。本次没有重跑 API，因此这只是具体的源码线索，此次“未找到信息”答复的具体原因仍待复现。</p><p><b>记住：</b>流程完成、工具执行、答案正确是不同验收层次。模型说“不知道”不能代替检查实际工具输入与输出。</p></div></details>
+ <details data-category="work"><summary>长对话插入几十轮排障，主线丢了<small>共享记录与交接</small></summary><div class="inside"><p><b>当时：</b>原来的复刻路线被安装、接入、报错淹没，担心模型找不到前面决定。</p><p><b>解决：</b>明确四类对话职责；以入口、看板、PRD 和交接卡保存当前状态。模型升级也不能替代这些记录。</p><p><b>本次同步：</b>开发看板已写 B 完成，但入口、路线和开发开场仍留着 B-01。本次复盘统一为“下次 C-00”，防止回看时被旧状态误导。</p><p><b>记住：</b>任务编号是定位标签，不是要背的知识。让新对话读一张准确交接卡，比粘贴全部历史更可靠。</p></div></details>
+ </section>
+
+<section id="gains">
+ <span class="num">07 / 可迁移的收获</span><h2>今天学到的，不只是一条安装命令</h2><p class="lead">这些方法可以带到以后的订单查询、界面设计和作品说明里。</p>
+ <div class="grid">
+ <article class="card"><h3>① 小步复用，比盲目重写更容易理解</h3><p>一个能运行的样例是参照物。先保留它，再改一个业务工具，才能比较“我具体改了什么、结果发生了什么变化”。</p><p class="small">下一次的直接应用：C-00 保存基线，随后只做 A1001 查询。</p></article>
+ <article class="card"><h3>② 排障要让问题范围越来越小</h3><p>环境检查 → 密钥格式 → 模型可用性 → 最小生成 → 完整业务。某一步失败，就先分析这一层，避免把所有红字都归到模型能力。</p><p class="small">有效记录：命令、路径、预期、实际、已尝试、证据和未确定项。</p></article>
+ <article class="card"><h3>③ 产品能力来自工具事实和操作边界</h3><p>会聊天不等于会查订单。订单来自工具记录；规则来自业务资料；没有退款执行工具，就不能声称已退款。</p><p class="small">以后需要工具层校验与实际事件，不只依赖“不要编造”的提示词。</p></article>
+ <article class="card"><h3>④ 验收要分“运行、质量、产品”</h3><p>今天有真实运行证据；Wi-Fi 返回“未找到信息”，具体原因待核对；电商产品还没实现。把范围说清楚，本身就是产品经理的能力。</p><p class="small">有 usage 才报告 token 或成本；没有数据就保留未知，不把模型请求数当作费用。</p></article>
+ <article class="card"><h3>⑤ UI 展示应当忠于后台事实</h3><p>“正在处理”“未找到”“查询失败”需要不同状态。内部 Agent 转交不能包装成接入人工；样例动画不能当实际执行证据。</p><p class="small">设计提案已列出这些状态，未来实现还需要会话隔离与真实接口。</p></article>
+ <article class="card"><h3>⑥ 理解要落在实际代码上</h3><p>业务比喻让你入门，精确代码位置让你确认。可以暂时不懂全部 Python，但要能分清输入、说明、模型决策、执行和数据。</p><p class="small">今天你不断追问“是什么意思、为什么这么做”，帮助把操作变成了理解。</p></article>
+ </div>
+</section>
+
+<details><summary>面试时怎么讲今天的工作？（当前阶段版本）</summary><div class="inside"><p><b>可直接使用：</b>“我在做一个模拟电商售后的 Agent 项目。目前先复用了 OpenAI Agents SDK 的官方航空客服示例，作为学习和运行基线。我借助 Codex 搭建 Python 环境，用 Python 自带的 venv 创建独立运行环境，并在里面安装项目依赖；再配置 API 密钥、服务地址和模型名，接入 DeepSeek。随后实际验证了 Agent 转交和 FAQ 工具调用，并逐段理解输入、分流、工具执行和答复的路径。目前运行与流程学习已完成；电商订单查询和 Web 界面还没有实现，是后续改造目标。”</p><p><b>这句话的通俗意思：</b>“我先装好运行代码所需的 Python，再给这个项目准备专用工具箱、装好需要的库，最后填写 DeepSeek 的访问凭证、接口地址和模型名称，让程序能够向模型服务发请求。”</p><p><b>问“虚拟环境有什么用”：</b>“它让项目依赖安装在独立位置，减少不同项目库版本冲突。我先安装 Python，再创建 .venv 并安装所需库。它管理运行依赖，不承担模型训练。”</p><p><b>问“你自己做了什么”：</b>“代码接入和排障有 Codex 协助。我确定了产品方向、需求与验收案例，按指引完成本机安装、密钥配置和真实运行，并逐段学习关键流程。后续会在保存的航空基线之上实现订单工具和异常处理；还没有完成的部分不计入当前成果。”</p><p><b>问“跑通就代表可用吗”：</b>“我完成了 3 个航空问题、12 次模型请求的流程验证。选座只验证意图与追问；Wi-Fi 返回“未找到相关信息”，原因尚未确认，未做独立正确性验收。电商 8 条案例已定义但尚未运行，因此我不会把运行基线当作完整产品验收。”</p></div></details>
+
+<section id="review">
+ <span class="num">08 / 今晚复习</span><h2>10–15 分钟，把今天收进自己的知识里</h2><p class="lead">按自己节奏回看；勾选只用于个人阅读进度，不作为项目验收或能力测试。</p>
+ <div class="split">
+ <article class="card"><h3>推荐阅读顺序</h3><div class="checks">
+ <label class="check"><input type="checkbox" data-check="outcome"><span><strong>2 分钟：知道今天完成到哪里</strong><em>看第 01 节；记住 A/B 完成，C/D/E 待做。</em></span></label>
+ <label class="check"><input type="checkbox" data-check="flow"><span><strong>4 分钟：走一遍七步流程</strong><em>点击第 04 节；重点看“模型决定、Runner 执行、工具给事实”。</em></span></label>
+ <label class="check"><input type="checkbox" data-check="pitfalls"><span><strong>3 分钟：回看最有感触的卡点</strong><em>密钥输入、HTTP 400、Agent 职责、Wi-Fi 更正，任选两项。</em></span></label>
+ <label class="check"><input type="checkbox" data-check="next"><span><strong>2 分钟：留下自己的话和下一步</strong><em>右侧记一句收获，记住下次先 C-00。</em></span></label>
+ </div><div class="progress"><span id="progress-bar" style="width:0%"></span></div><div id="review-count" class="review-count">已回看 0 / 4 项</div>
+ <details style="margin-top:20px"><summary>随时查看：一句话参考解释</summary><div class="inside"><p>用户输入先进入对话记录；模型按 Triage 的说明选择交给 FAQ，Runner 切换并继续；FAQ 请求工具，Runner 执行本地函数；模型参考返回资料写答复，程序显示并保存可接续的记录。</p><p class="small">不需要复述给我，也不要求一字不差。这个解释用来帮助回想。</p></div></details></article>
+ <article class="card"><h3>留给以后的自己</h3><p class="small">笔记尝试保存在当前浏览器本地。换浏览器或清理数据可能丢失；重要内容请下载备份。请勿填写 API 密钥。</p><label class="notes-label" for="notes">今天我终于理解了…… / 还想问的是……</label><textarea id="notes" placeholder="例如：以前以为 Triage 自己把问题送走，现在知道是模型选择目标、Runner 执行。\n下一次我想继续理解：……"></textarea><p id="save-status" class="small" role="status">笔记仅在本机浏览器保存。</p><div class="copy-row"><button id="export-notes">下载我的复习笔记</button><button id="clear-progress">清除本页阅读勾选</button></div><p class="small">清除勾选不会删除笔记，也不改变项目看板。</p></article>
+ </div>
+</section>
+
+<section id="next">
+ <span class="num">09 / 接续指令</span><h2>下次只做 C-00：保存当前可运行基线</h2><p class="lead">今天可以到这里。下次先建立可回退版本，再改电商功能。</p>
+ <article class="card tomorrow"><h3>为什么这一步排在订单查询之前？</h3><p>当前入口依赖下载仓库，两边都还没有 Git。需要先明确哪些文件属于你的产品、哪些是保留的航空参照、怎样记录依赖；这样修改出问题时有恢复依据。</p><p><b>C-00 完成标准：</b>明确代码与依赖范围；保留现有文件和航空基线；建立可回退的 Git 记录与功能分支；密钥和 <code>.venv</code> 不进入版本控制。由开发对话实际检查和操作，主线按结果验收。</p></article>
+ <h3 style="font-size:17px;margin:20px 0 8px">复制到「ServicePilot｜开发实现」</h3>
+ <pre id="next-prompt">先读取 开始这里.md、ServicePilot/docs/任务看板.md 和 ServicePilot/docs/对话分工与模型.md。
+今天 A 的真实运行与 B-01 的流程学习已完成。现在只做 C-00：核实当前代码与依赖关系，保留航空学习基线，建立 Git 可回退记录和个人功能分支。
+不要覆盖现有工作，不把密钥和 .venv 入库；每个操作说明为什么做和预期结果，不用测试我。
+完成后写回文件范围、版本/分支、验证证据、未完成项与下一步。C-00 通过后，再进入 C-01 模拟订单查询。</pre>
+ <div class="copy-row"><button id="copy-prompt" class="primary">复制接续指令</button><span id="copy-feedback" class="copy-feedback" role="status"></span></div>
+ <div class="callout"><b>之后的第一个产品闭环：C-01</b><p>“我的订单 A1001 到哪了？” → <code>query_order</code> → 模拟记录 → 已发货、模拟物流、MOCK1001。不编造送达日期。对应验收案例 <b>C02</b>；这里“C-01”是开发任务号，“C02”是案例号，两者不是同一编号体系。</p></div>
+ <p class="small">再往后：8 条核心案例稳定 → 简洁界面 → 扩展评测与作品材料。Wi-Fi 的答复与工具匹配线索保留为复习记录，不把补全航空业务变成电商主线的新任务。</p>
+</section>
+
+<section id="sources">
+ <span class="num">10 / 可追溯资料</span><h2>下次回看，不必翻完整聊天</h2><p class="lead">链接指向同一文件夹里的资料；移动报告时请保留目录关系。看板随项目更新，本页是今天的阶段快照。</p>
+ <div class="source-grid">
+ <a class="source" href="../../开始这里.md">开始这里<span>项目入口与当前任务</span></a><a class="source" href="../docs/任务看板.md">任务看板<span>A/B 状态、C-00、收工交接</span></a>
+ <a class="source" href="../docs/PRD.md">产品需求文档<span>模拟电商目标、规则与能力边界</span></a><a class="source" href="../docs/首批验收案例.md">首批 8 条案例<span>已经定义，尚未运行的电商标准</span></a>
+ <a class="source" href="../docs/从示例到产品的推进路线.md">推进路线<span>A → B → C → D → E 的完成条件</span></a><a class="source" href="../docs/对话分工与模型.md">对话分工与交接<span>职责、代码边界、开工收工模板</span></a>
+ <a class="source" href="../docs/DeepSeek运行说明.md">DeepSeek 运行说明<span>真实启动入口与本机密钥输入</span></a><a class="source" href="../docs/界面与交互提案.md">界面与交互提案<span>页面与状态建议，尚未实现</span></a>
+ <a class="source" href="../artifacts/airline-baseline-2026-10-11.json">航空基线运行证据<span>3 个问题、12 次请求、工具与转交事件</span></a><a class="source" href="2026-10-11-汇总来源.json">本页来源索引<span>四个对话、覆盖范围、证据边界</span></a>
+ </div>
+ <details style="margin-top:18px"><summary>实际代码位置（供以后查阅）</summary><div class="inside"><p><a href="../scripts/run_deepseek_customer_service.py">ServicePilot/scripts/run_deepseek_customer_service.py</a>：233 行导入示例；259 行初始 Triage；274/282 行输入与记录；284–290 行 Runner；302–303 行显示；310–311 行保存历史与最后 Agent。</p><p><a href="../../openai-agents-python-main/examples/customer_service/main.py">下载仓库 examples/customer_service/main.py</a>：44–71 行 FAQ 工具；58–69 行座位/Wi-Fi 分支；114–125 行 FAQ Agent；123 行工具使用说明；143–158 行 Triage。</p><p class="small">行号以本次复查代码为准，后续修改会变化。不要把安装目录里的 SDK 库文件当业务文件修改。</p></div></details>
+ </section>
+<footer class="footer"><p><b>汇总口径：</b>覆盖今天四个分类对话的可读取历史，并与当前入口、业务示例、文档和固定运行证据交叉核对。空白截图消息结合会话中的结果说明回顾；未保存当次工具参数，未补造运行日志。</p><p>本次只制作复习材料、同步旧文档状态；没有修改客服业务代码，没有调用 DeepSeek。未测成本与 token，未声称通过电商案例。本页不含密钥、旧密钥截图或模型私有推理。</p><p>ServicePilot · 2026-10-11 项目学习快照。后续实际状态以任务看板为准。</p></footer>
+</main></div>
+<script>
+const steps=[
+ ['01 / 输入与记录','先保存问题，此时还没有回答','<code>question</code> 是本轮输入；<code>items</code> 是给模型继续处理的对话记录。把问题加入记录后，再交给 Runner。','items.append({"role": "user", "content": question})','入口第 274、282 行。追加输入本身不产生答复。'],
+ ['02 / 模型作分流决策','Triage 判断这类问题交给谁','Runner 请求模型，模型看到 Triage 的工作说明与可转交对象，选择 FAQ 来处理行李规则。角色配置限定它的职责。','current_agent = sample.triage_agent','入口第 259 行；航空示例第 143–158 行配置职责和交接。'],
+ ['03 / SDK 落实交接','Runner 切换到 FAQ，并继续处理','handoff 返回目标；Runner 按配置落实切换，继续用 FAQ 的说明与工具处理上下文。这是内部 Agent 转交，不是接入人工。','result = await Runner.run(current_agent, items, ...)','入口第 284–290 行。片段中的 ... 表示省略其他参数，不是新的完整命令。'],
+ ['04 / 请求工具','FAQ 请求查资料，而不是直接编答案','FAQ 的工作说明要求使用 lookup 工具，不依赖自身知识。模型提出工具调用并给出 question 参数；接下来由 Runner 执行。','Use the faq lookup tool to answer the question.\nDo not rely on your own knowledge.','航空示例第 123 行说明；第 125 行 tools 配置。这是指令原句。'],
+ ['05 / 本地执行','Python 工具按关键词返回示例资料','faq_lookup_tool 把输入转小写，检查 bag/baggage 等英文关键词，返回写在代码里的行李规则。没有查询真实航空政策。','question_lower = question.lower()\n# 匹配行李关键词后，返回本地示例文本','航空示例第 48–57 行。英文关键词不会直接匹配纯中文“行李”。'],
+ ['06 / 根据资料回答','模型把工具结果组织成自然语言','Runner 将工具结果反馈给模型。模型参考 FAQ 说明、对话与工具资料生成回复；工具给事实，模型负责表达。','工具事实：一件行李，under 50 pounds，\n22 × 14 × 9 inches（示例文本）','首轮行李输出已实际观察。该规则只属于示例，不用于现实出行判断。'],
+ ['07 / 显示与接续','程序显示回复，保留下一轮需要的记录','入口提取 MessageOutputItem 的文字并打印；随后保存可接续历史和最后 Agent。下一题可能由 FAQ 开始，再按需转回 Triage。','items = result.to_input_list()\ncurrent_agent = result.last_agent','入口第 302–303、310–311 行。显示文本与后台执行流程是不同职责。']
+];
+let step=0;const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function showStep(n){step=n;const s=steps[n];document.querySelector('#step-body').innerHTML='<div class="label">'+s[0]+'</div><h3>'+s[1]+'</h3><p>'+s[2]+'</p><pre><code>'+esc(s[3])+'</code></pre><p class="small">'+s[4]+'</p>';document.querySelectorAll('[data-step]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.step===n)));document.querySelector('#step-count').textContent=(n+1)+' / 7';document.querySelector('#prev').disabled=n===0;document.querySelector('#next').disabled=n===6}
+document.querySelectorAll('[data-step]').forEach(b=>b.addEventListener('click',()=>showStep(+b.dataset.step)));document.querySelector('#prev').onclick=()=>showStep(Math.max(0,step-1));document.querySelector('#next').onclick=()=>showStep(Math.min(6,step+1));showStep(0);
+const filterButtons=document.querySelectorAll('[data-filter]');filterButtons.forEach(b=>b.onclick=()=>{filterButtons.forEach(x=>{x.classList.toggle('selected',x===b);x.setAttribute('aria-pressed',String(x===b))});document.querySelectorAll('[data-category]').forEach(d=>d.hidden=b.dataset.filter!=='all'&&d.dataset.category!==b.dataset.filter)});
+document.querySelector('#expand').onclick=()=>document.querySelectorAll('#concepts details,#pitfalls details').forEach(d=>d.open=true);document.querySelector('#collapse').onclick=()=>document.querySelectorAll('details').forEach(d=>d.open=false);
+document.querySelector('#print').onclick=()=>window.print();let printStates;window.addEventListener('beforeprint',()=>{printStates=[...document.querySelectorAll('details')].map(d=>d.open);document.querySelectorAll('details').forEach(d=>d.open=true);document.querySelectorAll('[data-category]').forEach(d=>d.hidden=false)});window.addEventListener('afterprint',()=>{document.querySelectorAll('details').forEach((d,i)=>d.open=printStates?printStates[i]:false);document.querySelector('[data-filter].selected').click()});
+const storageKey='servicepilot-review-2026-10-11';const checks=[...document.querySelectorAll('[data-check]')],notes=document.querySelector('#notes'),saveStatus=document.querySelector('#save-status');let state={notes:'',checks:{}};try{const raw=JSON.parse(localStorage.getItem(storageKey)||'null');if(raw&&typeof raw.notes==='string'&&raw.checks&&typeof raw.checks==='object')state=raw}catch(e){saveStatus.textContent='当前浏览器无法读取本地记录，请下载笔记备份。'}
+notes.value=state.notes;checks.forEach(c=>c.checked=state.checks[c.dataset.check]===true);function updateProgress(){const n=checks.filter(c=>c.checked).length;document.querySelector('#review-count').textContent='已回看 '+n+' / 4 项';document.querySelector('#progress-bar').style.width=n/4*100+'%'}function save(){state={notes:notes.value,checks:Object.fromEntries(checks.map(c=>[c.dataset.check,c.checked]))};try{localStorage.setItem(storageKey,JSON.stringify(state));saveStatus.textContent='已保存在当前浏览器本地。重要笔记请下载备份。'}catch(e){saveStatus.textContent='浏览器未允许保存，请下载笔记备份。'}updateProgress()}checks.forEach(c=>c.onchange=save);notes.oninput=save;updateProgress();document.querySelector('#clear-progress').onclick=()=>{checks.forEach(c=>c.checked=false);save()};
+document.querySelector('#export-notes').onclick=()=>{const body='# ServicePilot · 2026-10-11 个人复习笔记\n\n'+notes.value+'\n\n## 阅读进度\n'+checks.map(c=>'- ['+(c.checked?'x':' ')+'] '+c.closest('label').querySelector('strong').textContent).join('\n')+'\n\n下次任务：C-00 保存航空基线与建立 Git。\n';const url=URL.createObjectURL(new Blob(['\ufeff'+body],{type:'text/markdown;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='ServicePilot-2026-10-11-我的笔记.md';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)};
+document.querySelector('#copy-prompt').onclick=async()=>{const content=document.querySelector('#next-prompt').textContent;try{await navigator.clipboard.writeText(content);document.querySelector('#copy-feedback').textContent='已复制，可粘贴到开发对话。'}catch(e){const selection=window.getSelection(),range=document.createRange();range.selectNodeContents(document.querySelector('#next-prompt'));selection.removeAllRanges();selection.addRange(range);document.querySelector('#copy-feedback').textContent='浏览器未允许自动复制；已选中，请按 Ctrl+C。'}};
+if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){document.querySelectorAll('.side nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}},{rootMargin:'-10% 0px -65% 0px'});document.querySelectorAll('main section').forEach(s=>observer.observe(s))}
+</script>
+</body></html>

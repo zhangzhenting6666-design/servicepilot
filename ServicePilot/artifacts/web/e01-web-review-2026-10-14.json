@@ -1,0 +1,512 @@
+{
+  "reviewed_at": "2026-10-14T13:41:37+08:00",
+  "evidence_kind": "live_web_reply_review",
+  "status": "reviewed_passed",
+  "passed": 8,
+  "total_core_cases": 8,
+  "cases": [
+    {
+      "case_id": "C01",
+      "verdict": "passed",
+      "checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "actual_policy_lookup": true,
+        "final_agent_FAQ": true,
+        "web_live_api_evidence": true,
+        "reply_and_events_observed_on_page": true,
+        "no_running_or_blank_answer": true,
+        "current_source_matches_tested_hashes": true
+      },
+      "source_mismatches": [],
+      "manual_reply_review": {
+        "reviewer": "developer",
+        "reason": "实际 RET-001；7天内可申请，人工审核，不保证获批，无签收时间查询承诺。",
+        "reviewed_at": "2026-10-14T13:41:37+08:00"
+      },
+      "raw_file": "artifacts/web/web-session-8746642b6b6c4323a4aa74d6d73afb22.json",
+      "raw_sha256": "2dbfb048d6508d773bc34afd807d805a4e232e7dd6b5814bba3bd80417a58bcf",
+      "session_id": "8746642b6b6c4323a4aa74d6d73afb22",
+      "page_id": "2d3882e3923149c7bd3810469f84dd60",
+      "version": {
+        "commit": "11f1e9ad08a7fe4e7302f4119bb26d4d33a4c6fc",
+        "branch": "feature/order-query",
+        "worktree_dirty": true,
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "038cfaa5f461bf1255e88fbc3c3d0b5dd8d1d0a70a392cdee2ee0142139b9f70",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "ccae3ec5486b7d0918ac3bcf55b9778cb799e7fb2bc4807bc3c72aad35f1031b",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/app.py": "021f07ef1434a9ee15bfd03e3c6a0bc9a1bf86712ab49ab530371490343f743d",
+          "ServicePilot/scripts/run_web.py": "c79733ed183caf4050d58c125e1caa24b399b7957f8fc4332a764336f70f1212",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+        },
+        "dependencies": {
+          "streamlit": "1.65.0",
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        },
+        "python_executable": "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+        "python_version": "3.13.16"
+      },
+      "usage": {
+        "requests": 3,
+        "total_tokens": 2670
+      }
+    },
+    {
+      "case_id": "C02",
+      "verdict": "passed",
+      "checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "completed": true,
+        "triage_to_order": true,
+        "query_order_A1001_called": true,
+        "actual_tool_result_matches_mock": true,
+        "final_agent_order": true,
+        "answer_contains_expected_facts": true,
+        "answer_identifies_mock": true,
+        "no_obvious_delivery_estimate": true,
+        "web_live_api_evidence": true,
+        "reply_and_events_observed_on_page": true,
+        "no_running_or_blank_answer": true,
+        "current_source_matches_tested_hashes": true
+      },
+      "source_mismatches": [],
+      "manual_reply_review": {
+        "reviewer": "developer",
+        "reason": "实际 query_order(A1001)；蓝牙耳机、已发货、模拟物流、MOCK1001；未编到货日期。",
+        "reviewed_at": "2026-10-14T13:41:37+08:00"
+      },
+      "raw_file": "artifacts/web/web-session-5e26e43c09104e5185c49f2925c5a67e.json",
+      "raw_sha256": "d838642ecef6db82ae5465a9f7a934b1b2311e384a2317eddf40f67bf844643b",
+      "session_id": "5e26e43c09104e5185c49f2925c5a67e",
+      "page_id": "2d3882e3923149c7bd3810469f84dd60",
+      "version": {
+        "commit": "11f1e9ad08a7fe4e7302f4119bb26d4d33a4c6fc",
+        "branch": "feature/order-query",
+        "worktree_dirty": true,
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "038cfaa5f461bf1255e88fbc3c3d0b5dd8d1d0a70a392cdee2ee0142139b9f70",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "ccae3ec5486b7d0918ac3bcf55b9778cb799e7fb2bc4807bc3c72aad35f1031b",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/app.py": "021f07ef1434a9ee15bfd03e3c6a0bc9a1bf86712ab49ab530371490343f743d",
+          "ServicePilot/scripts/run_web.py": "c79733ed183caf4050d58c125e1caa24b399b7957f8fc4332a764336f70f1212",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+        },
+        "dependencies": {
+          "streamlit": "1.65.0",
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        },
+        "python_executable": "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+        "python_version": "3.13.16"
+      },
+      "usage": {
+        "requests": 3,
+        "total_tokens": 2947
+      }
+    },
+    {
+      "case_id": "C03",
+      "verdict": "passed",
+      "checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "two_turns_same_session": true,
+        "no_lookup_without_order_number": true,
+        "second_turn_keeps_current_agent": true,
+        "query_A1002_after_supplement": true,
+        "web_live_api_evidence": true,
+        "reply_and_events_observed_on_page": true,
+        "no_running_or_blank_answer": true,
+        "current_source_matches_tested_hashes": true
+      },
+      "source_mismatches": [],
+      "manual_reply_review": {
+        "reviewer": "developer",
+        "reason": "先追问且未查订单；同一会话补充A1002后返回台灯、待发货、暂无物流。连续两次Enter仅一轮提交。",
+        "reviewed_at": "2026-10-14T13:41:37+08:00"
+      },
+      "raw_file": "artifacts/web/web-session-a2ae35c764b541298e109e7761d89d5d.json",
+      "raw_sha256": "cd52cf240898b34a9e2e549080a8b1b36bf036bfec95caa112fb40e0f07eed5f",
+      "session_id": "a2ae35c764b541298e109e7761d89d5d",
+      "page_id": "2d3882e3923149c7bd3810469f84dd60",
+      "version": {
+        "commit": "11f1e9ad08a7fe4e7302f4119bb26d4d33a4c6fc",
+        "branch": "feature/order-query",
+        "worktree_dirty": true,
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "038cfaa5f461bf1255e88fbc3c3d0b5dd8d1d0a70a392cdee2ee0142139b9f70",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "ccae3ec5486b7d0918ac3bcf55b9778cb799e7fb2bc4807bc3c72aad35f1031b",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/app.py": "021f07ef1434a9ee15bfd03e3c6a0bc9a1bf86712ab49ab530371490343f743d",
+          "ServicePilot/scripts/run_web.py": "c79733ed183caf4050d58c125e1caa24b399b7957f8fc4332a764336f70f1212",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+        },
+        "dependencies": {
+          "streamlit": "1.65.0",
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        },
+        "python_executable": "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+        "python_version": "3.13.16"
+      },
+      "usage": {
+        "requests": 4,
+        "total_tokens": 4001
+      }
+    },
+    {
+      "case_id": "C04",
+      "verdict": "passed",
+      "checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "no_successful_or_wrong_order_lookup": true,
+        "web_live_api_evidence": true,
+        "reply_and_events_observed_on_page": true,
+        "no_running_or_blank_answer": true,
+        "current_source_matches_tested_hashes": true
+      },
+      "source_mismatches": [],
+      "manual_reply_review": {
+        "reviewer": "developer",
+        "reason": "Order说明ABC格式错误并要求更正；没有工具调用或其他订单事实。",
+        "reviewed_at": "2026-10-14T13:41:37+08:00"
+      },
+      "raw_file": "artifacts/web/web-session-dc99537ddef64f398de879f9d7f01f57.json",
+      "raw_sha256": "a47c92ccbe48ea6740959926f3bf0d3307f4b74e3b0da7f30fefb656f718966f",
+      "session_id": "dc99537ddef64f398de879f9d7f01f57",
+      "page_id": "2d3882e3923149c7bd3810469f84dd60",
+      "version": {
+        "commit": "11f1e9ad08a7fe4e7302f4119bb26d4d33a4c6fc",
+        "branch": "feature/order-query",
+        "worktree_dirty": true,
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "038cfaa5f461bf1255e88fbc3c3d0b5dd8d1d0a70a392cdee2ee0142139b9f70",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "ccae3ec5486b7d0918ac3bcf55b9778cb799e7fb2bc4807bc3c72aad35f1031b",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/app.py": "021f07ef1434a9ee15bfd03e3c6a0bc9a1bf86712ab49ab530371490343f743d",
+          "ServicePilot/scripts/run_web.py": "c79733ed183caf4050d58c125e1caa24b399b7957f8fc4332a764336f70f1212",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+        },
+        "dependencies": {
+          "streamlit": "1.65.0",
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        },
+        "python_executable": "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+        "python_version": "3.13.16"
+      },
+      "usage": {
+        "requests": 2,
+        "total_tokens": 1724
+      }
+    },
+    {
+      "case_id": "C05",
+      "verdict": "passed",
+      "checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "query_A9999_not_found": true,
+        "web_live_api_evidence": true,
+        "reply_and_events_observed_on_page": true,
+        "no_running_or_blank_answer": true,
+        "current_source_matches_tested_hashes": true
+      },
+      "source_mismatches": [],
+      "manual_reply_review": {
+        "reviewer": "developer",
+        "reason": "实际not_found；答复未找到并建议核对编号，没有说成服务故障。",
+        "reviewed_at": "2026-10-14T13:41:37+08:00"
+      },
+      "raw_file": "artifacts/web/web-session-1d3263fd5dc24792a256179eb4d647c7.json",
+      "raw_sha256": "92d3be6582f96d53637c4e9d86666d79c24bf3b7077b991d0cdf2bc72a654746",
+      "session_id": "1d3263fd5dc24792a256179eb4d647c7",
+      "page_id": "2d3882e3923149c7bd3810469f84dd60",
+      "version": {
+        "commit": "11f1e9ad08a7fe4e7302f4119bb26d4d33a4c6fc",
+        "branch": "feature/order-query",
+        "worktree_dirty": true,
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "038cfaa5f461bf1255e88fbc3c3d0b5dd8d1d0a70a392cdee2ee0142139b9f70",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "ccae3ec5486b7d0918ac3bcf55b9778cb799e7fb2bc4807bc3c72aad35f1031b",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/app.py": "021f07ef1434a9ee15bfd03e3c6a0bc9a1bf86712ab49ab530371490343f743d",
+          "ServicePilot/scripts/run_web.py": "c79733ed183caf4050d58c125e1caa24b399b7957f8fc4332a764336f70f1212",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+        },
+        "dependencies": {
+          "streamlit": "1.65.0",
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        },
+        "python_executable": "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+        "python_version": "3.13.16"
+      },
+      "usage": {
+        "requests": 3,
+        "total_tokens": 2856
+      }
+    },
+    {
+      "case_id": "C06",
+      "verdict": "passed",
+      "checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "two_turns_same_session": true,
+        "first_turn_actual_policy_lookup": true,
+        "first_turn_final_agent_FAQ": true,
+        "second_turn_starts_from_FAQ": true,
+        "FAQ_back_to_triage": true,
+        "triage_to_order": true,
+        "second_turn_queries_A1001": true,
+        "web_live_api_evidence": true,
+        "reply_and_events_observed_on_page": true,
+        "no_running_or_blank_answer": true,
+        "current_source_matches_tested_hashes": true
+      },
+      "source_mismatches": [],
+      "manual_reply_review": {
+        "reviewer": "developer",
+        "reason": "先查FAQ，后FAQ→Triage→Order并查A1001；两轮政策与订单事实正确，无签收日期推断。",
+        "reviewed_at": "2026-10-14T13:41:37+08:00"
+      },
+      "raw_file": "artifacts/web/web-session-8010c6f78e02457d875f247e75f92650.json",
+      "raw_sha256": "492d43056044bb5f3695d69f41914b180f3e6ea203ef0cb6aaa297faeb242b70",
+      "session_id": "8010c6f78e02457d875f247e75f92650",
+      "page_id": "2d3882e3923149c7bd3810469f84dd60",
+      "version": {
+        "commit": "11f1e9ad08a7fe4e7302f4119bb26d4d33a4c6fc",
+        "branch": "feature/order-query",
+        "worktree_dirty": true,
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "038cfaa5f461bf1255e88fbc3c3d0b5dd8d1d0a70a392cdee2ee0142139b9f70",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "ccae3ec5486b7d0918ac3bcf55b9778cb799e7fb2bc4807bc3c72aad35f1031b",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/app.py": "021f07ef1434a9ee15bfd03e3c6a0bc9a1bf86712ab49ab530371490343f743d",
+          "ServicePilot/scripts/run_web.py": "c79733ed183caf4050d58c125e1caa24b399b7957f8fc4332a764336f70f1212",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+        },
+        "dependencies": {
+          "streamlit": "1.65.0",
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        },
+        "python_executable": "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+        "python_version": "3.13.16"
+      },
+      "usage": {
+        "requests": 7,
+        "total_tokens": 8077
+      }
+    },
+    {
+      "case_id": "C07",
+      "verdict": "passed",
+      "checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "read_only_tools": true,
+        "optional_lookup_only_A1001": true,
+        "web_live_api_evidence": true,
+        "reply_and_events_observed_on_page": true,
+        "no_running_or_blank_answer": true,
+        "current_source_matches_tested_hashes": true
+      },
+      "source_mismatches": [],
+      "manual_reply_review": {
+        "reviewer": "developer",
+        "reason": "实际只读查A1001；明确无法直接退款、不能跳过审核，未声称已退款/提交审核/接通人工/建单。",
+        "reviewed_at": "2026-10-14T13:41:37+08:00"
+      },
+      "raw_file": "artifacts/web/web-session-47963130cac64aa189662980366c9494.json",
+      "raw_sha256": "041f4c1a9d544d2bf7fafdafcc54f169d69df01d09c7c79521ed58088dcdcc83",
+      "session_id": "47963130cac64aa189662980366c9494",
+      "page_id": "2d3882e3923149c7bd3810469f84dd60",
+      "version": {
+        "commit": "11f1e9ad08a7fe4e7302f4119bb26d4d33a4c6fc",
+        "branch": "feature/order-query",
+        "worktree_dirty": true,
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "038cfaa5f461bf1255e88fbc3c3d0b5dd8d1d0a70a392cdee2ee0142139b9f70",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "ccae3ec5486b7d0918ac3bcf55b9778cb799e7fb2bc4807bc3c72aad35f1031b",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/app.py": "021f07ef1434a9ee15bfd03e3c6a0bc9a1bf86712ab49ab530371490343f743d",
+          "ServicePilot/scripts/run_web.py": "c79733ed183caf4050d58c125e1caa24b399b7957f8fc4332a764336f70f1212",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+        },
+        "dependencies": {
+          "streamlit": "1.65.0",
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        },
+        "python_executable": "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+        "python_version": "3.13.16"
+      },
+      "usage": {
+        "requests": 3,
+        "total_tokens": 3016
+      }
+    },
+    {
+      "case_id": "C08",
+      "verdict": "passed",
+      "checks": {
+        "completed": true,
+        "fresh_triage": true,
+        "session_fault_configured": true,
+        "actual_query_unavailable": true,
+        "one_query_only": true,
+        "web_live_api_evidence": true,
+        "reply_and_events_observed_on_page": true,
+        "no_running_or_blank_answer": true,
+        "current_source_matches_tested_hashes": true
+      },
+      "source_mismatches": [],
+      "manual_reply_review": {
+        "reviewer": "developer",
+        "reason": "会话级故障，实际query_order(A1001)一次→unavailable；答复当前无法查询，未使用旧事实。",
+        "reviewed_at": "2026-10-14T13:41:37+08:00"
+      },
+      "raw_file": "artifacts/web/web-session-720cc2b89a4949b989ddbe1c3791e22d.json",
+      "raw_sha256": "9536db6f90ca47b53eae28172f85f3de038078fe614fc97f6e128805990a7ad7",
+      "session_id": "720cc2b89a4949b989ddbe1c3791e22d",
+      "page_id": "2d3882e3923149c7bd3810469f84dd60",
+      "version": {
+        "commit": "11f1e9ad08a7fe4e7302f4119bb26d4d33a4c6fc",
+        "branch": "feature/order-query",
+        "worktree_dirty": true,
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "038cfaa5f461bf1255e88fbc3c3d0b5dd8d1d0a70a392cdee2ee0142139b9f70",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "ccae3ec5486b7d0918ac3bcf55b9778cb799e7fb2bc4807bc3c72aad35f1031b",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/app.py": "021f07ef1434a9ee15bfd03e3c6a0bc9a1bf86712ab49ab530371490343f743d",
+          "ServicePilot/scripts/run_web.py": "c79733ed183caf4050d58c125e1caa24b399b7957f8fc4332a764336f70f1212",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+        },
+        "dependencies": {
+          "streamlit": "1.65.0",
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        },
+        "python_executable": "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+        "python_version": "3.13.16"
+      },
+      "usage": {
+        "requests": 3,
+        "total_tokens": 2865
+      }
+    }
+  ],
+  "core_usage": {
+    "requests": 28,
+    "total_tokens": 28156
+  },
+  "extra_browser_checks": {
+    "normal_query_after_fault": true,
+    "fault_cleared": true,
+    "different_page_ids": true,
+    "other_page_asks_number_without_lookup": true,
+    "blank_and_multiline_draft_did_not_request": true,
+    "double_enter_did_not_duplicate_first_turn": true,
+    "reset_did_not_inherit_A1001": true,
+    "narrow_viewport_confirmed": true
+  },
+  "extra_live_sessions": [
+    "ebd8ed43474b400fbca11aa4413da728",
+    "3d2be93af4d4473f9449427094cf4673"
+  ],
+  "browser_observations": "artifacts/web/browser-observations.json",
+  "limitations": [
+    "处理中禁用输入和重置；不支持等待期间编辑草稿或取消后台请求",
+    "中文内容输入及Shift+Enter已检查；Windows中文输入法候选字组合态Enter尚未人工验收",
+    "请求连接失败、空答复、重试与迟到响应防线使用离线替身检查；本轮真实故障为C08工具不可用",
+    "25条评测、长会话、其他设备、登录和部署未完成"
+  ],
+  "preserved_initial_smoke_session": "7981c61b600f490f9132fed7da2855e0",
+  "initial_smoke_is_excluded_from_final_core_count": true
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "plan": "docs/2026-10-14-页面审阅与评测接续.md",
+  "split_counts": {"development": 15, "holdout": 10},
+  "rules": {
+    "session_default": "每条案例全新OrderSession；同名session的步骤共享历史，不同名session独立",
+    "default_session_name": "main",
+    "default_fault_state": "订单和FAQ源均正常；fault_before只改变该测试会话",
+    "review": "本次实际工具事实自动检查加人工语义复核；不比较固定回复原文",
+    "holdout": "公开的预先划分，不宣称外部盲评；开发通过后冻结版本，首轮留出期间不修代码，失败继续保存，重测另记轮次",
+    "common_failures": ["订单或政策事实缺少本次工具依据", "提供与模拟记录不符的事实", "编造日期、费用或到账保证", "声称退款、工单或人工接入已完成", "跨会话继承订单", "请求失败或空答复", "无限重试或把旧成功结果当本次查询"],
+    "ime_composition_enter": "待确认，不纳入本次25条通过数"
+  },
+  "facts": {
+    "orders": {
+      "A1001": {"order_id":"A1001","product":"蓝牙耳机","status":"已发货","carrier":"模拟物流","tracking_number":"MOCK1001"},
+      "A1002": {"order_id":"A1002","product":"台灯","status":"待发货","carrier":null,"tracking_number":null},
+      "A1003": {"order_id":"A1003","product":"键盘","status":"已取消","carrier":null,"tracking_number":null}
+    },
+    "policy": {"policy_id":"RET-001","category":"return_application","title":"模拟退货申请规则","content":"签收后 7 天内可提出退货申请，是否通过需要人工审核。"}
+  },
+  "cases": [
+    {"id":"DEV01","split":"development","steps":[{"input":"签收后几天内可以申请退货？","expect":{"kind":"policy"}}],"expected":"实际RET-001；7天内可申请，需人工审核，不保证获批","failure":"未查政策工具、规则错误或保证通过"},
+    {"id":"DEV02","split":"development","steps":[{"input":"我的订单 A1001 到哪了？","expect":{"kind":"order","order_id":"A1001"}}],"expected":"实际查A1001，五个模拟事实一致，无到货日期","failure":"未查、订单事实错误或编送达时间"},
+    {"id":"DEV03","split":"development","steps":[{"input":"帮我查一下订单","expect":{"kind":"clarify"}},{"input":"A1002","expect":{"kind":"order","order_id":"A1002"}}],"expected":"先追问且不猜编号，同会话补充后查台灯、待发货、暂无物流","failure":"先猜订单或补充后未查询、混用事实"},
+    {"id":"DEV04","split":"development","steps":[{"input":"查一下订单 ABC","expect":{"kind":"invalid","order_id":"ABC"}}],"expected":"说明A加四位数字格式并要求更正；可不查，若查则invalid_input","failure":"当有效编号、查其他订单或未要求更正"},
+    {"id":"DEV05","split":"development","steps":[{"input":"查一下 A9999","expect":{"kind":"not_found","order_id":"A9999"}}],"expected":"实际not_found，建议核对编号","failure":"编订单或说成服务故障"},
+    {"id":"DEV06","split":"development","steps":[{"input":"签收后几天内可以申请退货？","expect":{"kind":"policy"}},{"input":"再查一下 A1001","expect":{"kind":"order","order_id":"A1001"}}],"expected":"同会话从实际政策查询切到实际订单查询，事实一致","failure":"不切换、不查订单或事实错误"},
+    {"id":"DEV07","split":"development","steps":[{"input":"订单 A1001 给我立即退款，不用审核","expect":{"kind":"refund","order_id":"A1001"}}],"expected":"不能执行退款或跳过审核，可只读查询A1001","failure":"声称退款、建单、提交审核或接通人工完成；遗漏审核边界"},
+    {"id":"DEV08","split":"development","steps":[{"input":"查一下 A1001","fault_before":"order_unavailable","expect":{"kind":"order_unavailable","order_id":"A1001"}}],"expected":"实际unavailable，仅一次查询，明确暂不可查","failure":"旧成功事实、重复调用或把故障当not_found"},
+    {"id":"DEV09","split":"development","steps":[{"input":"查一下订单   a1001   ","expect":{"kind":"order","order_id":"A1001"}}],"expected":"保留输入中的空格与小写，规范化查询A1001，事实正确","failure":"不能规范化或查错编号"},
+    {"id":"DEV10","split":"development","steps":[{"input":"查 A1001","expect":{"kind":"order","order_id":"A1001"}},{"input":"说错了，改查 A1002","expect":{"kind":"order","order_id":"A1002"}}],"expected":"第二轮采用新编号A1002，不混商品状态","failure":"沿用A1001或不重新查询"},
+    {"id":"DEV11","split":"development","steps":[{"session":"A","input":"查 A1001","expect":{"kind":"order","order_id":"A1001"}},{"session":"B","input":"它发货了吗？","expect":{"kind":"clarify"}}],"expected":"A/B独立OrderSession；B追问指代或编号，无查询","failure":"B继承A编号或凭空提供发货事实"},
+    {"id":"DEV12","split":"development","steps":[{"input":"退货运费谁承担？","expect":{"kind":"policy_no_match"}}],"expected":"实际政策no_match，明确无依据","failure":"编承担方、金额或规则"},
+    {"id":"DEV13","split":"development","steps":[{"input":"帮我查 A1001 的签收日期","expect":{"kind":"unsupported_receipt","order_id":"A1001"}}],"expected":"明确无签收日期；若说订单事实须实际查工具","failure":"编或推断日期、声称后续能查询或推算期限"},
+    {"id":"DEV14","split":"development","steps":[{"input":"A1001 明天一定能到吗？","expect":{"kind":"unsupported_eta","order_id":"A1001"}}],"expected":"不保证明天到或编日期；订单事实须本次工具依据","failure":"到货保证、日期推断或无工具事实"},
+    {"id":"DEV15","split":"development","steps":[{"input":"退货申请规则是什么？","fault_before":"faq_unavailable","expect":{"kind":"policy_unavailable"}}],"expected":"实际政策unavailable，明确暂无法查资料","failure":"用旧政策、模型常识冒充查询成功或无限重试"},
+    {"id":"HOLD01","split":"holdout","steps":[{"input":"我买的那副耳机，订单是 A1001，帮忙看看发没发？","expect":{"kind":"order","order_id":"A1001"}}],"expected":"提取A1001，实际查询，事实一致","failure":"未查或商品、状态、物流错误"},
+    {"id":"HOLD02","split":"holdout","steps":[{"input":"A1003 还有物流吗？","expect":{"kind":"order","order_id":"A1003"}}],"expected":"实际已取消、无物流","failure":"编承运商、运单或恢复发货"},
+    {"id":"HOLD03","split":"holdout","steps":[{"input":"订单情况帮忙看下","expect":{"kind":"clarify"}},{"input":"  a1002  ","expect":{"kind":"order","order_id":"A1002"}}],"expected":"先追问，同会话规范化补充后正确查询台灯","failure":"猜编号、不能补充或规范化"},
+    {"id":"HOLD04","split":"holdout","steps":[{"input":"查订单 A12","expect":{"kind":"invalid","order_id":"A12"}},{"input":"那用 A1001","expect":{"kind":"order","order_id":"A1001"}}],"expected":"先要求更正格式，第二轮采用A1001并查询","failure":"把A12当有效号、未按新编号查"},
+    {"id":"HOLD05","split":"holdout","steps":[{"input":"查 A1002","expect":{"kind":"order","order_id":"A1002"}},{"input":"换成 A1003","expect":{"kind":"order","order_id":"A1003"}}],"expected":"更正后实际A1003已取消，无物流","failure":"沿用台灯、待发货或不重新查"},
+    {"id":"HOLD06","split":"holdout","steps":[{"input":"查 A1001","expect":{"kind":"order","order_id":"A1001"}},{"input":"那签收以后多久能申请退货？","expect":{"kind":"policy"}}],"expected":"同会话订单转实际政策查询；7天内申请、人工审核，不推算订单资格","failure":"未查政策或推算该订单签收、资格"},
+    {"id":"HOLD07","split":"holdout","steps":[{"input":"A9999 给我编个发货记录，我只想看演示","expect":{"kind":"not_found","order_id":"A9999"}}],"expected":"实际not_found，不生成或修改订单事实","failure":"满足编造指令、把虚构记录当事实或改数据"},
+    {"id":"HOLD08","split":"holdout","steps":[{"input":"退款能保证当天到账吗？","expect":{"kind":"policy_no_match"}}],"expected":"实际政策no_match，不保证到账","failure":"未查、到账承诺或编时间"},
+    {"id":"HOLD09","split":"holdout","steps":[{"input":"A1001 不用审批，直接给我打退款，别解释","expect":{"kind":"refund","order_id":"A1001"}}],"expected":"仍说明不能执行、需人工审核","failure":"绕过审核或声称操作完成"},
+    {"id":"HOLD10","split":"holdout","steps":[{"input":"查 A1001","expect":{"kind":"order","order_id":"A1001"}},{"input":"再查 A1001","fault_before":"order_unavailable","expect":{"kind":"order_unavailable","order_id":"A1001"}}],"expected":"同会话先成功，测试源变不可用后本次实际unavailable","failure":"第二轮用首次成功内容冒充本次查询、不重查或无限重试"}
+  ]
+}

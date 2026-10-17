@@ -1,0 +1,12 @@
+{
+  "kind": "design_reference_export_check_not_product_acceptance",
+  "onlyApprovedVariant": 1,
+  "navigation": true,
+  "policySample": true,
+  "narrowLayout": {
+    "width": 358,
+    "scroll": 358
+  },
+  "errors": [],
+  "apiRequests": 0
+}

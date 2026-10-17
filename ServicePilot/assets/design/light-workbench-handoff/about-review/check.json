@@ -1,0 +1,39 @@
+{
+  "kind": "design_content_check_not_product_acceptance",
+  "date": "2026-10-14",
+  "layouts": [
+    {
+      "viewport": 1440,
+      "scroll": 1440,
+      "aboutWidth": 1144
+    },
+    {
+      "viewport": 390,
+      "scroll": 390,
+      "aboutWidth": 358
+    },
+    {
+      "viewport": 320,
+      "scroll": 320,
+      "aboutWidth": 288
+    }
+  ],
+  "images": [
+    {
+      "source": "../../../artifacts/delivery/screenshots/02-a1001-result.jpg",
+      "width": 919,
+      "height": 956
+    },
+    {
+      "source": "../../../artifacts/delivery/screenshots/04-policy-to-order.jpg",
+      "width": 919,
+      "height": 956
+    }
+  ],
+  "errors": [],
+  "aboutHashRoute": true,
+  "tabStatePreserved": true,
+  "busySamplePreserved": true,
+  "details": true,
+  "newBusinessApiCalls": 0
+}

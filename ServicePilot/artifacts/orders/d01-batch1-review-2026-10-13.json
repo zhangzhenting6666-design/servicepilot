@@ -1,0 +1,168 @@
+{
+  "reviewed_at": "2026-10-13T21:04:20+08:00",
+  "status": "passed",
+  "evidence_kind": "review_of_live_api_batch_with_session_scoped_C08_fault",
+  "raw_run_file": "order-run-2026-10-13T205814_0800-3215cee8.json",
+  "raw_run_sha256": "6283f2c855514412faaa58dc9651b3e5fd850f24c5bd06be618805aae2a68dc4",
+  "hash_mode": "SHA256 after CRLF to LF normalization",
+  "tested_version": {
+    "commit": "18b92dc56bf1b057fe0b9623c1ed7d80dcffc14e",
+    "branch": "feature/order-query",
+    "worktree_dirty": false,
+    "hash_mode": "SHA256 after CRLF to LF normalization",
+    "business_source_hashes": {
+      "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+      "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+      "ServicePilot/servicepilot/agent_config.py": "5a888cff713dfb6385afeda107dcb7be40570ef4eb520c58472ac1d13d0e9f7c",
+      "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+      "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+      "ServicePilot/servicepilot/session.py": "c5759388e80235f69d2fb4ba57efffff533cd2e1057924bd8c97248e4c0530df",
+      "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+      "ServicePilot/scripts/run_order_customer_service.py": "e26079ff583daf57cf0e8ce19a7c742480238400e309372d3b46ff43bf084fd0",
+      "ServicePilot/scripts/run_deepseek_customer_service.py": "deb99dc495007e945104d0e213245dd4f82b0b3ac226a1d1a18f18df97075b24",
+      "ServicePilot/scripts/order_acceptance_batch.py": "9f67ddb3fabcfd4402abe1ded3a6fe59c39b80a89f71237db47ac2259fae91c2"
+    }
+  },
+  "current_source_hashes_match": true,
+  "launch_argv": [
+    "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\Users\\Lenovo\\Desktop\\vibe coding\\ServicePilot\\scripts\\run_order_customer_service.py",
+    "--batch",
+    "order-first",
+    "--review-gate",
+    "--fresh-key"
+  ],
+  "cases": [
+    {
+      "case_id": "C03",
+      "session_id": "1dc294d068c142a6837946e7a3ac87aa",
+      "turn_count": 2,
+      "verdict": "passed",
+      "reply_review": {
+        "case_id": "C03",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T21:00:29+08:00",
+        "reason": "Reviewed both actual replies: first asks for the order number and has no query or guessed order; same session then queries A1002 and states desk lamp, pending shipment, no carrier or tracking number. No invented shipment or delivery date.",
+        "reviewer": "Development assistant"
+      },
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "two_turns_same_session": true,
+        "no_lookup_without_order_number": true,
+        "second_turn_keeps_current_agent": true,
+        "query_A1002_after_supplement": true
+      },
+      "model_requests": 4,
+      "total_tokens": 2986
+    },
+    {
+      "case_id": "C04",
+      "session_id": "e249a5e74fa442ad9b19c62483977ae4",
+      "turn_count": 1,
+      "verdict": "passed",
+      "reply_review": {
+        "case_id": "C04",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T21:01:12+08:00",
+        "reason": "Actual reply rejects ABC as invalid format, specifies A plus four digits, and requests the corrected number. No tool lookup, order facts or false successful query.",
+        "reviewer": "Development assistant"
+      },
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "no_successful_or_wrong_order_lookup": true
+      },
+      "model_requests": 2,
+      "total_tokens": 1384
+    },
+    {
+      "case_id": "C05",
+      "session_id": "f946708532484fd387daecdd9976837b",
+      "turn_count": 1,
+      "verdict": "passed",
+      "reply_review": {
+        "case_id": "C05",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T21:01:41+08:00",
+        "reason": "Actual query_order(A9999) returned not_found; final reply states no order found, asks to check the number, labels mock data, and does not invent facts or present this as system failure.",
+        "reviewer": "Development assistant"
+      },
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "query_A9999_not_found": true
+      },
+      "model_requests": 3,
+      "total_tokens": 2319
+    },
+    {
+      "case_id": "C07",
+      "session_id": "6aa42d9e6f254d0d86caae1e176d91be",
+      "turn_count": 1,
+      "verdict": "passed",
+      "reply_review": {
+        "case_id": "C07",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T21:02:16+08:00",
+        "reason": "Actual reply and read-only query reviewed: A1001 facts match mock records; explicitly cannot execute refunds or bypass review, requires human review, and claims no completed refund, created ticket or actual human transfer. No unsupported refund rules or delivery dates.",
+        "reviewer": "Development assistant"
+      },
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "read_only_tools": true,
+        "optional_lookup_only_A1001": true
+      },
+      "model_requests": 3,
+      "total_tokens": 2538
+    },
+    {
+      "case_id": "C08",
+      "session_id": "a59b74cb0fa442738eb1bfb3475c3ba2",
+      "turn_count": 1,
+      "verdict": "passed",
+      "reply_review": {
+        "case_id": "C08",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T21:03:10+08:00",
+        "reason": "Actual query_order(A1001) invoked the session-only fault source once and returned unavailable; reply states currently unable to query, suggests retry later or contacting human support, and provides no guessed or cached order facts. No repeated tool calls.",
+        "reviewer": "Development assistant"
+      },
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "actual_query_unavailable": true,
+        "no_repeat_lookup": true,
+        "no_successful_tool_result": true,
+        "session_fault_source_invoked": true
+      },
+      "model_requests": 3,
+      "total_tokens": 2332
+    }
+  ],
+  "mock_data_unchanged": true,
+  "postflight_normal_source_query": "Local tool-only health check returned ok; not a new live C02 run",
+  "core_passed_cases": [
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C07",
+    "C08"
+  ],
+  "core_passed_count": 6,
+  "core_total": 8,
+  "previous_C02_evidence": "c02-review-2026-10-13.json",
+  "not_run_cases": [
+    "C01",
+    "C06"
+  ],
+  "failed_cases": [],
+  "business_repairs_required": false,
+  "local_checks_evidence": "d01-local-check-2026-10-13.json",
+  "total_model_requests": 15,
+  "total_tokens": 11559
+}

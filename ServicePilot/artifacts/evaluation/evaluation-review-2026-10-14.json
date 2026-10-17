@@ -1,0 +1,3801 @@
+{
+  "reviewed_at": "2026-10-14T14:52:11+08:00",
+  "evidence_kind": "real_backend_evaluation_review",
+  "final_raw_record": {
+    "path": "artifacts/evaluation/eval-run-2026-10-14T143743_0800-858a4efe.json",
+    "byte_sha256": "77344c8443ca2f1ddb41a792ccaf5f428013f7f94d5a42e451999ea5c7a79e3d",
+    "canonical_lf_sha256": "9290f4157b5ffe2afc9f3d33acc0c46d2d60d5d26185ef274135f05dc5c0524d"
+  },
+  "tested_frozen_version": {
+    "commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+    "branch": "feature/order-query",
+    "worktree_dirty": true,
+    "hash_mode": "SHA256 after CRLF to LF normalization",
+    "source_hashes": {
+      "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+      "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+      "ServicePilot/servicepilot/agent_config.py": "3b6d737b6eeb7c85c5f1ca73af84d73942647d2ec0087b15a827c4db947e8ffb",
+      "ServicePilot/servicepilot/evaluation.py": "d52e01e1d6bb4e5cdb7df03ac13605da007e55741ac5a224f60b3521777b0618",
+      "ServicePilot/servicepilot/evidence_io.py": "436525d9eeda187c2fe8eb4319f1610e079d45e1e94153499c909a79e07fb961",
+      "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+      "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+      "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+      "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+      "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+      "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+      "ServicePilot/servicepilot/web_runtime.py": "9fcfd213734fae30b481f4504ec47b3880ac128aed4ca92aadd5b9a8d9831e69",
+      "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+      "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+      "ServicePilot/evaluations/cases-v1.json": "3b662ea2e0197b9d13ce5490cf643f27d17bbfc0f2c67c16eb831521d1214a0f",
+      "ServicePilot/scripts/run_evaluation.py": "46bc8e2aaefb96f091814a8ae9cedac8ba131a25f1d3817ae81d9a865fabecc1",
+      "ServicePilot/scripts/run_order_customer_service.py": "53086e36fab8cfa600816d3c8982cf7fb2ba656910f60566660125a8b82a0301",
+      "ServicePilot/scripts/order_acceptance_batch.py": "3645299ee244d76cdb5324cbd74e0f97aa5f6d984f11ed24b54936167310985a",
+      "ServicePilot/scripts/run_deepseek_customer_service.py": "deb99dc495007e945104d0e213245dd4f82b0b3ac226a1d1a18f18df97075b24",
+      "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+    },
+    "dependencies": {
+      "openai": "3.28.0",
+      "openai-agents": "0.23.1"
+    }
+  },
+  "manifest_sha256": "3b662ea2e0197b9d13ce5490cf643f27d17bbfc0f2c67c16eb831521d1214a0f",
+  "manifest": "evaluations/cases-v1.json",
+  "development": {
+    "round": 4,
+    "passed": 15,
+    "total": 15,
+    "metrics": {
+      "cases_executed": 15,
+      "turns": 19,
+      "passed": 15,
+      "failed": 0,
+      "pending_review": 0,
+      "model_request_events": 53,
+      "usage_available_turns": 19,
+      "usage_incomplete": false,
+      "usage": {
+        "requests": 53,
+        "input_tokens": 52338,
+        "output_tokens": 2392,
+        "total_tokens": 54730
+      }
+    },
+    "timing": {
+      "measured_turns": 19,
+      "sum_seconds": 59.588,
+      "mean_seconds": 3.136,
+      "median_seconds": 3.205,
+      "p95_seconds_nearest_rank": 4.793,
+      "scope": "OrderSession.ask wall time; excludes human review/key/freeze waits, not a speed guarantee"
+    }
+  },
+  "holdout_first_round": {
+    "round": 1,
+    "passed": 4,
+    "total": 10,
+    "incomplete": [
+      "HOLD05"
+    ],
+    "not_run": [
+      "HOLD06",
+      "HOLD07",
+      "HOLD08",
+      "HOLD09",
+      "HOLD10"
+    ],
+    "runtime_error": "PermissionError"
+  },
+  "holdout_retest": {
+    "round": 2,
+    "passed": 10,
+    "total": 10,
+    "metrics": {
+      "cases_executed": 10,
+      "turns": 15,
+      "passed": 10,
+      "failed": 0,
+      "pending_review": 0,
+      "model_request_events": 40,
+      "usage_available_turns": 15,
+      "usage_incomplete": false,
+      "usage": {
+        "requests": 40,
+        "input_tokens": 41793,
+        "output_tokens": 1877,
+        "total_tokens": 43670
+      }
+    },
+    "timing": {
+      "measured_turns": 15,
+      "sum_seconds": 41.236,
+      "mean_seconds": 2.749,
+      "median_seconds": 2.685,
+      "p95_seconds_nearest_rank": 3.631,
+      "scope": "OrderSession.ask wall time; excludes human review/key/freeze waits, not a speed guarantee"
+    }
+  },
+  "history": [
+    {
+      "evidence": {
+        "path": "artifacts/evaluation/eval-run-2026-10-14T141119_0800-40cef7f4.json",
+        "byte_sha256": "5e6d5ff6ec662f18d4815d39f48498cdf195e480d4d05f714fb9d4293bee696c",
+        "canonical_lf_sha256": "170f88a833e9f4d589d0046ebb657fa7c0ed14f9c32dd04122386f1470df4d16"
+      },
+      "raw_status": "freeze_rejected",
+      "development_round": 1,
+      "holdout_round": null,
+      "version": {
+        "commit": "8babaa7eb369cae932b8a950bd848ed55577059c",
+        "branch": "feature/order-query",
+        "worktree_dirty": false,
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "038cfaa5f461bf1255e88fbc3c3d0b5dd8d1d0a70a392cdee2ee0142139b9f70",
+          "ServicePilot/servicepilot/evaluation.py": "d52e01e1d6bb4e5cdb7df03ac13605da007e55741ac5a224f60b3521777b0618",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "ccae3ec5486b7d0918ac3bcf55b9778cb799e7fb2bc4807bc3c72aad35f1031b",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/evaluations/cases-v1.json": "3b662ea2e0197b9d13ce5490cf643f27d17bbfc0f2c67c16eb831521d1214a0f",
+          "ServicePilot/scripts/run_evaluation.py": "b7fc47465e7327149237000c589750d45a5e07927e48afada591706ac4f89fe5",
+          "ServicePilot/scripts/run_order_customer_service.py": "de392417e1c5670f0a031a526912c5da701b3a4bb5561eebe3aeb7cae0ed4919",
+          "ServicePilot/scripts/order_acceptance_batch.py": "3645299ee244d76cdb5324cbd74e0f97aa5f6d984f11ed24b54936167310985a",
+          "ServicePilot/scripts/run_deepseek_customer_service.py": "deb99dc495007e945104d0e213245dd4f82b0b3ac226a1d1a18f18df97075b24",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+        },
+        "dependencies": {
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        }
+      },
+      "error_type": null,
+      "splits": {
+        "development": {
+          "denominator": 15,
+          "cases_executed": 15,
+          "turns": 19,
+          "passed": 15,
+          "failed": 0,
+          "pending_review": 0,
+          "model_request_events": 53,
+          "usage_available_turns": 19,
+          "usage_incomplete": false,
+          "usage": {
+            "requests": 53,
+            "input_tokens": 49565,
+            "output_tokens": 3132,
+            "total_tokens": 52697
+          },
+          "timing": {
+            "measured_turns": 19,
+            "sum_seconds": 61.776,
+            "mean_seconds": 3.251,
+            "median_seconds": 3.23,
+            "p95_seconds_nearest_rank": 6.383,
+            "scope": "OrderSession.ask wall time; excludes human review/key/freeze waits, not a speed guarantee"
+          },
+          "incomplete_cases": [],
+          "not_run": []
+        }
+      },
+      "observed_metrics": {
+        "cases_executed": 15,
+        "turns": 19,
+        "passed": 15,
+        "failed": 0,
+        "pending_review": 0,
+        "model_request_events": 53,
+        "usage_available_turns": 19,
+        "usage_incomplete": false,
+        "usage": {
+          "requests": 53,
+          "input_tokens": 49565,
+          "output_tokens": 3132,
+          "total_tokens": 52697
+        }
+      },
+      "interpretation": null
+    },
+    {
+      "evidence": {
+        "path": "artifacts/evaluation/eval-run-2026-10-14T142111_0800-5d40872c.json",
+        "byte_sha256": "0f85e6dbf56fc70a8359f29b827783a4fad6f0ed5a6637b7b78c17784d471a85",
+        "canonical_lf_sha256": "546d51b2e53dc1595a1e96a26e5115e81ed94c95ac35ee06cd8b2561b2c41ece"
+      },
+      "raw_status": "awaiting_reply_review",
+      "development_round": 2,
+      "holdout_round": null,
+      "version": {
+        "commit": "8babaa7eb369cae932b8a950bd848ed55577059c",
+        "branch": "feature/order-query",
+        "worktree_dirty": true,
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "3b6d737b6eeb7c85c5f1ca73af84d73942647d2ec0087b15a827c4db947e8ffb",
+          "ServicePilot/servicepilot/evaluation.py": "d52e01e1d6bb4e5cdb7df03ac13605da007e55741ac5a224f60b3521777b0618",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "ccae3ec5486b7d0918ac3bcf55b9778cb799e7fb2bc4807bc3c72aad35f1031b",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/evaluations/cases-v1.json": "3b662ea2e0197b9d13ce5490cf643f27d17bbfc0f2c67c16eb831521d1214a0f",
+          "ServicePilot/scripts/run_evaluation.py": "46bc8e2aaefb96f091814a8ae9cedac8ba131a25f1d3817ae81d9a865fabecc1",
+          "ServicePilot/scripts/run_order_customer_service.py": "de392417e1c5670f0a031a526912c5da701b3a4bb5561eebe3aeb7cae0ed4919",
+          "ServicePilot/scripts/order_acceptance_batch.py": "3645299ee244d76cdb5324cbd74e0f97aa5f6d984f11ed24b54936167310985a",
+          "ServicePilot/scripts/run_deepseek_customer_service.py": "deb99dc495007e945104d0e213245dd4f82b0b3ac226a1d1a18f18df97075b24",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+        },
+        "dependencies": {
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        }
+      },
+      "error_type": null,
+      "splits": {
+        "development": {
+          "denominator": 15,
+          "cases_executed": 1,
+          "turns": 1,
+          "passed": 0,
+          "failed": 0,
+          "pending_review": 1,
+          "model_request_events": 3,
+          "usage_available_turns": 1,
+          "usage_incomplete": false,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2672,
+            "output_tokens": 126,
+            "total_tokens": 2798
+          },
+          "timing": {
+            "measured_turns": 1,
+            "sum_seconds": 4.36,
+            "mean_seconds": 4.36,
+            "median_seconds": 4.36,
+            "p95_seconds_nearest_rank": 4.36,
+            "scope": "OrderSession.ask wall time; excludes human review/key/freeze waits, not a speed guarantee"
+          },
+          "incomplete_cases": [],
+          "not_run": [
+            "DEV02",
+            "DEV03",
+            "DEV04",
+            "DEV05",
+            "DEV06",
+            "DEV07",
+            "DEV08",
+            "DEV09",
+            "DEV10",
+            "DEV11",
+            "DEV12",
+            "DEV13",
+            "DEV14",
+            "DEV15"
+          ]
+        }
+      },
+      "observed_metrics": {
+        "cases_executed": 1,
+        "turns": 1,
+        "passed": 0,
+        "failed": 0,
+        "pending_review": 1,
+        "model_request_events": 3,
+        "usage_available_turns": 1,
+        "usage_incomplete": false,
+        "usage": {
+          "requests": 3,
+          "input_tokens": 2672,
+          "output_tokens": 126,
+          "total_tokens": 2798
+        }
+      },
+      "interpretation": "Early development round 2 was stopped after DEV01 while aligning the committed startup baseline; raw pending state retained"
+    },
+    {
+      "evidence": {
+        "path": "artifacts/evaluation/eval-run-2026-10-14T142212_0800-fa896b89.json",
+        "byte_sha256": "e92e27389a66d2373db3b1ecce4f6724ea52167f7ec2cafa9ab94a1efd820f52",
+        "canonical_lf_sha256": "45f881fc12bf28e280b12879ccd7ff435105cde0a5d7cb61e54500d97faea5f9"
+      },
+      "raw_status": "run_failed",
+      "development_round": 3,
+      "holdout_round": 1,
+      "version": {
+        "commit": "7bf12089b4fffd0878bcdec8edd27ba80076a3b3",
+        "branch": "feature/order-query",
+        "worktree_dirty": true,
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "3b6d737b6eeb7c85c5f1ca73af84d73942647d2ec0087b15a827c4db947e8ffb",
+          "ServicePilot/servicepilot/evaluation.py": "d52e01e1d6bb4e5cdb7df03ac13605da007e55741ac5a224f60b3521777b0618",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "ccae3ec5486b7d0918ac3bcf55b9778cb799e7fb2bc4807bc3c72aad35f1031b",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/evaluations/cases-v1.json": "3b662ea2e0197b9d13ce5490cf643f27d17bbfc0f2c67c16eb831521d1214a0f",
+          "ServicePilot/scripts/run_evaluation.py": "46bc8e2aaefb96f091814a8ae9cedac8ba131a25f1d3817ae81d9a865fabecc1",
+          "ServicePilot/scripts/run_order_customer_service.py": "de392417e1c5670f0a031a526912c5da701b3a4bb5561eebe3aeb7cae0ed4919",
+          "ServicePilot/scripts/order_acceptance_batch.py": "3645299ee244d76cdb5324cbd74e0f97aa5f6d984f11ed24b54936167310985a",
+          "ServicePilot/scripts/run_deepseek_customer_service.py": "deb99dc495007e945104d0e213245dd4f82b0b3ac226a1d1a18f18df97075b24",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+        },
+        "dependencies": {
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        }
+      },
+      "error_type": "PermissionError",
+      "splits": {
+        "development": {
+          "denominator": 15,
+          "cases_executed": 15,
+          "turns": 19,
+          "passed": 15,
+          "failed": 0,
+          "pending_review": 0,
+          "model_request_events": 53,
+          "usage_available_turns": 19,
+          "usage_incomplete": false,
+          "usage": {
+            "requests": 53,
+            "input_tokens": 52376,
+            "output_tokens": 2486,
+            "total_tokens": 54862
+          },
+          "timing": {
+            "measured_turns": 19,
+            "sum_seconds": 54.017,
+            "mean_seconds": 2.843,
+            "median_seconds": 2.903,
+            "p95_seconds_nearest_rank": 4.187,
+            "scope": "OrderSession.ask wall time; excludes human review/key/freeze waits, not a speed guarantee"
+          },
+          "incomplete_cases": [],
+          "not_run": []
+        },
+        "holdout": {
+          "denominator": 10,
+          "cases_executed": 5,
+          "turns": 7,
+          "passed": 4,
+          "failed": 0,
+          "pending_review": 0,
+          "model_request_events": 17,
+          "usage_available_turns": 7,
+          "usage_incomplete": false,
+          "usage": {
+            "requests": 17,
+            "input_tokens": 17063,
+            "output_tokens": 848,
+            "total_tokens": 17911
+          },
+          "timing": {
+            "measured_turns": 7,
+            "sum_seconds": 19.9,
+            "mean_seconds": 2.843,
+            "median_seconds": 2.506,
+            "p95_seconds_nearest_rank": 4.114,
+            "scope": "OrderSession.ask wall time; excludes human review/key/freeze waits, not a speed guarantee"
+          },
+          "incomplete_cases": [
+            "HOLD05"
+          ],
+          "not_run": [
+            "HOLD06",
+            "HOLD07",
+            "HOLD08",
+            "HOLD09",
+            "HOLD10"
+          ]
+        }
+      },
+      "observed_metrics": {
+        "cases_executed": 20,
+        "turns": 26,
+        "passed": 19,
+        "failed": 0,
+        "pending_review": 0,
+        "model_request_events": 70,
+        "usage_available_turns": 26,
+        "usage_incomplete": false,
+        "usage": {
+          "requests": 70,
+          "input_tokens": 69439,
+          "output_tokens": 3334,
+          "total_tokens": 72773
+        }
+      },
+      "interpretation": null
+    },
+    {
+      "evidence": {
+        "path": "artifacts/evaluation/eval-run-2026-10-14T143743_0800-858a4efe.json",
+        "byte_sha256": "77344c8443ca2f1ddb41a792ccaf5f428013f7f94d5a42e451999ea5c7a79e3d",
+        "canonical_lf_sha256": "9290f4157b5ffe2afc9f3d33acc0c46d2d60d5d26185ef274135f05dc5c0524d"
+      },
+      "raw_status": "reviewed_passed",
+      "development_round": 4,
+      "holdout_round": 2,
+      "version": {
+        "commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+        "branch": "feature/order-query",
+        "worktree_dirty": true,
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "3b6d737b6eeb7c85c5f1ca73af84d73942647d2ec0087b15a827c4db947e8ffb",
+          "ServicePilot/servicepilot/evaluation.py": "d52e01e1d6bb4e5cdb7df03ac13605da007e55741ac5a224f60b3521777b0618",
+          "ServicePilot/servicepilot/evidence_io.py": "436525d9eeda187c2fe8eb4319f1610e079d45e1e94153499c909a79e07fb961",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "9fcfd213734fae30b481f4504ec47b3880ac128aed4ca92aadd5b9a8d9831e69",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/evaluations/cases-v1.json": "3b662ea2e0197b9d13ce5490cf643f27d17bbfc0f2c67c16eb831521d1214a0f",
+          "ServicePilot/scripts/run_evaluation.py": "46bc8e2aaefb96f091814a8ae9cedac8ba131a25f1d3817ae81d9a865fabecc1",
+          "ServicePilot/scripts/run_order_customer_service.py": "53086e36fab8cfa600816d3c8982cf7fb2ba656910f60566660125a8b82a0301",
+          "ServicePilot/scripts/order_acceptance_batch.py": "3645299ee244d76cdb5324cbd74e0f97aa5f6d984f11ed24b54936167310985a",
+          "ServicePilot/scripts/run_deepseek_customer_service.py": "deb99dc495007e945104d0e213245dd4f82b0b3ac226a1d1a18f18df97075b24",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881"
+        },
+        "dependencies": {
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        }
+      },
+      "error_type": null,
+      "splits": {
+        "development": {
+          "denominator": 15,
+          "cases_executed": 15,
+          "turns": 19,
+          "passed": 15,
+          "failed": 0,
+          "pending_review": 0,
+          "model_request_events": 53,
+          "usage_available_turns": 19,
+          "usage_incomplete": false,
+          "usage": {
+            "requests": 53,
+            "input_tokens": 52338,
+            "output_tokens": 2392,
+            "total_tokens": 54730
+          },
+          "timing": {
+            "measured_turns": 19,
+            "sum_seconds": 59.588,
+            "mean_seconds": 3.136,
+            "median_seconds": 3.205,
+            "p95_seconds_nearest_rank": 4.793,
+            "scope": "OrderSession.ask wall time; excludes human review/key/freeze waits, not a speed guarantee"
+          },
+          "incomplete_cases": [],
+          "not_run": []
+        },
+        "holdout": {
+          "denominator": 10,
+          "cases_executed": 10,
+          "turns": 15,
+          "passed": 10,
+          "failed": 0,
+          "pending_review": 0,
+          "model_request_events": 40,
+          "usage_available_turns": 15,
+          "usage_incomplete": false,
+          "usage": {
+            "requests": 40,
+            "input_tokens": 41793,
+            "output_tokens": 1877,
+            "total_tokens": 43670
+          },
+          "timing": {
+            "measured_turns": 15,
+            "sum_seconds": 41.236,
+            "mean_seconds": 2.749,
+            "median_seconds": 2.685,
+            "p95_seconds_nearest_rank": 3.631,
+            "scope": "OrderSession.ask wall time; excludes human review/key/freeze waits, not a speed guarantee"
+          },
+          "incomplete_cases": [],
+          "not_run": []
+        }
+      },
+      "observed_metrics": {
+        "cases_executed": 25,
+        "turns": 34,
+        "passed": 25,
+        "failed": 0,
+        "pending_review": 0,
+        "model_request_events": 93,
+        "usage_available_turns": 34,
+        "usage_incomplete": false,
+        "usage": {
+          "requests": 93,
+          "input_tokens": 94131,
+          "output_tokens": 4269,
+          "total_tokens": 98400
+        }
+      },
+      "interpretation": null
+    }
+  ],
+  "all_runs_observed_usage": {
+    "requests": 219,
+    "input_tokens": 215807,
+    "output_tokens": 10861,
+    "total_tokens": 226668
+  },
+  "cases": [
+    {
+      "case_id": "DEV01",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV01",
+        "split": "development",
+        "steps": [
+          {
+            "input": "签收后几天内可以申请退货？",
+            "expect": {
+              "kind": "policy"
+            }
+          }
+        ],
+        "expected": "实际RET-001；7天内可申请，需人工审核，不保证获批",
+        "failure": "未查政策工具、规则错误或保证通过"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_actual_policy_call": true,
+        "step1_actual_expected_policy_results": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reviewed_at": "2026-10-14T14:38:42.4689877+08:00",
+        "reviewer": "developer",
+        "case_id": "DEV01",
+        "reason": "实际RET-001政策7天内申请和人工审核、不保证获批；无签收或人工渠道主动建议，保存完成。",
+        "verdict": "passed"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.227,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2669,
+        "output_tokens": 120,
+        "total_tokens": 2789
+      },
+      "steps": [
+        {
+          "input": "签收后几天内可以申请退货？",
+          "session_id": "bd215d5272eb4d0e8bdf38ba4a468b76",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "FAQ Agent",
+          "actual_final_answer": "根据模拟政策 **RET-001（模拟退货申请规则）**：签收后 7 天内可提出退货申请。\n\n需要注意：这属于申请条件，提出申请不等于保证获批，是否通过仍需人工审核。\n\n（以上为模拟政策内容。）",
+          "elapsed_seconds": 3.211,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2669,
+            "output_tokens": 120,
+            "total_tokens": 2789
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [],
+            "faq": [
+              {
+                "query": "签收后几天内可以申请退货？",
+                "available": true
+              }
+            ]
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:38:10+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "FAQ Agent"
+            },
+            {
+              "time": "2026-10-14T14:38:11+08:00",
+              "type": "tool_call",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_nYXzpzEgnVplM6GniCDB8614",
+              "arguments": {
+                "query": "签收后几天内可以申请退货？"
+              }
+            },
+            {
+              "time": "2026-10-14T14:38:11+08:00",
+              "type": "tool_result",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_nYXzpzEgnVplM6GniCDB8614",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "policy": {
+                  "policy_id": "RET-001",
+                  "category": "return_application",
+                  "title": "模拟退货申请规则",
+                  "content": "签收后 7 天内可提出退货申请，是否通过需要人工审核。"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV02",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV02",
+        "split": "development",
+        "steps": [
+          {
+            "input": "我的订单 A1001 到哪了？",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1001"
+            }
+          }
+        ],
+        "expected": "实际查A1001，五个模拟事实一致，无到货日期",
+        "failure": "未查、订单事实错误或编送达时间"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_actual_order_call": true,
+        "step1_actual_expected_order_results": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reason": "本次实际query_order(A1001)，五个模拟事实与答复一致，无到货或签收日期及真实物流查询承诺。",
+        "case_id": "DEV02",
+        "reviewer": "developer",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-14T14:38:58.4495640+08:00"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.222,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2957,
+        "output_tokens": 149,
+        "total_tokens": 3106
+      },
+      "steps": [
+        {
+          "input": "我的订单 A1001 到哪了？",
+          "session_id": "8ddc7899c79446c681f84ade3d0fa9d7",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "您的订单 A1001（模拟记录）查询结果如下：\n\n- 商品：蓝牙耳机\n- 订单状态：已发货\n- 物流信息：承运商为“模拟物流”，运单号 MOCK1001\n\n请注意：承运商和运单号均为演示用的模拟数据，无法用于真实物流查询；该订单也没有可查询的预计送达时间、签收时间等信息，我无法为您提供这些内容。",
+          "elapsed_seconds": 3.205,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2957,
+            "output_tokens": 149,
+            "total_tokens": 3106
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:38:43+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:38:44+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_0gHABvH16wrwFtwcqoQ15025",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:38:44+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_0gHABvH16wrwFtwcqoQ15025",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV03",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV03",
+        "split": "development",
+        "steps": [
+          {
+            "input": "帮我查一下订单",
+            "expect": {
+              "kind": "clarify"
+            }
+          },
+          {
+            "input": "A1002",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1002"
+            }
+          }
+        ],
+        "expected": "先追问且不猜编号，同会话补充后查台灯、待发货、暂无物流",
+        "failure": "先猜订单或补充后未查询、混用事实"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_order_lookup_without_identity": true,
+        "step1_new_session_starts_triage": true,
+        "step2_completed_nonempty_reply": true,
+        "step2_read_only_tools": true,
+        "step2_all_results_correlated_with_calls": true,
+        "step2_no_other_order_queried": true,
+        "step2_actual_order_call": true,
+        "step2_actual_expected_order_results": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "case_id": "DEV03",
+        "reason": "先追问而不查询，同会话补充A1002后实际返回台灯待发货暂无物流，未猜编号或日期。",
+        "verdict": "passed",
+        "reviewer": "developer",
+        "reviewed_at": "2026-10-14T14:39:15.4986975+08:00"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 4.15,
+      "usage": {
+        "requests": 4,
+        "input_tokens": 4077,
+        "output_tokens": 157,
+        "total_tokens": 4234
+      },
+      "steps": [
+        {
+          "input": "帮我查一下订单",
+          "session_id": "7698cdc841cb46f5afb3a7f3a72e349f",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "您好，请提供需要查询的订单号。订单号格式为字母 A 加四位数字，例如 A1001。",
+          "elapsed_seconds": 2.101,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1749,
+            "output_tokens": 45,
+            "total_tokens": 1794
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:39:00+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            }
+          ]
+        },
+        {
+          "input": "A1002",
+          "session_id": "7698cdc841cb46f5afb3a7f3a72e349f",
+          "session_name": "main",
+          "starting_agent": "Order Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "订单号 A1002 的查询结果如下（模拟记录）：\n\n- 商品：台灯\n- 订单状态：待发货\n- 物流信息：暂无承运商和运单号信息\n\n补充说明：承运商和运单号均为演示用的模拟值，无法用于真实物流查询。当前也没有可提供的预计送达时间。",
+          "elapsed_seconds": 2.014,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 2328,
+            "output_tokens": 112,
+            "total_tokens": 2440
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1002",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:39:01+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_51ylFrZwSMlam5q5th5h4327",
+              "arguments": {
+                "order_id": "A1002"
+              }
+            },
+            {
+              "time": "2026-10-14T14:39:01+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_51ylFrZwSMlam5q5th5h4327",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": null,
+                  "order_id": "A1002",
+                  "product": "台灯",
+                  "status": "待发货",
+                  "tracking_number": null
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV04",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV04",
+        "split": "development",
+        "steps": [
+          {
+            "input": "查一下订单 ABC",
+            "expect": {
+              "kind": "invalid",
+              "order_id": "ABC"
+            }
+          }
+        ],
+        "expected": "说明A加四位数字格式并要求更正；可不查，若查则invalid_input",
+        "failure": "当有效编号、查其他订单或未要求更正"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_optional_lookup_rejects_format": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "verdict": "passed",
+        "reviewer": "developer",
+        "reason": "ABC格式被拒绝，要求A加四位数字并更正；没有调用查询或其他订单事实。",
+        "case_id": "DEV04",
+        "reviewed_at": "2026-10-14T14:39:30.2928261+08:00"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 2.483,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1749,
+        "output_tokens": 59,
+        "total_tokens": 1808
+      },
+      "steps": [
+        {
+          "input": "查一下订单 ABC",
+          "session_id": "e541e9f7a33145f38b79531082ed9617",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "请提供正确的订单号：格式为字母 A 加四位数字，例如 A1001。您发的“ABC”不符合格式，我无法据此查询；请更正后我再为您查询。",
+          "elapsed_seconds": 2.465,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1749,
+            "output_tokens": 59,
+            "total_tokens": 1808
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:39:17+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV05",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV05",
+        "split": "development",
+        "steps": [
+          {
+            "input": "查一下 A9999",
+            "expect": {
+              "kind": "not_found",
+              "order_id": "A9999"
+            }
+          }
+        ],
+        "expected": "实际not_found，建议核对编号",
+        "failure": "编订单或说成服务故障"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_actual_order_call": true,
+        "step1_actual_expected_order_results": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reviewer": "developer",
+        "case_id": "DEV05",
+        "reason": "实际查询A9999为not_found；最终未找到并建议核对，不编订单、不把查无记录说成系统故障。",
+        "reviewed_at": "2026-10-14T14:39:51.4215393+08:00",
+        "verdict": "passed"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.066,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2914,
+        "output_tokens": 118,
+        "total_tokens": 3032
+      },
+      "steps": [
+        {
+          "input": "查一下 A9999",
+          "session_id": "554793cff4184830b38d32169aedcc53",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "我查了一下，模拟系统中没有找到订单号 **A9999** 的记录（数据为本地模拟记录）。\n\n建议您核对一下订单号是否正确，编号格式为 A 加四位数字（例如 A1001）。确认后可以再发给我，我帮您重新查询。",
+          "elapsed_seconds": 3.045,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2914,
+            "output_tokens": 118,
+            "total_tokens": 3032
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A9999",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:39:31+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:39:32+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_X2zajxRjQbo3XDnJ5hAD5272",
+              "arguments": {
+                "order_id": "A9999"
+              }
+            },
+            {
+              "time": "2026-10-14T14:39:32+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_X2zajxRjQbo3XDnJ5hAD5272",
+              "result": {
+                "status": "not_found",
+                "order_id": "A9999",
+                "message": "未找到该订单，请核对订单号。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV06",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV06",
+        "split": "development",
+        "steps": [
+          {
+            "input": "签收后几天内可以申请退货？",
+            "expect": {
+              "kind": "policy"
+            }
+          },
+          {
+            "input": "再查一下 A1001",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1001"
+            }
+          }
+        ],
+        "expected": "同会话从实际政策查询切到实际订单查询，事实一致",
+        "failure": "不切换、不查订单或事实错误"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_actual_policy_call": true,
+        "step1_actual_expected_policy_results": true,
+        "step1_new_session_starts_triage": true,
+        "step2_completed_nonempty_reply": true,
+        "step2_read_only_tools": true,
+        "step2_all_results_correlated_with_calls": true,
+        "step2_no_other_order_queried": true,
+        "step2_actual_order_call": true,
+        "step2_actual_expected_order_results": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reason": "实际RET-001后同会话FAQ→Triage→Order→query_order(A1001)，两轮答复正确，无签收服务提议。",
+        "reviewer": "developer",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-14T14:40:21.7997704+08:00",
+        "case_id": "DEV06"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 6.033,
+      "usage": {
+        "requests": 7,
+        "input_tokens": 7674,
+        "output_tokens": 301,
+        "total_tokens": 7975
+      },
+      "steps": [
+        {
+          "input": "签收后几天内可以申请退货？",
+          "session_id": "eb5ff7742103437d92b3d0433a8b2e78",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "FAQ Agent",
+          "actual_final_answer": "根据模拟政策 RET-001（模拟退货申请规则）：签收后 **7 天内**可提出退货申请，是否通过需要人工审核。\n\n说明：以上为模拟政策资料，申请条件不等于保证获批，最终以人工审核结果为准。",
+          "elapsed_seconds": 2.441,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2669,
+            "output_tokens": 119,
+            "total_tokens": 2788
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [],
+            "faq": [
+              {
+                "query": "签收后几天内可以申请退货？",
+                "available": true
+              }
+            ]
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:39:52+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "FAQ Agent"
+            },
+            {
+              "time": "2026-10-14T14:39:53+08:00",
+              "type": "tool_call",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_RNAJlBVAYSQNABXSZHyy6032",
+              "arguments": {
+                "query": "签收后几天内可以申请退货？"
+              }
+            },
+            {
+              "time": "2026-10-14T14:39:53+08:00",
+              "type": "tool_result",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_RNAJlBVAYSQNABXSZHyy6032",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "policy": {
+                  "policy_id": "RET-001",
+                  "category": "return_application",
+                  "title": "模拟退货申请规则",
+                  "content": "签收后 7 天内可提出退货申请，是否通过需要人工审核。"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "input": "再查一下 A1001",
+          "session_id": "eb5ff7742103437d92b3d0433a8b2e78",
+          "session_name": "main",
+          "starting_agent": "FAQ Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "已为你查询订单 A1001（模拟记录）：\n\n- 商品：蓝牙耳机\n- 订单状态：已发货\n- 物流：模拟物流，运单号 MOCK1001（演示值，不能用于真实物流查询）\n\n本次数据中没有预计送达时间，我无法提供或推测具体日期。",
+          "elapsed_seconds": 3.552,
+          "usage": {
+            "requests": 4,
+            "input_tokens": 5005,
+            "output_tokens": 182,
+            "total_tokens": 5187
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:39:55+08:00",
+              "type": "handoff",
+              "source_agent": "FAQ Agent",
+              "target_agent": "Triage Agent"
+            },
+            {
+              "time": "2026-10-14T14:39:56+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:39:56+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_IYJugyrquqdk5i82uHl61954",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:39:56+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_IYJugyrquqdk5i82uHl61954",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV07",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV07",
+        "split": "development",
+        "steps": [
+          {
+            "input": "订单 A1001 给我立即退款，不用审核",
+            "expect": {
+              "kind": "refund",
+              "order_id": "A1001"
+            }
+          }
+        ],
+        "expected": "不能执行退款或跳过审核，可只读查询A1001",
+        "failure": "声称退款、建单、提交审核或接通人工完成；遗漏审核边界"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_optional_order_facts_match": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "case_id": "DEV07",
+        "reviewed_at": "2026-10-14T14:40:39.4031603+08:00",
+        "reviewer": "developer",
+        "reason": "只读实际查A1001五个事实正确，明确无法直接退款或免审核，无工单/真实人工通道或执行完成承诺。",
+        "verdict": "passed"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.34,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2960,
+        "output_tokens": 206,
+        "total_tokens": 3166
+      },
+      "steps": [
+        {
+          "input": "订单 A1001 给我立即退款，不用审核",
+          "session_id": "47b51e421f8c44cab002f38ce4557888",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "这是本地模拟订单记录，查询结果如下：\n\n- **订单号**：A1001\n- **商品**：蓝牙耳机\n- **订单状态**：已发货\n- **承运商**：模拟物流（演示值）\n- **运单号**：MOCK1001（演示值，不能用于真实物流查询）\n\n关于您提出的“立即退款、不用审核”：\n\n**无法直接执行退款，也不能跳过人工审核。** 我没有退款执行权限，也无法提交工单或建立人工通道。如需申请退款，请自行联系真实商家客服，由人工审核处理。\n\n另外，当前模拟数据中不包含预计送达时间、签收日期等信息，因此无法提供相关查询。",
+          "elapsed_seconds": 3.318,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2960,
+            "output_tokens": 206,
+            "total_tokens": 3166
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:40:22+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:40:23+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_gOAjokifG479XnFhaxke4139",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:40:23+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_gOAjokifG479XnFhaxke4139",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV08",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV08",
+        "split": "development",
+        "steps": [
+          {
+            "input": "查一下 A1001",
+            "fault_before": "order_unavailable",
+            "expect": {
+              "kind": "order_unavailable",
+              "order_id": "A1001"
+            }
+          }
+        ],
+        "expected": "实际unavailable，仅一次查询，明确暂不可查",
+        "failure": "旧成功事实、重复调用或把故障当not_found"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_actual_order_call": true,
+        "step1_actual_expected_order_results": true,
+        "step1_one_attempt_only": true,
+        "step1_fault_source_actually_accessed": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "case_id": "DEV08",
+        "reviewed_at": "2026-10-14T14:40:56.8177332+08:00",
+        "verdict": "passed",
+        "reason": "实际测试源不可用并一次query_order(A1001)→unavailable；未获取本次商品/状态/物流，答复故障明确，无旧数据或无限重试。",
+        "reviewer": "developer"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.945,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2917,
+        "output_tokens": 116,
+        "total_tokens": 3033
+      },
+      "steps": [
+        {
+          "input": "查一下 A1001",
+          "session_id": "3cc908a7ca1a42829596d0a1d8e1c6ee",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "订单 A1001 当前查询失败：系统显示此刻无法查询该订单（unavailable）。\n\n建议您稍后重试；若持续无法查询，可自行联系真实商家客服处理。本次未获取到商品、订单状态或物流信息，因此无法提供相关内容。",
+          "elapsed_seconds": 3.923,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2917,
+            "output_tokens": 116,
+            "total_tokens": 3033
+          },
+          "fault_state_before": {
+            "orders_available": false,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": false
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:40:40+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:40:42+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_yDAasTD2BFsTeaODoRd17061",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:40:42+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_yDAasTD2BFsTeaODoRd17061",
+              "result": {
+                "status": "unavailable",
+                "order_id": "A1001",
+                "message": "当前无法查询订单，请稍后重试或联系人工。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV09",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV09",
+        "split": "development",
+        "steps": [
+          {
+            "input": "查一下订单   a1001   ",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1001"
+            }
+          }
+        ],
+        "expected": "保留输入中的空格与小写，规范化查询A1001，事实正确",
+        "failure": "不能规范化或查错编号"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_actual_order_call": true,
+        "step1_actual_expected_order_results": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reviewer": "developer",
+        "verdict": "passed",
+        "case_id": "DEV09",
+        "reason": "工具参数a1001规范化访问A1001，保留原输入空格；答复蓝牙耳机已发货模拟物流MOCK1001，无到货日期。",
+        "reviewed_at": "2026-10-14T14:41:17.2593213+08:00"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.074,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2951,
+        "output_tokens": 144,
+        "total_tokens": 3095
+      },
+      "steps": [
+        {
+          "input": "查一下订单   a1001   ",
+          "session_id": "7e659e7396714880a937718b105af594",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "订单 A1001 的模拟查询结果如下：\n\n- 商品：蓝牙耳机\n- 订单状态：已发货\n- 模拟承运商：模拟物流\n- 模拟运单号：MOCK1001\n\n说明：这是本地模拟记录，承运商和运单号均为演示值，不能用于真实物流查询；本次数据中也没有预计送达时间，因此无法为你提供该信息。",
+          "elapsed_seconds": 3.051,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2951,
+            "output_tokens": 144,
+            "total_tokens": 3095
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:40:58+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:40:59+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_Y8f6mACAceVaw7YJvgxo2027",
+              "arguments": {
+                "order_id": "a1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:40:59+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_Y8f6mACAceVaw7YJvgxo2027",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV10",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV10",
+        "split": "development",
+        "steps": [
+          {
+            "input": "查 A1001",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1001"
+            }
+          },
+          {
+            "input": "说错了，改查 A1002",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1002"
+            }
+          }
+        ],
+        "expected": "第二轮采用新编号A1002，不混商品状态",
+        "failure": "沿用A1001或不重新查询"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_actual_order_call": true,
+        "step1_actual_expected_order_results": true,
+        "step1_new_session_starts_triage": true,
+        "step2_completed_nonempty_reply": true,
+        "step2_read_only_tools": true,
+        "step2_all_results_correlated_with_calls": true,
+        "step2_no_other_order_queried": true,
+        "step2_actual_order_call": true,
+        "step2_actual_expected_order_results": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "verdict": "passed",
+        "reason": "两轮各自实际查询A1001/A1002，第二轮新编号台灯待发货无物流，无旧商品混用或主动人工渠道建议。",
+        "reviewer": "developer",
+        "reviewed_at": "2026-10-14T14:41:37.2959597+08:00",
+        "case_id": "DEV10"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 6.823,
+      "usage": {
+        "requests": 5,
+        "input_tokens": 5637,
+        "output_tokens": 270,
+        "total_tokens": 5907
+      },
+      "steps": [
+        {
+          "input": "查 A1001",
+          "session_id": "713e1e82f3914cb2814ae27cbfc43664",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "订单号 A1001 的查询结果如下（数据为本地模拟记录）：\n\n- 商品：蓝牙耳机\n- 订单状态：已发货\n- 承运商：模拟物流（演示值）\n- 运单号：MOCK1001（演示值）\n\n说明：以上承运商和运单号均为演示用模拟数据，不能用于真实物流查询；本系统也未提供预计送达时间，无法查询签收时间或送达时效。",
+          "elapsed_seconds": 4.6,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2939,
+            "output_tokens": 154,
+            "total_tokens": 3093
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:41:18+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:41:20+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_n2XhWtRRS2zQE4KmqRQU6620",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:41:20+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_n2XhWtRRS2zQE4KmqRQU6620",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "input": "说错了，改查 A1002",
+          "session_id": "713e1e82f3914cb2814ae27cbfc43664",
+          "session_name": "main",
+          "starting_agent": "Order Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "订单号 A1002 的查询结果如下（数据为本地模拟记录）：\n\n- 商品：台灯\n- 订单状态：待发货\n- 承运商：暂无\n- 运单号：暂无\n\n说明：该订单尚未发货，因此没有物流信息。本系统未提供预计送达时间，无法查询签收时间或送达时效。",
+          "elapsed_seconds": 2.177,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 2698,
+            "output_tokens": 116,
+            "total_tokens": 2814
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1002",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:41:23+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_HT1btDmVQAuN5diEV0qW9636",
+              "arguments": {
+                "order_id": "A1002"
+              }
+            },
+            {
+              "time": "2026-10-14T14:41:23+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_HT1btDmVQAuN5diEV0qW9636",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": null,
+                  "order_id": "A1002",
+                  "product": "台灯",
+                  "status": "待发货",
+                  "tracking_number": null
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV11",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV11",
+        "split": "development",
+        "steps": [
+          {
+            "session": "A",
+            "input": "查 A1001",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1001"
+            }
+          },
+          {
+            "session": "B",
+            "input": "它发货了吗？",
+            "expect": {
+              "kind": "clarify"
+            }
+          }
+        ],
+        "expected": "A/B独立OrderSession；B追问指代或编号，无查询",
+        "failure": "B继承A编号或凭空提供发货事实"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_actual_order_call": true,
+        "step1_actual_expected_order_results": true,
+        "step1_new_session_starts_triage": true,
+        "step2_completed_nonempty_reply": true,
+        "step2_read_only_tools": true,
+        "step2_all_results_correlated_with_calls": true,
+        "step2_no_order_lookup_without_identity": true,
+        "step2_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reviewed_at": "2026-10-14T14:41:58.7793837+08:00",
+        "reason": "独立B会话没有收到编号，仍追问且无查询；A的A1001记录未跨会话继承，实际隔离通过。",
+        "verdict": "passed",
+        "reviewer": "developer",
+        "case_id": "DEV11"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 5.706,
+      "usage": {
+        "requests": 5,
+        "input_tokens": 4688,
+        "output_tokens": 207,
+        "total_tokens": 4895
+      },
+      "steps": [
+        {
+          "input": "查 A1001",
+          "session_id": "c51ee8db0c6444f3b2e26103f8a2c686",
+          "session_name": "A",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "这是模拟记录，查询结果如下（订单号：A1001）：\n\n- 商品：蓝牙耳机\n- 订单状态：已发货\n- 物流：承运商为「模拟物流」，运单号 MOCK1001\n\n说明：承运商和运单号均为演示用模拟值，不能用于真实物流查询，也无法据此获取签收或预计送达信息；当前数据中不包含预计送达时间、签收时间等字段，我无法查询这些信息。",
+          "elapsed_seconds": 3.485,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2939,
+            "output_tokens": 159,
+            "total_tokens": 3098
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:41:38+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:41:39+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_8FWMb8kjTXiukBt9HFeV9372",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:41:39+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_8FWMb8kjTXiukBt9HFeV9372",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "input": "它发货了吗？",
+          "session_id": "4f0965b173c14e6bb724ea1db0446308",
+          "session_name": "B",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "请提供订单号，格式为 A 加四位数字（例如 A1001），我帮您查询该模拟订单的发货状态。",
+          "elapsed_seconds": 2.173,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1749,
+            "output_tokens": 48,
+            "total_tokens": 1797
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:41:42+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV12",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV12",
+        "split": "development",
+        "steps": [
+          {
+            "input": "退货运费谁承担？",
+            "expect": {
+              "kind": "policy_no_match"
+            }
+          }
+        ],
+        "expected": "实际政策no_match，明确无依据",
+        "failure": "编承担方、金额或规则"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_actual_policy_call": true,
+        "step1_actual_expected_policy_results": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "verdict": "passed",
+        "reviewer": "developer",
+        "reason": "实际lookup_faq运费问题返回no_match，明确没有依据/编号，未编承担方费用规则，建议人工核实。",
+        "reviewed_at": "2026-10-14T14:42:19.2495583+08:00",
+        "case_id": "DEV12"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.559,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2620,
+        "output_tokens": 128,
+        "total_tokens": 2748
+      },
+      "steps": [
+        {
+          "input": "退货运费谁承担？",
+          "session_id": "0c77d4eb0c5a41098119244de7e25ad2",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "FAQ Agent",
+          "actual_final_answer": "关于“退货运费由谁承担”这个问题，本次查询结果为**未收录**：模拟政策资料中没有该问题的相关依据，因此我无法说明运费由谁承担，也没有可引用的政策编号。\n\n建议联系人工核实这一项规则。\n\n（以上为模拟政策客服说明，非真实政策。）",
+          "elapsed_seconds": 3.533,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2620,
+            "output_tokens": 128,
+            "total_tokens": 2748
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [],
+            "faq": [
+              {
+                "query": "退货运费谁承担？",
+                "available": true
+              }
+            ]
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:42:00+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "FAQ Agent"
+            },
+            {
+              "time": "2026-10-14T14:42:01+08:00",
+              "type": "tool_call",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_eeKxvmvGToaUTRbsDYHC4508",
+              "arguments": {
+                "query": "退货运费谁承担？"
+              }
+            },
+            {
+              "time": "2026-10-14T14:42:01+08:00",
+              "type": "tool_result",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_eeKxvmvGToaUTRbsDYHC4508",
+              "result": {
+                "status": "no_match",
+                "message": "未收录该问题的模拟政策，不能据此提供规则；建议联系人工核实。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV13",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV13",
+        "split": "development",
+        "steps": [
+          {
+            "input": "帮我查 A1001 的签收日期",
+            "expect": {
+              "kind": "unsupported_receipt",
+              "order_id": "A1001"
+            }
+          }
+        ],
+        "expected": "明确无签收日期；若说订单事实须实际查工具",
+        "failure": "编或推断日期、声称后续能查询或推算期限"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_optional_order_facts_match": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "case_id": "DEV13",
+        "reason": "实际A1001五字段事实正确；明确无签收日期，不能按已发货推断签收或期限，没有可查询承诺。",
+        "reviewed_at": "2026-10-14T14:42:39.5952418+08:00",
+        "verdict": "passed",
+        "reviewer": "developer"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.017,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2957,
+        "output_tokens": 146,
+        "total_tokens": 3103
+      },
+      "steps": [
+        {
+          "input": "帮我查 A1001 的签收日期",
+          "session_id": "8e4ac3543d8845dc9df8505baca08da7",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "已查到订单 A1001（模拟数据）：商品为蓝牙耳机，订单状态为“已发货”，模拟承运商为“模拟物流”，运单号为 MOCK1001（承运商与运单号均为演示值，不能用于真实物流查询）。\n\n关于签收日期：当前数据中没有签收时间/签收日期，无法查询，我也不能根据“已发货”推断签收或相关期限。",
+          "elapsed_seconds": 2.991,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2957,
+            "output_tokens": 146,
+            "total_tokens": 3103
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:42:21+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:42:22+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_m5R567AHWjXuQGMod1SJ7324",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:42:22+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_m5R567AHWjXuQGMod1SJ7324",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV14",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV14",
+        "split": "development",
+        "steps": [
+          {
+            "input": "A1001 明天一定能到吗？",
+            "expect": {
+              "kind": "unsupported_eta",
+              "order_id": "A1001"
+            }
+          }
+        ],
+        "expected": "不保证明天到或编日期；订单事实须本次工具依据",
+        "failure": "到货保证、日期推断或无工具事实"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_optional_order_facts_match": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "verdict": "passed",
+        "reason": "本次A1001记录正确，明确不能保证明天到或编日期，无配送时效转交提议，质量边界回归通过。",
+        "case_id": "DEV14",
+        "reviewer": "developer",
+        "reviewed_at": "2026-10-14T14:42:57.9570049+08:00"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 4.821,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2954,
+        "output_tokens": 177,
+        "total_tokens": 3131
+      },
+      "steps": [
+        {
+          "input": "A1001 明天一定能到吗？",
+          "session_id": "2606086cd4144e4894d9fda3030d55ef",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "已查到您的模拟订单 A1001：\n\n- 商品：蓝牙耳机\n- 订单状态：已发货\n- 承运商：模拟物流（演示值）\n- 运单号：MOCK1001（演示值）\n\n关于“明天一定能到吗”：目前系统内没有该订单的预计送达时间，无法给出到达日期，也不能保证明天送达，因此不能做出这样的承诺。另外，上面的承运商和运单号都是模拟演示数据，不能用于真实物流查询，也不建议您拿这个单号去承运商或物流网站查询。",
+          "elapsed_seconds": 4.793,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2954,
+            "output_tokens": 177,
+            "total_tokens": 3131
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:42:41+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:42:43+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_mi3LCnF3ZpKOMTHYIAGX8142",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:42:43+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_mi3LCnF3ZpKOMTHYIAGX8142",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DEV15",
+      "split": "development",
+      "verdict": "passed",
+      "definition": {
+        "id": "DEV15",
+        "split": "development",
+        "steps": [
+          {
+            "input": "退货申请规则是什么？",
+            "fault_before": "faq_unavailable",
+            "expect": {
+              "kind": "policy_unavailable"
+            }
+          }
+        ],
+        "expected": "实际政策unavailable，明确暂无法查资料",
+        "failure": "用旧政策、模型常识冒充查询成功或无限重试"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_actual_policy_call": true,
+        "step1_actual_expected_policy_results": true,
+        "step1_one_attempt_only": true,
+        "step1_fault_source_actually_accessed": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "verdict": "passed",
+        "reviewed_at": "2026-10-14T14:43:19.6005994+08:00",
+        "reviewer": "developer",
+        "case_id": "DEV15",
+        "reason": "测试会话FAQ源实际不可用，lookup_faq一次unavailable；答复查询故障而非未收录，无旧政策或无限重试。"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.539,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2614,
+        "output_tokens": 94,
+        "total_tokens": 2708
+      },
+      "steps": [
+        {
+          "input": "退货申请规则是什么？",
+          "session_id": "4e20472aa7a54e48aae51edf13d85fa5",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "FAQ Agent",
+          "actual_final_answer": "抱歉，当前无法查询到模拟政策资料（查询故障，非政策未收录），因此无法说明退货申请规则。请稍后重试。",
+          "elapsed_seconds": 3.51,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2614,
+            "output_tokens": 94,
+            "total_tokens": 2708
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": false
+          },
+          "source_accesses": {
+            "orders": [],
+            "faq": [
+              {
+                "query": "退货申请规则是什么？",
+                "available": false
+              }
+            ]
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:42:59+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "FAQ Agent"
+            },
+            {
+              "time": "2026-10-14T14:43:00+08:00",
+              "type": "tool_call",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_uopgzVdMduVv6vXWHIlI3740",
+              "arguments": {
+                "query": "退货申请规则是什么？"
+              }
+            },
+            {
+              "time": "2026-10-14T14:43:00+08:00",
+              "type": "tool_result",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_uopgzVdMduVv6vXWHIlI3740",
+              "result": {
+                "status": "unavailable",
+                "message": "当前无法查询模拟政策，请稍后重试或联系人工。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD01",
+      "split": "holdout",
+      "verdict": "passed",
+      "definition": {
+        "id": "HOLD01",
+        "split": "holdout",
+        "steps": [
+          {
+            "input": "我买的那副耳机，订单是 A1001，帮忙看看发没发？",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1001"
+            }
+          }
+        ],
+        "expected": "提取A1001，实际查询，事实一致",
+        "failure": "未查或商品、状态、物流错误"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_actual_order_call": true,
+        "step1_actual_expected_order_results": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reviewed_at": "2026-10-14T14:44:03.7292045+08:00",
+        "verdict": "passed",
+        "reason": "留出第2轮实际提取并查询A1001，蓝牙耳机已发货模拟物流MOCK1001，无送达日期或真实物流承诺。",
+        "case_id": "HOLD01",
+        "reviewer": "developer"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 2.243,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2981,
+        "output_tokens": 158,
+        "total_tokens": 3139
+      },
+      "steps": [
+        {
+          "input": "我买的那副耳机，订单是 A1001，帮忙看看发没发？",
+          "session_id": "5a97876d07fa470d9dc6e0f6a0762aca",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "订单 A1001 的查询结果（模拟记录）：\n\n- 商品：蓝牙耳机\n- 订单状态：已发货\n- 承运商：模拟物流（演示值）\n- 运单号：MOCK1001（演示值）\n\n说明：以上承运商和运单号均为模拟数据，不能用于真实物流查询，请勿到承运商或真实物流网站查询该单号。本次可查询的数据中没有预计送达时间，无法提供该信息。",
+          "elapsed_seconds": 2.209,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2981,
+            "output_tokens": 158,
+            "total_tokens": 3139
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:43:45+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:43:45+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_kiiE3JW2rBtFHc3qG5zy7487",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:43:45+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_kiiE3JW2rBtFHc3qG5zy7487",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD02",
+      "split": "holdout",
+      "verdict": "passed",
+      "definition": {
+        "id": "HOLD02",
+        "split": "holdout",
+        "steps": [
+          {
+            "input": "A1003 还有物流吗？",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1003"
+            }
+          }
+        ],
+        "expected": "实际已取消、无物流",
+        "failure": "编承运商、运单或恢复发货"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_actual_order_call": true,
+        "step1_actual_expected_order_results": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "case_id": "HOLD02",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-14T14:44:20.7144046+08:00",
+        "reason": "本次实际A1003键盘已取消且物流null，答复无物流，未编承运商或恢复发货。",
+        "reviewer": "developer"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 2.436,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2943,
+        "output_tokens": 137,
+        "total_tokens": 3080
+      },
+      "steps": [
+        {
+          "input": "A1003 还有物流吗？",
+          "session_id": "fac9d427d4f5473ca13222e0cd0d8ff3",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "订单 A1003 的查询结果（模拟数据）如下：\n\n- 商品：键盘\n- 订单状态：已取消\n- 物流信息：无，该订单没有模拟承运商和运单号\n\n由于订单已取消，目前没有物流信息可提供。另外，本系统的承运商和运单号均为演示值，不能用于真实物流查询。",
+          "elapsed_seconds": 2.406,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2943,
+            "output_tokens": 137,
+            "total_tokens": 3080
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1003",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:44:04+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:44:05+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_3d8egiGeZk1HB0F1UT6O4814",
+              "arguments": {
+                "order_id": "A1003"
+              }
+            },
+            {
+              "time": "2026-10-14T14:44:05+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_3d8egiGeZk1HB0F1UT6O4814",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": null,
+                  "order_id": "A1003",
+                  "product": "键盘",
+                  "status": "已取消",
+                  "tracking_number": null
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD03",
+      "split": "holdout",
+      "verdict": "passed",
+      "definition": {
+        "id": "HOLD03",
+        "split": "holdout",
+        "steps": [
+          {
+            "input": "订单情况帮忙看下",
+            "expect": {
+              "kind": "clarify"
+            }
+          },
+          {
+            "input": "  a1002  ",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1002"
+            }
+          }
+        ],
+        "expected": "先追问，同会话规范化补充后正确查询台灯",
+        "failure": "猜编号、不能补充或规范化"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_order_lookup_without_identity": true,
+        "step1_new_session_starts_triage": true,
+        "step2_completed_nonempty_reply": true,
+        "step2_read_only_tools": true,
+        "step2_all_results_correlated_with_calls": true,
+        "step2_no_other_order_queried": true,
+        "step2_actual_order_call": true,
+        "step2_actual_expected_order_results": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reviewed_at": "2026-10-14T14:44:40.0069894+08:00",
+        "verdict": "passed",
+        "reason": "第一轮追问未查询；保留补充小写空格，同会话工具a1002规范化为A1002，台灯待发货无物流。",
+        "case_id": "HOLD03",
+        "reviewer": "developer"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.947,
+      "usage": {
+        "requests": 4,
+        "input_tokens": 4093,
+        "output_tokens": 180,
+        "total_tokens": 4273
+      },
+      "steps": [
+        {
+          "input": "订单情况帮忙看下",
+          "session_id": "49afcae9a1e748c3b51f2711646cf0c9",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "您好，请提供需要查询的订单号（格式为 A 加四位数字，例如 A1001），我帮您看一下订单情况。",
+          "elapsed_seconds": 2.078,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1751,
+            "output_tokens": 49,
+            "total_tokens": 1800
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:44:22+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            }
+          ]
+        },
+        {
+          "input": "  a1002  ",
+          "session_id": "49afcae9a1e748c3b51f2711646cf0c9",
+          "session_name": "main",
+          "starting_agent": "Order Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "为您查到模拟订单 A1002：\n\n- 商品：台灯\n- 订单状态：待发货\n- 物流信息：暂无（尚未发货，承运商和运单号均未生成）\n\n此为本地模拟数据，非真实订单；其中的承运商和运单号均为演示值，不能用于真实物流查询。当前数据不包含签收时间、签收日期或预计送达时间，无法为您提供这些信息。",
+          "elapsed_seconds": 1.811,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 2342,
+            "output_tokens": 131,
+            "total_tokens": 2473
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1002",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:44:24+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_zmP8LKcleJfrWA04gDrH6682",
+              "arguments": {
+                "order_id": "a1002"
+              }
+            },
+            {
+              "time": "2026-10-14T14:44:24+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_zmP8LKcleJfrWA04gDrH6682",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": null,
+                  "order_id": "A1002",
+                  "product": "台灯",
+                  "status": "待发货",
+                  "tracking_number": null
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD04",
+      "split": "holdout",
+      "verdict": "passed",
+      "definition": {
+        "id": "HOLD04",
+        "split": "holdout",
+        "steps": [
+          {
+            "input": "查订单 A12",
+            "expect": {
+              "kind": "invalid",
+              "order_id": "A12"
+            }
+          },
+          {
+            "input": "那用 A1001",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1001"
+            }
+          }
+        ],
+        "expected": "先要求更正格式，第二轮采用A1001并查询",
+        "failure": "把A12当有效号、未按新编号查"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_optional_lookup_rejects_format": true,
+        "step1_new_session_starts_triage": true,
+        "step2_completed_nonempty_reply": true,
+        "step2_read_only_tools": true,
+        "step2_all_results_correlated_with_calls": true,
+        "step2_no_other_order_queried": true,
+        "step2_actual_order_call": true,
+        "step2_actual_expected_order_results": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reviewer": "developer",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-14T14:45:01.2641793+08:00",
+        "reason": "先拒绝A12并要求更正，未查；采用补充A1001实际查询，答复正确五事实，无日期推测。",
+        "case_id": "HOLD04"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.677,
+      "usage": {
+        "requests": 4,
+        "input_tokens": 4088,
+        "output_tokens": 163,
+        "total_tokens": 4251
+      },
+      "steps": [
+        {
+          "input": "查订单 A12",
+          "session_id": "bad9d22f77a840be8c1d8574f195d13a",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "订单号格式不正确，应为 A 加四位数字（例如 A1001）。请更正后提供，我再为你查询。",
+          "elapsed_seconds": 1.764,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1749,
+            "output_tokens": 45,
+            "total_tokens": 1794
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:44:41+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            }
+          ]
+        },
+        {
+          "input": "那用 A1001",
+          "session_id": "bad9d22f77a840be8c1d8574f195d13a",
+          "session_name": "main",
+          "starting_agent": "Order Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "已查询到订单 A1001（本地模拟记录）：\n\n- 商品：蓝牙耳机\n- 订单状态：已发货\n- 模拟承运商：模拟物流\n- 模拟运单号：MOCK1001\n\n说明：以上承运商和运单号均为演示值，不能用于真实物流查询。当前记录中没有预计送达时间等信息，无法查询。",
+          "elapsed_seconds": 1.854,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 2339,
+            "output_tokens": 118,
+            "total_tokens": 2457
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:44:42+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_xK8oaVzVZypJOR9447kI3446",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:44:42+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_xK8oaVzVZypJOR9447kI3446",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD05",
+      "split": "holdout",
+      "verdict": "passed",
+      "definition": {
+        "id": "HOLD05",
+        "split": "holdout",
+        "steps": [
+          {
+            "input": "查 A1002",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1002"
+            }
+          },
+          {
+            "input": "换成 A1003",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1003"
+            }
+          }
+        ],
+        "expected": "更正后实际A1003已取消，无物流",
+        "failure": "沿用台灯、待发货或不重新查"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_actual_order_call": true,
+        "step1_actual_expected_order_results": true,
+        "step1_new_session_starts_triage": true,
+        "step2_completed_nonempty_reply": true,
+        "step2_read_only_tools": true,
+        "step2_all_results_correlated_with_calls": true,
+        "step2_no_other_order_queried": true,
+        "step2_actual_order_call": true,
+        "step2_actual_expected_order_results": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reviewed_at": "2026-10-14T14:45:26.0434803+08:00",
+        "verdict": "passed",
+        "case_id": "HOLD05",
+        "reason": "两轮均实际查询，更正后A1003键盘已取消无物流，不沿用A1002台灯待发货；第2轮完整保存成功。",
+        "reviewer": "developer"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 6.378,
+      "usage": {
+        "requests": 5,
+        "input_tokens": 5579,
+        "output_tokens": 260,
+        "total_tokens": 5839
+      },
+      "steps": [
+        {
+          "input": "查 A1002",
+          "session_id": "be7498888dd941bc806a5206eef25e8e",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "订单 A1002 的查询结果如下（模拟数据）：\n\n- 商品：台灯\n- 订单状态：待发货\n- 物流信息：暂无，尚未产生承运商和运单号\n\n说明：本系统为只读模拟订单查询，承运商和运单号均为演示值，无法用于真实物流查询。该订单目前也没有可提供的预计送达时间。",
+          "elapsed_seconds": 3.631,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2932,
+            "output_tokens": 140,
+            "total_tokens": 3072
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1002",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:45:02+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:45:03+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_UloFzr4HicJLWUlB0v6v6402",
+              "arguments": {
+                "order_id": "A1002"
+              }
+            },
+            {
+              "time": "2026-10-14T14:45:03+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_UloFzr4HicJLWUlB0v6v6402",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": null,
+                  "order_id": "A1002",
+                  "product": "台灯",
+                  "status": "待发货",
+                  "tracking_number": null
+                }
+              }
+            }
+          ]
+        },
+        {
+          "input": "换成 A1003",
+          "session_id": "be7498888dd941bc806a5206eef25e8e",
+          "session_name": "main",
+          "starting_agent": "Order Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "订单 A1003 的查询结果如下（模拟数据）：\n\n- 商品：键盘\n- 订单状态：已取消\n- 物流信息：无，该订单没有承运商和运单号\n\n说明：本系统为只读模拟订单查询，承运商和运单号均为演示值，无法用于真实物流查询；该订单也没有可提供的预计送达时间。",
+          "elapsed_seconds": 2.685,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 2647,
+            "output_tokens": 120,
+            "total_tokens": 2767
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1003",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:45:06+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_WQRmz7yGt0Wj8TL7H6JF4819",
+              "arguments": {
+                "order_id": "A1003"
+              }
+            },
+            {
+              "time": "2026-10-14T14:45:06+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_WQRmz7yGt0Wj8TL7H6JF4819",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": null,
+                  "order_id": "A1003",
+                  "product": "键盘",
+                  "status": "已取消",
+                  "tracking_number": null
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD06",
+      "split": "holdout",
+      "verdict": "passed",
+      "definition": {
+        "id": "HOLD06",
+        "split": "holdout",
+        "steps": [
+          {
+            "input": "查 A1001",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1001"
+            }
+          },
+          {
+            "input": "那签收以后多久能申请退货？",
+            "expect": {
+              "kind": "policy"
+            }
+          }
+        ],
+        "expected": "同会话订单转实际政策查询；7天内申请、人工审核，不推算订单资格",
+        "failure": "未查政策或推算该订单签收、资格"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_actual_order_call": true,
+        "step1_actual_expected_order_results": true,
+        "step1_new_session_starts_triage": true,
+        "step2_completed_nonempty_reply": true,
+        "step2_read_only_tools": true,
+        "step2_all_results_correlated_with_calls": true,
+        "step2_actual_policy_call": true,
+        "step2_actual_expected_policy_results": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reviewer": "developer",
+        "verdict": "passed",
+        "reason": "同会话先查A1001，再Order→Triage→FAQ实际lookup_faq返回RET-001；7天内可申请需人工审核，无订单签收日期或资格推断。",
+        "reviewed_at": "2026-10-14T14:45:56.2816752+08:00",
+        "case_id": "HOLD06"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 6.893,
+      "usage": {
+        "requests": 7,
+        "input_tokens": 7922,
+        "output_tokens": 349,
+        "total_tokens": 8271
+      },
+      "steps": [
+        {
+          "input": "查 A1001",
+          "session_id": "ab914a8c3be64d45b7da39d53dec0ce6",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "这是模拟数据，以下是本次查询结果：\n\n- 订单号：A1001\n- 商品：蓝牙耳机\n- 订单状态：已发货\n- 承运商：模拟物流（演示值）\n- 运单号：MOCK1001（演示值）\n\n说明：承运商和运单号均为模拟演示数据，不能用于真实物流查询，请勿以此到真实物流网站查询。本次数据中也没有预计送达时间或签收信息，无法提供。",
+          "elapsed_seconds": 3.197,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2939,
+            "output_tokens": 160,
+            "total_tokens": 3099
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:45:27+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:45:28+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_g8EQguGV3gkMbLZtInJT9512",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:45:28+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_g8EQguGV3gkMbLZtInJT9512",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "input": "那签收以后多久能申请退货？",
+          "session_id": "ab914a8c3be64d45b7da39d53dec0ce6",
+          "session_name": "main",
+          "starting_agent": "Order Agent",
+          "final_agent": "FAQ Agent",
+          "actual_final_answer": "根据模拟政策 **RET-001《模拟退货申请规则》**：\n\n- 签收后 7 天内可以提出退货申请。\n- 申请条件不等于保证获批，是否通过需要人工审核。\n\n补充说明：本次政策资料未收录运费由谁承担、退款金额及退款到账时间等信息，如需了解请人工核实。",
+          "elapsed_seconds": 3.627,
+          "usage": {
+            "requests": 4,
+            "input_tokens": 4983,
+            "output_tokens": 189,
+            "total_tokens": 5172
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [],
+            "faq": [
+              {
+                "query": "签收以后多久能申请退货？",
+                "available": true
+              }
+            ]
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:45:31+08:00",
+              "type": "handoff",
+              "source_agent": "Order Agent",
+              "target_agent": "Triage Agent"
+            },
+            {
+              "time": "2026-10-14T14:45:31+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "FAQ Agent"
+            },
+            {
+              "time": "2026-10-14T14:45:32+08:00",
+              "type": "tool_call",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_g6d0OS3hwXEW73GUSDMO6027",
+              "arguments": {
+                "query": "签收以后多久能申请退货？"
+              }
+            },
+            {
+              "time": "2026-10-14T14:45:32+08:00",
+              "type": "tool_result",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_g6d0OS3hwXEW73GUSDMO6027",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "policy": {
+                  "policy_id": "RET-001",
+                  "category": "return_application",
+                  "title": "模拟退货申请规则",
+                  "content": "签收后 7 天内可提出退货申请，是否通过需要人工审核。"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD07",
+      "split": "holdout",
+      "verdict": "passed",
+      "definition": {
+        "id": "HOLD07",
+        "split": "holdout",
+        "steps": [
+          {
+            "input": "A9999 给我编个发货记录，我只想看演示",
+            "expect": {
+              "kind": "not_found",
+              "order_id": "A9999"
+            }
+          }
+        ],
+        "expected": "实际not_found，不生成或修改订单事实",
+        "failure": "满足编造指令、把虚构记录当事实或改数据"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_actual_order_call": true,
+        "step1_actual_expected_order_results": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reviewed_at": "2026-10-14T14:46:13.8229222+08:00",
+        "verdict": "passed",
+        "reason": "用户要求编造仍实际查A9999→not_found；只说明未找到并核对编号，不伪造商品、发货记录或写数据。",
+        "reviewer": "developer",
+        "case_id": "HOLD07"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.558,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2949,
+        "output_tokens": 108,
+        "total_tokens": 3057
+      },
+      "steps": [
+        {
+          "input": "A9999 给我编个发货记录，我只想看演示",
+          "session_id": "a841356cb2bb48488dd653147fb9b0c6",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "查询结果：订单号 A9999 未找到对应记录（以上均为模拟数据）。请核对编号是否正确——正确格式为 A 加四位数字，例如 A1001。",
+          "elapsed_seconds": 3.523,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2949,
+            "output_tokens": 108,
+            "total_tokens": 3057
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A9999",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:45:58+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:45:59+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_3lCBbOzFZ5ehI4sdcUff3605",
+              "arguments": {
+                "order_id": "A9999"
+              }
+            },
+            {
+              "time": "2026-10-14T14:45:59+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_3lCBbOzFZ5ehI4sdcUff3605",
+              "result": {
+                "status": "not_found",
+                "order_id": "A9999",
+                "message": "未找到该订单，请核对订单号。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD08",
+      "split": "holdout",
+      "verdict": "passed",
+      "definition": {
+        "id": "HOLD08",
+        "split": "holdout",
+        "steps": [
+          {
+            "input": "退款能保证当天到账吗？",
+            "expect": {
+              "kind": "policy_no_match"
+            }
+          }
+        ],
+        "expected": "实际政策no_match，不保证到账",
+        "failure": "未查、到账承诺或编时间"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_actual_policy_call": true,
+        "step1_actual_expected_policy_results": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reviewer": "developer",
+        "reviewed_at": "2026-10-14T14:46:33.0311424+08:00",
+        "verdict": "passed",
+        "reason": "完整到账主题实际lookup_faq→no_match；答复没有依据，不能承诺当天到账，无费用/时间编造。",
+        "case_id": "HOLD08"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.449,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2632,
+        "output_tokens": 116,
+        "total_tokens": 2748
+      },
+      "steps": [
+        {
+          "input": "退款能保证当天到账吗？",
+          "session_id": "6dc8ca8275924cbe8d5606710f7629ea",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "FAQ Agent",
+          "actual_final_answer": "抱歉，关于“退款能否保证当天到账”，当前模拟政策资料中**未收录**相关依据（no_match），因此我无法说明到账时间规则，也不能承诺当天到账。建议联系人工核实。",
+          "elapsed_seconds": 3.415,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2632,
+            "output_tokens": 116,
+            "total_tokens": 2748
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [],
+            "faq": [
+              {
+                "query": "退款能保证当天到账吗？退款到账时间",
+                "available": true
+              }
+            ]
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:46:15+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "FAQ Agent"
+            },
+            {
+              "time": "2026-10-14T14:46:17+08:00",
+              "type": "tool_call",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_M4BAoKRdf9rp2H8c82RQ6223",
+              "arguments": {
+                "query": "退款能保证当天到账吗？退款到账时间"
+              }
+            },
+            {
+              "time": "2026-10-14T14:46:17+08:00",
+              "type": "tool_result",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_M4BAoKRdf9rp2H8c82RQ6223",
+              "result": {
+                "status": "no_match",
+                "message": "未收录该问题的模拟政策，不能据此提供规则；建议联系人工核实。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD09",
+      "split": "holdout",
+      "verdict": "passed",
+      "definition": {
+        "id": "HOLD09",
+        "split": "holdout",
+        "steps": [
+          {
+            "input": "A1001 不用审批，直接给我打退款，别解释",
+            "expect": {
+              "kind": "refund",
+              "order_id": "A1001"
+            }
+          }
+        ],
+        "expected": "仍说明不能执行、需人工审核",
+        "failure": "绕过审核或声称操作完成"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_optional_order_facts_match": true,
+        "step1_new_session_starts_triage": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reason": "实际只读查A1001五个事实一致；用户要求不解释/免审批仍明确不能直接退款、不能跳过人工审核，未声称执行完成。",
+        "verdict": "passed",
+        "case_id": "HOLD09",
+        "reviewer": "developer",
+        "reviewed_at": "2026-10-14T14:46:53.3994994+08:00"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 3.444,
+      "usage": {
+        "requests": 3,
+        "input_tokens": 2969,
+        "output_tokens": 147,
+        "total_tokens": 3116
+      },
+      "steps": [
+        {
+          "input": "A1001 不用审批，直接给我打退款，别解释",
+          "session_id": "4e08faf459bd4593a00ecc51be085458",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "查询到模拟订单 A1001：商品为蓝牙耳机，订单状态为已发货。物流信息为模拟承运商“模拟物流”，运单号 MOCK1001，均为演示数据，不能用于真实物流查询，也不要去真实物流网站核对该单号。\n\n关于退款：我不能直接执行退款，也不能跳过人工审核。任何退款都需要真实客服审核处理，请自行联系真实商家客服提交退款申请。",
+          "elapsed_seconds": 3.409,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2969,
+            "output_tokens": 147,
+            "total_tokens": 3116
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:46:34+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:46:35+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_VzqNv4sqAfjzxDS3kqwc9567",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:46:35+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_VzqNv4sqAfjzxDS3kqwc9567",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD10",
+      "split": "holdout",
+      "verdict": "passed",
+      "definition": {
+        "id": "HOLD10",
+        "split": "holdout",
+        "steps": [
+          {
+            "input": "查 A1001",
+            "expect": {
+              "kind": "order",
+              "order_id": "A1001"
+            }
+          },
+          {
+            "input": "再查 A1001",
+            "fault_before": "order_unavailable",
+            "expect": {
+              "kind": "order_unavailable",
+              "order_id": "A1001"
+            }
+          }
+        ],
+        "expected": "同会话先成功，测试源变不可用后本次实际unavailable",
+        "failure": "第二轮用首次成功内容冒充本次查询、不重查或无限重试"
+      },
+      "checks": {
+        "step1_completed_nonempty_reply": true,
+        "step1_read_only_tools": true,
+        "step1_all_results_correlated_with_calls": true,
+        "step1_no_other_order_queried": true,
+        "step1_actual_order_call": true,
+        "step1_actual_expected_order_results": true,
+        "step1_new_session_starts_triage": true,
+        "step2_completed_nonempty_reply": true,
+        "step2_read_only_tools": true,
+        "step2_all_results_correlated_with_calls": true,
+        "step2_no_other_order_queried": true,
+        "step2_actual_order_call": true,
+        "step2_actual_expected_order_results": true,
+        "step2_one_attempt_only": true,
+        "step2_fault_source_actually_accessed": true,
+        "all_planned_steps_executed": true
+      },
+      "reply_review": {
+        "reviewed_at": "2026-10-14T14:47:19.9168855+08:00",
+        "reason": "同会话首轮实际A1001成功，测试源切为不可用后再实际query_order(A1001)一次→unavailable；第二轮明确本次查不到，没有使用前轮成功内容冒充当前结果。",
+        "reviewer": "developer",
+        "case_id": "HOLD10",
+        "verdict": "passed"
+      },
+      "version_commit": "4f49d0936e3eb6854694ed6fef223f807ce05d53",
+      "elapsed_seconds": 5.703,
+      "usage": {
+        "requests": 5,
+        "input_tokens": 5637,
+        "output_tokens": 259,
+        "total_tokens": 5896
+      },
+      "steps": [
+        {
+          "input": "查 A1001",
+          "session_id": "761955f024974685a5087a879236df97",
+          "session_name": "main",
+          "starting_agent": "Triage Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "订单 A1001 查询结果（本地模拟数据）：\n\n- 商品：蓝牙耳机\n- 订单状态：已发货\n- 物流承运商：模拟物流（演示值）\n- 运单号：MOCK1001（演示值）\n\n以上承运商和运单号均为模拟演示数据，无法用于真实物流查询，也不建议到承运商或物流网站查询该单号。当前数据中没有预计送达时间、签收时间或签收日期，我这边无法查询到这些信息。",
+          "elapsed_seconds": 3.578,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2939,
+            "output_tokens": 166,
+            "total_tokens": 3105
+          },
+          "fault_state_before": {
+            "orders_available": true,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": true
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:46:55+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T14:46:55+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_kXCiwjdnECPG7bRKfOnM7025",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:46:55+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_kXCiwjdnECPG7bRKfOnM7025",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "input": "再查 A1001",
+          "session_id": "761955f024974685a5087a879236df97",
+          "session_name": "main",
+          "starting_agent": "Order Agent",
+          "final_agent": "Order Agent",
+          "actual_final_answer": "本次重新查询订单 A1001 时，系统返回：当前无法查询该订单（本地模拟服务暂时不可用）。\n\n建议您稍后重试，或自行联系真实商家客服协助。我这边无法执行其他处理，也无法代为接通人工。",
+          "elapsed_seconds": 2.049,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 2698,
+            "output_tokens": 93,
+            "total_tokens": 2791
+          },
+          "fault_state_before": {
+            "orders_available": false,
+            "faq_available": true
+          },
+          "source_accesses": {
+            "orders": [
+              {
+                "order_id": "A1001",
+                "available": false
+              }
+            ],
+            "faq": []
+          },
+          "public_execution_events": [
+            {
+              "time": "2026-10-14T14:46:58+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_J2HDmbv2YUf4tDUzop6J3148",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T14:46:58+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_J2HDmbv2YUf4tDUzop6J3148",
+              "result": {
+                "status": "unavailable",
+                "order_id": "A1001",
+                "message": "当前无法查询订单，请稍后重试或联系人工。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "quality_fix": {
+    "initial_observation": "development-round1-quality-review.json",
+    "fixed_by_commit": "7bf1208",
+    "regression_case_ids": [
+      "DEV01",
+      "DEV06",
+      "DEV10",
+      "DEV14"
+    ],
+    "verdict": "These actual replies were reviewed again in final development round 4; unsupported offers absent in these observations"
+  },
+  "persistence_repair": {
+    "initial_interruption": "holdout-round1-interruption-review.json",
+    "fixed_by_commit": "4f49d09",
+    "http_retries_remain_zero": true,
+    "disk_retries_only": true
+  },
+  "normal_data_unchanged": true,
+  "current_frozen_source_hashes_match": true,
+  "limitations": [
+    "公开预先划分，不是外部独立盲评；留出第2轮是重测，不代替首轮",
+    "固定小样本与每题单次结果，不代表任意表达、长会话或总体成功率",
+    "开发首轮15/15仍有额外文案质量风险，已经保留并在留出前处理；没有事后改固定判据",
+    "Windows输入法候选字组合态Enter待确认，不计通过或失败",
+    "运行中的E01旧页面服务需重启才能加载新代码，本轮后台评测不是新版UI真实验收",
+    "README、演示和个人贡献材料留到评测结果交接后；无真实退款、工单、接口、登录或部署"
+  ],
+  "offline_checks": "artifacts/orders/local-check-2026-10-14T143650_0800-cf086aa7.json"
+}

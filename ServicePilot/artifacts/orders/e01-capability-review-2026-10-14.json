@@ -1,0 +1,103 @@
+{
+  "evidence_kind": "live_api_reply_review",
+  "status": "reviewed_passed",
+  "tested_version": {
+    "commit": "e79a442f59227d7b897730d0dcbb6e2c8b16c2c9",
+    "branch": "feature/order-query",
+    "worktree_dirty": true,
+    "hash_mode": "SHA256 after CRLF to LF normalization",
+    "business_source_hashes": {
+      "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+      "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+      "ServicePilot/servicepilot/agent_config.py": "038cfaa5f461bf1255e88fbc3c3d0b5dd8d1d0a70a392cdee2ee0142139b9f70",
+      "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+      "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+      "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+      "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+      "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+      "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+      "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+      "ServicePilot/scripts/run_order_customer_service.py": "518d34a2d0b40beb3b0ad663e59e7b5de60175175855e999b5bb042759499c11",
+      "ServicePilot/scripts/run_deepseek_customer_service.py": "deb99dc495007e945104d0e213245dd4f82b0b3ac226a1d1a18f18df97075b24",
+      "ServicePilot/scripts/order_acceptance_batch.py": "3645299ee244d76cdb5324cbd74e0f97aa5f6d984f11ed24b54936167310985a"
+    }
+  },
+  "raw_run_file": "ServicePilot\\artifacts\\orders\\order-run-2026-10-14T131636_0800-d52e33fb.json",
+  "raw_sha256": "973d1a808e4c9ef9f999ac009ec02694c897dbe4fa223ca1d8a132f52b7fb185",
+  "cases": [
+    {
+      "case_id": "C01",
+      "verdict": "passed",
+      "checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "actual_policy_lookup": true,
+        "final_agent_FAQ": true
+      },
+      "reply_review": {
+        "case_id": "C01",
+        "reviewer": "developer",
+        "verdict": "passed",
+        "reason": "实际 lookup_faq 返回 RET-001；7天内申请且需人工审核，不保证获批；明确无法查询签收日期，不承诺查签收时间。",
+        "reviewed_at": "2026-10-14T13:18:05.5055783+08:00"
+      }
+    },
+    {
+      "case_id": "C06",
+      "verdict": "passed",
+      "checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "two_turns_same_session": true,
+        "first_turn_actual_policy_lookup": true,
+        "first_turn_final_agent_FAQ": true,
+        "second_turn_starts_from_FAQ": true,
+        "FAQ_back_to_triage": true,
+        "triage_to_order": true,
+        "second_turn_queries_A1001": true
+      },
+      "reply_review": {
+        "verdict": "passed",
+        "reason": "同一会话实际 FAQ→Triage→Order→query_order(A1001)，五个事实一致，政策需人工审核；两轮明确没有签收日期，不再提出查询签收时间。",
+        "reviewed_at": "2026-10-14T13:19:06.1837026+08:00",
+        "case_id": "C06",
+        "reviewer": "developer"
+      }
+    },
+    {
+      "case_id": "Q01",
+      "verdict": "passed",
+      "checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "no_receipt_field_in_results": true
+      },
+      "reply_review": {
+        "case_id": "Q01",
+        "reviewer": "developer",
+        "reviewed_at": "2026-10-14T13:19:27.2993159+08:00",
+        "verdict": "passed",
+        "reason": "实际 query_order(A1001) 仅五个既有字段；最终答复明确无法查询签收日期，不从已发货推断签收或期限，无日期编造。"
+      }
+    },
+    {
+      "case_id": "Q02",
+      "verdict": "passed",
+      "checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "actual_policy_no_match": true
+      },
+      "reply_review": {
+        "reason": "实际 lookup_faq(退货运费谁承担？) 返回 no_match；最终明确没有依据，不编承担方，仅建议人工核实，主动建议限于支持范围。",
+        "reviewer": "developer",
+        "reviewed_at": "2026-10-14T13:19:47.4030330+08:00",
+        "verdict": "passed",
+        "case_id": "Q02"
+      }
+    }
+  ],
+  "mock_data_unchanged": true,
+  "mock_policies_unchanged": true,
+  "scope": "C01/C06 regression and Q01 receipt-date boundary/Q02 unknown shipping policy; no new receipt fields"
+}

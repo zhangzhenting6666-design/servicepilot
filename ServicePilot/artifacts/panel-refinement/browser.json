@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "code_background": "rgb(238, 243, 240)",
+      "overflow": false,
+      "page": "代码解读",
+      "panels": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "padding": "15px",
+          "width": 348
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "padding": "15px",
+          "width": 348
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "padding": "15px",
+          "width": 348
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "padding": "15px",
+          "width": 348
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "padding": "15px",
+          "width": 348
+        }
+      ],
+      "scale": 1,
+      "width": 390
+    },
+    {
+      "brand": {
+        "bottom": 138.20000457763672,
+        "height": 86.20000457763672,
+        "left": 106,
+        "right": 1250,
+        "top": 52,
+        "width": 1144,
+        "x": 106,
+        "y": 52
+      },
+      "columns": [
+        {
+          "width": 517.2000122070312,
+          "x": 128.8000030517578
+        },
+        {
+          "width": 517.2000122070312,
+          "x": 710
+        }
+      ],
+      "overflow": false,
+      "page": "项目介绍",
+      "panel_padding": "22px",
+      "platform": {
+        "bottom": 48,
+        "height": 48,
+        "left": 0,
+        "right": 1366.4000244140625,
+        "top": 0,
+        "width": 1366.4000244140625,
+        "x": 0,
+        "y": 0
+      },
+      "scale": 1,
+      "width": 1366
+    },
+    {
+      "overflow": false,
+      "page": "代码解读",
+      "panel_padding": "22px",
+      "panels": 5,
+      "width": 1366
+    },
+    {
+      "main_width": 1200,
+      "overflow": false,
+      "page": "项目介绍",
+      "panels": 7,
+      "width": 1920
+    },
+    {
+      "overflow": false,
+      "page": "代码解读",
+      "width": 1920
+    },
+    {
+      "code_scroll_width": 845,
+      "code_width": 306,
+      "overflow": false,
+      "page": "完整代码展示",
+      "white_background": "rgb(255, 255, 255)",
+      "width": 390
+    },
+    {
+      "architecture_loaded": true,
+      "overflow": false,
+      "page": "架构总览",
+      "width": 390
+    }
+  ],
+  "visible_about_text_preserved": true,
+  "visible_code_text_preserved_except_version": true,
+  "copy_matches_selected_full_source": true,
+  "default_full_source_closed": true,
+  "api_request_attempted": false
+}

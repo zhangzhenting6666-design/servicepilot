@@ -1,0 +1,12 @@
+{
+  "local_url": "http://127.0.0.1:8501/",
+  "self_assessment_present": false,
+  "personal_caveat_present": false,
+  "version_r3": true,
+  "architecture_loaded": true,
+  "architecture_dimensions": [
+    1680,
+    2110
+  ],
+  "api_request_attempted": false
+}

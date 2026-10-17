@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-14",
+  "evidence_kind": "design_preview_browser_check",
+  "product_api_called": false,
+  "product_code_modified": false,
+  "public_deployment_verified": false,
+  "method": "Codex in-app browser; visible screenshot inspection and read-only DOM measurements",
+  "reference_opened": "../approved-workbench/reference.html",
+  "reference_images_viewed": ["chat.png", "about.png", "architecture.png"],
+  "mobile": {
+    "viewport": [390, 844],
+    "states_checked": ["empty", "order", "faq", "ask", "loading", "invalid", "notfound", "nomatch", "unavailable", "error", "blank", "reset", "resetfail", "startup"],
+    "page_horizontal_overflow_in_checked_states": false,
+    "loading_input_disabled": true,
+    "loading_reset_disabled": true,
+    "loading_examples_disabled": true,
+    "loading_fake_events_displayed": false,
+    "about_single_column": true,
+    "architecture_asset_loaded": true,
+    "architecture_source": "../../architecture/servicepilot-system-2026-10-14.svg",
+    "zoom_content_width": 1680,
+    "zoom_page_horizontal_overflow": false
+  },
+  "desktop": {
+    "viewport": [1440, 1000],
+    "workspace_column_widths_approx": [820, 304],
+    "page_horizontal_overflow": false,
+    "reset_confirmation_keeps_current_policy_sample": true,
+    "reset_cancel_keeps_policy_sample": true,
+    "reset_confirm_returns_to_empty": true,
+    "example_click_only_populates_draft": true,
+    "example_click_keeps_empty_chat_and_events": true
+  },
+  "fallback_320": {
+    "viewport": [320, 844],
+    "order_with_expanded_events_horizontal_overflow": false,
+    "navigation_labels_remain_in_one_row": true
+  },
+  "streamlit_mapping_verified": "Local Streamlit 1.65.0 signatures for tabs/container/chat_input and official documentation",
+  "not_verified": ["new product UI integration", "real backend acceptance for redesigned UI", "Windows IME composition Enter", "phone software keyboard", "cloud startup", "public HTTPS access"],
+  "note": "Self-recorded design checks only. Samples do not count as business acceptance or deployment evidence."
+}

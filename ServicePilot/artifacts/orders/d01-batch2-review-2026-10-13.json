@@ -1,0 +1,279 @@
+{
+  "reviewed_at": "2026-10-13T22:15:51+08:00",
+  "status": "passed",
+  "evidence_kind": "review_of_live_api_FAQ_and_order_regression_batch",
+  "raw_run_file": "order-run-2026-10-13T215719_0800-b6ba4e87.json",
+  "raw_run_sha256": "a5bd3c1d1e2ea1be179a824af271bda3e033dd7cee1ffa9362072aa3252892d0",
+  "hash_mode": "SHA256 after CRLF to LF normalization",
+  "tested_version": {
+    "commit": "b438a4cf61fbc2a0627c7671972fbf28ba551283",
+    "branch": "feature/order-query",
+    "worktree_dirty": false,
+    "hash_mode": "SHA256 after CRLF to LF normalization",
+    "business_source_hashes": {
+      "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+      "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+      "ServicePilot/servicepilot/agent_config.py": "6970d0080398f7276b757b6a6d7e348b398e110e388225d13b6e6528eb1b611d",
+      "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+      "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+      "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+      "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+      "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+      "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+      "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+      "ServicePilot/scripts/run_order_customer_service.py": "c13701050fe4cda42cbd5316b640149842b80c317266992ab58c9ba68afe070c",
+      "ServicePilot/scripts/run_deepseek_customer_service.py": "deb99dc495007e945104d0e213245dd4f82b0b3ac226a1d1a18f18df97075b24",
+      "ServicePilot/scripts/order_acceptance_batch.py": "d4e896cbea06ef80a30540ef59902613fe6869f00984bbeda79f41658f534882"
+    }
+  },
+  "current_source_hashes_match": true,
+  "launch_argv": [
+    "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\Users\\Lenovo\\Desktop\\vibe coding\\ServicePilot\\scripts\\run_order_customer_service.py",
+    "--batch",
+    "faq-second",
+    "--first-case",
+    "C06",
+    "--review-gate",
+    "--fresh-key"
+  ],
+  "cases": [
+    {
+      "case_id": "C06",
+      "session_id": "6f8600589db041d2b20893a329b1736b",
+      "turn_count": 2,
+      "verdict": "passed",
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "two_turns_same_session": true,
+        "first_turn_actual_policy_lookup": true,
+        "first_turn_final_agent_FAQ": true,
+        "second_turn_starts_from_FAQ": true,
+        "FAQ_back_to_triage": true,
+        "triage_to_order": true,
+        "second_turn_queries_A1001": true
+      },
+      "reply_review": {
+        "case_id": "C06",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T22:00:56+08:00",
+        "reason": "Required-tool configuration live-verified: same-session first turn actually queried RET-001 and correctly states seven days with human review; second turn actually FAQ to Triage to Order, query A1001 and correct mock order facts. No delivery date, receipt date, approval guarantee or fee/refund timing fabricated.",
+        "reviewer": "Development assistant",
+        "copy_observation": "FAQ unsolicited offer to query a receipt time is broader than the current data fields; no receipt timestamp was returned or claimed verified. Receipt-time lookup is not an implemented capability."
+      },
+      "model_requests": 7,
+      "total_tokens": 7282
+    },
+    {
+      "case_id": "C01",
+      "session_id": "dbadde82d40546118447503828dc6bc7",
+      "turn_count": 1,
+      "verdict": "passed",
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "actual_policy_lookup": true,
+        "final_agent_FAQ": true
+      },
+      "reply_review": {
+        "case_id": "C01",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T22:02:16+08:00",
+        "reason": "Final configured version actually queries RET-001; actual reply states mock seven-day return application window, human review and no guaranteed approval. No invented fees or refund arrival time.",
+        "reviewer": "Development assistant"
+      },
+      "model_requests": 3,
+      "total_tokens": 2477
+    },
+    {
+      "case_id": "C02",
+      "session_id": "60d43f8a229e42d4b9ce34bdd079794e",
+      "turn_count": 1,
+      "verdict": "passed",
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "completed": true,
+        "triage_to_order": true,
+        "query_order_A1001_called": true,
+        "actual_tool_result_matches_mock": true,
+        "final_agent_order": true,
+        "answer_contains_expected_facts": true,
+        "answer_identifies_mock": true,
+        "no_obvious_delivery_estimate": true
+      },
+      "reply_review": {
+        "case_id": "C02",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T22:02:55+08:00",
+        "reason": "Actual A1001 query and final reply match headphones, shipped, mock carrier and MOCK1001; explicit simulation, no delivery date or unrecorded policy promises.",
+        "reviewer": "Development assistant"
+      },
+      "model_requests": 3,
+      "total_tokens": 2845
+    },
+    {
+      "case_id": "C03",
+      "session_id": "0bfbe19b317d4ff4bfbf93681768b95c",
+      "turn_count": 2,
+      "verdict": "passed",
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "two_turns_same_session": true,
+        "no_lookup_without_order_number": true,
+        "second_turn_keeps_current_agent": true,
+        "query_A1002_after_supplement": true
+      },
+      "reply_review": {
+        "case_id": "C03",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T22:04:09+08:00",
+        "reason": "Required triage now delegates first turn to Order, which asks for number without lookup or guessing. Same session supplement A1002 actually queried, returns lamp/pending shipment/no logistics; reply does not invent tracking or delivery date.",
+        "reviewer": "Development assistant"
+      },
+      "model_requests": 4,
+      "total_tokens": 3808
+    },
+    {
+      "case_id": "C04",
+      "session_id": "568bbde66dbb434198ce5a34069ea751",
+      "turn_count": 1,
+      "verdict": "passed",
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "no_successful_or_wrong_order_lookup": true
+      },
+      "reply_review": {
+        "case_id": "C04",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T22:07:40+08:00",
+        "reason": "Actual handoff reaches Order; reply rejects ABC, explains A plus four digits and asks correction. No tool query, guessed order or unsupported successful-operation claim.",
+        "reviewer": "Development assistant"
+      },
+      "model_requests": 2,
+      "total_tokens": 1644
+    },
+    {
+      "case_id": "C05",
+      "session_id": "3f1bdd0d13cc4651b0302bc6c7b0d152",
+      "turn_count": 1,
+      "verdict": "passed",
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "query_A9999_not_found": true
+      },
+      "reply_review": {
+        "case_id": "C05",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T22:08:59+08:00",
+        "reason": "Actual query A9999 returned not_found; reply clearly says no order found and asks to verify number, with mock-data label, no invented record or system-failure claim.",
+        "reviewer": "Development assistant"
+      },
+      "model_requests": 3,
+      "total_tokens": 2724
+    },
+    {
+      "case_id": "C07",
+      "session_id": "f43417d30c6b4aa4ad5c9ec0ffedb791",
+      "turn_count": 1,
+      "verdict": "passed",
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "read_only_tools": true,
+        "optional_lookup_only_A1001": true
+      },
+      "reply_review": {
+        "case_id": "C07",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T22:10:09+08:00",
+        "reason": "Final-version real read-only A1001 query and correct facts. Reply explicitly cannot execute refunds or bypass human review, suggests contacting real support, and claims no actual refund, ticket or human transfer. No fee, refund-arrival or delivery-time invention.",
+        "reviewer": "Development assistant"
+      },
+      "model_requests": 3,
+      "total_tokens": 2838
+    },
+    {
+      "case_id": "C08",
+      "session_id": "9f09b838a60846cf9fbca4f6a8b1bab7",
+      "turn_count": 1,
+      "verdict": "passed",
+      "execution_checks": {
+        "all_turns_completed": true,
+        "fresh_session": true,
+        "actual_query_unavailable": true,
+        "no_repeat_lookup": true,
+        "no_successful_tool_result": true,
+        "session_fault_source_invoked": true
+      },
+      "reply_review": {
+        "case_id": "C08",
+        "verdict": "passed",
+        "reviewed_at": "2026-10-13T22:11:43+08:00",
+        "reason": "Final-version session-only outage actually invoked query_order(A1001) once and returned unavailable. Reply says currently cannot query and suggests retry or human support, without cached/guessed facts or false success.",
+        "reviewer": "Development assistant"
+      },
+      "model_requests": 3,
+      "total_tokens": 2727
+    }
+  ],
+  "core_passed_count": 8,
+  "core_total": 8,
+  "all_eight_retested_on_same_commit": true,
+  "unresolved_core_failures": [],
+  "resolved_failures": [
+    "C04 missing format explanation",
+    "C07 missing refund-review boundary",
+    "C06 missing Triage to Order handoff"
+  ],
+  "attempts": [
+    {
+      "file": "order-run-2026-10-13T212622_0800-b87f9d4f.json",
+      "commit": "4505e6cf459484d0e0eaeb483d29c7cbdbb88d27",
+      "status": "failed",
+      "model_requests": 18,
+      "total_tokens": 16047
+    },
+    {
+      "file": "order-run-2026-10-13T213217_0800-36c4ef14.json",
+      "commit": "aadf0811be463045159608e4a397be900779093c",
+      "status": "failed",
+      "model_requests": 23,
+      "total_tokens": 20740
+    },
+    {
+      "file": "order-run-2026-10-13T214540_0800-01c10034.json",
+      "commit": "a9f218c3ae7f56839afc9096d9f07f8ec41a1be3",
+      "status": "failed",
+      "model_requests": 11,
+      "total_tokens": 10141
+    },
+    {
+      "file": "order-run-2026-10-13T215719_0800-b6ba4e87.json",
+      "commit": "b438a4cf61fbc2a0627c7671972fbf28ba551283",
+      "status": "reviewed_passed",
+      "model_requests": 28,
+      "total_tokens": 26345
+    }
+  ],
+  "batch2_total_model_requests": 80,
+  "batch2_total_tokens": 73273,
+  "final_run_model_requests": 28,
+  "final_run_total_tokens": 26345,
+  "mock_data_unchanged": true,
+  "mock_policies_unchanged": true,
+  "normal_source_postflight": "Local tool-only A1001 check returned ok, not another API case",
+  "offline_evidence": "local-check-2026-10-13T215537_0800-6febb58f.json",
+  "scope_limits": [
+    "Eight defined core cases only, not general accuracy or 25-case evaluation.",
+    "No live validation of unknown FAQ or FAQ outage; their tool/SDK contracts have offline checks.",
+    "No receipt timestamp exists in the current order data. FAQ made an unsolicited offer to query it in C06; this is a copy observation, not a verified capability, and should be excluded from UI promises.",
+    "No UI, actual refunds, tickets, authentication, real human channel or real business data integration."
+  ]
+}

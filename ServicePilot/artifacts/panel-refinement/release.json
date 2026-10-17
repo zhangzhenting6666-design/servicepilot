@@ -1,0 +1,34 @@
+{
+  "workspace_code_commit": "f8c15390e0146aefb8dfb8205444965210ec5c07",
+  "release_commit": "ec95b02a814a69f97f43188f10ea4109d00f0f66",
+  "remote_verified_by_ls_remote": true,
+  "public_snapshot_id": "c47fe3c9cdb11db6d1ef97b4cfad04e423cf5912f4476c66660ed137ffa05c3d",
+  "label": "展示版 r4",
+  "offline_tests_passed": 18,
+  "api_request_attempted": false,
+  "local_viewports": [
+    [
+      1366,
+      768
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "public_source_files": 22,
+  "release_files": 29,
+  "user_cloud_confirmation": "两栏都已正常显示",
+  "cloud_independent_verification": false,
+  "cloud_browser_attempt": {
+    "operation": "existing public tab reload and DOM snapshot",
+    "timeout_ms": 20000,
+    "result": "js execution timed out; kernel reset"
+  },
+  "new_cloud_business_acceptance": false,
+  "scope": "Existing about/code panels only; entrypoint, architecture, images and business modules unchanged."
+}

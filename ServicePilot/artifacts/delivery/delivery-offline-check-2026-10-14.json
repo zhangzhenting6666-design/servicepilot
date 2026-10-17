@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-14T15:40:42+08:00",
+  "evidence_kind": "offline_delivery_integrity_check",
+  "api_request_attempted": false,
+  "command": [
+    "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\Users\\Lenovo\\Desktop\\vibe coding\\ServicePilot\\tmp\\check_delivery_offline.py"
+  ],
+  "documents_checked": [
+    "开始这里.md",
+    "ServicePilot/README.md",
+    "ServicePilot/docs/任务看板.md",
+    "ServicePilot/docs/PRD.md",
+    "ServicePilot/docs/基线与启动说明.md",
+    "ServicePilot/docs/三分钟演示与录制步骤.md",
+    "ServicePilot/docs/个人贡献说明.md",
+    "ServicePilot/docs/作品介绍.md",
+    "ServicePilot/docs/2026-10-14-交付整理交接.md"
+  ],
+  "local_link_count": 95,
+  "missing_links": [],
+  "new_text_files_scanned_for_credential_patterns": 17,
+  "credential_pattern_hit_count": 0,
+  "scan_limit": "pattern scan, not proof for every possible secret format",
+  "pip_check": {
+    "returncode": 0,
+    "output": "No broken requirements found."
+  },
+  "git_diff_check_returncode": 0,
+  "frozen_20_source_hashes_unchanged": true,
+  "prior_eval_report_and_E01_and_mainline_plan_preserved": true,
+  "screen_recording_present": false,
+  "clean_install_on_another_device": "not tested",
+  "IME_candidate_Enter": "unconfirmed",
+  "verdict": "passed"
+}

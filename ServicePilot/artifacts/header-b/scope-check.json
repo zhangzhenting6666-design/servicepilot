@@ -1,0 +1,16 @@
+{
+  "app_semantics_unchanged_after_removing_display_shell": true,
+  "unchanged_files": [
+    "servicepilot/workbench_ui.py",
+    "servicepilot/code_guide.py",
+    "servicepilot/agent_config.py",
+    "servicepilot/model_config.py",
+    "servicepilot/order_tools.py",
+    "servicepilot/faq_tools.py",
+    "servicepilot/web_runtime.py",
+    "servicepilot/session.py",
+    "assets/architecture/servicepilot-system.svg",
+    "assets/showcase/02-a1001-result.jpg",
+    "assets/showcase/04-policy-to-order.jpg"
+  ]
+}

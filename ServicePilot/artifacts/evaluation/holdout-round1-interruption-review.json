@@ -1,0 +1,20 @@
+{
+  "evidence_kind": "live_evaluation_interruption_review",
+  "raw_run_file": "artifacts/evaluation/eval-run-2026-10-14T142212_0800-fa896b89.json",
+  "frozen_commit": "7bf12089b4fffd0878bcdec8edd27ba80076a3b3",
+  "holdout_round": 1,
+  "passed": 4,
+  "total": 10,
+  "passed_cases": ["HOLD01","HOLD02","HOLD03","HOLD04"],
+  "incomplete_cases": ["HOLD05"],
+  "not_run": ["HOLD06","HOLD07","HOLD08","HOLD09","HOLD10"],
+  "actual_error_type": "PermissionError",
+  "completed_partial_step": "HOLD05第1步实际query_order(A1002)→台灯待发货无物流；第2步未执行，不计整条通过",
+  "normal_data_unchanged": true,
+  "frozen_source_hashes_match_verified_after_interruption": true,
+  "diagnosis": "独立临时文件复现：目标JSON有读者打开时，原保存函数的replace抛PermissionError/WinError5；关闭读者后成功。与评测过程中本机读取记录和原子替换竞争一致。原运行仅保留错误类型，没有原始堆栈，因此不声称排除所有其他文件共享冲突来源。",
+  "reproduction": "artifacts/evaluation/evidence-lock-reproduction.json",
+  "repair": "只在证据磁盘替换环节为WinError5/32/33增加8次有界重试（最多约1秒）；不重试模型请求。正常数据与Agent职责不改。",
+  "next_run": "新版本完整开发集回归后重新冻结，留出全部10条另记第2轮；不得覆盖第1轮或称第2轮为首次未使用留出",
+  "outcome_class": "评测运行/持久化中断，非已完成的模型业务回答失败"
+}

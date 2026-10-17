@@ -1,0 +1,1360 @@
+[
+  {
+    "name": "01-wide-guide",
+    "time": "2026-10-16T05:49:34.061Z",
+    "metrics": {
+      "bodyWidth": 1920,
+      "main": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "stAppHeader st-emotion-cache-9qudxx e149qiiz1",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 48,
+            "height": 48,
+            "left": 0,
+            "right": 1920,
+            "top": 0,
+            "width": 1920,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMain st-emotion-cache-4rsbii e8oj7lc1",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 1128,
+            "height": 1080,
+            "left": 0,
+            "right": 1920,
+            "top": 48,
+            "width": 1920,
+            "x": 0,
+            "y": 48
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMainBlockContainer block-container st-emotion-cache-lhe5w4 e8oj7lc4",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 5190.39990234375,
+            "height": 5142.39990234375,
+            "left": 354.8000183105469,
+            "right": 1554.8000183105469,
+            "top": 48,
+            "width": 1200,
+            "x": 354.8000183105469,
+            "y": 48
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "sp-brand",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 154.20000457763672,
+            "height": 86.20000457763672,
+            "left": 382.8000183105469,
+            "right": 1526.8000183105469,
+            "top": 68,
+            "width": 1144,
+            "x": 382.8000183105469,
+            "y": 68
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "st-emotion-cache-1m17l4s e1ac7blb3",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 210.9999961853027,
+            "height": 56.79999923706055,
+            "left": 382.8000183105469,
+            "right": 1526.8000183105469,
+            "top": 154.1999969482422,
+            "width": 1144,
+            "x": 382.8000183105469,
+            "y": 154.1999969482422
+          }
+        }
+      ],
+      "pageWidth": 1920,
+      "tabs": [
+        {
+          "name": "客服体验",
+          "rect": {
+            "bottom": 210.1999969482422,
+            "height": 56,
+            "left": 382.8000183105469,
+            "right": 438.8000183105469,
+            "top": 154.1999969482422,
+            "width": 56,
+            "x": 382.8000183105469,
+            "y": 154.1999969482422
+          },
+          "selected": "false"
+        },
+        {
+          "name": "架构总览",
+          "rect": {
+            "bottom": 210.1999969482422,
+            "height": 56,
+            "left": 463.8000183105469,
+            "right": 519.8000183105469,
+            "top": 154.1999969482422,
+            "width": 56,
+            "x": 463.8000183105469,
+            "y": 154.1999969482422
+          },
+          "selected": "false"
+        },
+        {
+          "name": "项目介绍",
+          "rect": {
+            "bottom": 210.1999969482422,
+            "height": 56,
+            "left": 544.7999877929688,
+            "right": 600.7999877929688,
+            "top": 154.1999969482422,
+            "width": 56,
+            "x": 544.7999877929688,
+            "y": 154.1999969482422
+          },
+          "selected": "false"
+        },
+        {
+          "name": "代码解读",
+          "rect": {
+            "bottom": 210.1999969482422,
+            "height": 56,
+            "left": 625.7999877929688,
+            "right": 681.7999877929688,
+            "top": 154.1999969482422,
+            "width": 56,
+            "x": 625.7999877929688,
+            "y": 154.1999969482422
+          },
+          "selected": "true"
+        }
+      ],
+      "viewport": {
+        "h": 1080,
+        "w": 1920
+      }
+    },
+    "snapshot": "- banner\n- generic: S\n- strong: ServicePilot\n- generic: 模拟电商售后 · Agent 工作流\n- generic: 模拟业务 Demo\n- tablist:\n  - tab \"客服体验\":\n    - paragraph: 客服体验\n  - tab \"架构总览\":\n    - paragraph: 架构总览\n  - tab \"项目介绍\":\n    - paragraph: 项目介绍\n  - tab \"代码解读\" [active] [selected]:\n    - paragraph: 代码解读\n- tabpanel \"代码解读\":\n  - paragraph: 代码解读\n  - heading \"从业务问题，读到实际实现。\" [level=1]:\n    - text: 从业务问题，读到实际实现。\n    - link \"Link to heading\":\n      - /url: \"#e0fa9285\"\n  - paragraph: 精选片段与完整文件来自同一稳定源码快照；只读展示，不执行源码或请求模型。\n  - paragraph: 这是学习材料与自测提示，不表示本人已经掌握或独立实现了全部代码。\n  - paragraph: 来源版本：2026-10-16 · 代码解读 r1 · 内容摘要 SHA256 f463a8c6d40c3019 · UTF-8/LF快照原文；无源码删节。\n  - heading \"01 / Agent 分工\" [level=3]:\n    - text: 01 / Agent 分工\n    - link \"Link to heading\":\n      - /url: \"#01-agent\"\n  - paragraph: 业务问题：为什么订单问题交给 Order，政策问题交给 FAQ？\n  - paragraph:\n    - strong: 角色定义职责和可用工具，模型选择交接，SDK 的 Runner 执行动作。\n  - paragraph: servicepilot/agent_config.py · 原文件 L68–L75 · 快照 f463a8c6d40c；代码块不另外从1编号。\n  - code: \"triage.handoffs = [handoff(agent=faq, tool_name_override=\\\"transfer_to_faq_agent\\\"), handoff(agent=order, tool_name_override=\\\"transfer_to_order_agent\\\")] order.handoffs = [handoff(agent=triage, tool_name_override=\\\"transfer_to_triage_agent\\\")] faq.handoffs = [handoff(agent=triage, tool_name_override=\\\"transfer_to_triage_agent\\\")] for agent in (triage, order, faq): for transfer in agent.handoffs: transfer.strict_json_schema = False return triage, order, faq\"\n  - paragraph: 白话解释：Triage 可以交给两个专员；专员跨职责时先回 Triage。FAQ 绑定 lookup_faq，Order 绑定 query_order。同一底层模型可以按不同角色工作，Agent 不是另写的一套模型。\n  - paragraph: 设计取舍：用明确的工具权限和交接关系约束分工；口头说“转接”不能代替真实 handoff。\n  - paragraph: 历史证据：2026-10-14 后台4f49d09评测，及2026-10-15发布7792895云端政策→订单观察。历史结论，不是本轮实时执行。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；artifacts/workbench/cloud/browser-cases.json（证据留在工作区，不公开原始日志）。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：FAQ 接到订单请求时，代码允许它直接调用 query_order 吗？\n  - heading \"02 / 模型接入\" [level=3]:\n    - text: 02 / 模型接入\n    - link \"Link to heading\":\n      - /url: \"#02\"\n  - paragraph: 业务问题：谁提供生成能力，哪里决定调用哪个模型？\n  - paragraph:\n    - strong: AsyncOpenAI 是客户端，DeepSeek 提供服务，RunConfig 把模型配置交给 SDK。\n  - paragraph: servicepilot/model_config.py · 原文件 L6–L20 · 快照 f463a8c6d40c；代码块不另外从1编号。\n  - code:\n    - text: MODEL = \"deepseek-flash\" BASE_URL = \"https://api.deepseek.com\"\n    - text: \"def create_client_config(key: str): set_tracing_disabled(True) client = AsyncOpenAI(api_key=key, base_url=BASE_URL, max_retries=0, timeout=45.0, http_client=DefaultAsyncHttpxClient(trust_env=False)) config = RunConfig( model=OpenAIChatCompletionsModel(model=MODEL, openai_client=client), model_settings=ModelSettings(max_tokens=1024, parallel_tool_calls=False, extra_body={\\\"thinking\\\": {\\\"type\\\": \\\"disabled\\\"}}), tracing_disabled=True, trace_include_sensitive_data=False, ) return client, config\"\n  - paragraph: 白话解释：服务地址指向 DeepSeek，MODEL 是模型名称。key 是服务端传入的变量，页面不展示它的值。配置关闭 tracing 和自动HTTP重试；45秒是请求超时，不是保证45秒成功。\n  - paragraph: 设计取舍：Web 与 CLI 复用配置；不同角色可以共用模型连接。模型服务故障仍可能导致整轮失败。\n  - paragraph: 历史证据：2026-10-14冻结4f49d09真实评测使用deepseek-flash；2026-10-15云端故障观察记录InternalServerError。供应商恢复不等于本项目已验证恢复。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；docs/2026-10-15-云端请求失败观察.md。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：把 BASE_URL 与 MODEL 混为一个概念，会漏掉什么配置？\n  - heading \"03 / 工具查询\" [level=3]:\n    - text: 03 / 工具查询\n    - link \"Link to heading\":\n      - /url: \"#03\"\n  - paragraph: 业务问题：模型怎样知道 A1001 的商品和订单状态？\n  - paragraph:\n    - strong: 模型提出带参数的调用，工具校验编号，再读取模拟数据返回结构化事实。\n  - paragraph: servicepilot/order_tools.py · 原文件 L13–L26 · 快照 f463a8c6d40c；代码块不另外从1编号。\n  - code: \"def query_order(order_id: str, source: OrderSource | None = None) -> dict: \\\"\\\"\\\"Normalize and validate an order number, then return structured lookup facts.\\\"\\\"\\\" if not isinstance(order_id, str): return {\\\"status\\\": \\\"invalid_input\\\", \\\"message\\\": \\\"订单号应为 A 加四位数字，例如 A1001。\\\"} normalized = order_id.strip().upper() if re.fullmatch(r\\\"A[0-9]{4}\\\", normalized) is None: return {\\\"status\\\": \\\"invalid_input\\\", \\\"message\\\": \\\"订单号应为 A 加四位数字，例如 A1001。\\\"} try: order = (source if source is not None else JsonOrderSource()).get(normalized) except (OSError, ValueError, TypeError, AttributeError): return {\\\"status\\\": \\\"unavailable\\\", \\\"order_id\\\": normalized, \\\"message\\\": \\\"当前无法查询订单，请稍后重试或联系人工。\\\"} if order is None: return {\\\"status\\\": \\\"not_found\\\", \\\"order_id\\\": normalized, \\\"message\\\": \\\"未找到该订单，请核对订单号。\\\"} return {\\\"status\\\": \\\"ok\\\", \\\"source\\\": \\\"local_mock\\\", \\\"order\\\": order}\"\n  - paragraph: data/orders.json · 原文件 L4–L10 · 快照 f463a8c6d40c；代码块不另外从1编号。\n  - code: \"\\\"A1001\\\": { \\\"order_id\\\": \\\"A1001\\\", \\\"product\\\": \\\"蓝牙耳机\\\", \\\"status\\\": \\\"已发货\\\", \\\"carrier\\\": \\\"模拟物流\\\", \\\"tracking_number\\\": \\\"MOCK1001\\\" },\"\n  - paragraph: 白话解释：参数是 order_id，不是整句问题。工具去空格、转大写，要求 A 加四位数字；数据源可以替换。A1001 是蓝牙耳机、已发货、模拟物流、MOCK1001；A1002 的物流字段为空。\n  - paragraph: 设计取舍：ok、invalid_input、not_found、unavailable 含义分开，便于检查最终回答是否对应本次查询。没有签收日期或预计到货时间，不能推算。\n  - paragraph: 历史证据：2026-10-14旧页面7f9f277的A1001与多轮A1002复查；2026-10-15发布7792895云端必要回归。截图在项目介绍中标注历史时间与版本。\n  - paragraph: 工作区来源索引：artifacts/delivery/delivery-review-2026-10-14.json；docs/2026-10-15-公网发布验证与最终交接.md。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：A9999查无记录，与数据源不可用分别返回什么状态？\n  - heading \"04 / 多轮会话\" [level=3]:\n    - text: 04 / 多轮会话\n    - link \"Link to heading\":\n      - /url: \"#04\"\n  - paragraph: 业务问题：先说“帮我查订单”，再补“A1002”，程序怎样接上？\n  - paragraph:\n    - strong: OrderSession 保存历史和当前 Agent；新会话会创建新的后台上下文。\n  - paragraph: servicepilot/session.py · 原文件 L68–L75 · 快照 f463a8c6d40c；代码块不另外从1编号。\n  - code: \"result = await Runner.run( self.current_agent, [*self.items, {\\\"role\\\": \\\"user\\\", \\\"content\\\": question}], run_config=self.config, hooks=recorder, max_turns=6, ) self.items = result.to_input_list() self.current_agent = result.last_agent usage = result.context_wrapper.usage\"\n  - paragraph: servicepilot/web_runtime.py · 原文件 L224–L237 · 快照 f463a8c6d40c；代码块不另外从1编号。\n  - code: \"def reset(self, fault=False): with self.lock: if self.busy: return \\\"正在处理中，完成后才能开始新会话\\\" try: self.backend.reset(fault) except Exception: return \\\"新会话未能创建，请重试\\\" parent = self.session_id self.report[\\\"reset_at\\\"] = now() self._save() self.last_submission = None self._fresh(parent, fault) return None\"\n  - paragraph: 白话解释：每轮把旧消息与新问题一起交给Runner；成功后保存to_input_list和last_agent。重置先调用backend.reset再生成新session_id，不只清空画面。页面各自持有后台，旧响应还要核对归属。\n  - paragraph: 设计取舍：处理中禁止重置与重复发送，减少并发混写。历史会增加上下文，不代表支持无限记忆；日志保留也不等于重启恢复聊天。\n  - paragraph: 历史证据：2026-10-14旧页面7f9f277重置与多轮复查；2026-10-15云端已查A1001后重置仍追问编号。\n  - paragraph: 工作区来源索引：artifacts/delivery/delivery-review-2026-10-14.json；artifacts/workbench/cloud/final-review.json。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：只清空页面但保留self.items，会有什么风险？\n  - heading \"05 / 异常与验证\" [level=3]:\n    - text: 05 / 异常与验证\n    - link \"Link to heading\":\n      - /url: \"#05\"\n  - paragraph: 业务问题：“没查到订单”和“模型请求失败”为什么不能说成一回事？\n  - paragraph:\n    - strong: 业务状态由工具返回；运行异常由会话记录安全类型，页面据此显示失败。\n  - paragraph: servicepilot/session.py · 原文件 L80–L86 · 快照 f463a8c6d40c；代码块不另外从1编号。\n  - code: \"except Exception as error: # Keep typed error metadata, never provider response text or request headers. turn.update(status=\\\"failed\\\", error_type=type(error).__name__, http_status=getattr(error, \\\"status_code\\\", None)) finally: turn.update(finished_at=now(), elapsed_seconds=round(time.perf_counter() - started, 3)) return turn\"\n  - paragraph: servicepilot/workbench_ui.py · 原文件 L45–L54 · 快照 f463a8c6d40c；代码块不另外从1编号。\n  - code: \"def event_summary(turn): if turn.get(\\\"status\\\") == \\\"running\\\": return \\\"处理中，完成后展示实际事件。\\\" if turn.get(\\\"status\\\") == \\\"failed\\\": return \\\"本次请求失败；以下仅展示已返回的公开事件。\\\" results = [e[\\\"result\\\"] for e in turn.get(\\\"events\\\", []) if e.get(\\\"type\\\") == \\\"tool_result\\\" and isinstance(e.get(\\\"result\\\"), dict)] if results: return \\\" · \\\".join(LABELS.get(r.get(\\\"status\\\"), \\\"未知结果状态\\\") for r in results) return \\\"本次未提供执行事件。\\\" if not turn.get(\\\"events\\\") else \\\"本轮公开事件已返回。\\\"\"\n  - paragraph: 白话解释：not_found 是成功完成查询但没有记录；HTTP/API异常可能连查询都未发生。只保存error_type/http_status，不展示原始响应或请求头。failed 不能显示旧成功事实卡。\n  - paragraph: 设计取舍：记录工具成功还不够，必须核对最终答复、版本和会话。保存异常也是真实失败；修复后的留出重测不能改称首次盲评。\n  - paragraph: 历史证据：后台4f49d09：开发15/15、留出第2轮10/10；首轮HOLD05保存中断、后五条未运行，原记录保留。上述不是本轮或任意输入的成功率。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；artifacts/evaluation/holdout-round1-interruption-review.json。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：看到工具返回ok，是否足够把整条案例标为通过？还要核对什么？\n  - generic \"keyboard_arrow_right 完整代码展示\":\n    - generic: keyboard_arrow_right\n    - paragraph: 完整代码展示\n  - paragraph: 来源与许可：参考OpenAI Agents SDK航空客服示例，SDK由安装包提供；原示例MIT许可随发布包THIRD_PARTY_LICENSE保留。Codex协助实现与验证；不代表个人独立编码或已掌握。\n- generic: ServicePilot · 模拟电商售后 · 真实执行与历史验证分开记录"
+  },
+  {
+    "name": "02-wide-final",
+    "time": "2026-10-16T05:51:26.731Z",
+    "metrics": {
+      "bodyWidth": 1920,
+      "main": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "stAppHeader st-emotion-cache-9qudxx e149qiiz1",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 48,
+            "height": 48,
+            "left": 0,
+            "right": 1920,
+            "top": 0,
+            "width": 1920,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMain st-emotion-cache-4rsbii e8oj7lc1",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 1080,
+            "height": 1080,
+            "left": 0,
+            "right": 1920,
+            "top": 0,
+            "width": 1920,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMainBlockContainer block-container st-emotion-cache-lhe5w4 e8oj7lc4",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 5174.39990234375,
+            "height": 5174.39990234375,
+            "left": 354.8000183105469,
+            "right": 1554.8000183105469,
+            "top": 0,
+            "width": 1200,
+            "x": 354.8000183105469,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "sp-brand",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 138.20000457763672,
+            "height": 86.20000457763672,
+            "left": 382.8000183105469,
+            "right": 1526.8000183105469,
+            "top": 52,
+            "width": 1144,
+            "x": 382.8000183105469,
+            "y": 52
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "st-emotion-cache-1m17l4s e1ac7blb3",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 194.9999961853027,
+            "height": 56.79999923706055,
+            "left": 382.8000183105469,
+            "right": 1526.8000183105469,
+            "top": 138.1999969482422,
+            "width": 1144,
+            "x": 382.8000183105469,
+            "y": 138.1999969482422
+          }
+        }
+      ],
+      "pageWidth": 1920,
+      "tabs": [
+        {
+          "name": "客服体验",
+          "rect": {
+            "bottom": 194.1999969482422,
+            "height": 56,
+            "left": 382.8000183105469,
+            "right": 438.8000183105469,
+            "top": 138.1999969482422,
+            "width": 56,
+            "x": 382.8000183105469,
+            "y": 138.1999969482422
+          },
+          "selected": "false"
+        },
+        {
+          "name": "架构总览",
+          "rect": {
+            "bottom": 194.1999969482422,
+            "height": 56,
+            "left": 463.8000183105469,
+            "right": 519.8000183105469,
+            "top": 138.1999969482422,
+            "width": 56,
+            "x": 463.8000183105469,
+            "y": 138.1999969482422
+          },
+          "selected": "false"
+        },
+        {
+          "name": "项目介绍",
+          "rect": {
+            "bottom": 194.1999969482422,
+            "height": 56,
+            "left": 544.7999877929688,
+            "right": 600.7999877929688,
+            "top": 138.1999969482422,
+            "width": 56,
+            "x": 544.7999877929688,
+            "y": 138.1999969482422
+          },
+          "selected": "false"
+        },
+        {
+          "name": "代码解读",
+          "rect": {
+            "bottom": 194.1999969482422,
+            "height": 56,
+            "left": 625.7999877929688,
+            "right": 681.7999877929688,
+            "top": 138.1999969482422,
+            "width": 56,
+            "x": 625.7999877929688,
+            "y": 138.1999969482422
+          },
+          "selected": "true"
+        }
+      ],
+      "viewport": {
+        "h": 1080,
+        "w": 1920
+      }
+    },
+    "snapshot": "- banner\n- generic: S\n- strong: ServicePilot\n- generic: 模拟电商售后 · Agent 工作流\n- generic: 模拟业务 Demo\n- tablist:\n  - tab \"客服体验\":\n    - paragraph: 客服体验\n  - tab \"架构总览\":\n    - paragraph: 架构总览\n  - tab \"项目介绍\":\n    - paragraph: 项目介绍\n  - tab \"代码解读\" [active] [selected]:\n    - paragraph: 代码解读\n- tabpanel \"代码解读\":\n  - paragraph: 代码解读\n  - heading \"从业务问题，读到实际实现。\" [level=1]:\n    - text: 从业务问题，读到实际实现。\n    - link \"Link to heading\":\n      - /url: \"#e0fa9285\"\n  - paragraph: 精选片段与完整文件来自同一稳定源码快照；只读展示，不执行源码或请求模型。\n  - paragraph: 这是学习材料与自测提示，不表示本人已经掌握或独立实现了全部代码。\n  - paragraph: 来源版本：2026-10-16 · 代码解读 r1 · 内容摘要 SHA256 70991f5187d65e85 · UTF-8/LF快照原文；无源码删节。\n  - heading \"01 / Agent 分工\" [level=3]:\n    - text: 01 / Agent 分工\n    - link \"Link to heading\":\n      - /url: \"#01-agent\"\n  - paragraph: 业务问题：为什么订单问题交给 Order，政策问题交给 FAQ？\n  - paragraph:\n    - strong: 角色定义职责和可用工具，模型选择交接，SDK 的 Runner 执行动作。\n  - paragraph: servicepilot/agent_config.py · 原文件 L68–L75 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"triage.handoffs = [handoff(agent=faq, tool_name_override=\\\"transfer_to_faq_agent\\\"), handoff(agent=order, tool_name_override=\\\"transfer_to_order_agent\\\")] order.handoffs = [handoff(agent=triage, tool_name_override=\\\"transfer_to_triage_agent\\\")] faq.handoffs = [handoff(agent=triage, tool_name_override=\\\"transfer_to_triage_agent\\\")] for agent in (triage, order, faq): for transfer in agent.handoffs: transfer.strict_json_schema = False return triage, order, faq\"\n  - paragraph: 白话解释：Triage 可以交给两个专员；专员跨职责时先回 Triage。FAQ 绑定 lookup_faq，Order 绑定 query_order。同一底层模型可以按不同角色工作，Agent 不是另写的一套模型。\n  - paragraph: 设计取舍：用明确的工具权限和交接关系约束分工；口头说“转接”不能代替真实 handoff。\n  - paragraph: 历史证据：2026-10-14 后台4f49d09评测，及2026-10-15发布7792895云端政策→订单观察。历史结论，不是本轮实时执行。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；artifacts/workbench/cloud/browser-cases.json（证据留在工作区，不公开原始日志）。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：FAQ 接到订单请求时，代码允许它直接调用 query_order 吗？\n  - heading \"02 / 模型接入\" [level=3]:\n    - text: 02 / 模型接入\n    - link \"Link to heading\":\n      - /url: \"#02\"\n  - paragraph: 业务问题：谁提供生成能力，哪里决定调用哪个模型？\n  - paragraph:\n    - strong: AsyncOpenAI 是客户端，DeepSeek 提供服务，RunConfig 把模型配置交给 SDK。\n  - paragraph: servicepilot/model_config.py · 原文件 L6–L20 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code:\n    - text: MODEL = \"deepseek-flash\" BASE_URL = \"https://api.deepseek.com\"\n    - text: \"def create_client_config(key: str): set_tracing_disabled(True) client = AsyncOpenAI(api_key=key, base_url=BASE_URL, max_retries=0, timeout=45.0, http_client=DefaultAsyncHttpxClient(trust_env=False)) config = RunConfig( model=OpenAIChatCompletionsModel(model=MODEL, openai_client=client), model_settings=ModelSettings(max_tokens=1024, parallel_tool_calls=False, extra_body={\\\"thinking\\\": {\\\"type\\\": \\\"disabled\\\"}}), tracing_disabled=True, trace_include_sensitive_data=False, ) return client, config\"\n  - paragraph: 白话解释：服务地址指向 DeepSeek，MODEL 是模型名称。key 是服务端传入的变量，页面不展示它的值。配置关闭 tracing 和自动HTTP重试；45秒是请求超时，不是保证45秒成功。\n  - paragraph: 设计取舍：Web 与 CLI 复用配置；不同角色可以共用模型连接。模型服务故障仍可能导致整轮失败。\n  - paragraph: 历史证据：2026-10-14冻结4f49d09真实评测使用deepseek-flash；2026-10-15云端故障观察记录InternalServerError。供应商恢复不等于本项目已验证恢复。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；docs/2026-10-15-云端请求失败观察.md。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：把 BASE_URL 与 MODEL 混为一个概念，会漏掉什么配置？\n  - heading \"03 / 工具查询\" [level=3]:\n    - text: 03 / 工具查询\n    - link \"Link to heading\":\n      - /url: \"#03\"\n  - paragraph: 业务问题：模型怎样知道 A1001 的商品和订单状态？\n  - paragraph:\n    - strong: 模型提出带参数的调用，工具校验编号，再读取模拟数据返回结构化事实。\n  - paragraph: servicepilot/order_tools.py · 原文件 L13–L26 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"def query_order(order_id: str, source: OrderSource | None = None) -> dict: \\\"\\\"\\\"Normalize and validate an order number, then return structured lookup facts.\\\"\\\"\\\" if not isinstance(order_id, str): return {\\\"status\\\": \\\"invalid_input\\\", \\\"message\\\": \\\"订单号应为 A 加四位数字，例如 A1001。\\\"} normalized = order_id.strip().upper() if re.fullmatch(r\\\"A[0-9]{4}\\\", normalized) is None: return {\\\"status\\\": \\\"invalid_input\\\", \\\"message\\\": \\\"订单号应为 A 加四位数字，例如 A1001。\\\"} try: order = (source if source is not None else JsonOrderSource()).get(normalized) except (OSError, ValueError, TypeError, AttributeError): return {\\\"status\\\": \\\"unavailable\\\", \\\"order_id\\\": normalized, \\\"message\\\": \\\"当前无法查询订单，请稍后重试或联系人工。\\\"} if order is None: return {\\\"status\\\": \\\"not_found\\\", \\\"order_id\\\": normalized, \\\"message\\\": \\\"未找到该订单，请核对订单号。\\\"} return {\\\"status\\\": \\\"ok\\\", \\\"source\\\": \\\"local_mock\\\", \\\"order\\\": order}\"\n  - paragraph: data/orders.json · 原文件 L4–L10 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"\\\"A1001\\\": { \\\"order_id\\\": \\\"A1001\\\", \\\"product\\\": \\\"蓝牙耳机\\\", \\\"status\\\": \\\"已发货\\\", \\\"carrier\\\": \\\"模拟物流\\\", \\\"tracking_number\\\": \\\"MOCK1001\\\" },\"\n  - paragraph: 白话解释：参数是 order_id，不是整句问题。工具去空格、转大写，要求 A 加四位数字；数据源可以替换。A1001 是蓝牙耳机、已发货、模拟物流、MOCK1001；A1002 的物流字段为空。\n  - paragraph: 设计取舍：ok、invalid_input、not_found、unavailable 含义分开，便于检查最终回答是否对应本次查询。没有签收日期或预计到货时间，不能推算。\n  - paragraph: 历史证据：2026-10-14旧页面7f9f277的A1001与多轮A1002复查；2026-10-15发布7792895云端必要回归。截图在项目介绍中标注历史时间与版本。\n  - paragraph: 工作区来源索引：artifacts/delivery/delivery-review-2026-10-14.json；docs/2026-10-15-公网发布验证与最终交接.md。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：A9999查无记录，与数据源不可用分别返回什么状态？\n  - heading \"04 / 多轮会话\" [level=3]:\n    - text: 04 / 多轮会话\n    - link \"Link to heading\":\n      - /url: \"#04\"\n  - paragraph: 业务问题：先说“帮我查订单”，再补“A1002”，程序怎样接上？\n  - paragraph:\n    - strong: OrderSession 保存历史和当前 Agent；新会话会创建新的后台上下文。\n  - paragraph: servicepilot/session.py · 原文件 L68–L75 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"result = await Runner.run( self.current_agent, [*self.items, {\\\"role\\\": \\\"user\\\", \\\"content\\\": question}], run_config=self.config, hooks=recorder, max_turns=6, ) self.items = result.to_input_list() self.current_agent = result.last_agent usage = result.context_wrapper.usage\"\n  - paragraph: servicepilot/web_runtime.py · 原文件 L224–L237 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"def reset(self, fault=False): with self.lock: if self.busy: return \\\"正在处理中，完成后才能开始新会话\\\" try: self.backend.reset(fault) except Exception: return \\\"新会话未能创建，请重试\\\" parent = self.session_id self.report[\\\"reset_at\\\"] = now() self._save() self.last_submission = None self._fresh(parent, fault) return None\"\n  - paragraph: 白话解释：每轮把旧消息与新问题一起交给Runner；成功后保存to_input_list和last_agent。重置先调用backend.reset再生成新session_id，不只清空画面。页面各自持有后台，旧响应还要核对归属。\n  - paragraph: 设计取舍：处理中禁止重置与重复发送，减少并发混写。历史会增加上下文，不代表支持无限记忆；日志保留也不等于重启恢复聊天。\n  - paragraph: 历史证据：2026-10-14旧页面7f9f277重置与多轮复查；2026-10-15云端已查A1001后重置仍追问编号。\n  - paragraph: 工作区来源索引：artifacts/delivery/delivery-review-2026-10-14.json；artifacts/workbench/cloud/final-review.json。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：只清空页面但保留self.items，会有什么风险？\n  - heading \"05 / 异常与验证\" [level=3]:\n    - text: 05 / 异常与验证\n    - link \"Link to heading\":\n      - /url: \"#05\"\n  - paragraph: 业务问题：“没查到订单”和“模型请求失败”为什么不能说成一回事？\n  - paragraph:\n    - strong: 业务状态由工具返回；运行异常由会话记录安全类型，页面据此显示失败。\n  - paragraph: servicepilot/session.py · 原文件 L80–L86 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"except Exception as error: # Keep typed error metadata, never provider response text or request headers. turn.update(status=\\\"failed\\\", error_type=type(error).__name__, http_status=getattr(error, \\\"status_code\\\", None)) finally: turn.update(finished_at=now(), elapsed_seconds=round(time.perf_counter() - started, 3)) return turn\"\n  - paragraph: servicepilot/workbench_ui.py · 原文件 L45–L54 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"def event_summary(turn): if turn.get(\\\"status\\\") == \\\"running\\\": return \\\"处理中，完成后展示实际事件。\\\" if turn.get(\\\"status\\\") == \\\"failed\\\": return \\\"本次请求失败；以下仅展示已返回的公开事件。\\\" results = [e[\\\"result\\\"] for e in turn.get(\\\"events\\\", []) if e.get(\\\"type\\\") == \\\"tool_result\\\" and isinstance(e.get(\\\"result\\\"), dict)] if results: return \\\" · \\\".join(LABELS.get(r.get(\\\"status\\\"), \\\"未知结果状态\\\") for r in results) return \\\"本次未提供执行事件。\\\" if not turn.get(\\\"events\\\") else \\\"本轮公开事件已返回。\\\"\"\n  - paragraph: 白话解释：not_found 是成功完成查询但没有记录；HTTP/API异常可能连查询都未发生。只保存error_type/http_status，不展示原始响应或请求头。failed 不能显示旧成功事实卡。\n  - paragraph: 设计取舍：记录工具成功还不够，必须核对最终答复、版本和会话。保存异常也是真实失败；修复后的留出重测不能改称首次盲评。\n  - paragraph: 历史证据：后台4f49d09：开发15/15、留出第2轮10/10；首轮HOLD05保存中断、后五条未运行，原记录保留。上述不是本轮或任意输入的成功率。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；artifacts/evaluation/holdout-round1-interruption-review.json。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：看到工具返回ok，是否足够把整条案例标为通过？还要核对什么？\n  - generic \"keyboard_arrow_right 完整代码展示\":\n    - generic: keyboard_arrow_right\n    - paragraph: 完整代码展示\n  - paragraph: 来源与许可：参考OpenAI Agents SDK航空客服示例，SDK由安装包提供；原示例MIT许可随发布包THIRD_PARTY_LICENSE保留。Codex协助实现与验证；不代表个人独立编码或已掌握。\n- generic: ServicePilot · 模拟电商售后 · 真实执行与历史验证分开记录"
+  },
+  {
+    "name": "actual-copy-model",
+    "time": "2026-10-16T05:52:45.662Z",
+    "copiedModel": "\"\"\"One provider configuration shared by CLI and Web; no credential persistence.\"\"\"\n\nfrom agents import ModelSettings, OpenAIChatCompletionsModel, RunConfig, set_tracing_disabled\nfrom openai import AsyncOpenAI, DefaultAsyncHttpxClient\n\nMODEL = \"deepseek-flash\"\nBASE_URL = \"https://api.deepseek.com\"\n\n\ndef create_client_config(key: str):\n    set_tracing_disabled(True)\n    client = AsyncOpenAI(api_key=key, base_url=BASE_URL, max_retries=0, timeout=45.0,\n                         http_client=DefaultAsyncHttpxClient(trust_env=False))\n    config = RunConfig(\n        model=OpenAIChatCompletionsModel(model=MODEL, openai_client=client),\n        model_settings=ModelSettings(max_tokens=1024, parallel_tool_calls=False,\n                                    extra_body={\"thinking\": {\"type\": \"disabled\"}}),\n        tracing_disabled=True, trace_include_sensitive_data=False,\n    )\n    return client, config"
+  },
+  {
+    "name": "03-file-copy-model",
+    "time": "2026-10-16T05:52:45.676Z",
+    "metrics": {
+      "bodyWidth": 1920,
+      "main": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "stAppHeader st-emotion-cache-9qudxx e149qiiz1",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 48,
+            "height": 48,
+            "left": 0,
+            "right": 1920,
+            "top": 0,
+            "width": 1920,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMain st-emotion-cache-4rsbii e8oj7lc1",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 1080,
+            "height": 1080,
+            "left": 0,
+            "right": 1920,
+            "top": 0,
+            "width": 1920,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMainBlockContainer block-container st-emotion-cache-lhe5w4 e8oj7lc4",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 1171.19970703125,
+            "height": 5974.39990234375,
+            "left": 354.8000183105469,
+            "right": 1554.8000183105469,
+            "top": -4803.2001953125,
+            "width": 1200,
+            "x": 354.8000183105469,
+            "y": -4803.2001953125
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "sp-brand",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": -4665.000190734863,
+            "height": 86.20000457763672,
+            "left": 382.8000183105469,
+            "right": 1526.8000183105469,
+            "top": -4751.2001953125,
+            "width": 1144,
+            "x": 382.8000183105469,
+            "y": -4751.2001953125
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "st-emotion-cache-1m17l4s e1ac7blb3",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": -4608.200000762939,
+            "height": 56.79999923706055,
+            "left": 382.8000183105469,
+            "right": 1526.8000183105469,
+            "top": -4665,
+            "width": 1144,
+            "x": 382.8000183105469,
+            "y": -4665
+          }
+        }
+      ],
+      "pageWidth": 1920,
+      "tabs": [
+        {
+          "name": "客服体验",
+          "rect": {
+            "bottom": -4609,
+            "height": 56,
+            "left": 382.8000183105469,
+            "right": 438.8000183105469,
+            "top": -4665,
+            "width": 56,
+            "x": 382.8000183105469,
+            "y": -4665
+          },
+          "selected": "false"
+        },
+        {
+          "name": "架构总览",
+          "rect": {
+            "bottom": -4609,
+            "height": 56,
+            "left": 463.8000183105469,
+            "right": 519.8000183105469,
+            "top": -4665,
+            "width": 56,
+            "x": 463.8000183105469,
+            "y": -4665
+          },
+          "selected": "false"
+        },
+        {
+          "name": "项目介绍",
+          "rect": {
+            "bottom": -4609,
+            "height": 56,
+            "left": 544.7999877929688,
+            "right": 600.7999877929688,
+            "top": -4665,
+            "width": 56,
+            "x": 544.7999877929688,
+            "y": -4665
+          },
+          "selected": "false"
+        },
+        {
+          "name": "代码解读",
+          "rect": {
+            "bottom": -4609,
+            "height": 56,
+            "left": 625.7999877929688,
+            "right": 681.7999877929688,
+            "top": -4665,
+            "width": 56,
+            "x": 625.7999877929688,
+            "y": -4665
+          },
+          "selected": "true"
+        }
+      ],
+      "viewport": {
+        "h": 1080,
+        "w": 1920
+      }
+    },
+    "snapshot": "- log\n- log\n- banner\n- generic: S\n- strong: ServicePilot\n- generic: 模拟电商售后 · Agent 工作流\n- generic: 模拟业务 Demo\n- tablist:\n  - tab \"客服体验\":\n    - paragraph: 客服体验\n  - tab \"架构总览\":\n    - paragraph: 架构总览\n  - tab \"项目介绍\":\n    - paragraph: 项目介绍\n  - tab \"代码解读\" [selected]:\n    - paragraph: 代码解读\n- tabpanel \"代码解读\":\n  - paragraph: 代码解读\n  - heading \"从业务问题，读到实际实现。\" [level=1]:\n    - text: 从业务问题，读到实际实现。\n    - link \"Link to heading\":\n      - /url: \"#e0fa9285\"\n  - paragraph: 精选片段与完整文件来自同一稳定源码快照；只读展示，不执行源码或请求模型。\n  - paragraph: 这是学习材料与自测提示，不表示本人已经掌握或独立实现了全部代码。\n  - paragraph: 来源版本：2026-10-16 · 代码解读 r1 · 内容摘要 SHA256 70991f5187d65e85 · UTF-8/LF快照原文；无源码删节。\n  - heading \"01 / Agent 分工\" [level=3]:\n    - text: 01 / Agent 分工\n    - link \"Link to heading\":\n      - /url: \"#01-agent\"\n  - paragraph: 业务问题：为什么订单问题交给 Order，政策问题交给 FAQ？\n  - paragraph:\n    - strong: 角色定义职责和可用工具，模型选择交接，SDK 的 Runner 执行动作。\n  - paragraph: servicepilot/agent_config.py · 原文件 L68–L75 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"triage.handoffs = [handoff(agent=faq, tool_name_override=\\\"transfer_to_faq_agent\\\"), handoff(agent=order, tool_name_override=\\\"transfer_to_order_agent\\\")] order.handoffs = [handoff(agent=triage, tool_name_override=\\\"transfer_to_triage_agent\\\")] faq.handoffs = [handoff(agent=triage, tool_name_override=\\\"transfer_to_triage_agent\\\")] for agent in (triage, order, faq): for transfer in agent.handoffs: transfer.strict_json_schema = False return triage, order, faq\"\n  - paragraph: 白话解释：Triage 可以交给两个专员；专员跨职责时先回 Triage。FAQ 绑定 lookup_faq，Order 绑定 query_order。同一底层模型可以按不同角色工作，Agent 不是另写的一套模型。\n  - paragraph: 设计取舍：用明确的工具权限和交接关系约束分工；口头说“转接”不能代替真实 handoff。\n  - paragraph: 历史证据：2026-10-14 后台4f49d09评测，及2026-10-15发布7792895云端政策→订单观察。历史结论，不是本轮实时执行。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；artifacts/workbench/cloud/browser-cases.json（证据留在工作区，不公开原始日志）。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：FAQ 接到订单请求时，代码允许它直接调用 query_order 吗？\n  - heading \"02 / 模型接入\" [level=3]:\n    - text: 02 / 模型接入\n    - link \"Link to heading\":\n      - /url: \"#02\"\n  - paragraph: 业务问题：谁提供生成能力，哪里决定调用哪个模型？\n  - paragraph:\n    - strong: AsyncOpenAI 是客户端，DeepSeek 提供服务，RunConfig 把模型配置交给 SDK。\n  - paragraph: servicepilot/model_config.py · 原文件 L6–L20 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code:\n    - text: MODEL = \"deepseek-flash\" BASE_URL = \"https://api.deepseek.com\"\n    - text: \"def create_client_config(key: str): set_tracing_disabled(True) client = AsyncOpenAI(api_key=key, base_url=BASE_URL, max_retries=0, timeout=45.0, http_client=DefaultAsyncHttpxClient(trust_env=False)) config = RunConfig( model=OpenAIChatCompletionsModel(model=MODEL, openai_client=client), model_settings=ModelSettings(max_tokens=1024, parallel_tool_calls=False, extra_body={\\\"thinking\\\": {\\\"type\\\": \\\"disabled\\\"}}), tracing_disabled=True, trace_include_sensitive_data=False, ) return client, config\"\n  - paragraph: 白话解释：服务地址指向 DeepSeek，MODEL 是模型名称。key 是服务端传入的变量，页面不展示它的值。配置关闭 tracing 和自动HTTP重试；45秒是请求超时，不是保证45秒成功。\n  - paragraph: 设计取舍：Web 与 CLI 复用配置；不同角色可以共用模型连接。模型服务故障仍可能导致整轮失败。\n  - paragraph: 历史证据：2026-10-14冻结4f49d09真实评测使用deepseek-flash；2026-10-15云端故障观察记录InternalServerError。供应商恢复不等于本项目已验证恢复。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；docs/2026-10-15-云端请求失败观察.md。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：把 BASE_URL 与 MODEL 混为一个概念，会漏掉什么配置？\n  - heading \"03 / 工具查询\" [level=3]:\n    - text: 03 / 工具查询\n    - link \"Link to heading\":\n      - /url: \"#03\"\n  - paragraph: 业务问题：模型怎样知道 A1001 的商品和订单状态？\n  - paragraph:\n    - strong: 模型提出带参数的调用，工具校验编号，再读取模拟数据返回结构化事实。\n  - paragraph: servicepilot/order_tools.py · 原文件 L13–L26 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"def query_order(order_id: str, source: OrderSource | None = None) -> dict: \\\"\\\"\\\"Normalize and validate an order number, then return structured lookup facts.\\\"\\\"\\\" if not isinstance(order_id, str): return {\\\"status\\\": \\\"invalid_input\\\", \\\"message\\\": \\\"订单号应为 A 加四位数字，例如 A1001。\\\"} normalized = order_id.strip().upper() if re.fullmatch(r\\\"A[0-9]{4}\\\", normalized) is None: return {\\\"status\\\": \\\"invalid_input\\\", \\\"message\\\": \\\"订单号应为 A 加四位数字，例如 A1001。\\\"} try: order = (source if source is not None else JsonOrderSource()).get(normalized) except (OSError, ValueError, TypeError, AttributeError): return {\\\"status\\\": \\\"unavailable\\\", \\\"order_id\\\": normalized, \\\"message\\\": \\\"当前无法查询订单，请稍后重试或联系人工。\\\"} if order is None: return {\\\"status\\\": \\\"not_found\\\", \\\"order_id\\\": normalized, \\\"message\\\": \\\"未找到该订单，请核对订单号。\\\"} return {\\\"status\\\": \\\"ok\\\", \\\"source\\\": \\\"local_mock\\\", \\\"order\\\": order}\"\n  - paragraph: data/orders.json · 原文件 L4–L10 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"\\\"A1001\\\": { \\\"order_id\\\": \\\"A1001\\\", \\\"product\\\": \\\"蓝牙耳机\\\", \\\"status\\\": \\\"已发货\\\", \\\"carrier\\\": \\\"模拟物流\\\", \\\"tracking_number\\\": \\\"MOCK1001\\\" },\"\n  - paragraph: 白话解释：参数是 order_id，不是整句问题。工具去空格、转大写，要求 A 加四位数字；数据源可以替换。A1001 是蓝牙耳机、已发货、模拟物流、MOCK1001；A1002 的物流字段为空。\n  - paragraph: 设计取舍：ok、invalid_input、not_found、unavailable 含义分开，便于检查最终回答是否对应本次查询。没有签收日期或预计到货时间，不能推算。\n  - paragraph: 历史证据：2026-10-14旧页面7f9f277的A1001与多轮A1002复查；2026-10-15发布7792895云端必要回归。截图在项目介绍中标注历史时间与版本。\n  - paragraph: 工作区来源索引：artifacts/delivery/delivery-review-2026-10-14.json；docs/2026-10-15-公网发布验证与最终交接.md。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：A9999查无记录，与数据源不可用分别返回什么状态？\n  - heading \"04 / 多轮会话\" [level=3]:\n    - text: 04 / 多轮会话\n    - link \"Link to heading\":\n      - /url: \"#04\"\n  - paragraph: 业务问题：先说“帮我查订单”，再补“A1002”，程序怎样接上？\n  - paragraph:\n    - strong: OrderSession 保存历史和当前 Agent；新会话会创建新的后台上下文。\n  - paragraph: servicepilot/session.py · 原文件 L68–L75 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"result = await Runner.run( self.current_agent, [*self.items, {\\\"role\\\": \\\"user\\\", \\\"content\\\": question}], run_config=self.config, hooks=recorder, max_turns=6, ) self.items = result.to_input_list() self.current_agent = result.last_agent usage = result.context_wrapper.usage\"\n  - paragraph: servicepilot/web_runtime.py · 原文件 L224–L237 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"def reset(self, fault=False): with self.lock: if self.busy: return \\\"正在处理中，完成后才能开始新会话\\\" try: self.backend.reset(fault) except Exception: return \\\"新会话未能创建，请重试\\\" parent = self.session_id self.report[\\\"reset_at\\\"] = now() self._save() self.last_submission = None self._fresh(parent, fault) return None\"\n  - paragraph: 白话解释：每轮把旧消息与新问题一起交给Runner；成功后保存to_input_list和last_agent。重置先调用backend.reset再生成新session_id，不只清空画面。页面各自持有后台，旧响应还要核对归属。\n  - paragraph: 设计取舍：处理中禁止重置与重复发送，减少并发混写。历史会增加上下文，不代表支持无限记忆；日志保留也不等于重启恢复聊天。\n  - paragraph: 历史证据：2026-10-14旧页面7f9f277重置与多轮复查；2026-10-15云端已查A1001后重置仍追问编号。\n  - paragraph: 工作区来源索引：artifacts/delivery/delivery-review-2026-10-14.json；artifacts/workbench/cloud/final-review.json。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：只清空页面但保留self.items，会有什么风险？\n  - heading \"05 / 异常与验证\" [level=3]:\n    - text: 05 / 异常与验证\n    - link \"Link to heading\":\n      - /url: \"#05\"\n  - paragraph: 业务问题：“没查到订单”和“模型请求失败”为什么不能说成一回事？\n  - paragraph:\n    - strong: 业务状态由工具返回；运行异常由会话记录安全类型，页面据此显示失败。\n  - paragraph: servicepilot/session.py · 原文件 L80–L86 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"except Exception as error: # Keep typed error metadata, never provider response text or request headers. turn.update(status=\\\"failed\\\", error_type=type(error).__name__, http_status=getattr(error, \\\"status_code\\\", None)) finally: turn.update(finished_at=now(), elapsed_seconds=round(time.perf_counter() - started, 3)) return turn\"\n  - paragraph: servicepilot/workbench_ui.py · 原文件 L45–L54 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"def event_summary(turn): if turn.get(\\\"status\\\") == \\\"running\\\": return \\\"处理中，完成后展示实际事件。\\\" if turn.get(\\\"status\\\") == \\\"failed\\\": return \\\"本次请求失败；以下仅展示已返回的公开事件。\\\" results = [e[\\\"result\\\"] for e in turn.get(\\\"events\\\", []) if e.get(\\\"type\\\") == \\\"tool_result\\\" and isinstance(e.get(\\\"result\\\"), dict)] if results: return \\\" · \\\".join(LABELS.get(r.get(\\\"status\\\"), \\\"未知结果状态\\\") for r in results) return \\\"本次未提供执行事件。\\\" if not turn.get(\\\"events\\\") else \\\"本轮公开事件已返回。\\\"\"\n  - paragraph: 白话解释：not_found 是成功完成查询但没有记录；HTTP/API异常可能连查询都未发生。只保存error_type/http_status，不展示原始响应或请求头。failed 不能显示旧成功事实卡。\n  - paragraph: 设计取舍：记录工具成功还不够，必须核对最终答复、版本和会话。保存异常也是真实失败；修复后的留出重测不能改称首次盲评。\n  - paragraph: 历史证据：后台4f49d09：开发15/15、留出第2轮10/10；首轮HOLD05保存中断、后五条未运行，原记录保留。上述不是本轮或任意输入的成功率。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；artifacts/evaluation/holdout-round1-interruption-review.json。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：看到工具返回ok，是否足够把整条案例标为通过？还要核对什么？\n  - generic \"keyboard_arrow_down 完整代码展示\":\n    - generic: keyboard_arrow_down\n    - paragraph: 完整代码展示\n  - paragraph: 清单内 22 个产品文件的完整文本；来源版本 2026-10-16 · 代码解读 r1，内容摘要 SHA256 70991f5187d65e85a43d243ef73c762a6a7a837ea218924d0cee6f8160473340。不是整个工作区或第三方SDK源码。\n  - paragraph: 包含入口、自有运行/展示/部署模块、模拟数据、CSS、依赖声明和平台配置。排除Secrets/密钥值、原始日志、个人文档、测试脚本、第三方SDK仓库、虚拟环境与源码快照自身；无任意路径访问、无源码ZIP下载。\n  - paragraph: 选择公开产品文件\n  - combobox \"选择公开产品文件\": servicepilot/model_config.py\n  - button \"Open\":\n  - paragraph: 文件：ServicePilot/servicepilot/model_config.py · 全部 20 行 · SHA256 731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60\n  - paragraph: 代码块右上角复制当前文件的完整正文；行号不进入复制文本。Streamlit展示/复制会去除首尾空行，SHA256按快照原文计算。长代码在自身区域滚动。\n  - code:\n    - generic: \"1\"\n    - text: \"\\\"\\\"\\\"One provider configuration shared by CLI and Web; no credential persistence.\\\"\\\"\\\"\"\n    - generic: \"2\"\n    - generic: \"3\"\n    - text: from agents import ModelSettings, OpenAIChatCompletionsModel, RunConfig, set_tracing_disabled\n    - generic: \"4\"\n    - text: from openai import AsyncOpenAI, DefaultAsyncHttpxClient\n    - generic: \"5\"\n    - generic: \"6\"\n    - text: MODEL = \"deepseek-flash\"\n    - generic: \"7\"\n    - text: BASE_URL = \"https://api.deepseek.com\"\n    - generic: \"8\"\n    - generic: \"9\"\n    - generic: \"10\"\n    - text: \"def create_client_config(key: str):\"\n    - generic: \"11\"\n    - text: set_tracing_disabled(True)\n    - generic: \"12\"\n    - text: client = AsyncOpenAI(api_key=key, base_url=BASE_URL, max_retries=0, timeout=45.0,\n    - generic: \"13\"\n    - text: http_client=DefaultAsyncHttpxClient(trust_env=False))\n    - generic: \"14\"\n    - text: config = RunConfig(\n    - generic: \"15\"\n    - text: model=OpenAIChatCompletionsModel(model=MODEL, openai_client=client),\n    - generic: \"16\"\n    - text: model_settings=ModelSettings(max_tokens=1024, parallel_tool_calls=False,\n    - generic: \"17\"\n    - text: \"extra_body={\\\"thinking\\\": {\\\"type\\\": \\\"disabled\\\"}}),\"\n    - generic: \"18\"\n    - text: tracing_disabled=True, trace_include_sensitive_data=False,\n    - generic: \"19\"\n    - text: )\n    - generic: \"20\"\n    - text: return client, config\n  - button \"Copy to clipboard\" [active]:\n  - paragraph: 没有脱敏删节；构建前按明确清单筛选并检查凭证模式。若代码变化须重建快照后再发布。\n  - paragraph: 来源与许可：参考OpenAI Agents SDK航空客服示例，SDK由安装包提供；原示例MIT许可随发布包THIRD_PARTY_LICENSE保留。Codex协助实现与验证；不代表个人独立编码或已掌握。\n- generic: ServicePilot · 模拟电商售后 · 真实执行与历史验证分开记录"
+  },
+  {
+    "name": "04-laptop-chat",
+    "time": "2026-10-16T05:52:46.083Z",
+    "metrics": {
+      "bodyWidth": 1366,
+      "main": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "stAppHeader st-emotion-cache-9qudxx e149qiiz1",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 48,
+            "height": 48,
+            "left": 0,
+            "right": 1366.4000244140625,
+            "top": 0,
+            "width": 1366.4000244140625,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMain st-emotion-cache-4rsbii e8oj7lc1",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 768,
+            "height": 768,
+            "left": 0,
+            "right": 1366.4000244140625,
+            "top": 0,
+            "width": 1366.4000244140625,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMainBlockContainer block-container st-emotion-cache-lhe5w4 e8oj7lc4",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 750.4000244140625,
+            "height": 750.4000244140625,
+            "left": 83.20000457763672,
+            "right": 1283.2000045776367,
+            "top": 0,
+            "width": 1200,
+            "x": 83.20000457763672,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "sp-brand",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 138.20000457763672,
+            "height": 86.20000457763672,
+            "left": 111.20000457763672,
+            "right": 1255.2000045776367,
+            "top": 52,
+            "width": 1144,
+            "x": 111.20000457763672,
+            "y": 52
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "st-emotion-cache-1m17l4s e1ac7blb3",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 194.9999961853027,
+            "height": 56.79999923706055,
+            "left": 111.20000457763672,
+            "right": 1255.2000045776367,
+            "top": 138.1999969482422,
+            "width": 1144,
+            "x": 111.20000457763672,
+            "y": 138.1999969482422
+          }
+        }
+      ],
+      "pageWidth": 1366,
+      "tabs": [
+        {
+          "name": "客服体验",
+          "rect": {
+            "bottom": 194.1999969482422,
+            "height": 56,
+            "left": 111.20000457763672,
+            "right": 167.20000457763672,
+            "top": 138.1999969482422,
+            "width": 56,
+            "x": 111.20000457763672,
+            "y": 138.1999969482422
+          },
+          "selected": "true"
+        },
+        {
+          "name": "架构总览",
+          "rect": {
+            "bottom": 194.1999969482422,
+            "height": 56,
+            "left": 192.1999969482422,
+            "right": 248.1999969482422,
+            "top": 138.1999969482422,
+            "width": 56,
+            "x": 192.1999969482422,
+            "y": 138.1999969482422
+          },
+          "selected": "false"
+        },
+        {
+          "name": "项目介绍",
+          "rect": {
+            "bottom": 194.1999969482422,
+            "height": 56,
+            "left": 273.20001220703125,
+            "right": 329.20001220703125,
+            "top": 138.1999969482422,
+            "width": 56,
+            "x": 273.20001220703125,
+            "y": 138.1999969482422
+          },
+          "selected": "false"
+        },
+        {
+          "name": "代码解读",
+          "rect": {
+            "bottom": 194.1999969482422,
+            "height": 56,
+            "left": 354.20001220703125,
+            "right": 410.2000122070313,
+            "top": 138.1999969482422,
+            "width": 56,
+            "x": 354.20001220703125,
+            "y": 138.1999969482422
+          },
+          "selected": "false"
+        }
+      ],
+      "viewport": {
+        "h": 768,
+        "w": 1366
+      }
+    },
+    "snapshot": "- log\n- log\n- banner\n- generic: S\n- strong: ServicePilot\n- generic: 模拟电商售后 · Agent 工作流\n- generic: 模拟业务 Demo\n- tablist:\n  - tab \"客服体验\" [active] [selected]:\n    - paragraph: 客服体验\n  - tab \"架构总览\":\n    - paragraph: 架构总览\n  - tab \"项目介绍\":\n    - paragraph: 项目介绍\n  - tab \"代码解读\":\n    - paragraph: 代码解读\n- tabpanel \"客服体验\":\n  - paragraph: 客服体验\n  - heading \"让订单与规则查询有依据。\" [level=1]:\n    - text: 让订单与规则查询有依据。\n    - link \"Link to heading\":\n      - /url: \"#fc05b09d\"\n  - paragraph: 查询演示订单，或了解模拟退货申请规则。\n  - button \"新会话\" [disabled]:\n    - generic \"新会话\":\n      - paragraph: 新会话\n  - status:\n    - paragraph: 仅使用演示订单与模拟政策。退货申请需人工审核，本 Demo 不直接执行退款。\n  - alert:\n    - paragraph: 客服暂不可用：服务端尚未配置或初始化失败。架构总览和项目介绍仍可浏览。\n  - paragraph: 本机请运行“启动聊天页面.cmd”，仅在启动终端输入密钥；云端由项目方配置服务端Secrets。\n  - textbox \"客服暂不可用\" [disabled]\n  - button \"Send message\" [disabled]:\n- generic: ServicePilot · 模拟电商售后 · 真实执行与历史验证分开记录"
+  },
+  {
+    "name": "mobile-客服体验",
+    "time": "2026-10-16T05:53:01.939Z",
+    "metrics": {
+      "bodyWidth": 390,
+      "main": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "stAppHeader st-emotion-cache-9qudxx e149qiiz1",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 48,
+            "height": 48,
+            "left": 0,
+            "right": 390.3999938964844,
+            "top": 0,
+            "width": 390.3999938964844,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMain st-emotion-cache-4rsbii e8oj7lc1",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 844,
+            "height": 844,
+            "left": 0,
+            "right": 390.3999938964844,
+            "top": 0,
+            "width": 390.3999938964844,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMainBlockContainer block-container st-emotion-cache-lhe5w4 e8oj7lc4",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 851.6000366210938,
+            "height": 851.6000366210938,
+            "left": 0,
+            "right": 380,
+            "top": 0,
+            "width": 380,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "sp-brand",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 123.20000457763672,
+            "height": 71.20000457763672,
+            "left": 16,
+            "right": 364,
+            "top": 52,
+            "width": 348,
+            "x": 16,
+            "y": 52
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "st-emotion-cache-1m17l4s e1ac7blb3",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 172.0000038146973,
+            "height": 48.79999923706055,
+            "left": 16,
+            "right": 364,
+            "top": 123.20000457763672,
+            "width": 348,
+            "x": 16,
+            "y": 123.20000457763672
+          }
+        }
+      ],
+      "pageWidth": 390,
+      "tabs": [
+        {
+          "name": "客服体验",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 16,
+            "right": 94,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 16,
+            "y": 123.20000457763672
+          },
+          "selected": "true"
+        },
+        {
+          "name": "架构总览",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 106,
+            "right": 184,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 106,
+            "y": 123.20000457763672
+          },
+          "selected": "false"
+        },
+        {
+          "name": "项目介绍",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 196,
+            "right": 274,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 196,
+            "y": 123.20000457763672
+          },
+          "selected": "false"
+        },
+        {
+          "name": "代码解读",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 286,
+            "right": 364,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 286,
+            "y": 123.20000457763672
+          },
+          "selected": "false"
+        }
+      ],
+      "viewport": {
+        "h": 844,
+        "w": 390
+      }
+    },
+    "snapshot": "- log\n- log\n- banner\n- generic: S\n- strong: ServicePilot\n- generic: 模拟电商售后 · Agent 工作流\n- generic: 模拟业务 Demo\n- tablist:\n  - tab \"客服体验\" [active] [selected]:\n    - paragraph: 客服体验\n  - tab \"架构总览\":\n    - paragraph: 架构总览\n  - tab \"项目介绍\":\n    - paragraph: 项目介绍\n  - tab \"代码解读\":\n    - paragraph: 代码解读\n- tabpanel \"客服体验\":\n  - paragraph: 客服体验\n  - heading \"让订单与规则查询有依据。\" [level=1]:\n    - text: 让订单与规则查询有依据。\n    - link \"Link to heading\":\n      - /url: \"#fc05b09d\"\n  - paragraph: 查询演示订单，或了解模拟退货申请规则。\n  - button \"新会话\" [disabled]:\n    - generic \"新会话\":\n      - paragraph: 新会话\n  - status:\n    - paragraph: 仅使用演示订单与模拟政策。退货申请需人工审核，本 Demo 不直接执行退款。\n  - alert:\n    - paragraph: 客服暂不可用：服务端尚未配置或初始化失败。架构总览和项目介绍仍可浏览。\n  - paragraph: 本机请运行“启动聊天页面.cmd”，仅在启动终端输入密钥；云端由项目方配置服务端Secrets。\n  - textbox \"客服暂不可用\" [disabled]\n  - button \"Send message\" [disabled]:\n- generic: ServicePilot · 模拟电商售后 · 真实执行与历史验证分开记录"
+  },
+  {
+    "name": "mobile-架构总览",
+    "time": "2026-10-16T05:53:03.347Z",
+    "metrics": {
+      "bodyWidth": 390,
+      "main": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "stAppHeader st-emotion-cache-9qudxx e149qiiz1",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 48,
+            "height": 48,
+            "left": 0,
+            "right": 390.3999938964844,
+            "top": 0,
+            "width": 390.3999938964844,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMain st-emotion-cache-4rsbii e8oj7lc1",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 844,
+            "height": 844,
+            "left": 0,
+            "right": 390.3999938964844,
+            "top": 0,
+            "width": 390.3999938964844,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMainBlockContainer block-container st-emotion-cache-lhe5w4 e8oj7lc4",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 1321.862548828125,
+            "height": 1321.862548828125,
+            "left": 0,
+            "right": 380,
+            "top": 0,
+            "width": 380,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "sp-brand",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 123.20000457763672,
+            "height": 71.20000457763672,
+            "left": 16,
+            "right": 364,
+            "top": 52,
+            "width": 348,
+            "x": 16,
+            "y": 52
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "st-emotion-cache-1m17l4s e1ac7blb3",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 172.0000038146973,
+            "height": 48.79999923706055,
+            "left": 16,
+            "right": 364,
+            "top": 123.20000457763672,
+            "width": 348,
+            "x": 16,
+            "y": 123.20000457763672
+          }
+        }
+      ],
+      "pageWidth": 390,
+      "tabs": [
+        {
+          "name": "客服体验",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 16,
+            "right": 94,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 16,
+            "y": 123.20000457763672
+          },
+          "selected": "false"
+        },
+        {
+          "name": "架构总览",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 106,
+            "right": 184,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 106,
+            "y": 123.20000457763672
+          },
+          "selected": "true"
+        },
+        {
+          "name": "项目介绍",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 196,
+            "right": 274,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 196,
+            "y": 123.20000457763672
+          },
+          "selected": "false"
+        },
+        {
+          "name": "代码解读",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 286,
+            "right": 364,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 286,
+            "y": 123.20000457763672
+          },
+          "selected": "false"
+        }
+      ],
+      "viewport": {
+        "h": 844,
+        "w": 390
+      }
+    },
+    "snapshot": "- log\n- log\n- banner\n- generic: S\n- strong: ServicePilot\n- generic: 模拟电商售后 · Agent 工作流\n- generic: 模拟业务 Demo\n- tablist:\n  - tab \"客服体验\":\n    - paragraph: 客服体验\n  - tab \"架构总览\" [active] [selected]:\n    - paragraph: 架构总览\n  - tab \"项目介绍\":\n    - paragraph: 项目介绍\n  - tab \"代码解读\":\n    - paragraph: 代码解读\n- tabpanel \"架构总览\":\n  - paragraph: 架构总览\n  - heading \"从用户提问，到有依据的回答。\" [level=1]:\n    - text: 从用户提问，到有依据的回答。\n    - link \"Link to heading\":\n      - /url: \"#405dd9e0\"\n  - paragraph: 页面管理交互，会话保留上下文，Runner 串联模型与本地工具。\n  - generic \"keyboard_arrow_right 放大查看完整图\":\n    - generic: keyboard_arrow_right\n    - paragraph: 放大查看完整图\n  - button \"下载完整 SVG\":\n    - paragraph: 下载完整 SVG\n  - button \"Fullscreen\":\n  - paragraph: 架构资产制作于2026-10-14，图内进度为制作时状态；当前界面已接入，公网验证另记。\n  - list:\n    - listitem: 模型提出交接与查询请求，Runner 执行本地工具。\n    - listitem: 订单与政策来自本地模拟 JSON，不是真实商家接口。\n    - listitem: 公开执行事件完成后展示，内部交接不代表接通真人。\n- generic: ServicePilot · 模拟电商售后 · 真实执行与历史验证分开记录"
+  },
+  {
+    "name": "mobile-项目介绍",
+    "time": "2026-10-16T05:53:03.722Z",
+    "metrics": {
+      "bodyWidth": 390,
+      "main": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "stAppHeader st-emotion-cache-9qudxx e149qiiz1",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 48,
+            "height": 48,
+            "left": 0,
+            "right": 390.3999938964844,
+            "top": 0,
+            "width": 390.3999938964844,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMain st-emotion-cache-4rsbii e8oj7lc1",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 844,
+            "height": 844,
+            "left": 0,
+            "right": 390.3999938964844,
+            "top": 0,
+            "width": 390.3999938964844,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMainBlockContainer block-container st-emotion-cache-lhe5w4 e8oj7lc4",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 5140.60009765625,
+            "height": 5140.60009765625,
+            "left": 0,
+            "right": 380,
+            "top": 0,
+            "width": 380,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "sp-brand",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 123.20000457763672,
+            "height": 71.20000457763672,
+            "left": 16,
+            "right": 364,
+            "top": 52,
+            "width": 348,
+            "x": 16,
+            "y": 52
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "st-emotion-cache-1m17l4s e1ac7blb3",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 172.0000038146973,
+            "height": 48.79999923706055,
+            "left": 16,
+            "right": 364,
+            "top": 123.20000457763672,
+            "width": 348,
+            "x": 16,
+            "y": 123.20000457763672
+          }
+        }
+      ],
+      "pageWidth": 390,
+      "tabs": [
+        {
+          "name": "客服体验",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 16,
+            "right": 94,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 16,
+            "y": 123.20000457763672
+          },
+          "selected": "false"
+        },
+        {
+          "name": "架构总览",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 106,
+            "right": 184,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 106,
+            "y": 123.20000457763672
+          },
+          "selected": "false"
+        },
+        {
+          "name": "项目介绍",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 196,
+            "right": 274,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 196,
+            "y": 123.20000457763672
+          },
+          "selected": "true"
+        },
+        {
+          "name": "代码解读",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 286,
+            "right": 364,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 286,
+            "y": 123.20000457763672
+          },
+          "selected": "false"
+        }
+      ],
+      "viewport": {
+        "h": 844,
+        "w": 390
+      }
+    },
+    "snapshot": "- log\n- log\n- banner\n- generic: S\n- strong: ServicePilot\n- generic: 模拟电商售后 · Agent 工作流\n- generic: 模拟业务 Demo\n- tablist:\n  - tab \"客服体验\":\n    - paragraph: 客服体验\n  - tab \"架构总览\":\n    - paragraph: 架构总览\n  - tab \"项目介绍\" [active] [selected]:\n    - paragraph: 项目介绍\n  - tab \"代码解读\":\n    - paragraph: 代码解读\n- tabpanel \"项目介绍\":\n  - paragraph: 项目介绍\n  - heading \"让售后助手的行为可检查。\" [level=1]:\n    - text: 让售后助手的行为可检查。\n    - link \"Link to heading\":\n      - /url: \"#a374aa57\"\n  - paragraph: 把“订单到哪了、如何申请退货”拆成可查询、可追问、可核对的流程。基于 OpenAI Agents SDK 与 DeepSeek，在 Codex 协助下完成模拟售后 Demo。\n  - heading \"可体验的能力\" [level=3]:\n    - text: 可体验的能力\n    - link \"Link to heading\":\n      - /url: \"#3f9c1819\"\n  - paragraph: 订单与政策查询、多轮补充、角色交接、新会话和实际事件查看。\n  - paragraph: 客服体验栏目连接已有真实模型与本地模拟工具；未预填样例回复。\n  - heading \"验证与边界\" [level=3]:\n    - text: 验证与边界\n    - link \"Link to heading\":\n      - /url: \"#e31d7434\"\n  - paragraph: 固定样本开发15/15、留出第2轮重测10/10；首轮中断记录保留。使用模拟订单与政策，不执行真实退款。\n  - paragraph: 后台冻结版本4f49d09；不是任意问题准确率或生产效果承诺。\n  - generic: 01 / 场景\n  - heading \"从三个具体问题开始。\" [level=3]:\n    - text: 从三个具体问题开始。\n    - link \"Link to heading\":\n      - /url: \"#89684036\"\n  - paragraph: 查询订单\n  - paragraph: “我的订单 A1001 到哪了？”\n  - paragraph: 查询本次模拟记录；没有到货时间就明确说明。\n  - paragraph: 咨询政策\n  - paragraph: “签收后几天可以申请退货？”\n  - paragraph: 查询模拟政策，7天内可提出申请，是否通过需人工审核。\n  - paragraph: 多轮补充\n  - paragraph: “帮我查订单。” → “A1002”\n  - paragraph: 缺编号先追问，补充后在同一会话继续查询。\n  - generic: 02 / 实际运行\n  - heading \"看到回答，也能核对它的来源。\" [level=3]:\n    - text: 看到回答，也能核对它的来源。\n    - link \"Link to heading\":\n      - /url: \"#36d7016a\"\n  - paragraph: 以下为2026-10-14本机真实历史截图，旧版界面7f9f277（dirty=true，源文件哈希已复核）；不是本次改版或云端验收。\n  - 'button \"Fullscreen: 订单查询：事实来自工具 · 历史本机截图\"':\n  - paragraph: 订单查询：事实来自工具 · 历史本机截图\n  - generic \"keyboard_arrow_right 查看清晰大图 · 订单查询：事实来自工具\":\n    - generic: keyboard_arrow_right\n    - paragraph: 查看清晰大图 · 订单查询：事实来自工具\n  - paragraph: A1001 → query_order → 商品、已发货、模拟运单；未补造送达时间。\n  - 'button \"Fullscreen: 话题切换：同一会话接着处理 · 历史本机截图\"':\n  - paragraph: 话题切换：同一会话接着处理 · 历史本机截图\n  - generic \"keyboard_arrow_right 查看清晰大图 · 话题切换：同一会话接着处理\":\n    - generic: keyboard_arrow_right\n    - paragraph: 查看清晰大图 · 话题切换：同一会话接着处理\n  - paragraph: 先问政策再查订单，FAQ → Triage → Order，实际调用查询工具。\n  - generic: 03 / 工作方式\n  - heading \"模型、执行器、工具，各司其职。\" [level=3]:\n    - text: 模型、执行器、工具，各司其职。\n    - link \"Link to heading\":\n      - /url: \"#5da5fe89\"\n  - paragraph: 01 理解与分流\n  - paragraph: Triage识别任务；订单与政策专员按职责接手。\n  - paragraph: 02 执行实际动作\n  - paragraph: 模型提出动作，Runner执行handoff或Python工具。\n  - paragraph: 03 查询业务事实\n  - paragraph: 工具读取本地JSON，返回本次事实和结果状态。\n  - paragraph: 04 依据结果回答\n  - paragraph: 模型组织答复，页面展示实际事件，等待下一题。\n  - paragraph: 完整项目图在顶部“架构总览”栏目。\n  - generic: 04 / 验证与改进\n  - heading \"用案例检查行为，保留失败与修复。\" [level=3]:\n    - text: 用案例检查行为，保留失败与修复。\n    - link \"Link to heading\":\n      - /url: \"#ad23280e\"\n  - paragraph: 最终开发集\n  - paragraph: 15 / 15\n  - paragraph: 后台4f49d09，最终开发轮。\n  - paragraph: 留出第2轮重测\n  - paragraph: 10 / 10\n  - paragraph: 后台4f49d09，保留首轮中断。\n  - paragraph: 本机历史关键复查\n  - paragraph: 5 / 5\n  - paragraph: 旧页面7f9f277，非新版/云端验收。\n  - paragraph: 固定样本划分公开可见，不是首次外部盲评，不代表总体准确率；本次改版和云端结果另记。\n  - generic \"keyboard_arrow_right 只说“转接”并不代表真正交接\":\n    - generic: keyboard_arrow_right\n    - paragraph: 只说“转接”并不代表真正交接\n  - generic \"keyboard_arrow_right 证据保存失败，也需要作为真实失败处理\":\n    - generic: keyboard_arrow_right\n    - paragraph: 证据保存失败，也需要作为真实失败处理\n  - generic: 05 / 项目过程\n  - heading \"从可运行示例，推进到可展示作品。\" [level=3]:\n    - text: 从可运行示例，推进到可展示作品。\n    - link \"Link to heading\":\n      - /url: \"#18d394b0\"\n  - paragraph: \"10.11\"\n  - paragraph: 运行与理解\n  - paragraph: 接入DeepSeek，运行航空客服基线，理解Agent、工具与交接。\n  - paragraph: \"10.13\"\n  - paragraph: 售后业务改造\n  - paragraph: 加入模拟订单、政策工具、多轮补充与边界案例。\n  - paragraph: \"10.14\"\n  - paragraph: 验证与展示准备\n  - paragraph: 完成后台评测及本机页面复查，准备架构图、界面与部署。\n  - heading \"本人参与\" [level=3]:\n    - text: 本人参与\n    - link \"Link to heading\":\n      - /url: \"#8597594f\"\n  - paragraph: 需求审阅，模拟规则、功能范围与验收目标确认，本机运行配合和结果审阅。\n  - heading \"实现与协作\" [level=3]:\n    - text: 实现与协作\n    - link \"Link to heading\":\n      - /url: \"#bc2ccf92\"\n  - paragraph: Codex协助代码、排错、验证与文档；OpenAI Agents SDK提供执行机制，DeepSeek提供模型服务。\n  - status:\n    - paragraph: 当前工作台已接入现有后台；能否查询取决于服务端配置。公网访问与本次验收以交接记录为准。没有真实退款、工单、真人接入或真实商家接口。\n  - paragraph: 个人独立实现与掌握程度按实际经历说明。\n- generic: ServicePilot · 模拟电商售后 · 真实执行与历史验证分开记录"
+  },
+  {
+    "name": "mobile-代码解读",
+    "time": "2026-10-16T05:53:04.929Z",
+    "metrics": {
+      "bodyWidth": 390,
+      "main": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "stAppHeader st-emotion-cache-9qudxx e149qiiz1",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 48,
+            "height": 48,
+            "left": 0,
+            "right": 390.3999938964844,
+            "top": 0,
+            "width": 390.3999938964844,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMain st-emotion-cache-4rsbii e8oj7lc1",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 844,
+            "height": 844,
+            "left": 0,
+            "right": 390.3999938964844,
+            "top": 0,
+            "width": 390.3999938964844,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMainBlockContainer block-container st-emotion-cache-lhe5w4 e8oj7lc4",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 7942,
+            "height": 7942,
+            "left": 0,
+            "right": 380,
+            "top": 0,
+            "width": 380,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "sp-brand",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 123.20000457763672,
+            "height": 71.20000457763672,
+            "left": 16,
+            "right": 364,
+            "top": 52,
+            "width": 348,
+            "x": 16,
+            "y": 52
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "st-emotion-cache-1m17l4s e1ac7blb3",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 172.0000038146973,
+            "height": 48.79999923706055,
+            "left": 16,
+            "right": 364,
+            "top": 123.20000457763672,
+            "width": 348,
+            "x": 16,
+            "y": 123.20000457763672
+          }
+        }
+      ],
+      "pageWidth": 390,
+      "tabs": [
+        {
+          "name": "客服体验",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 16,
+            "right": 94,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 16,
+            "y": 123.20000457763672
+          },
+          "selected": "false"
+        },
+        {
+          "name": "架构总览",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 106,
+            "right": 184,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 106,
+            "y": 123.20000457763672
+          },
+          "selected": "false"
+        },
+        {
+          "name": "项目介绍",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 196,
+            "right": 274,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 196,
+            "y": 123.20000457763672
+          },
+          "selected": "false"
+        },
+        {
+          "name": "代码解读",
+          "rect": {
+            "bottom": 171.20000457763672,
+            "height": 48,
+            "left": 286,
+            "right": 364,
+            "top": 123.20000457763672,
+            "width": 78,
+            "x": 286,
+            "y": 123.20000457763672
+          },
+          "selected": "true"
+        }
+      ],
+      "viewport": {
+        "h": 844,
+        "w": 390
+      }
+    },
+    "snapshot": "- log\n- log\n- banner\n- generic: S\n- strong: ServicePilot\n- generic: 模拟电商售后 · Agent 工作流\n- generic: 模拟业务 Demo\n- tablist:\n  - tab \"客服体验\":\n    - paragraph: 客服体验\n  - tab \"架构总览\":\n    - paragraph: 架构总览\n  - tab \"项目介绍\":\n    - paragraph: 项目介绍\n  - tab \"代码解读\" [active] [selected]:\n    - paragraph: 代码解读\n- tabpanel \"代码解读\":\n  - paragraph: 代码解读\n  - heading \"从业务问题，读到实际实现。\" [level=1]:\n    - text: 从业务问题，读到实际实现。\n    - link \"Link to heading\":\n      - /url: \"#e0fa9285\"\n  - paragraph: 精选片段与完整文件来自同一稳定源码快照；只读展示，不执行源码或请求模型。\n  - paragraph: 这是学习材料与自测提示，不表示本人已经掌握或独立实现了全部代码。\n  - paragraph: 来源版本：2026-10-16 · 代码解读 r1 · 内容摘要 SHA256 70991f5187d65e85 · UTF-8/LF快照原文；无源码删节。\n  - heading \"01 / Agent 分工\" [level=3]:\n    - text: 01 / Agent 分工\n    - link \"Link to heading\":\n      - /url: \"#01-agent\"\n  - paragraph: 业务问题：为什么订单问题交给 Order，政策问题交给 FAQ？\n  - paragraph:\n    - strong: 角色定义职责和可用工具，模型选择交接，SDK 的 Runner 执行动作。\n  - paragraph: servicepilot/agent_config.py · 原文件 L68–L75 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"triage.handoffs = [handoff(agent=faq, tool_name_override=\\\"transfer_to_faq_agent\\\"), handoff(agent=order, tool_name_override=\\\"transfer_to_order_agent\\\")] order.handoffs = [handoff(agent=triage, tool_name_override=\\\"transfer_to_triage_agent\\\")] faq.handoffs = [handoff(agent=triage, tool_name_override=\\\"transfer_to_triage_agent\\\")] for agent in (triage, order, faq): for transfer in agent.handoffs: transfer.strict_json_schema = False return triage, order, faq\"\n  - paragraph: 白话解释：Triage 可以交给两个专员；专员跨职责时先回 Triage。FAQ 绑定 lookup_faq，Order 绑定 query_order。同一底层模型可以按不同角色工作，Agent 不是另写的一套模型。\n  - paragraph: 设计取舍：用明确的工具权限和交接关系约束分工；口头说“转接”不能代替真实 handoff。\n  - paragraph: 历史证据：2026-10-14 后台4f49d09评测，及2026-10-15发布7792895云端政策→订单观察。历史结论，不是本轮实时执行。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；artifacts/workbench/cloud/browser-cases.json（证据留在工作区，不公开原始日志）。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：FAQ 接到订单请求时，代码允许它直接调用 query_order 吗？\n  - heading \"02 / 模型接入\" [level=3]:\n    - text: 02 / 模型接入\n    - link \"Link to heading\":\n      - /url: \"#02\"\n  - paragraph: 业务问题：谁提供生成能力，哪里决定调用哪个模型？\n  - paragraph:\n    - strong: AsyncOpenAI 是客户端，DeepSeek 提供服务，RunConfig 把模型配置交给 SDK。\n  - paragraph: servicepilot/model_config.py · 原文件 L6–L20 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code:\n    - text: MODEL = \"deepseek-flash\" BASE_URL = \"https://api.deepseek.com\"\n    - text: \"def create_client_config(key: str): set_tracing_disabled(True) client = AsyncOpenAI(api_key=key, base_url=BASE_URL, max_retries=0, timeout=45.0, http_client=DefaultAsyncHttpxClient(trust_env=False)) config = RunConfig( model=OpenAIChatCompletionsModel(model=MODEL, openai_client=client), model_settings=ModelSettings(max_tokens=1024, parallel_tool_calls=False, extra_body={\\\"thinking\\\": {\\\"type\\\": \\\"disabled\\\"}}), tracing_disabled=True, trace_include_sensitive_data=False, ) return client, config\"\n  - paragraph: 白话解释：服务地址指向 DeepSeek，MODEL 是模型名称。key 是服务端传入的变量，页面不展示它的值。配置关闭 tracing 和自动HTTP重试；45秒是请求超时，不是保证45秒成功。\n  - paragraph: 设计取舍：Web 与 CLI 复用配置；不同角色可以共用模型连接。模型服务故障仍可能导致整轮失败。\n  - paragraph: 历史证据：2026-10-14冻结4f49d09真实评测使用deepseek-flash；2026-10-15云端故障观察记录InternalServerError。供应商恢复不等于本项目已验证恢复。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；docs/2026-10-15-云端请求失败观察.md。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：把 BASE_URL 与 MODEL 混为一个概念，会漏掉什么配置？\n  - heading \"03 / 工具查询\" [level=3]:\n    - text: 03 / 工具查询\n    - link \"Link to heading\":\n      - /url: \"#03\"\n  - paragraph: 业务问题：模型怎样知道 A1001 的商品和订单状态？\n  - paragraph:\n    - strong: 模型提出带参数的调用，工具校验编号，再读取模拟数据返回结构化事实。\n  - paragraph: servicepilot/order_tools.py · 原文件 L13–L26 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"def query_order(order_id: str, source: OrderSource | None = None) -> dict: \\\"\\\"\\\"Normalize and validate an order number, then return structured lookup facts.\\\"\\\"\\\" if not isinstance(order_id, str): return {\\\"status\\\": \\\"invalid_input\\\", \\\"message\\\": \\\"订单号应为 A 加四位数字，例如 A1001。\\\"} normalized = order_id.strip().upper() if re.fullmatch(r\\\"A[0-9]{4}\\\", normalized) is None: return {\\\"status\\\": \\\"invalid_input\\\", \\\"message\\\": \\\"订单号应为 A 加四位数字，例如 A1001。\\\"} try: order = (source if source is not None else JsonOrderSource()).get(normalized) except (OSError, ValueError, TypeError, AttributeError): return {\\\"status\\\": \\\"unavailable\\\", \\\"order_id\\\": normalized, \\\"message\\\": \\\"当前无法查询订单，请稍后重试或联系人工。\\\"} if order is None: return {\\\"status\\\": \\\"not_found\\\", \\\"order_id\\\": normalized, \\\"message\\\": \\\"未找到该订单，请核对订单号。\\\"} return {\\\"status\\\": \\\"ok\\\", \\\"source\\\": \\\"local_mock\\\", \\\"order\\\": order}\"\n  - paragraph: data/orders.json · 原文件 L4–L10 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"\\\"A1001\\\": { \\\"order_id\\\": \\\"A1001\\\", \\\"product\\\": \\\"蓝牙耳机\\\", \\\"status\\\": \\\"已发货\\\", \\\"carrier\\\": \\\"模拟物流\\\", \\\"tracking_number\\\": \\\"MOCK1001\\\" },\"\n  - paragraph: 白话解释：参数是 order_id，不是整句问题。工具去空格、转大写，要求 A 加四位数字；数据源可以替换。A1001 是蓝牙耳机、已发货、模拟物流、MOCK1001；A1002 的物流字段为空。\n  - paragraph: 设计取舍：ok、invalid_input、not_found、unavailable 含义分开，便于检查最终回答是否对应本次查询。没有签收日期或预计到货时间，不能推算。\n  - paragraph: 历史证据：2026-10-14旧页面7f9f277的A1001与多轮A1002复查；2026-10-15发布7792895云端必要回归。截图在项目介绍中标注历史时间与版本。\n  - paragraph: 工作区来源索引：artifacts/delivery/delivery-review-2026-10-14.json；docs/2026-10-15-公网发布验证与最终交接.md。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：A9999查无记录，与数据源不可用分别返回什么状态？\n  - heading \"04 / 多轮会话\" [level=3]:\n    - text: 04 / 多轮会话\n    - link \"Link to heading\":\n      - /url: \"#04\"\n  - paragraph: 业务问题：先说“帮我查订单”，再补“A1002”，程序怎样接上？\n  - paragraph:\n    - strong: OrderSession 保存历史和当前 Agent；新会话会创建新的后台上下文。\n  - paragraph: servicepilot/session.py · 原文件 L68–L75 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"result = await Runner.run( self.current_agent, [*self.items, {\\\"role\\\": \\\"user\\\", \\\"content\\\": question}], run_config=self.config, hooks=recorder, max_turns=6, ) self.items = result.to_input_list() self.current_agent = result.last_agent usage = result.context_wrapper.usage\"\n  - paragraph: servicepilot/web_runtime.py · 原文件 L224–L237 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"def reset(self, fault=False): with self.lock: if self.busy: return \\\"正在处理中，完成后才能开始新会话\\\" try: self.backend.reset(fault) except Exception: return \\\"新会话未能创建，请重试\\\" parent = self.session_id self.report[\\\"reset_at\\\"] = now() self._save() self.last_submission = None self._fresh(parent, fault) return None\"\n  - paragraph: 白话解释：每轮把旧消息与新问题一起交给Runner；成功后保存to_input_list和last_agent。重置先调用backend.reset再生成新session_id，不只清空画面。页面各自持有后台，旧响应还要核对归属。\n  - paragraph: 设计取舍：处理中禁止重置与重复发送，减少并发混写。历史会增加上下文，不代表支持无限记忆；日志保留也不等于重启恢复聊天。\n  - paragraph: 历史证据：2026-10-14旧页面7f9f277重置与多轮复查；2026-10-15云端已查A1001后重置仍追问编号。\n  - paragraph: 工作区来源索引：artifacts/delivery/delivery-review-2026-10-14.json；artifacts/workbench/cloud/final-review.json。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：只清空页面但保留self.items，会有什么风险？\n  - heading \"05 / 异常与验证\" [level=3]:\n    - text: 05 / 异常与验证\n    - link \"Link to heading\":\n      - /url: \"#05\"\n  - paragraph: 业务问题：“没查到订单”和“模型请求失败”为什么不能说成一回事？\n  - paragraph:\n    - strong: 业务状态由工具返回；运行异常由会话记录安全类型，页面据此显示失败。\n  - paragraph: servicepilot/session.py · 原文件 L80–L86 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"except Exception as error: # Keep typed error metadata, never provider response text or request headers. turn.update(status=\\\"failed\\\", error_type=type(error).__name__, http_status=getattr(error, \\\"status_code\\\", None)) finally: turn.update(finished_at=now(), elapsed_seconds=round(time.perf_counter() - started, 3)) return turn\"\n  - paragraph: servicepilot/workbench_ui.py · 原文件 L45–L54 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"def event_summary(turn): if turn.get(\\\"status\\\") == \\\"running\\\": return \\\"处理中，完成后展示实际事件。\\\" if turn.get(\\\"status\\\") == \\\"failed\\\": return \\\"本次请求失败；以下仅展示已返回的公开事件。\\\" results = [e[\\\"result\\\"] for e in turn.get(\\\"events\\\", []) if e.get(\\\"type\\\") == \\\"tool_result\\\" and isinstance(e.get(\\\"result\\\"), dict)] if results: return \\\" · \\\".join(LABELS.get(r.get(\\\"status\\\"), \\\"未知结果状态\\\") for r in results) return \\\"本次未提供执行事件。\\\" if not turn.get(\\\"events\\\") else \\\"本轮公开事件已返回。\\\"\"\n  - paragraph: 白话解释：not_found 是成功完成查询但没有记录；HTTP/API异常可能连查询都未发生。只保存error_type/http_status，不展示原始响应或请求头。failed 不能显示旧成功事实卡。\n  - paragraph: 设计取舍：记录工具成功还不够，必须核对最终答复、版本和会话。保存异常也是真实失败；修复后的留出重测不能改称首次盲评。\n  - paragraph: 历史证据：后台4f49d09：开发15/15、留出第2轮10/10；首轮HOLD05保存中断、后五条未运行，原记录保留。上述不是本轮或任意输入的成功率。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；artifacts/evaluation/holdout-round1-interruption-review.json。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：看到工具返回ok，是否足够把整条案例标为通过？还要核对什么？\n  - generic \"keyboard_arrow_down 完整代码展示\":\n    - generic: keyboard_arrow_down\n    - paragraph: 完整代码展示\n  - paragraph: 清单内 22 个产品文件的完整文本；来源版本 2026-10-16 · 代码解读 r1，内容摘要 SHA256 70991f5187d65e85a43d243ef73c762a6a7a837ea218924d0cee6f8160473340。不是整个工作区或第三方SDK源码。\n  - paragraph: 包含入口、自有运行/展示/部署模块、模拟数据、CSS、依赖声明和平台配置。排除Secrets/密钥值、原始日志、个人文档、测试脚本、第三方SDK仓库、虚拟环境与源码快照自身；无任意路径访问、无源码ZIP下载。\n  - paragraph: 选择公开产品文件\n  - combobox \"选择公开产品文件\": servicepilot/model_config.py\n  - button \"Open\":\n  - paragraph: 文件：ServicePilot/servicepilot/model_config.py · 全部 20 行 · SHA256 731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60\n  - paragraph: 代码块右上角复制当前文件的完整正文；行号不进入复制文本。Streamlit展示/复制会去除首尾空行，SHA256按快照原文计算。长代码在自身区域滚动。\n  - code:\n    - generic: \"1\"\n    - text: \"\\\"\\\"\\\"One provider configuration shared by CLI and Web; no credential persistence.\\\"\\\"\\\"\"\n    - generic: \"2\"\n    - generic: \"3\"\n    - text: from agents import ModelSettings, OpenAIChatCompletionsModel, RunConfig, set_tracing_disabled\n    - generic: \"4\"\n    - text: from openai import AsyncOpenAI, DefaultAsyncHttpxClient\n    - generic: \"5\"\n    - generic: \"6\"\n    - text: MODEL = \"deepseek-flash\"\n    - generic: \"7\"\n    - text: BASE_URL = \"https://api.deepseek.com\"\n    - generic: \"8\"\n    - generic: \"9\"\n    - generic: \"10\"\n    - text: \"def create_client_config(key: str):\"\n    - generic: \"11\"\n    - text: set_tracing_disabled(True)\n    - generic: \"12\"\n    - text: client = AsyncOpenAI(api_key=key, base_url=BASE_URL, max_retries=0, timeout=45.0,\n    - generic: \"13\"\n    - text: http_client=DefaultAsyncHttpxClient(trust_env=False))\n    - generic: \"14\"\n    - text: config = RunConfig(\n    - generic: \"15\"\n    - text: model=OpenAIChatCompletionsModel(model=MODEL, openai_client=client),\n    - generic: \"16\"\n    - text: model_settings=ModelSettings(max_tokens=1024, parallel_tool_calls=False,\n    - generic: \"17\"\n    - text: \"extra_body={\\\"thinking\\\": {\\\"type\\\": \\\"disabled\\\"}}),\"\n    - generic: \"18\"\n    - text: tracing_disabled=True, trace_include_sensitive_data=False,\n    - generic: \"19\"\n    - text: )\n    - generic: \"20\"\n    - text: return client, config\n  - paragraph: 没有脱敏删节；构建前按明确清单筛选并检查凭证模式。若代码变化须重建快照后再发布。\n  - paragraph: 来源与许可：参考OpenAI Agents SDK航空客服示例，SDK由安装包提供；原示例MIT许可随发布包THIRD_PARTY_LICENSE保留。Codex协助实现与验证；不代表个人独立编码或已掌握。\n- generic: ServicePilot · 模拟电商售后 · 真实执行与历史验证分开记录"
+  },
+  {
+    "name": "copy-integrity",
+    "exactMatch": true,
+    "snapshot_id": "70991f5187d65e85a43d243ef73c762a6a7a837ea218924d0cee6f8160473340"
+  },
+  {
+    "name": "mobile-full-code-internal-scroll",
+    "metrics": {
+      "code": [
+        {
+          "height": 430,
+          "overflow": "auto",
+          "scrollHeight": 3235,
+          "scrollWidth": 1260,
+          "width": 304
+        }
+      ],
+      "pageWidth": 390,
+      "viewport": 390
+    }
+  },
+  {
+    "name": "05-mobile-full-source",
+    "time": "2026-10-16T05:54:14.397Z",
+    "metrics": {
+      "bodyWidth": 390,
+      "main": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "stAppHeader st-emotion-cache-9qudxx e149qiiz1",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 48,
+            "height": 48,
+            "left": 0,
+            "right": 390.3999938964844,
+            "top": 0,
+            "width": 390.3999938964844,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMain st-emotion-cache-4rsbii e8oj7lc1",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": 844,
+            "height": 844,
+            "left": 0,
+            "right": 390.3999938964844,
+            "top": 0,
+            "width": 390.3999938964844,
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "kind": "stMainBlockContainer block-container st-emotion-cache-lhe5w4 e8oj7lc4",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": 938.7998046875,
+            "height": 7919.60009765625,
+            "left": 0,
+            "right": 380,
+            "top": -6980.80029296875,
+            "width": 380,
+            "x": 0,
+            "y": -6980.80029296875
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "sp-brand",
+          "overflowX": "visible",
+          "rect": {
+            "bottom": -6857.600288391113,
+            "height": 71.20000457763672,
+            "left": 16,
+            "right": 364,
+            "top": -6928.80029296875,
+            "width": 348,
+            "x": 16,
+            "y": -6928.80029296875
+          }
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "kind": "st-emotion-cache-1m17l4s e1ac7blb3",
+          "overflowX": "auto",
+          "rect": {
+            "bottom": -6808.800098419189,
+            "height": 48.79999923706055,
+            "left": 16,
+            "right": 364,
+            "top": -6857.60009765625,
+            "width": 348,
+            "x": 16,
+            "y": -6857.60009765625
+          }
+        }
+      ],
+      "pageWidth": 390,
+      "tabs": [
+        {
+          "name": "客服体验",
+          "rect": {
+            "bottom": -6809.60009765625,
+            "height": 48,
+            "left": 16,
+            "right": 94,
+            "top": -6857.60009765625,
+            "width": 78,
+            "x": 16,
+            "y": -6857.60009765625
+          },
+          "selected": "false"
+        },
+        {
+          "name": "架构总览",
+          "rect": {
+            "bottom": -6809.60009765625,
+            "height": 48,
+            "left": 106,
+            "right": 184,
+            "top": -6857.60009765625,
+            "width": 78,
+            "x": 106,
+            "y": -6857.60009765625
+          },
+          "selected": "false"
+        },
+        {
+          "name": "项目介绍",
+          "rect": {
+            "bottom": -6809.60009765625,
+            "height": 48,
+            "left": 196,
+            "right": 274,
+            "top": -6857.60009765625,
+            "width": 78,
+            "x": 196,
+            "y": -6857.60009765625
+          },
+          "selected": "false"
+        },
+        {
+          "name": "代码解读",
+          "rect": {
+            "bottom": -6809.60009765625,
+            "height": 48,
+            "left": 286,
+            "right": 364,
+            "top": -6857.60009765625,
+            "width": 78,
+            "x": 286,
+            "y": -6857.60009765625
+          },
+          "selected": "true"
+        }
+      ],
+      "viewport": {
+        "h": 844,
+        "w": 390
+      }
+    },
+    "snapshot": "- log:\n  - generic: 22 options available.\n- log\n- banner\n- generic: S\n- strong: ServicePilot\n- generic: 模拟电商售后 · Agent 工作流\n- generic: 模拟业务 Demo\n- tablist:\n  - tab \"客服体验\":\n    - paragraph: 客服体验\n  - tab \"架构总览\":\n    - paragraph: 架构总览\n  - tab \"项目介绍\":\n    - paragraph: 项目介绍\n  - tab \"代码解读\" [selected]:\n    - paragraph: 代码解读\n- tabpanel \"代码解读\":\n  - paragraph: 代码解读\n  - heading \"从业务问题，读到实际实现。\" [level=1]:\n    - text: 从业务问题，读到实际实现。\n    - link \"Link to heading\":\n      - /url: \"#e0fa9285\"\n  - paragraph: 精选片段与完整文件来自同一稳定源码快照；只读展示，不执行源码或请求模型。\n  - paragraph: 这是学习材料与自测提示，不表示本人已经掌握或独立实现了全部代码。\n  - paragraph: 来源版本：2026-10-16 · 代码解读 r1 · 内容摘要 SHA256 70991f5187d65e85 · UTF-8/LF快照原文；无源码删节。\n  - heading \"01 / Agent 分工\" [level=3]:\n    - text: 01 / Agent 分工\n    - link \"Link to heading\":\n      - /url: \"#01-agent\"\n  - paragraph: 业务问题：为什么订单问题交给 Order，政策问题交给 FAQ？\n  - paragraph:\n    - strong: 角色定义职责和可用工具，模型选择交接，SDK 的 Runner 执行动作。\n  - paragraph: servicepilot/agent_config.py · 原文件 L68–L75 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"triage.handoffs = [handoff(agent=faq, tool_name_override=\\\"transfer_to_faq_agent\\\"), handoff(agent=order, tool_name_override=\\\"transfer_to_order_agent\\\")] order.handoffs = [handoff(agent=triage, tool_name_override=\\\"transfer_to_triage_agent\\\")] faq.handoffs = [handoff(agent=triage, tool_name_override=\\\"transfer_to_triage_agent\\\")] for agent in (triage, order, faq): for transfer in agent.handoffs: transfer.strict_json_schema = False return triage, order, faq\"\n  - paragraph: 白话解释：Triage 可以交给两个专员；专员跨职责时先回 Triage。FAQ 绑定 lookup_faq，Order 绑定 query_order。同一底层模型可以按不同角色工作，Agent 不是另写的一套模型。\n  - paragraph: 设计取舍：用明确的工具权限和交接关系约束分工；口头说“转接”不能代替真实 handoff。\n  - paragraph: 历史证据：2026-10-14 后台4f49d09评测，及2026-10-15发布7792895云端政策→订单观察。历史结论，不是本轮实时执行。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；artifacts/workbench/cloud/browser-cases.json（证据留在工作区，不公开原始日志）。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：FAQ 接到订单请求时，代码允许它直接调用 query_order 吗？\n  - heading \"02 / 模型接入\" [level=3]:\n    - text: 02 / 模型接入\n    - link \"Link to heading\":\n      - /url: \"#02\"\n  - paragraph: 业务问题：谁提供生成能力，哪里决定调用哪个模型？\n  - paragraph:\n    - strong: AsyncOpenAI 是客户端，DeepSeek 提供服务，RunConfig 把模型配置交给 SDK。\n  - paragraph: servicepilot/model_config.py · 原文件 L6–L20 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code:\n    - text: MODEL = \"deepseek-flash\" BASE_URL = \"https://api.deepseek.com\"\n    - text: \"def create_client_config(key: str): set_tracing_disabled(True) client = AsyncOpenAI(api_key=key, base_url=BASE_URL, max_retries=0, timeout=45.0, http_client=DefaultAsyncHttpxClient(trust_env=False)) config = RunConfig( model=OpenAIChatCompletionsModel(model=MODEL, openai_client=client), model_settings=ModelSettings(max_tokens=1024, parallel_tool_calls=False, extra_body={\\\"thinking\\\": {\\\"type\\\": \\\"disabled\\\"}}), tracing_disabled=True, trace_include_sensitive_data=False, ) return client, config\"\n  - paragraph: 白话解释：服务地址指向 DeepSeek，MODEL 是模型名称。key 是服务端传入的变量，页面不展示它的值。配置关闭 tracing 和自动HTTP重试；45秒是请求超时，不是保证45秒成功。\n  - paragraph: 设计取舍：Web 与 CLI 复用配置；不同角色可以共用模型连接。模型服务故障仍可能导致整轮失败。\n  - paragraph: 历史证据：2026-10-14冻结4f49d09真实评测使用deepseek-flash；2026-10-15云端故障观察记录InternalServerError。供应商恢复不等于本项目已验证恢复。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；docs/2026-10-15-云端请求失败观察.md。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：把 BASE_URL 与 MODEL 混为一个概念，会漏掉什么配置？\n  - heading \"03 / 工具查询\" [level=3]:\n    - text: 03 / 工具查询\n    - link \"Link to heading\":\n      - /url: \"#03\"\n  - paragraph: 业务问题：模型怎样知道 A1001 的商品和订单状态？\n  - paragraph:\n    - strong: 模型提出带参数的调用，工具校验编号，再读取模拟数据返回结构化事实。\n  - paragraph: servicepilot/order_tools.py · 原文件 L13–L26 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"def query_order(order_id: str, source: OrderSource | None = None) -> dict: \\\"\\\"\\\"Normalize and validate an order number, then return structured lookup facts.\\\"\\\"\\\" if not isinstance(order_id, str): return {\\\"status\\\": \\\"invalid_input\\\", \\\"message\\\": \\\"订单号应为 A 加四位数字，例如 A1001。\\\"} normalized = order_id.strip().upper() if re.fullmatch(r\\\"A[0-9]{4}\\\", normalized) is None: return {\\\"status\\\": \\\"invalid_input\\\", \\\"message\\\": \\\"订单号应为 A 加四位数字，例如 A1001。\\\"} try: order = (source if source is not None else JsonOrderSource()).get(normalized) except (OSError, ValueError, TypeError, AttributeError): return {\\\"status\\\": \\\"unavailable\\\", \\\"order_id\\\": normalized, \\\"message\\\": \\\"当前无法查询订单，请稍后重试或联系人工。\\\"} if order is None: return {\\\"status\\\": \\\"not_found\\\", \\\"order_id\\\": normalized, \\\"message\\\": \\\"未找到该订单，请核对订单号。\\\"} return {\\\"status\\\": \\\"ok\\\", \\\"source\\\": \\\"local_mock\\\", \\\"order\\\": order}\"\n  - paragraph: data/orders.json · 原文件 L4–L10 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"\\\"A1001\\\": { \\\"order_id\\\": \\\"A1001\\\", \\\"product\\\": \\\"蓝牙耳机\\\", \\\"status\\\": \\\"已发货\\\", \\\"carrier\\\": \\\"模拟物流\\\", \\\"tracking_number\\\": \\\"MOCK1001\\\" },\"\n  - paragraph: 白话解释：参数是 order_id，不是整句问题。工具去空格、转大写，要求 A 加四位数字；数据源可以替换。A1001 是蓝牙耳机、已发货、模拟物流、MOCK1001；A1002 的物流字段为空。\n  - paragraph: 设计取舍：ok、invalid_input、not_found、unavailable 含义分开，便于检查最终回答是否对应本次查询。没有签收日期或预计到货时间，不能推算。\n  - paragraph: 历史证据：2026-10-14旧页面7f9f277的A1001与多轮A1002复查；2026-10-15发布7792895云端必要回归。截图在项目介绍中标注历史时间与版本。\n  - paragraph: 工作区来源索引：artifacts/delivery/delivery-review-2026-10-14.json；docs/2026-10-15-公网发布验证与最终交接.md。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：A9999查无记录，与数据源不可用分别返回什么状态？\n  - heading \"04 / 多轮会话\" [level=3]:\n    - text: 04 / 多轮会话\n    - link \"Link to heading\":\n      - /url: \"#04\"\n  - paragraph: 业务问题：先说“帮我查订单”，再补“A1002”，程序怎样接上？\n  - paragraph:\n    - strong: OrderSession 保存历史和当前 Agent；新会话会创建新的后台上下文。\n  - paragraph: servicepilot/session.py · 原文件 L68–L75 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"result = await Runner.run( self.current_agent, [*self.items, {\\\"role\\\": \\\"user\\\", \\\"content\\\": question}], run_config=self.config, hooks=recorder, max_turns=6, ) self.items = result.to_input_list() self.current_agent = result.last_agent usage = result.context_wrapper.usage\"\n  - paragraph: servicepilot/web_runtime.py · 原文件 L224–L237 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"def reset(self, fault=False): with self.lock: if self.busy: return \\\"正在处理中，完成后才能开始新会话\\\" try: self.backend.reset(fault) except Exception: return \\\"新会话未能创建，请重试\\\" parent = self.session_id self.report[\\\"reset_at\\\"] = now() self._save() self.last_submission = None self._fresh(parent, fault) return None\"\n  - paragraph: 白话解释：每轮把旧消息与新问题一起交给Runner；成功后保存to_input_list和last_agent。重置先调用backend.reset再生成新session_id，不只清空画面。页面各自持有后台，旧响应还要核对归属。\n  - paragraph: 设计取舍：处理中禁止重置与重复发送，减少并发混写。历史会增加上下文，不代表支持无限记忆；日志保留也不等于重启恢复聊天。\n  - paragraph: 历史证据：2026-10-14旧页面7f9f277重置与多轮复查；2026-10-15云端已查A1001后重置仍追问编号。\n  - paragraph: 工作区来源索引：artifacts/delivery/delivery-review-2026-10-14.json；artifacts/workbench/cloud/final-review.json。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：只清空页面但保留self.items，会有什么风险？\n  - heading \"05 / 异常与验证\" [level=3]:\n    - text: 05 / 异常与验证\n    - link \"Link to heading\":\n      - /url: \"#05\"\n  - paragraph: 业务问题：“没查到订单”和“模型请求失败”为什么不能说成一回事？\n  - paragraph:\n    - strong: 业务状态由工具返回；运行异常由会话记录安全类型，页面据此显示失败。\n  - paragraph: servicepilot/session.py · 原文件 L80–L86 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"except Exception as error: # Keep typed error metadata, never provider response text or request headers. turn.update(status=\\\"failed\\\", error_type=type(error).__name__, http_status=getattr(error, \\\"status_code\\\", None)) finally: turn.update(finished_at=now(), elapsed_seconds=round(time.perf_counter() - started, 3)) return turn\"\n  - paragraph: servicepilot/workbench_ui.py · 原文件 L45–L54 · 快照 70991f5187d6；代码块不另外从1编号。\n  - code: \"def event_summary(turn): if turn.get(\\\"status\\\") == \\\"running\\\": return \\\"处理中，完成后展示实际事件。\\\" if turn.get(\\\"status\\\") == \\\"failed\\\": return \\\"本次请求失败；以下仅展示已返回的公开事件。\\\" results = [e[\\\"result\\\"] for e in turn.get(\\\"events\\\", []) if e.get(\\\"type\\\") == \\\"tool_result\\\" and isinstance(e.get(\\\"result\\\"), dict)] if results: return \\\" · \\\".join(LABELS.get(r.get(\\\"status\\\"), \\\"未知结果状态\\\") for r in results) return \\\"本次未提供执行事件。\\\" if not turn.get(\\\"events\\\") else \\\"本轮公开事件已返回。\\\"\"\n  - paragraph: 白话解释：not_found 是成功完成查询但没有记录；HTTP/API异常可能连查询都未发生。只保存error_type/http_status，不展示原始响应或请求头。failed 不能显示旧成功事实卡。\n  - paragraph: 设计取舍：记录工具成功还不够，必须核对最终答复、版本和会话。保存异常也是真实失败；修复后的留出重测不能改称首次盲评。\n  - paragraph: 历史证据：后台4f49d09：开发15/15、留出第2轮10/10；首轮HOLD05保存中断、后五条未运行，原记录保留。上述不是本轮或任意输入的成功率。\n  - paragraph: 工作区来源索引：docs/2026-10-14-25条评测报告.md；artifacts/evaluation/holdout-round1-interruption-review.json。\n  - status:\n    - paragraph: 自测问题（可自行思考，不要求作答）：看到工具返回ok，是否足够把整条案例标为通过？还要核对什么？\n  - generic \"keyboard_arrow_down 完整代码展示\":\n    - generic: keyboard_arrow_down\n    - paragraph: 完整代码展示\n  - paragraph: 清单内 22 个产品文件的完整文本；来源版本 2026-10-16 · 代码解读 r1，内容摘要 SHA256 70991f5187d65e85a43d243ef73c762a6a7a837ea218924d0cee6f8160473340。不是整个工作区或第三方SDK源码。\n  - paragraph: 包含入口、自有运行/展示/部署模块、模拟数据、CSS、依赖声明和平台配置。排除Secrets/密钥值、原始日志、个人文档、测试脚本、第三方SDK仓库、虚拟环境与源码快照自身；无任意路径访问、无源码ZIP下载。\n  - paragraph: 选择公开产品文件\n  - combobox \"选择公开产品文件\": app.py\n  - button \"Open\":\n  - paragraph: 文件：ServicePilot/app.py · 全部 143 行 · SHA256 28f91baf9468fa6c6bd92183d34b674f927ca426fd9f240e9e15ae5bcbab401e\n  - paragraph: 代码块右上角复制当前文件的完整正文；行号不进入复制文本。Streamlit展示/复制会去除首尾空行，SHA256按快照原文计算。长代码在自身区域滚动。\n  - code:\n    - generic: \"1\"\n    - text: \"\\\"\\\"\\\"Light workbench. Replies and events are supplied only by OrderSession.\\\"\\\"\\\"\"\n    - generic: \"2\"\n    - text: from pathlib import Path\n    - generic: \"3\"\n    - text: import sys\n    - generic: \"4\"\n    - text: import uuid\n    - generic: \"5\"\n    - generic: \"6\"\n    - text: PRODUCT = Path(__file__).resolve().parent\n    - generic: \"7\"\n    - text: sys.path.insert(0, str(PRODUCT))\n    - generic: \"8\"\n    - text: import streamlit as st\n    - generic: \"9\"\n    - text: from servicepilot.web_runtime import acceptance_enabled, new_conversation, server_ready, web_version\n    - generic: \"10\"\n    - text: from servicepilot.workbench_ui import heading, show_about, show_architecture, show_events, show_facts, event_summary\n    - generic: \"11\"\n    - text: from servicepilot.deployment import bootstrap_from_environment\n    - generic: \"12\"\n    - text: from servicepilot.code_guide import show_code_guide\n    - generic: \"13\"\n    - generic: \"14\"\n    - text: st.set_page_config(page_title=\"ServicePilot · 模拟电商售后\", page_icon=\"💬\", layout=\"wide\")\n    - generic: \"15\"\n    - text: st.set_option(\"client.toolbarMode\", \"minimal\")\n    - generic: \"16\"\n    - text: st.html(\"<style>\" + (PRODUCT / \"assets/workbench.css\").read_text(encoding=\"utf-8\") + \"</style>\")\n    - generic: \"17\"\n    - text: st.markdown('<header class=\"sp-brand\"><div class=\"sp-brand-main\"><span class=\"sp-logo\" aria-hidden=\"true\">S</span>'\n    - generic: \"18\"\n    - text: \"'<div><strong>ServicePilot</strong><div class=\\\"sp-subtitle\\\">模拟电商售后 · Agent 工作流</div></div>'\"\n    - generic: \"19\"\n    - text: \"'</div><span class=\\\"sp-badge\\\">模拟业务 Demo</span></header>', unsafe_allow_html=True)\"\n    - generic: \"20\"\n    - text: bootstrap_from_environment()\n    - generic: \"21\"\n    - text: c = st.session_state.get(\"conversation\")\n    - generic: \"22\"\n    - text: \"if c is None and server_ready():\"\n    - generic: \"23\"\n    - text: \"try:\"\n    - generic: \"24\"\n    - text: c = new_conversation()\n    - generic: \"25\"\n    - text: c.version = web_version()\n    - generic: \"26\"\n    - text: c.report[\"version\"] = c.version\n    - generic: \"27\"\n    - text: c._save()\n    - generic: \"28\"\n    - text: st.session_state.conversation = c\n    - generic: \"29\"\n    - text: \"except Exception:\"\n    - generic: \"30\"\n    - text: st.session_state.initialization_failed = True\n    - generic: \"31\"\n    - generic: \"32\"\n    - generic: \"33\"\n    - text: \"def submit(owner):\"\n    - generic: \"34\"\n    - text: st.session_state.notice = c.submit(st.session_state.get(\"chat_\" + owner, \"\"), uuid.uuid4().hex, owner)\n    - generic: \"35\"\n    - generic: \"36\"\n    - generic: \"37\"\n    - text: \"def fill_example(text):\"\n    - generic: \"38\"\n    - text: \"if not c.busy:\"\n    - generic: \"39\"\n    - text: st.session_state[\"chat_\" + c.session_id] = text\n    - generic: \"40\"\n    - generic: \"41\"\n    - generic: \"42\"\n    - text: \"def reset():\"\n    - generic: \"43\"\n    - text: notice = c.reset(bool(st.session_state.get(\"inject_fault\", False)))\n    - generic: \"44\"\n    - text: st.session_state.notice = notice or \"已开始新会话\"\n    - generic: \"45\"\n    - text: st.session_state.confirm_reset = False\n    - generic: \"46\"\n    - generic: \"47\"\n    - generic: \"48\"\n    - text: chat_tab, architecture_tab, about_tab, code_tab = st.tabs([\"客服体验\", \"架构总览\", \"项目介绍\", \"代码解读\"], key=\"workbench_nav\")\n    - generic: \"49\"\n    - text: \"with chat_tab:\"\n    - generic: \"50\"\n    - text: \"with st.container(key=\\\"chat_intro\\\"):\"\n    - generic: \"51\"\n    - text: title, new = st.columns([5, 1], vertical_alignment=\"center\")\n    - generic: \"52\"\n    - text: \"with title:\"\n    - generic: \"53\"\n    - text: heading(\"客服体验\", \"让订单与规则查询有依据。\", \"查询演示订单，或了解模拟退货申请规则。\")\n    - generic: \"54\"\n    - text: \"with new:\"\n    - generic: \"55\"\n    - text: \"if st.button(\\\"新会话\\\", disabled=c is None or c.busy, width=\\\"stretch\\\"):\"\n    - generic: \"56\"\n    - text: \"if c.turns:\"\n    - generic: \"57\"\n    - text: st.session_state.confirm_reset = True\n    - generic: \"58\"\n    - text: \"else:\"\n    - generic: \"59\"\n    - text: reset()\n    - generic: \"60\"\n    - text: st.rerun()\n    - generic: \"61\"\n    - text: st.info(\"仅使用演示订单与模拟政策。退货申请需人工审核，本 Demo 不直接执行退款。\")\n    - generic: \"62\"\n    - text: \"if c is None:\"\n    - generic: \"63\"\n    - text: st.warning(\"客服暂不可用：服务端尚未配置或初始化失败。架构总览和项目介绍仍可浏览。\")\n    - generic: \"64\"\n    - text: st.caption(\"本机请运行“启动聊天页面.cmd”，仅在启动终端输入密钥；云端由项目方配置服务端Secrets。\")\n    - generic: \"65\"\n    - text: \"with st.container():\"\n    - generic: \"66\"\n    - text: st.chat_input(\"客服暂不可用\", disabled=True)\n    - generic: \"67\"\n    - text: \"else:\"\n    - generic: \"68\"\n    - text: \"if acceptance_enabled():\"\n    - generic: \"69\"\n    - text: \"with st.expander(\\\"本机验收控制（只影响新建的测试会话）\\\"):\"\n    - generic: \"70\"\n    - text: st.checkbox(\"下一新会话注入订单工具故障（C08）\", key=\"inject_fault\", disabled=c.busy)\n    - generic: \"71\"\n    - text: \"if c.report.get(\\\"fault_injection\\\"):\"\n    - generic: \"72\"\n    - text: st.warning(\"当前为工具故障测试会话，正常模拟数据未改变。\")\n    - generic: \"73\"\n    - text: \"if st.session_state.get(\\\"confirm_reset\\\"):\"\n    - generic: \"74\"\n    - text: st.warning(\"开始新会话后，当前聊天将从页面清除，后台上下文也会重建；已有运行记录仍保留。\")\n    - generic: \"75\"\n    - text: yes, no = st.columns(2)\n    - generic: \"76\"\n    - text: \"if yes.button(\\\"开始新会话\\\", disabled=c.busy):\"\n    - generic: \"77\"\n    - text: reset()\n    - generic: \"78\"\n    - text: st.rerun()\n    - generic: \"79\"\n    - text: \"if no.button(\\\"取消\\\", disabled=c.busy):\"\n    - generic: \"80\"\n    - text: st.session_state.confirm_reset = False\n    - generic: \"81\"\n    - text: st.rerun()\n    - generic: \"82\"\n    - text: \"if st.session_state.get(\\\"notice\\\"):\"\n    - generic: \"83\"\n    - text: st.info(st.session_state.notice)\n    - generic: \"84\"\n    - text: \"with st.container(key=\\\"workspace\\\"):\"\n    - generic: \"85\"\n    - text: chat, execution = st.columns([2.7, 1], gap=\"large\")\n    - generic: \"86\"\n    - text: \"with chat, st.container(border=True, key=\\\"chat_card\\\"):\"\n    - generic: \"87\"\n    - text: \"if not c.turns:\"\n    - generic: \"88\"\n    - text: st.markdown('<div class=\"sp-empty\"><h3>今天想了解什么？</h3><p>从一次演示订单或政策查询开始。</p></div>', unsafe_allow_html=True)\n    - generic: \"89\"\n    - text: \"for turn in c.turns:\"\n    - generic: \"90\"\n    - text: \"with st.chat_message(\\\"user\\\"):\"\n    - generic: \"91\"\n    - text: st.write(turn[\"input\"])\n    - generic: \"92\"\n    - text: \"with st.chat_message(\\\"assistant\\\"):\"\n    - generic: \"93\"\n    - text: \"if turn[\\\"status\\\"] == \\\"running\\\":\"\n    - generic: \"94\"\n    - text: st.write(\"正在处理，完成后展示答复和实际事件…\")\n    - generic: \"95\"\n    - text: \"elif turn[\\\"status\\\"] == \\\"completed\\\":\"\n    - generic: \"96\"\n    - text: st.markdown(turn[\"final_answer\"])\n    - generic: \"97\"\n    - text: show_facts(turn)\n    - generic: \"98\"\n    - text: \"else:\"\n    - generic: \"99\"\n    - text: \"messages = {\\\"EmptyResponse\\\": \\\"未收到可展示的回复，请重试。\\\",\"\n    - generic: \"100\"\n    - text: \"\\\"DemoBusyError\\\": \\\"当前演示繁忙，请稍后再试。\\\",\"\n    - generic: \"101\"\n    - text: \"\\\"DemoQuotaError\\\": \\\"本次服务演示额度已用完，请联系项目方。\\\"}\"\n    - generic: \"102\"\n    - text: st.error(messages.get(turn.get(\"error_type\"), \"本次未能取得回复，请稍后重试。\"))\n    - generic: \"103\"\n    - text: \"st.caption(f\\\"请求 {turn['request_id'][:8]} · {turn.get('error_type', 'RequestError')}\\\")\"\n    - generic: \"104\"\n    - text: \"if st.button(\\\"重试此问题\\\", key=\\\"retry_\\\" + turn[\\\"request_id\\\"], disabled=c.busy):\"\n    - generic: \"105\"\n    - text: st.session_state.notice = c.submit(turn[\"input\"], uuid.uuid4().hex, c.session_id, retry=True)\n    - generic: \"106\"\n    - text: st.rerun()\n    - generic: \"107\"\n    - text: \"with st.container(horizontal=True):\"\n    - generic: \"108\"\n    - text: st.button(\"查一下 A1001\", disabled=c.busy, on_click=fill_example, args=(\"我的订单 A1001 到哪了？\",))\n    - generic: \"109\"\n    - text: st.button(\"了解退货规则\", disabled=c.busy, on_click=fill_example, args=(\"签收后几天内可以申请退货？\",))\n    - generic: \"110\"\n    - text: st.caption(\"点击示例只填入，发送后执行查询。\")\n    - generic: \"111\"\n    - text: st.chat_input(\"输入订单或售后问题…\", key=\"chat_\" + c.session_id, disabled=c.busy,\n    - generic: \"112\"\n    - text: max_chars=2000, on_submit=submit, args=(c.session_id,))\n    - generic: \"113\"\n    - text: st.caption(\"模拟订单与政策 · 不直接执行退款 · Enter发送，Shift+Enter换行\")\n    - generic: \"114\"\n    - text: st.caption(\"没有签收日期、预计送达时间、运费或退款到账记录。\")\n    - generic: \"115\"\n    - text: \"with execution, st.container(border=True, key=\\\"execution_card\\\"):\"\n    - generic: \"116\"\n    - text: st.subheader(\"执行记录\")\n    - generic: \"117\"\n    - text: st.caption(\"来自实际后台记录；内部 Agent 转交不代表接入人工客服。\")\n    - generic: \"118\"\n    - text: \"if not c.turns:\"\n    - generic: \"119\"\n    - text: st.write(\"发送问题后，这里显示实际执行记录。\")\n    - generic: \"120\"\n    - text: \"else:\"\n    - generic: \"121\"\n    - text: st.write(event_summary(c.turns[-1]))\n    - generic: \"122\"\n    - text: \"for index, turn in reversed(list(enumerate(c.turns, 1))):\"\n    - generic: \"123\"\n    - text: \"with st.expander(f\\\"第 {index} 轮 · {turn['input'][:22]}\\\", expanded=False):\"\n    - generic: \"124\"\n    - text: show_events(turn)\n    - generic: \"125\"\n    - text: \"st.caption(f\\\"请求 {turn['request_id'][:8]} · {turn['status']}\\\")\"\n    - generic: \"126\"\n    - text: st.caption(\"非流式：处理完成后展示实际事件。\")\n    - generic: \"127\"\n    - text: \"st.caption(f\\\"会话 {c.session_id[:8]} · 处理中暂停输入和新会话，完成后可继续。\\\")\"\n    - generic: \"128\"\n    - text: \"with architecture_tab:\"\n    - generic: \"129\"\n    - text: show_architecture()\n    - generic: \"130\"\n    - text: \"with about_tab:\"\n    - generic: \"131\"\n    - text: show_about()\n    - generic: \"132\"\n    - text: \"with code_tab:\"\n    - generic: \"133\"\n    - text: show_code_guide()\n    - generic: \"134\"\n    - text: st.markdown('<footer class=\"sp-footer\">ServicePilot · 模拟电商售后 · 真实执行与历史验证分开记录</footer>', unsafe_allow_html=True)\n    - generic: \"135\"\n    - text: \"if c is not None:\"\n    - generic: \"136\"\n    - text: \"@st.fragment(run_every=0.5 if c.busy else None)\"\n    - generic: \"137\"\n    - text: \"def wait_for_result():\"\n    - generic: \"138\"\n    - text: \"if c.collect():\"\n    - generic: \"139\"\n    - text: st.rerun()\n    - generic: \"140\"\n    - text: \"if c.busy:\"\n    - generic: \"141\"\n    - text: \"with st.spinner(\\\"正在处理，完成后展示答复和实际事件…\\\"):\"\n    - generic: \"142\"\n    - text: st.caption(\"无需重复发送。\")\n    - generic: \"143\"\n    - text: wait_for_result()\n  - paragraph: 没有脱敏删节；构建前按明确清单筛选并检查凭证模式。若代码变化须重建快照后再发布。\n  - paragraph: 来源与许可：参考OpenAI Agents SDK航空客服示例，SDK由安装包提供；原示例MIT许可随发布包THIRD_PARTY_LICENSE保留。Codex协助实现与验证；不代表个人独立编码或已掌握。\n- generic: ServicePilot · 模拟电商售后 · 真实执行与历史验证分开记录"
+  }
+]

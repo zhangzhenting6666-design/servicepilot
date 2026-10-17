@@ -1,0 +1,239 @@
+{
+  "snapshot_id": "1d543a36fba5234f182536a6ebbe8ab0ca16a3ceff9d4e298de5106e0b7f8f64",
+  "checks": [
+    {
+      "label": "代码解读",
+      "metrics": {
+        "brandTop": 52,
+        "canScroll": true,
+        "contentWidth": 1200,
+        "h": 1080,
+        "mainWidth": 1910,
+        "pageWidth": 1920,
+        "platformBottom": 48,
+        "tabs": [
+          {
+            "left": 382.8000183105469,
+            "name": "客服体验",
+            "right": 438.8000183105469,
+            "selected": "false"
+          },
+          {
+            "left": 463.8000183105469,
+            "name": "架构总览",
+            "right": 519.8000183105469,
+            "selected": "false"
+          },
+          {
+            "left": 544.7999877929688,
+            "name": "项目介绍",
+            "right": 600.7999877929688,
+            "selected": "false"
+          },
+          {
+            "left": 625.7999877929688,
+            "name": "代码解读",
+            "right": 681.7999877929688,
+            "selected": "true"
+          }
+        ],
+        "w": 1920
+      }
+    },
+    {
+      "label": "代码解读",
+      "metrics": {
+        "brandTop": 52,
+        "canScroll": true,
+        "contentWidth": 1200,
+        "h": 768,
+        "mainWidth": 1356,
+        "pageWidth": 1366,
+        "platformBottom": 48,
+        "tabs": [
+          {
+            "left": 106,
+            "name": "客服体验",
+            "right": 162,
+            "selected": "false"
+          },
+          {
+            "left": 187,
+            "name": "架构总览",
+            "right": 243,
+            "selected": "false"
+          },
+          {
+            "left": 268,
+            "name": "项目介绍",
+            "right": 324,
+            "selected": "false"
+          },
+          {
+            "left": 349,
+            "name": "代码解读",
+            "right": 405,
+            "selected": "true"
+          }
+        ],
+        "w": 1366
+      }
+    },
+    {
+      "label": "客服体验",
+      "metrics": {
+        "brandTop": 52,
+        "canScroll": true,
+        "contentWidth": 380,
+        "h": 844,
+        "mainWidth": 380,
+        "pageWidth": 390,
+        "platformBottom": 48,
+        "tabs": [
+          {
+            "left": 16,
+            "name": "客服体验",
+            "right": 94,
+            "selected": "true"
+          },
+          {
+            "left": 106,
+            "name": "架构总览",
+            "right": 184,
+            "selected": "false"
+          },
+          {
+            "left": 196,
+            "name": "项目介绍",
+            "right": 274,
+            "selected": "false"
+          },
+          {
+            "left": 286,
+            "name": "代码解读",
+            "right": 364,
+            "selected": "false"
+          }
+        ],
+        "w": 390
+      }
+    },
+    {
+      "label": "架构总览",
+      "metrics": {
+        "brandTop": 52,
+        "canScroll": true,
+        "contentWidth": 380,
+        "h": 844,
+        "mainWidth": 380,
+        "pageWidth": 390,
+        "platformBottom": 48,
+        "tabs": [
+          {
+            "left": 16,
+            "name": "客服体验",
+            "right": 94,
+            "selected": "false"
+          },
+          {
+            "left": 106,
+            "name": "架构总览",
+            "right": 184,
+            "selected": "true"
+          },
+          {
+            "left": 196,
+            "name": "项目介绍",
+            "right": 274,
+            "selected": "false"
+          },
+          {
+            "left": 286,
+            "name": "代码解读",
+            "right": 364,
+            "selected": "false"
+          }
+        ],
+        "w": 390
+      }
+    },
+    {
+      "label": "项目介绍",
+      "metrics": {
+        "brandTop": 52,
+        "canScroll": true,
+        "contentWidth": 380,
+        "h": 844,
+        "mainWidth": 380,
+        "pageWidth": 390,
+        "platformBottom": 48,
+        "tabs": [
+          {
+            "left": 16,
+            "name": "客服体验",
+            "right": 94,
+            "selected": "false"
+          },
+          {
+            "left": 106,
+            "name": "架构总览",
+            "right": 184,
+            "selected": "false"
+          },
+          {
+            "left": 196,
+            "name": "项目介绍",
+            "right": 274,
+            "selected": "true"
+          },
+          {
+            "left": 286,
+            "name": "代码解读",
+            "right": 364,
+            "selected": "false"
+          }
+        ],
+        "w": 390
+      }
+    },
+    {
+      "label": "代码解读",
+      "metrics": {
+        "brandTop": 52,
+        "canScroll": true,
+        "contentWidth": 380,
+        "h": 844,
+        "mainWidth": 380,
+        "pageWidth": 390,
+        "platformBottom": 48,
+        "tabs": [
+          {
+            "left": 16,
+            "name": "客服体验",
+            "right": 94,
+            "selected": "false"
+          },
+          {
+            "left": 106,
+            "name": "架构总览",
+            "right": 184,
+            "selected": "false"
+          },
+          {
+            "left": 196,
+            "name": "项目介绍",
+            "right": 274,
+            "selected": "false"
+          },
+          {
+            "left": 286,
+            "name": "代码解读",
+            "right": 364,
+            "selected": "true"
+          }
+        ],
+        "w": 390
+      }
+    }
+  ]
+}

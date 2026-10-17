@@ -1,0 +1,15 @@
+{
+  "evidence_kind": "live_reply_quality_review",
+  "raw_run_file": "artifacts/evaluation/eval-run-2026-10-14T141119_0800-40cef7f4.json",
+  "tested_commit": "8babaa7",
+  "fixed_case_results": "15/15；保留预先固定的判据，不在看到结果后改写清单或计数",
+  "holdout_attempted": false,
+  "freeze_decision": "rejected_until_quality_fix_and_development_regression",
+  "issues": [
+    {"id":"QUALITY-01","cases":["DEV01","DEV06"],"status":"observed","actual_excerpt":"如果您想确认订单状态或签收相关信息，我可以帮您转接订单客服查询。","cause":"现有字段约束后仍允许主动建议，模型用签收相关信息的模糊措辞扩大服务范围；仅凭指令有表达变体风险。","fix_scope":"FAQ查询后只解释结果和必要边界，不主动追加查询/转交建议；保留用户后续订单请求的实际handoff。"},
+    {"id":"QUALITY-02","cases":["DEV10"],"status":"observed","actual_excerpt":"我可以帮您转接给对应的人工/FAQ 渠道处理","cause":"查询结尾主动拓展服务，并将内部Agent交接与未实现的人工通道混写。","fix_scope":"Order查询后不主动追加服务菜单；涉及人工只能建议用户自行联系真实商家客服。"},
+    {"id":"QUALITY-03","cases":["DEV14"],"status":"observed","actual_excerpt":"如果您想了解发货后的配送时效相关问题，我可以帮您转接给 Triage 处理。","cause":"已经拒绝保证明天到，但结尾又提出无数据支持的时效服务。","fix_scope":"同一Order结尾收敛，避免主动提议不支持的时效服务。"}
+  ],
+  "regression_plan": "在新版本完整重跑固定开发集15条，同时复核上述4条答复结尾；新证据另记轮次；再冻结运行首轮留出。",
+  "input_manifest_unchanged": true
+}

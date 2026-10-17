@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ServicePilot · 浅色工作台设计交接（预设样例）</title>
+<style>
+:root{color-scheme:light;--bg:#f5f7f6;--paper:#fff;--ink:#17332d;--muted:#65796f;--line:#dfe7e2;--soft:#e9f1ec;--green:#196e57;--user:#e7efe9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif}button,input,select{font:inherit;color:inherit}button,a,summary{cursor:pointer}button{min-height:44px;padding:8px 14px;border:1px solid var(--line);border-radius:8px;background:white}button:hover:not(:disabled){border-color:var(--green)}button:disabled,input:disabled{background:#edf1ee;color:var(--muted);cursor:not-allowed}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}button.primary{background:var(--green);color:white;border-color:var(--green)}button.primary:hover:not(:disabled){background:#145b48}button.primary:disabled{background:#edf1ee;color:var(--muted);border-color:var(--line)}[hidden]{display:none!important}h1,h2,h3,p{margin:0}h1{font-size:28px;line-height:1.35;font-weight:600;letter-spacing:-.5px}h2{font-size:18px;line-height:1.5;font-weight:600}p+p{margin-top:12px}a{color:var(--green);text-underline-offset:3px}.muted{color:var(--muted)}.small{font-size:14px}.note{font-size:13px;color:var(--muted)}.wrap{max-width:1200px;margin:auto;padding:0 28px}.reviewbar{background:#e9f1ec;border-bottom:1px solid var(--line);font-size:13px}.reviewbar .wrap{padding-top:12px;padding-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.reviewbar label{display:flex;align-items:center;gap:10px;flex-wrap:wrap}select{max-width:100%;min-height:44px;padding:4px 8px;border:1px solid var(--line);border-radius:7px;background:white}.header{background:var(--paper);border-bottom:1px solid var(--line)}.header .wrap{padding-top:22px;padding-bottom:22px;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{display:flex;gap:11px;align-items:center;min-width:0}.brand strong{display:block;font-size:20px;line-height:1.4}.logo{display:grid;place-items:center;width:36px;height:36px;flex:none;border-radius:11px;background:var(--green);color:white;font-size:24px;font-weight:600}.badge{font-size:13px;display:inline-block;background:var(--soft);color:var(--green);padding:3px 8px;border-radius:5px}.header .badge{white-space:nowrap}.nav{background:var(--paper);border-bottom:1px solid var(--line)}.nav .wrap{display:flex;gap:25px}.nav button{background:transparent;border:0;border-bottom:2px solid transparent;border-radius:0;padding:14px 2px;min-height:56px;color:var(--muted);white-space:nowrap}.nav button[aria-selected="true"]{border-color:var(--green);color:var(--green);font-weight:600}.panel{padding-top:32px;padding-bottom:40px;min-height:560px}.intro{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:24px}.eyebrow{font-size:13px;color:var(--green);margin-bottom:8px;display:block}.intro p,.information>p{margin-top:10px;color:var(--muted)}.actions{flex-shrink:0}.workspace{display:grid;grid-template-columns:minmax(0,2.7fr) minmax(280px,1fr);gap:20px;align-items:start}.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:24px;min-width:0}.chat{min-height:450px;display:flex;flex-direction:column;gap:24px}.empty{padding:50px 8px 36px;text-align:center}.empty h2{font-size:21px;margin-bottom:10px}.conversation{overflow-wrap:anywhere}.message{margin-bottom:24px}.user{text-align:right}.user p{display:inline-block;text-align:left;background:var(--user);padding:12px 16px;border-radius:12px 12px 3px 12px;max-width:90%}.agent{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;margin-bottom:10px}.avatar{width:28px;height:28px;background:var(--soft);color:var(--green);border-radius:7px;display:grid;place-items:center}.facts{margin:16px 0 10px;padding:12px 14px;border:1px solid var(--line);border-radius:9px}.facts div{display:flex;gap:16px;justify-content:space-between;margin:7px 0}.facts dt{font-size:14px;color:var(--muted);flex-shrink:0;max-width:40%}.facts dd{margin:0;text-align:right;font-weight:600;overflow-wrap:anywhere}.composer{margin-top:auto}.suggestions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}.suggestions button{font-size:14px}.input{display:flex;gap:8px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:8px;margin:12px 0 8px;background:white}.input input{border:0;min-width:0;flex:1;min-height:44px;padding:8px 6px;background:transparent;font-size:16px}.input button{flex:none}.trace h2{display:flex;justify-content:space-between;align-items:center;gap:8px}.trace p{margin:10px 0}.trace details{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}.trace summary{min-height:44px;padding:6px 0;font-size:14px}.events{list-style:none;margin:12px 0;padding:0}.events li{padding:10px 0 10px 16px;border-left:2px solid var(--line);overflow-wrap:anywhere}.events li strong{display:block;font-size:14px}.events li span{display:block;font-size:13px;color:var(--muted)}pre{font:13px/1.6 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--bg);padding:12px;border-radius:6px}.notice{padding:12px 16px;border-radius:8px;background:var(--soft);font-size:14px;margin-bottom:20px}.warning{background:#fff7e6;color:#805a16}.error{background:#fff0ee;color:#9b3029}.confirm{margin-bottom:20px}.confirm .buttons{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.status{padding:12px;border-radius:8px;margin-bottom:14px}.status.error{margin-top:8px}.information h1{margin-bottom:12px}.information>p{max-width:920px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin:40px 0 50px}.about-grid h2{margin-bottom:12px}.about-grid p{overflow-wrap:anywhere}.historical{margin-top:12px;font-size:14px;color:var(--muted)}.architecture{margin-top:28px}.architecture img{width:100%;height:auto;display:block;background:white}.architecture .graph{padding:12px;background:white;border:1px solid var(--line);border-radius:12px;margin-top:12px}.architecture details{margin:16px 0}.architecture summary{min-height:44px;color:var(--green)}.zoom{max-width:100%;overflow:auto;border:1px solid var(--line);background:white}.zoom img{width:1680px;max-width:none}.arch-notes{margin:24px 0;padding-left:20px}.footer{background:white;border-top:1px solid var(--line)}.footer .wrap{padding-top:16px;padding-bottom:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--muted)}.review-note{font-size:13px;color:var(--green)}
+@media(max-width:959px){.workspace{grid-template-columns:minmax(0,1fr)}.trace{padding:20px}.chat{min-height:350px}}
+@media(max-width:600px){.wrap{padding-left:16px;padding-right:16px}.header .wrap{padding-top:16px;padding-bottom:16px;flex-wrap:wrap;gap:10px}.brand strong{font-size:18px}.logo{width:32px;height:32px;font-size:22px}.header .badge{font-size:12px}.nav .wrap{gap:12px}.nav button{flex:1;font-size:14px;padding:10px 0;min-height:48px}.panel{padding-top:24px;padding-bottom:24px;min-height:0}.intro{display:block;margin-bottom:20px}.intro .actions{display:flex;justify-content:flex-end;margin-top:14px}h1{font-size:24px;line-height:1.4}.card{padding:16px}.chat{gap:20px;min-height:0}.empty{padding:28px 0}.user p{max-width:100%}.input{padding:6px;gap:4px}.input button{padding:8px 10px}.input input{padding:6px 4px}.about-grid{grid-template-columns:1fr;gap:24px;margin:28px 0}.architecture .graph{padding:4px}.footer .wrap{display:block}.footer span{display:block;margin:4px 0}.reviewbar .wrap{gap:8px}.reviewbar label{width:100%}.reviewbar select{flex:1;min-width:0}.trace h2{font-size:18px}}
+</style>
+<link rel="stylesheet" href="about-content.css">
+</head>
+<body>
+<div class="reviewbar"><div class="wrap"><span><strong>原型评审</strong> · 答复与事件均为预设样例，不发 API 请求</span><label for="state">查看关键状态<select id="state"><option value="empty">空会话</option><option value="order">订单成功</option><option value="faq">政策成功</option><option value="ask">缺编号追问</option><option value="loading">处理中（非流式）</option><option value="invalid">格式错误</option><option value="notfound">查无订单</option><option value="nomatch">政策未收录</option><option value="unavailable">工具不可用</option><option value="error">请求异常</option><option value="blank">空响应</option><option value="reset">新会话确认</option><option value="resetfail">新会话失败</option><option value="startup">后台未就绪</option></select></label></div></div>
+<header class="header"><div class="wrap"><div class="brand"><span class="logo" aria-hidden="true">S</span><div><strong>ServicePilot</strong><div class="note">模拟电商售后 · Agent 工作流</div></div></div><span class="badge">设计预览 · 预设样例</span></div></header>
+<nav class="nav" aria-label="工作台栏目"><div class="wrap" role="tablist"><button id="tab-chat" role="tab" aria-selected="true" aria-controls="chat-panel" data-tab="chat">客服体验</button><button id="tab-architecture" role="tab" aria-selected="false" aria-controls="architecture-panel" data-tab="architecture">架构总览</button><button id="tab-about" role="tab" aria-selected="false" aria-controls="about-panel" data-tab="about">项目介绍</button></div></nav>
+<main class="wrap">
+<section class="panel" id="chat-panel" role="tabpanel" aria-labelledby="tab-chat">
+<div class="intro"><div><span class="eyebrow">客服体验</span><h1>让订单与规则查询有依据。</h1><p>查询演示订单，或了解模拟退货申请规则。</p></div><div class="actions"><button id="reset">新会话</button></div></div>
+<div class="notice">仅使用演示订单与模拟政策。退货申请需人工审核，本 Demo 不直接执行退款。</div>
+<div class="notice warning confirm" id="confirm" hidden><p>开始新会话后，当前聊天将从页面清除，后台上下文也会重建；已有运行记录仍保留。</p><div class="buttons"><button class="primary" id="confirm-yes">开始新会话</button><button id="confirm-no">取消</button></div></div>
+<div id="notice" class="notice warning" hidden role="alert"></div>
+<div class="workspace">
+<section class="card chat" aria-label="聊天">
+<div id="conversation" class="conversation" aria-live="polite"></div>
+<div class="composer"><div class="suggestions"><button id="example-order">查一下 A1001</button><button id="example-policy">了解退货规则</button></div><p class="note">点击填入，发送后执行查询；本设计稿仅查看预设样例。</p><form id="form" class="input"><input id="input" maxlength="2000" aria-label="输入订单或售后问题" placeholder="输入订单或售后问题…"><button class="primary" id="send" type="submit">发送</button></form><p class="note">模拟订单与政策 · 不直接执行退款</p><p class="note" id="input-note">原型只演示点击发送；正式应用沿用原生输入与换行。</p></div>
+</section>
+<aside class="card trace" aria-label="执行记录"><h2>执行记录 <span class="badge">样例</span></h2><p class="note">内部 Agent 转交不代表接入人工客服。</p><div id="trace-summary" aria-live="polite"></div><details id="trace-details"><summary>查看本轮执行记录 · 预设样例</summary><div id="events"></div><details><summary>完整参数与结果 · 样例</summary><pre id="raw"></pre></details></details><p class="note">正式运行时，仅在请求完成后显示后台返回的实际事件。</p></aside>
+</div></section>
+<section class="panel information" id="architecture-panel" role="tabpanel" aria-labelledby="tab-architecture" hidden><span class="eyebrow">架构总览</span><h1>从用户提问，到有依据的回答。</h1><p>页面管理交互，会话保留上下文，Runner 串联模型与本地工具。</p><div class="architecture"><details id="arch-zoom"><summary>放大查看完整图</summary><p class="note">全图横向滚动仅发生在下方图形区域。</p><div class="zoom"><img src="../../architecture/servicepilot-system-2026-10-14.svg" alt="ServicePilot完整架构放大图：界面、会话、Runner、Agent、查询工具与模拟数据，以及模型服务、事件和边界"></div></details><a href="../../architecture/servicepilot-system-2026-10-14.svg" download>下载完整 SVG</a><div class="graph"><img src="../../architecture/servicepilot-system-2026-10-14.svg" alt="ServicePilot完整架构：界面 → 会话 → Runner → Triage/FAQ/Order → Python工具 → 模拟JSON → 工具结果 → 答复"></div><p class="note">完整图原资产，保留2026-10-14制作时的进度说明；公网接入尚待实际验证。</p></div><ul class="arch-notes"><li>模型提出交接与查询请求，Runner 执行本地工具。</li><li>订单与政策来自本地模拟 JSON，不是真实商家接口。</li><li>公开执行事件完成后展示，内部交接不等于接通真人。</li></ul></section>
+<section class="panel information about-story" id="about-panel" role="tabpanel" aria-labelledby="tab-about" hidden>
+  <span class="eyebrow">项目介绍</span>
+  <h1>让售后助手的行为可检查。</h1>
+  <p class="about-lead">把“订单到哪了、如何申请退货”两类问题，拆成可查询、可追问、可核对的流程。基于 OpenAI Agents SDK 与 DeepSeek，在 Codex 协助下完成模拟售后 Demo。</p>
+  <div class="about-grid about-overview">
+    <section><h2>可体验的能力</h2><p>订单与政策查询、多轮补充、角色交接、新会话和实际事件查看。</p><p class="historical">业务能力已在本机验证；当前页面仍是新版界面设计预览。</p></section>
+    <section><h2>验证与边界</h2><p>固定样本开发 <strong>15/15</strong>、留出第2轮重测 <strong>10/10</strong>；首轮中断记录保留。使用模拟订单与政策，不执行真实退款。</p><p class="historical">后台冻结版本4f49d09；不作为任意问题准确率或生产效果承诺。</p></section>
+  </div>
+
+  <section class="about-block" aria-labelledby="about-scenarios">
+    <div class="about-block-heading"><span class="about-index">01 / 场景</span><h2 id="about-scenarios">从三个具体问题开始。</h2></div>
+    <div class="about-scenarios">
+      <article class="about-scenario"><span class="about-scenario-type">查询订单</span><h3>“我的订单 A1001 到哪了？”</h3><p>查询本次模拟记录，回答商品、状态和已有物流字段；没有到货时间就明确说明。</p></article>
+      <article class="about-scenario"><span class="about-scenario-type">咨询政策</span><h3>“签收后几天可以申请退货？”</h3><p>查政策后标明RET-001：7天内可提出申请，是否通过需人工审核。</p></article>
+      <article class="about-scenario"><span class="about-scenario-type">多轮补充</span><h3>“帮我查订单。” → “A1002”</h3><p>缺编号先追问，补充后在同一会话继续查询，避免猜订单或丢失前文。</p></article>
+    </div>
+  </section>
+
+  <section class="about-block" aria-labelledby="about-evidence">
+    <div class="about-block-heading"><span class="about-index">02 / 实际运行</span><h2 id="about-evidence">看到回答，也能核对它的来源。</h2><p>以下是2026-10-14本机真实运行的历史截图；保留旧版界面，用于说明已有业务链路。本设计稿的交互仍为预设样例。</p></div>
+    <div class="about-evidence-grid">
+      <figure class="about-evidence"><a href="../../../artifacts/delivery/screenshots/02-a1001-result.jpg" target="_blank" rel="noopener" aria-label="放大真实订单查询截图"><img src="../../../artifacts/delivery/screenshots/02-a1001-result.jpg" width="919" height="956" loading="lazy" alt="本机真实运行：Triage转交Order，query_order查询A1001，答复蓝牙耳机已发货并展示模拟物流。"></a><figcaption><strong>订单查询：事实来自工具</strong><p>A1001 → query_order → 蓝牙耳机、已发货、模拟运单。未知的到货时间没有补造。</p><span>历史本机运行截图 · 点击查看大图</span></figcaption></figure>
+      <figure class="about-evidence"><a href="../../../artifacts/delivery/screenshots/04-policy-to-order.jpg" target="_blank" rel="noopener" aria-label="放大政策转订单真实截图"><img src="../../../artifacts/delivery/screenshots/04-policy-to-order.jpg" width="919" height="956" loading="lazy" alt="本机真实运行：先咨询退货规则，再查A1001；FAQ经过Triage交给Order，并实际调用query_order。"></a><figcaption><strong>话题切换：同一会话接着处理</strong><p>先问退货，再查订单。FAQ → Triage → Order，切换职责后继续使用相应查询工具。</p><span>历史本机运行截图 · 点击查看大图</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="about-block" aria-labelledby="about-process">
+    <div class="about-block-heading"><span class="about-index">03 / 工作方式</span><h2 id="about-process">模型、执行器、工具，各司其职。</h2></div>
+    <ol class="about-process">
+      <li><span>01</span><strong>理解与分流</strong><p>Triage识别任务；订单与政策专员按职责接手。</p></li>
+      <li><span>02</span><strong>执行实际动作</strong><p>Runner执行handoff或Python工具，模型提出动作。</p></li>
+      <li><span>03</span><strong>查询业务事实</strong><p>工具读取本地JSON，返回本次事实和结果状态。</p></li>
+      <li><span>04</span><strong>依据结果回答</strong><p>模型组织答复，页面展示实际事件，等待下一题。</p></li>
+    </ol>
+    <a class="about-inline-link" href="../../architecture/servicepilot-system-2026-10-14.html" target="_blank" rel="noopener">查看完整项目架构图 →</a>
+  </section>
+
+  <section class="about-block" aria-labelledby="about-validation">
+    <div class="about-block-heading"><span class="about-index">04 / 验证与改进</span><h2 id="about-validation">用案例检查行为，保留失败与修复。</h2></div>
+    <div class="about-validation">
+      <div><span>最终开发集</span><strong>15<span>/15</span></strong><p>同一冻结后台版本的最终开发轮。</p></div>
+      <div><span>留出重测</span><strong>10<span>/10</span></strong><p>首轮保存中断后，完整第2轮重测。</p></div>
+      <div><span>本机页面关键复查</span><strong>5<span>/5</span></strong><p>订单、政策转订单、多轮、重置、查无记录。</p></div>
+    </div>
+    <p class="historical">后台结果对应4f49d09；页面关键复查来自此前交付记录，版本单独归档。固定样本划分公开可见，不是首次外部盲评，也不代表新版UI或云端已验收。</p>
+    <div class="about-lessons">
+      <details><summary>只说“转接”并不代表真正交接</summary><p>项目中曾出现模型只口头表示转接、没有完成期望工具动作的情况。调整Triage工具选择配置后，复查真实handoff和最终答复，避免只看文字判断成功。</p></details>
+      <details><summary>证据保存失败，也需要作为真实失败处理</summary><p>留出首轮因Windows文件保存异常中断。保留首轮记录，增加有界磁盘重试；修复后回归并完整重测，不把重测包装成首次通过。</p></details>
+    </div>
+  </section>
+
+  <section class="about-block" aria-labelledby="about-journey">
+    <div class="about-block-heading"><span class="about-index">05 / 项目过程</span><h2 id="about-journey">从可运行示例，推进到可展示作品。</h2></div>
+    <ol class="about-journey"><li><time>10.11</time><strong>运行与理解</strong><p>接入DeepSeek，运行航空客服基线，理解Agent、工具与交接。</p></li><li><time>10.13</time><strong>售后业务改造</strong><p>加入模拟订单、政策工具、多轮补充与边界案例。</p></li><li><time>10.14</time><strong>验证与展示准备</strong><p>完成后台评测和已有本机页面复查，准备架构图及新版界面设计。</p></li></ol>
+    <div class="about-contribution"><section><h3>本人参与</h3><p>需求审阅，模拟规则、功能范围与验收目标确认，本机运行配合和结果审阅。</p></section><section><h3>实现与协作</h3><p>Codex协助代码、排错、验证与文档；OpenAI Agents SDK提供执行机制，DeepSeek提供模型服务。</p></section></div>
+    <div class="about-boundary"><strong>当前状态</strong><p>本机业务可运行；新版工作台待接入真实后台，公网访问与录屏待完成。没有真实退款、工单、真人接入或真实商家接口。个人独立实现与掌握程度按实际经历说明。</p></div>
+  </section>
+</section>
+</main>
+<footer class="footer"><div class="wrap"><span>ServicePilot · 模拟电商售后</span><span>设计交付已完成 · 产品改版与公网验证待完成</span></div></footer>
+<script>
+(() => {
+const $=id=>document.getElementById(id);let state='empty';let previous='order';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const result=(tool,status,extra={})=>({type:'tool_result',tool,result:{status,...extra}});
+const call=(tool,args)=>({type:'tool_call',tool,arguments:args});
+const handoff=target=>({type:'handoff',source_agent:'Triage Agent',target_agent:target});
+const mockOrder={order_id:'A1001',product:'蓝牙耳机',status:'已发货',carrier:'模拟物流',tracking_number:'MOCK1001'};
+const states={
+empty:{empty:true,summary:'发送问题后，这里显示实际执行记录。'},
+order:{question:'我的订单 A1001 到哪了？',answer:'模拟订单 A1001（蓝牙耳机）已发货，承运商为模拟物流，运单号 MOCK1001。',facts:[['订单号','A1001'],['商品','蓝牙耳机'],['订单状态','已发货'],['承运商','模拟物流'],['模拟运单','MOCK1001']],note:'承运商与运单号为演示值；没有预计送达时间。',events:[handoff('Order Agent'),call('query_order',{order_id:'A1001'}),result('query_order','ok',{order:mockOrder})],summary:'查询成功 · A1001 · 已发货'},
+faq:{question:'签收后几天内可以申请退货？',answer:'模拟政策 RET-001：签收后7天内可提出退货申请，是否通过需要人工审核。',note:'不保证获批，不承诺运费和退款到账时间。',events:[handoff('FAQ Agent'),call('lookup_faq',{query:'退货申请规则'}),result('lookup_faq','ok',{policy:{policy_id:'RET-001',content:'签收后7天内可提出退货申请，是否通过需人工审核。'}})],summary:'查询成功 · RET-001 · 模拟退货规则'},
+ask:{question:'帮我查一下订单',answer:'请提供订单号，例如 A1001。',events:[handoff('Order Agent')],summary:'等待补充订单号 · 样例未调用查询工具'},
+loading:{question:'我的订单 A1001 到哪了？',busy:true,answer:'正在处理，完成后展示答复和实际事件…',summary:'处理中，完成后展示实际事件。'},
+invalid:{question:'查一下订单 ABC',answer:'订单号应为 A 加四位数字，例如 A1001。请核对后再发送。',events:[],summary:'预设追问样例 · 未提供工具事件'},
+notfound:{question:'查一下 A9999',answer:'未找到模拟订单 A9999，请核对订单号。',events:[call('query_order',{order_id:'A9999'}),result('query_order','not_found')],summary:'未找到订单 · not_found'},
+nomatch:{question:'退货运费是多少？',answer:'模拟政策中未找到运费说明，建议联系人工确认。',events:[call('lookup_faq',{query:'退货运费'}),result('lookup_faq','no_match')],summary:'政策未收录 · no_match'},
+unavailable:{question:'查一下 A1001',answer:'当前无法查询订单，请稍后重试，或联系人工。',tone:'warning',events:[call('query_order',{order_id:'A1001'}),result('query_order','unavailable')],summary:'工具暂不可用 · unavailable'},
+error:{question:'查一下 A1001',answer:'本次未能取得回复，请稍后重试。',tone:'error',retry:true,events:[],summary:'请求异常 · 本次未提供执行事件'},
+blank:{question:'查一下 A1001',answer:'未收到可展示的回复，请重试。',tone:'error',retry:true,events:[],summary:'空响应 · 请求未完成'},
+startup:{empty:true,locked:true,summary:'客服暂不可用，尚无实际执行记录。',notice:'客服暂不可用，请稍后再试。架构总览和项目介绍仍可浏览。'}
+};
+function switchTab(name){document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===name?'true':'false'));['chat','architecture','about'].forEach(n=>$(n+'-panel').hidden=n!==name);}
+function render(next){state=next;$('state').value=next;const d=next==='reset'?(states[previous]||states.order):states[next]||states.order;const locked=Boolean(d.busy||d.locked);['input','send','reset','example-order','example-policy'].forEach(n=>$(n).disabled=locked);$('confirm').hidden=next!=='reset';$('notice').hidden=!(next==='resetfail'||d.notice);$('notice').textContent=next==='resetfail'?'新会话未能创建，请重试。当前聊天与执行记录仍保留。':d.notice||'';$('input-note').textContent=d.busy?'处理中暂停输入和新会话；当前非流式，无需重复发送。':'原型只演示点击发送；正式应用沿用原生输入与换行。';
+if(d.empty){$('conversation').innerHTML='<div class="empty"><h2>今天想了解什么？</h2><p class="muted">从一次演示订单或政策查询开始。</p></div>';}else{$('conversation').innerHTML='<div class="message user"><p>'+esc(d.question)+'</p></div><article class="message"><div class="agent"><span class="avatar" aria-hidden="true">S</span>售后助手 <span class="badge">预设样例</span></div><p class="'+(d.tone?'status '+d.tone:'')+'">'+esc(d.answer)+'</p>'+(d.facts?'<dl class="facts">'+d.facts.map(([k,v])=>'<div><dt>'+esc(k)+'</dt><dd>'+esc(v)+'</dd></div>').join('')+'</dl>':'')+(d.note?'<p class="note">'+esc(d.note)+'</p>':'')+(d.retry?'<button id="retry" type="button">重试此问题 · 样例</button><p class="note">正式应用产生新请求并保留失败记录。</p>':'')+'</article>';if(d.retry)$('retry').onclick=()=>{render('loading');};}
+$('trace-summary').innerHTML='<p class="'+(d.tone?'notice '+d.tone:'small')+'">'+esc(d.summary)+'</p>';$('trace-details').hidden=Boolean(d.empty||d.busy);$('trace-details').open=false;const ev=d.events||[];$('events').innerHTML=ev.length?'<ol class="events">'+ev.map(e=>{if(e.type==='handoff')return '<li><strong>内部转交 · 预设样例</strong><span>'+esc(e.source_agent)+' → '+esc(e.target_agent)+'</span></li>';if(e.type==='tool_call')return '<li><strong>'+esc(e.tool)+' · 样例调用</strong><span>'+esc(JSON.stringify(e.arguments))+'</span></li>';return '<li><strong>'+esc(e.result.status)+' · 样例结果</strong><span>'+esc(e.tool)+'</span></li>';}).join('')+'</ol>':'<p class="note">本样例未提供执行事件，不补造查询过程。</p>';$('raw').textContent=JSON.stringify(ev,null,2);if(next==='empty')$('input').value='';}
+$('state').onchange=()=>{const next=$('state').value;if(next==='reset')previous=['loading','startup','empty','reset'].includes(state)?'order':state;switchTab('chat');render(next);};document.querySelectorAll('[data-tab]').forEach(b=>{b.onclick=()=>switchTab(b.dataset.tab);b.onkeydown=e=>{const names=['chat','architecture','about'];let i=names.indexOf(b.dataset.tab);if(e.key==='ArrowRight')i=(i+1)%3;else if(e.key==='ArrowLeft')i=(i+2)%3;else if(e.key==='Home')i=0;else if(e.key==='End')i=2;else return;e.preventDefault();switchTab(names[i]);$('tab-'+names[i]).focus();};});$('example-order').onclick=()=>{$('input').value='我的订单 A1001 到哪了？';$('input').focus();};$('example-policy').onclick=()=>{$('input').value='签收后几天内可以申请退货？';$('input').focus();};$('reset').onclick=()=>{if(state==='empty'){render('empty');return;}previous=state;render('reset');};$('confirm-no').onclick=()=>render(previous);$('confirm-yes').onclick=()=>render('empty');$('form').onsubmit=e=>{e.preventDefault();const q=$('input').value.trim();if(!q){$('notice').textContent='请输入问题';$('notice').hidden=false;return;}const next=/A9999/i.test(q)?'notfound':/运费/.test(q)?'nomatch':/退货|政策/.test(q)?'faq':/ABC/.test(q)?'invalid':/A1001/i.test(q)?'order':'ask';render(next);$('input').value='';};render('empty');
+const initialTab=window.location.hash.slice(1);if(['chat','architecture','about'].includes(initialTab))switchTab(initialTab);
+})();
+</script>
+</body></html>

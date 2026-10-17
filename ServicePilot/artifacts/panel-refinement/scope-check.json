@@ -1,0 +1,16 @@
+{
+  "servicepilot/workbench_ui.py_content_and_control_flow_preserved": true,
+  "servicepilot/code_guide.py_content_and_control_flow_preserved": true,
+  "app.py_unchanged": true,
+  "assets/architecture/servicepilot-system.svg_unchanged": true,
+  "assets/showcase/02-a1001-result.jpg_unchanged": true,
+  "assets/showcase/04-policy-to-order.jpg_unchanged": true,
+  "servicepilot/agent_config.py_unchanged": true,
+  "servicepilot/model_config.py_unchanged": true,
+  "servicepilot/order_tools.py_unchanged": true,
+  "servicepilot/faq_tools.py_unchanged": true,
+  "servicepilot/session.py_unchanged": true,
+  "servicepilot/web_runtime.py_unchanged": true,
+  "data/orders.json_unchanged": true,
+  "data/policies.json_unchanged": true
+}

@@ -1,0 +1,94 @@
+{
+  "review_date": "2026-10-15",
+  "reviewed_by": "Codex, UI observations and semantic comparison with mock records",
+  "url": "https://servicepilot-c74sbjqk5s8ppt6tbmwltm.streamlit.app/",
+  "code_release": "7792895ad1607b6d9bf16aedaebe47a1a24731e4",
+  "remote_main": "4a5e6c27aa5bd906f67e48fc158c657816975527",
+  "remote_main_change": "README only",
+  "unchanged_non_readme_manifest_files": 25,
+  "runtime_git_sha_from_cloud_logs_verified": false,
+  "runtime_python_from_cloud_logs_verified": false,
+  "passed": 5,
+  "total": 5,
+  "reviewed_answer_turns": 6,
+  "reviewed_business_sessions": 3,
+  "unreviewed_submissions": "One earlier policy submission lost with temporary tab; not counted as passed",
+  "cases": [
+    {
+      "id": "a1001",
+      "passed": true,
+      "observed": "Headphones, shipped, mock carrier and MOCK1001; Triage to Order, query_order, completed",
+      "session": "d97a2b7c",
+      "request": "90a4879f"
+    },
+    {
+      "id": "missing_id_then_a1002",
+      "passed": true,
+      "observed": "Asked for order ID; follow-up A1002 returned lamp, pending shipment and no logistics",
+      "session": "afcb2c2b"
+    },
+    {
+      "id": "policy_to_order",
+      "passed": true,
+      "observed": "RET-001, 7 days, human review; subsequent FAQ to Triage to Order, query_order and A1001",
+      "session": "83317f83",
+      "request": "eed42a5d"
+    },
+    {
+      "id": "not_found",
+      "passed": true,
+      "observed": "A9999 explicitly no record; query_order event not found; no current successful facts",
+      "session": "83317f83",
+      "request": "748c40eb"
+    },
+    {
+      "id": "reset_isolation",
+      "passed": true,
+      "observed": "Reset d97a2b7c to afcb2c2b; old messages cleared, missing ID asked again instead of reusing A1001"
+    }
+  ],
+  "anonymous_browser_queries_verified": true,
+  "mobile_network": {
+    "source": "User response to Wi-Fi-off mobile-network test request",
+    "statement": "手机可访问且能查询",
+    "independent_capture": false
+  },
+  "local_listeners": {
+    "ports": [
+      8501,
+      8502,
+      8503,
+      8768
+    ],
+    "count": 0,
+    "subsequent_cloud_reload": "Passed, new session fc9b098d"
+  },
+  "responsive_390": {
+    "chat_page_scroll_width": 390,
+    "nav_same_row": true,
+    "architecture_page_scroll_width": 390,
+    "svg_loaded": true,
+    "svg_natural_width": 1680,
+    "zoom_client_width": 303,
+    "zoom_scroll_width": 1680,
+    "about_page_scroll_width": 390,
+    "historical_images_loaded": 4,
+    "note": "Two historical images plus their expandable copies",
+    "viewport_reset": true
+  },
+  "evidence_scope": "Browser snapshots and screenshots; not raw cloud server logs; cloud request and token totals not exported",
+  "evidence_hashes": {
+    "browser-cases.json": "0054fe755343ce7c794c32b59f5e73303eb8777d5c19bf6f440501511e2b7338",
+    "01-owner-startup.png": "67156c916d5ec65e0b76fb9b109971ade2fd8df6961d94b233ea9198d04a8555",
+    "02-policy-to-order.png": "7e17d250ce8813065a7c8bf5b902369a3ee7f87ace703addb355222aec386b18",
+    "03-chat-390.png": "45714e719be1deab838de5b4390dfb7902924596a52daa662c66d68bf471e15b",
+    "04-about-390.png": "066f45abe0d1504889bf156a0d82455d72384a6cf06d993c858d0634cece3603"
+  },
+  "remaining": [
+    "IME composition and mobile soft keyboard edge cases",
+    "Full 25-case cloud suite",
+    "Cloud runtime and build-log independent review",
+    "Long-term reliability and load test",
+    "Demo recording"
+  ]
+}

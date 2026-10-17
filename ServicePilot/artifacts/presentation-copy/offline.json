@@ -1,0 +1,8 @@
+{
+  "kind": "offline_presentation_copy_regression",
+  "tests": 16,
+  "errors": 0,
+  "failures": 0,
+  "passed": true,
+  "api_request_attempted": false
+}

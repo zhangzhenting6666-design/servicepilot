@@ -1,0 +1,37 @@
+{
+  "stage": "local_package_validation",
+  "package": "handoff-20261017-153236",
+  "exported_files": 261,
+  "bytes": 18844704,
+  "public_snapshot_id": "599f010e7cbb6484f42c226caac8b8583603df767d1204e20c54960c104c1c86",
+  "previous_release": "a5bf69b9672442643088a67875cfc5046b2594a2",
+  "runtime_files_compared": 27,
+  "runtime_files_changed": [],
+  "readme_missing_links": [],
+  "forbidden_paths": [],
+  "secret_scan": "passed",
+  "first_offline_attempt": {
+    "discovered": 41,
+    "import_errors": 2,
+    "reason": "PYTHONPATH included product but omitted scripts directory",
+    "resolution": "Documentation command includes both product and scripts; no runtime source changes"
+  },
+  "dependency_check": "No broken requirements found",
+  "model_requests_this_task": 0,
+  "current_cloud_model_test": "not_run",
+  "pending": [
+    "current r5 cloud minimal real questions independently verified",
+    "IME candidate-state Enter",
+    "screen recording",
+    "fresh installation on another device",
+    "long-term stability"
+  ],
+  "offline_retest": {
+    "tests": 45,
+    "seconds": 12.022,
+    "passed": true,
+    "log": "offline-tests.txt",
+    "tested_export": "ServicePilot\\artifacts\\deployment\\handoff-20261017-153236\\source",
+    "environment": "existing Windows Python3.13.16 environment, not a fresh second-device install"
+  }
+}

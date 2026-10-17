@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-14",
+  "status": "user_approved_design_reference_not_implemented",
+  "selected": "first light customer workbench",
+  "source": "C:\\Users\\Lenovo\\.codex\\visualizations\\2026\\10\\11\\01a129b6-de56-7a50-821d-d3f33ff26b74\\servicepilot-ui-directions.html",
+  "source_sha256": "39819470ea3205d43703ed0238037b3ed6849127dcd79c3932114a564c221e02",
+  "selected_variant": "客服工作台 · 推荐",
+  "rejected": "subsequent graphite/lime workbench-refined",
+  "runtime_api_calls": false,
+  "product_redesign_completed": false,
+  "public_deployment_completed": false,
+  "content_note": "Predefined design samples, not new acceptance evidence."
+}

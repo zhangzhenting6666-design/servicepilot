@@ -1,0 +1,90 @@
+{
+  "after-about-1366.jpg": [
+    1366,
+    768
+  ],
+  "after-about-1920.jpg": [
+    1920,
+    1080
+  ],
+  "after-about-390.jpg": [
+    390,
+    843
+  ],
+  "after-architecture-1366.jpg": [
+    1366,
+    768
+  ],
+  "after-architecture-1920.jpg": [
+    1920,
+    1080
+  ],
+  "after-architecture-390.jpg": [
+    390,
+    843
+  ],
+  "after-chat-1366.jpg": [
+    1366,
+    768
+  ],
+  "after-chat-1920.jpg": [
+    1920,
+    1080
+  ],
+  "after-chat-390.jpg": [
+    390,
+    843
+  ],
+  "after-code-1366.jpg": [
+    1366,
+    768
+  ],
+  "after-code-1920.jpg": [
+    1920,
+    1080
+  ],
+  "after-code-390.jpg": [
+    390,
+    843
+  ],
+  "before-about-1280.jpg": [
+    1280,
+    720
+  ],
+  "before-about-1920.jpg": [
+    1920,
+    1080
+  ],
+  "before-architecture-1280.jpg": [
+    1280,
+    720
+  ],
+  "before-architecture-1920.jpg": [
+    1920,
+    1080
+  ],
+  "before-chat-1280.jpg": [
+    1280,
+    720
+  ],
+  "before-chat-1920.jpg": [
+    1920,
+    1080
+  ],
+  "before-chat-390.jpg": [
+    390,
+    843
+  ],
+  "before-code-1280.jpg": [
+    1280,
+    720
+  ],
+  "before-code-1920.jpg": [
+    1920,
+    1080
+  ],
+  "full-source-390.jpg": [
+    390,
+    843
+  ]
+}

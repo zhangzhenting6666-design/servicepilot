@@ -1,0 +1,627 @@
+{
+  "reviewed_at": "2026-10-14T23:26:09+08:00",
+  "evidence_kind": "real_browser_workbench_source_review",
+  "browser_url": "http://127.0.0.1:8501",
+  "model": "deepseek-flash",
+  "requests": 17,
+  "total_tokens": 18374,
+  "user_turns": 6,
+  "source_hash_mismatches": [],
+  "sessions": [
+    {
+      "raw_file": "artifacts\\web\\web-session-975d38f0001f4e54aec8011c0b1b70ac.json",
+      "raw_sha256": "31564489823f746bddd0c082b0b771c807389da3e48d5f0cba48de04db686e40",
+      "session_id": "975d38f0001f4e54aec8011c0b1b70ac",
+      "previous_session_id": null,
+      "created_at": "2026-10-14T22:59:30+08:00",
+      "version": {
+        "commit": null,
+        "branch": null,
+        "worktree_dirty": null,
+        "version_note": "Git metadata unavailable; source hashes identify this runtime",
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "3b6d737b6eeb7c85c5f1ca73af84d73942647d2ec0087b15a827c4db947e8ffb",
+          "ServicePilot/servicepilot/deployment.py": "6216e10a948b03efbf3f0f3a6d06667b1e2626c381d6c0efd6d24fe9ca7de1ad",
+          "ServicePilot/servicepilot/evaluation.py": "d52e01e1d6bb4e5cdb7df03ac13605da007e55741ac5a224f60b3521777b0618",
+          "ServicePilot/servicepilot/evidence_io.py": "436525d9eeda187c2fe8eb4319f1610e079d45e1e94153499c909a79e07fb961",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "abc115b4ce43207483488ad8ffb5a1ab21e662a3a87e99e1c26554532874f74c",
+          "ServicePilot/servicepilot/workbench_ui.py": "a65dc2ba5fe5c6af559ccf54f3cf464eda777fbf99a7c1a1fc7f4ccedfb261c4",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/app.py": "44ebe0b4151ef7221d05ae84ecf193d29d64da96d2e36211eaee5d5233bc2ea5",
+          "ServicePilot/scripts/run_web.py": "49744ba47b2ec6ca1d872fedaa610e97c33e3c5f2c743db74486d2ac68509345",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881",
+          "ServicePilot/requirements.txt": "38efd88d0b03555a919bd742061fba3e95d09b6d5c119e9f34f242883e66c5ba",
+          "ServicePilot/assets/workbench.css": "d8f1c420407fe60c5c75e9dc684d744b167d10d36392acd46dd04eb53584fe72"
+        },
+        "dependencies": {
+          "streamlit": "1.65.0",
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        },
+        "python_executable": "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+        "python_version": "3.13.16"
+      },
+      "turns": [
+        {
+          "request_id": "682aea4310c444a196a72cc68d5c0be0",
+          "session_id": "975d38f0001f4e54aec8011c0b1b70ac",
+          "input": "我的订单 A1001 到哪了？",
+          "status": "completed",
+          "events": [
+            {
+              "time": "2026-10-14T23:00:48+08:00",
+              "type": "model_request",
+              "agent": "Triage Agent"
+            },
+            {
+              "time": "2026-10-14T23:00:49+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T23:00:49+08:00",
+              "type": "model_request",
+              "agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T23:00:50+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_qgCQgpQ3oNtsNZFUx2sl7777",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T23:00:50+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_qgCQgpQ3oNtsNZFUx2sl7777",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            },
+            {
+              "time": "2026-10-14T23:00:50+08:00",
+              "type": "model_request",
+              "agent": "Order Agent"
+            }
+          ],
+          "submitted_at": "2026-10-14T23:00:48+08:00",
+          "started_at": "2026-10-14T23:00:48+08:00",
+          "starting_agent": "Triage Agent",
+          "final_answer": "以下是模拟订单 A1001 的查询结果（数据为本地模拟记录）：\n\n- 商品：蓝牙耳机\n- 订单状态：已发货\n- 物流信息：模拟物流，运单号 MOCK1001\n\n需要说明两点：该承运商和运单号均为演示用模拟值，无法用于真实物流查询；现有数据中没有预计送达时间，我无法提供或推测具体到货时间。",
+          "final_agent": "Order Agent",
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2957,
+            "output_tokens": 147,
+            "total_tokens": 3104
+          },
+          "finished_at": "2026-10-14T23:00:51+08:00",
+          "elapsed_seconds": 2.971
+        }
+      ]
+    },
+    {
+      "raw_file": "artifacts\\web\\web-session-161f3ff623044b88ba8a48cfb1ad32a2.json",
+      "raw_sha256": "6feb1e9892cca26221a39888cae26f86cc39374a5534088e932809377bf605b5",
+      "session_id": "161f3ff623044b88ba8a48cfb1ad32a2",
+      "previous_session_id": "975d38f0001f4e54aec8011c0b1b70ac",
+      "created_at": "2026-10-14T23:02:43+08:00",
+      "version": {
+        "commit": null,
+        "branch": null,
+        "worktree_dirty": null,
+        "version_note": "Git metadata unavailable; source hashes identify this runtime",
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "3b6d737b6eeb7c85c5f1ca73af84d73942647d2ec0087b15a827c4db947e8ffb",
+          "ServicePilot/servicepilot/deployment.py": "6216e10a948b03efbf3f0f3a6d06667b1e2626c381d6c0efd6d24fe9ca7de1ad",
+          "ServicePilot/servicepilot/evaluation.py": "d52e01e1d6bb4e5cdb7df03ac13605da007e55741ac5a224f60b3521777b0618",
+          "ServicePilot/servicepilot/evidence_io.py": "436525d9eeda187c2fe8eb4319f1610e079d45e1e94153499c909a79e07fb961",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "abc115b4ce43207483488ad8ffb5a1ab21e662a3a87e99e1c26554532874f74c",
+          "ServicePilot/servicepilot/workbench_ui.py": "a65dc2ba5fe5c6af559ccf54f3cf464eda777fbf99a7c1a1fc7f4ccedfb261c4",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/app.py": "44ebe0b4151ef7221d05ae84ecf193d29d64da96d2e36211eaee5d5233bc2ea5",
+          "ServicePilot/scripts/run_web.py": "49744ba47b2ec6ca1d872fedaa610e97c33e3c5f2c743db74486d2ac68509345",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881",
+          "ServicePilot/requirements.txt": "38efd88d0b03555a919bd742061fba3e95d09b6d5c119e9f34f242883e66c5ba",
+          "ServicePilot/assets/workbench.css": "d8f1c420407fe60c5c75e9dc684d744b167d10d36392acd46dd04eb53584fe72"
+        },
+        "dependencies": {
+          "streamlit": "1.65.0",
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        },
+        "python_executable": "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+        "python_version": "3.13.16"
+      },
+      "turns": [
+        {
+          "request_id": "c97b94244ce64d7e81389b60333074c0",
+          "session_id": "161f3ff623044b88ba8a48cfb1ad32a2",
+          "input": "帮我查一下订单",
+          "status": "completed",
+          "events": [
+            {
+              "time": "2026-10-14T23:02:43+08:00",
+              "type": "model_request",
+              "agent": "Triage Agent"
+            },
+            {
+              "time": "2026-10-14T23:02:44+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T23:02:44+08:00",
+              "type": "model_request",
+              "agent": "Order Agent"
+            }
+          ],
+          "submitted_at": "2026-10-14T23:02:43+08:00",
+          "started_at": "2026-10-14T23:02:43+08:00",
+          "starting_agent": "Triage Agent",
+          "final_answer": "请提供需要查询的订单号，格式为 A 加四位数字，例如 A1001。",
+          "final_agent": "Order Agent",
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1749,
+            "output_tokens": 40,
+            "total_tokens": 1789
+          },
+          "finished_at": "2026-10-14T23:02:46+08:00",
+          "elapsed_seconds": 2.46
+        },
+        {
+          "request_id": "6b4b402fe0b34f769339bdb2fec7f954",
+          "session_id": "161f3ff623044b88ba8a48cfb1ad32a2",
+          "input": "A1002",
+          "status": "completed",
+          "events": [
+            {
+              "time": "2026-10-14T23:03:56+08:00",
+              "type": "model_request",
+              "agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T23:03:57+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_rrDH4cueKoqR4ih6kjF41940",
+              "arguments": {
+                "order_id": "A1002"
+              }
+            },
+            {
+              "time": "2026-10-14T23:03:57+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_rrDH4cueKoqR4ih6kjF41940",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": null,
+                  "order_id": "A1002",
+                  "product": "台灯",
+                  "status": "待发货",
+                  "tracking_number": null
+                }
+              }
+            },
+            {
+              "time": "2026-10-14T23:03:57+08:00",
+              "type": "model_request",
+              "agent": "Order Agent"
+            }
+          ],
+          "submitted_at": "2026-10-14T23:03:56+08:00",
+          "started_at": "2026-10-14T23:03:56+08:00",
+          "starting_agent": "Order Agent",
+          "final_answer": "订单 A1002 的查询结果（模拟数据）：\n\n- 商品：台灯\n- 订单状态：待发货\n- 物流信息：暂无（尚未分配承运商和运单号）\n\n说明：该订单为本地模拟记录，承运商与运单号均为演示值，不可用于真实物流查询；目前也没有预计送达时间信息，无法提供。",
+          "final_agent": "Order Agent",
+          "usage": {
+            "requests": 2,
+            "input_tokens": 2318,
+            "output_tokens": 118,
+            "total_tokens": 2436
+          },
+          "finished_at": "2026-10-14T23:03:58+08:00",
+          "elapsed_seconds": 2.247
+        }
+      ]
+    },
+    {
+      "raw_file": "artifacts\\web\\web-session-2f018bf2ecfa4ed99b9f99b88adbad82.json",
+      "raw_sha256": "e7785ba2e9d7bcf445dd388aeee82bcbb4a000d0907c08a2c7e2f5a43a68c9ef",
+      "session_id": "2f018bf2ecfa4ed99b9f99b88adbad82",
+      "previous_session_id": "161f3ff623044b88ba8a48cfb1ad32a2",
+      "created_at": "2026-10-14T23:20:46+08:00",
+      "version": {
+        "commit": null,
+        "branch": null,
+        "worktree_dirty": null,
+        "version_note": "Git metadata unavailable; source hashes identify this runtime",
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "3b6d737b6eeb7c85c5f1ca73af84d73942647d2ec0087b15a827c4db947e8ffb",
+          "ServicePilot/servicepilot/deployment.py": "6216e10a948b03efbf3f0f3a6d06667b1e2626c381d6c0efd6d24fe9ca7de1ad",
+          "ServicePilot/servicepilot/evaluation.py": "d52e01e1d6bb4e5cdb7df03ac13605da007e55741ac5a224f60b3521777b0618",
+          "ServicePilot/servicepilot/evidence_io.py": "436525d9eeda187c2fe8eb4319f1610e079d45e1e94153499c909a79e07fb961",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "abc115b4ce43207483488ad8ffb5a1ab21e662a3a87e99e1c26554532874f74c",
+          "ServicePilot/servicepilot/workbench_ui.py": "a65dc2ba5fe5c6af559ccf54f3cf464eda777fbf99a7c1a1fc7f4ccedfb261c4",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/app.py": "44ebe0b4151ef7221d05ae84ecf193d29d64da96d2e36211eaee5d5233bc2ea5",
+          "ServicePilot/scripts/run_web.py": "49744ba47b2ec6ca1d872fedaa610e97c33e3c5f2c743db74486d2ac68509345",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881",
+          "ServicePilot/requirements.txt": "38efd88d0b03555a919bd742061fba3e95d09b6d5c119e9f34f242883e66c5ba",
+          "ServicePilot/assets/workbench.css": "d8f1c420407fe60c5c75e9dc684d744b167d10d36392acd46dd04eb53584fe72"
+        },
+        "dependencies": {
+          "streamlit": "1.65.0",
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        },
+        "python_executable": "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+        "python_version": "3.13.16"
+      },
+      "turns": [
+        {
+          "request_id": "783e3df0a65d45cea70d012d98a87cc8",
+          "session_id": "2f018bf2ecfa4ed99b9f99b88adbad82",
+          "input": "签收后几天内可以申请退货？",
+          "status": "completed",
+          "events": [
+            {
+              "time": "2026-10-14T23:20:47+08:00",
+              "type": "model_request",
+              "agent": "Triage Agent"
+            },
+            {
+              "time": "2026-10-14T23:20:48+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "FAQ Agent"
+            },
+            {
+              "time": "2026-10-14T23:20:48+08:00",
+              "type": "model_request",
+              "agent": "FAQ Agent"
+            },
+            {
+              "time": "2026-10-14T23:20:49+08:00",
+              "type": "tool_call",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_NIG8nLG4Ff1w5jTfq3l83574",
+              "arguments": {
+                "query": "签收后几天内可以申请退货？"
+              }
+            },
+            {
+              "time": "2026-10-14T23:20:49+08:00",
+              "type": "tool_result",
+              "agent": "FAQ Agent",
+              "tool": "lookup_faq",
+              "call_id": "call_00_NIG8nLG4Ff1w5jTfq3l83574",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "policy": {
+                  "policy_id": "RET-001",
+                  "category": "return_application",
+                  "title": "模拟退货申请规则",
+                  "content": "签收后 7 天内可提出退货申请，是否通过需要人工审核。"
+                }
+              }
+            },
+            {
+              "time": "2026-10-14T23:20:49+08:00",
+              "type": "model_request",
+              "agent": "FAQ Agent"
+            }
+          ],
+          "submitted_at": "2026-10-14T23:20:47+08:00",
+          "started_at": "2026-10-14T23:20:47+08:00",
+          "starting_agent": "Triage Agent",
+          "final_answer": "根据模拟政策 **RET-001**（退货申请规则）：签收后 **7 天内**可以提出退货申请；申请并不等于一定获批，是否通过需要人工审核。\n\n（以上为模拟政策内容，非真实平台规则。）",
+          "final_agent": "FAQ Agent",
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2669,
+            "output_tokens": 117,
+            "total_tokens": 2786
+          },
+          "finished_at": "2026-10-14T23:20:50+08:00",
+          "elapsed_seconds": 2.983
+        },
+        {
+          "request_id": "ed253ad0b8534f79a244b1a0d9f87795",
+          "session_id": "2f018bf2ecfa4ed99b9f99b88adbad82",
+          "input": "再查一下 A1001",
+          "status": "completed",
+          "events": [
+            {
+              "time": "2026-10-14T23:21:43+08:00",
+              "type": "model_request",
+              "agent": "FAQ Agent"
+            },
+            {
+              "time": "2026-10-14T23:21:44+08:00",
+              "type": "handoff",
+              "source_agent": "FAQ Agent",
+              "target_agent": "Triage Agent"
+            },
+            {
+              "time": "2026-10-14T23:21:44+08:00",
+              "type": "model_request",
+              "agent": "Triage Agent"
+            },
+            {
+              "time": "2026-10-14T23:21:45+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T23:21:45+08:00",
+              "type": "model_request",
+              "agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T23:21:46+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_hk1oKITf7XLttOQnVO2x6460",
+              "arguments": {
+                "order_id": "A1001"
+              }
+            },
+            {
+              "time": "2026-10-14T23:21:46+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_hk1oKITf7XLttOQnVO2x6460",
+              "result": {
+                "status": "ok",
+                "source": "local_mock",
+                "order": {
+                  "carrier": "模拟物流",
+                  "order_id": "A1001",
+                  "product": "蓝牙耳机",
+                  "status": "已发货",
+                  "tracking_number": "MOCK1001"
+                }
+              }
+            },
+            {
+              "time": "2026-10-14T23:21:46+08:00",
+              "type": "model_request",
+              "agent": "Order Agent"
+            }
+          ],
+          "submitted_at": "2026-10-14T23:21:43+08:00",
+          "started_at": "2026-10-14T23:21:43+08:00",
+          "starting_agent": "FAQ Agent",
+          "final_answer": "订单 A1001 的模拟记录如下：\n\n- **商品**：蓝牙耳机\n- **订单状态**：已发货\n- **物流信息**：承运商「模拟物流」，运单号 MOCK1001\n\n说明：承运商和运单号均为演示用模拟数据，不能用于真实物流查询，请勿到承运商或物流网站查询该单号。此外，当前数据不包含签收时间、签收日期或预计送达时间，因此这些信息无法查询。\n\n（以上为模拟记录。）",
+          "final_agent": "Order Agent",
+          "usage": {
+            "requests": 4,
+            "input_tokens": 5015,
+            "output_tokens": 233,
+            "total_tokens": 5248
+          },
+          "finished_at": "2026-10-14T23:21:47+08:00",
+          "elapsed_seconds": 4.012
+        }
+      ]
+    },
+    {
+      "raw_file": "artifacts\\web\\web-session-f170b401702444b7be5772145197537e.json",
+      "raw_sha256": "ed4f8aec5ad1af2fa13513e0b9aaeca520ab8cd03a3b26547eb47ce6b9cc223d",
+      "session_id": "f170b401702444b7be5772145197537e",
+      "previous_session_id": "2f018bf2ecfa4ed99b9f99b88adbad82",
+      "created_at": "2026-10-14T23:22:44+08:00",
+      "version": {
+        "commit": null,
+        "branch": null,
+        "worktree_dirty": null,
+        "version_note": "Git metadata unavailable; source hashes identify this runtime",
+        "hash_mode": "SHA256 after CRLF to LF normalization",
+        "source_hashes": {
+          "ServicePilot/servicepilot/__init__.py": "d7b94ee79f6365bf0c534674ce3fec2d752ce865e3a8e689502a50676e83110b",
+          "ServicePilot/servicepilot/acceptance.py": "9ff7d65c219d9ba948375e4af11d72a0218cf7cda0b51cfd8c63452073a13119",
+          "ServicePilot/servicepilot/agent_config.py": "3b6d737b6eeb7c85c5f1ca73af84d73942647d2ec0087b15a827c4db947e8ffb",
+          "ServicePilot/servicepilot/deployment.py": "6216e10a948b03efbf3f0f3a6d06667b1e2626c381d6c0efd6d24fe9ca7de1ad",
+          "ServicePilot/servicepilot/evaluation.py": "d52e01e1d6bb4e5cdb7df03ac13605da007e55741ac5a224f60b3521777b0618",
+          "ServicePilot/servicepilot/evidence_io.py": "436525d9eeda187c2fe8eb4319f1610e079d45e1e94153499c909a79e07fb961",
+          "ServicePilot/servicepilot/faq_data.py": "109bfce5423e03c40f39be9aa0ff9353a51754363de7bc1c89744f11d13c64d4",
+          "ServicePilot/servicepilot/faq_tools.py": "23255e7f5256cfaf21b2f21e9b1a66e46fcbc5298805a7991705ba86b354d958",
+          "ServicePilot/servicepilot/model_config.py": "731098ca01691bfc4e0d4ca06f63b1bcc489146ec3e4ec29f3994fe75d4bbd60",
+          "ServicePilot/servicepilot/order_data.py": "d0a867d1a703ab99c83efb04d63a326648adbe6d9c8def10069a4bc369ff429a",
+          "ServicePilot/servicepilot/order_tools.py": "8eabfbcf118145f76962edec81a5bb995a7e13a9dd3422e834588056ff31cd89",
+          "ServicePilot/servicepilot/session.py": "430dd7c72637424e31635873b06aaab27c9a8c29238fb50f43693ca66f386ff3",
+          "ServicePilot/servicepilot/web_runtime.py": "abc115b4ce43207483488ad8ffb5a1ab21e662a3a87e99e1c26554532874f74c",
+          "ServicePilot/servicepilot/workbench_ui.py": "a65dc2ba5fe5c6af559ccf54f3cf464eda777fbf99a7c1a1fc7f4ccedfb261c4",
+          "ServicePilot/data/orders.json": "a664bedce38310c697d34fb8bca867b5ee042362c9884cd9eb4db422de005919",
+          "ServicePilot/data/policies.json": "89660ab07954eed290670ffd957f46c2ff5c32d81b9cfc92e3407237148b7274",
+          "ServicePilot/app.py": "44ebe0b4151ef7221d05ae84ecf193d29d64da96d2e36211eaee5d5233bc2ea5",
+          "ServicePilot/scripts/run_web.py": "49744ba47b2ec6ca1d872fedaa610e97c33e3c5f2c743db74486d2ac68509345",
+          "ServicePilot/requirements.lock.txt": "432c786df970898cc9e6307b1d08e818a92360db400aa67f857b02e5440e1881",
+          "ServicePilot/requirements.txt": "38efd88d0b03555a919bd742061fba3e95d09b6d5c119e9f34f242883e66c5ba",
+          "ServicePilot/assets/workbench.css": "d8f1c420407fe60c5c75e9dc684d744b167d10d36392acd46dd04eb53584fe72"
+        },
+        "dependencies": {
+          "streamlit": "1.65.0",
+          "openai": "3.28.0",
+          "openai-agents": "0.23.1"
+        },
+        "python_executable": "C:\\Users\\Lenovo\\Desktop\\vibe coding\\openai-agents-python-main\\.venv\\Scripts\\python.exe",
+        "python_version": "3.13.16"
+      },
+      "turns": [
+        {
+          "request_id": "eddf151f086e492cb59a3e233f1b6e36",
+          "session_id": "f170b401702444b7be5772145197537e",
+          "input": "查一下 A9999",
+          "status": "completed",
+          "events": [
+            {
+              "time": "2026-10-14T23:22:44+08:00",
+              "type": "model_request",
+              "agent": "Triage Agent"
+            },
+            {
+              "time": "2026-10-14T23:22:45+08:00",
+              "type": "handoff",
+              "source_agent": "Triage Agent",
+              "target_agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T23:22:45+08:00",
+              "type": "model_request",
+              "agent": "Order Agent"
+            },
+            {
+              "time": "2026-10-14T23:22:45+08:00",
+              "type": "tool_call",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_Uvp08ItiY0L7SWV195RE2394",
+              "arguments": {
+                "order_id": "A9999"
+              }
+            },
+            {
+              "time": "2026-10-14T23:22:45+08:00",
+              "type": "tool_result",
+              "agent": "Order Agent",
+              "tool": "query_order",
+              "call_id": "call_00_Uvp08ItiY0L7SWV195RE2394",
+              "result": {
+                "status": "not_found",
+                "order_id": "A9999",
+                "message": "未找到该订单，请核对订单号。"
+              }
+            },
+            {
+              "time": "2026-10-14T23:22:45+08:00",
+              "type": "model_request",
+              "agent": "Order Agent"
+            }
+          ],
+          "submitted_at": "2026-10-14T23:22:44+08:00",
+          "started_at": "2026-10-14T23:22:44+08:00",
+          "starting_agent": "Triage Agent",
+          "final_answer": "订单号 A9999 未查询到对应记录（模拟数据）。请核对编号是否正确后我再帮你查询，正确格式为 A 加四位数字，例如 A1001。",
+          "final_agent": "Order Agent",
+          "usage": {
+            "requests": 3,
+            "input_tokens": 2914,
+            "output_tokens": 97,
+            "total_tokens": 3011
+          },
+          "finished_at": "2026-10-14T23:22:46+08:00",
+          "elapsed_seconds": 2.289
+        }
+      ]
+    }
+  ],
+  "not_a_cloud_test": true,
+  "not_a_25_case_rerun": true,
+  "post_api_visual_adjustment": {
+    "file": "ServicePilot\\assets\\workbench.css",
+    "api_run_sha256": "d8f1c420407fe60c5c75e9dc684d744b167d10d36392acd46dd04eb53584fe72",
+    "change": "Native about/event subheading hierarchy only; no app, Agent, tool or session behavior changed. Final browser screenshots checked separately.",
+    "subheading_sha256": "6a24dc18094819092e07d9725f4e9c389a6b7574a4f05a7ae039f76cbccdb4d3"
+  },
+  "checks": [
+    {
+      "case": "A1001查询",
+      "verdict": "passed",
+      "basis": "Actual tool result and full final answer manually reviewed"
+    },
+    {
+      "case": "缺编号补充A1002",
+      "verdict": "passed",
+      "basis": "Pursued missing ID then exact fresh tool result; no invented logistics"
+    },
+    {
+      "case": "政策转订单",
+      "verdict": "passed",
+      "basis": "RET-001 plus actual FAQ to Triage to Order handoffs and order tool"
+    },
+    {
+      "case": "A9999查无订单",
+      "verdict": "passed",
+      "basis": "Actual not_found; no fabricated success"
+    },
+    {
+      "case": "新会话隔离",
+      "verdict": "passed",
+      "basis": "Previous A1001 context reset; fresh missing-ID input prompted rather than inherited old ID"
+    }
+  ],
+  "result": "5/5",
+  "presentation_followups": [
+    {
+      "file": "ServicePilot/assets/workbench.css",
+      "api_run_sha256": "d8f1c420407fe60c5c75e9dc684d744b167d10d36392acd46dd04eb53584fe72",
+      "candidate_sha256": "58314de8caefbecf94afaf6ed8ea78923b8b82d7af7518e468254e2fbbdb8d96"
+    },
+    {
+      "file": "ServicePilot/servicepilot/workbench_ui.py",
+      "api_run_sha256": "a65dc2ba5fe5c6af559ccf54f3cf464eda777fbf99a7c1a1fc7f4ccedfb261c4",
+      "candidate_sha256": "699fbccc0231c65fa4a7214b8328f6ee10f50da0092fd5ca0ef9ad782fe218d7"
+    }
+  ],
+  "candidate_commit": "4bd0f55fe01e7308af2e254ea6fff545370244e4",
+  "release_commit_not_yet_remote_verified": "7792895",
+  "candidate_business_source_matches_run": true
+}

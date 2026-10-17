@@ -1,0 +1,22 @@
+{
+  "previous_release": "4a5e6c27aa5bd906f67e48fc158c657816975527",
+  "workspace_code_commit": "ccefd20d296c8eab6eacf8ddf8723f79123eed89",
+  "snapshot_id": "1d543a36fba5234f182536a6ebbe8ab0ca16a3ceff9d4e298de5106e0b7f8f64",
+  "file_count": 29,
+  "changed": [
+    "README.md",
+    "ServicePilot/app.py",
+    "ServicePilot/assets/workbench.css"
+  ],
+  "added": [
+    "ServicePilot/assets/code-guide/snapshot.json",
+    "ServicePilot/servicepilot/code_guide.py",
+    "ServicePilot/servicepilot/source_catalog.py"
+  ],
+  "normal_business_files_unchanged": true,
+  "manifest": "artifacts\\deployment\\20261016-135522\\manifest.json",
+  "uploaded": true,
+  "remote_main_verified": "6e29e3d26bec28b69f5164cd53a3cae24142456d",
+  "public_ui_user_confirmation": "2026-10-16 用户明确回复已看到四栏和代码解读",
+  "cloud_business_regression": "not run; browser automation content timeout"
+}

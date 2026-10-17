@@ -1,0 +1,8 @@
+{
+  "kind": "offline_final_presentation_and_session_regression",
+  "api_request_attempted": false,
+  "tests": 15,
+  "failures": 0,
+  "errors": 0,
+  "status": "passed"
+}

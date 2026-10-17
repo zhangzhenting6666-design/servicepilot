@@ -1,0 +1,39 @@
+{
+  "workspace_code_commit": "b8656ce79923a35348a4334d14fa73f47a912cf1",
+  "release_commit": "7b4ec00dc1c89a3ce1449380b4bdb690b5abe72c",
+  "remote_verified_by_ls_remote": true,
+  "public_snapshot_id": "298b90c42fa6dec2553b7aa1f37a4ab650ab3d8cde5b16501bb36ee27cdb9558",
+  "public_file_count": 22,
+  "release_file_count": 29,
+  "unchanged_business_files": [
+    "servicepilot/agent_config.py",
+    "servicepilot/model_config.py",
+    "servicepilot/order_tools.py",
+    "servicepilot/order_data.py",
+    "servicepilot/faq_tools.py",
+    "servicepilot/faq_data.py",
+    "servicepilot/session.py",
+    "servicepilot/web_runtime.py",
+    "servicepilot/deployment.py",
+    "data/orders.json",
+    "data/policies.json"
+  ],
+  "architecture_exact_original_except_date": true,
+  "offline_tests_passed": 18,
+  "api_request_attempted": false,
+  "cloud_independent_verification": false,
+  "user_cloud_confirmation": "两处都已正常",
+  "upload_first_attempt": "schannel SSL/TLS handshake failed",
+  "upload_second_attempt": "succeeded; ls-remote matched",
+  "browser_blocker": {
+    "operation": "existing public tab screenshot",
+    "timeout_ms": 20000,
+    "result": "js execution timed out; kernel reset"
+  },
+  "interpretation": "User screenshots show new snapshot label with old Python-rendered text and missing old asset path. Cached stateless presentation modules reproduced offline; reload only those modules once per content version.",
+  "cloud_confirmed_scope": [
+    "r3 without self-assessment questions or personal mastery caveats",
+    "original complete architecture diagram visible without date"
+  ],
+  "new_cloud_business_acceptance": false
+}

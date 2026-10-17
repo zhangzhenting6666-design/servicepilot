@@ -1,0 +1,33 @@
+{
+  "previous_release": "6e29e3d26bec28b69f5164cd53a3cae24142456d",
+  "workspace_code_commit": "a678356d9dbdc49969027cb765d416bd920e4643",
+  "snapshot_id": "f86318853fefb29f9502bb60566b9fcff8a472c115f1e443c1a564ce1adfce35",
+  "files": 29,
+  "changed_files": [
+    "README.md",
+    "ServicePilot/assets/architecture/servicepilot-system.svg",
+    "ServicePilot/assets/code-guide/snapshot.json",
+    "ServicePilot/servicepilot/code_guide.py",
+    "ServicePilot/servicepilot/workbench_ui.py"
+  ],
+  "removed_release_asset": "dated SVG replaced with date-free alias; original workspace asset retained",
+  "api_request_attempted": false,
+  "remote_verified": "3cc950a268f71954be48da47bb3431c15ed3bccf",
+  "uploaded": true,
+  "cloud_independently_verified": false,
+  "public_source_calendar_dates_removed": true,
+  "self_test_and_personal_mastery_caveats_removed": true,
+  "original_legacy_svg_preserved": true,
+  "business_files_unchanged": [
+    "agent_config.py",
+    "model_config.py",
+    "order_tools.py",
+    "order_data.py",
+    "faq_tools.py",
+    "faq_data.py",
+    "session.py",
+    "web_runtime.py",
+    "deployment.py",
+    "evidence_io.py"
+  ]
+}

@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="2110" viewBox="0 0 1680 2110" role="img" aria-labelledby="title desc">
+<title id="title">ServicePilot 模拟电商售后系统完整运行架构</title>
+<desc id="desc">用户界面、会话、SDK Runner和三种Agent、本地工具、模拟JSON、答复返回；右侧为模型服务、运行配置、实际事件和业务边界。当前本机已实现，公网部署与新栏目待实现。</desc>
+<defs>
+ <filter id="shadow" x="-10%" y="-15%" width="120%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#1b3d31" flood-opacity="0.035"/></filter>
+ <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1,1 L8.5,5 L1,9" fill="none" stroke="#147e70" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+ <marker id="sidearrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1,1 L8.5,5 L1,9" fill="none" stroke="#7c93a0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text {font-family:'Microsoft YaHei','Noto Sans CJK SC','Segoe UI',sans-serif; fill:#173347;} .muted{fill:#5b7180;} .small{font-size:22px;} .body{font-size:25px;} .head{font-size:32px;font-weight:700;} .mono{font-family:'Cascadia Code',Consolas,'Microsoft YaHei',monospace;}</style>
+<rect width="1680" height="2110" fill="#f8faf8"/>
+
+<text x="64" y="85" font-size="49" font-weight="750" text-anchor="start">ServicePilot｜完整运行架构</text>
+<text x="66" y="132" font-size="26" font-weight="400" text-anchor="start" style="fill:#5b7180">从用户提问，到有依据的回答：界面 → 会话 → Agent → 工具与数据 → 页面</text>
+<rect x="66" y="152" width="182" height="40" rx="20" fill="#e1f1ea" stroke="#e1f1ea" stroke-width="2"/>
+<text x="157.0" y="180" font-size="21" font-weight="600" text-anchor="middle" style="fill:#147e70">本机已实现</text>
+<text x="270" y="180" font-size="23" font-weight="400" text-anchor="start" style="fill:#5b7180">模拟电商售后 Demo · 逻辑职责分层 · 2026.10.14</text>
+<rect x="144" y="222" width="984" height="130" rx="22" fill="#f4f0fa" stroke="#8868b4" stroke-width="2" filter="url(#shadow)"/>
+<rect x="168" y="247" width="52" height="52" rx="15" fill="#8868b4" stroke="#8868b4" stroke-width="2"/>
+<text x="194" y="283" font-size="28" font-weight="700" text-anchor="middle" style="fill:white">01</text>
+<text x="240" y="275" font-size="33" font-weight="700" text-anchor="start" style="fill:#173347">Streamlit 聊天页面</text>
+<text x="240" y="315" font-size="25" font-weight="400" text-anchor="start" style="fill:#5b7180">用户提问 / 客服答复 / 新会话 / 实际执行事件</text>
+<path d="M636 352 V400" fill="none" stroke="#147e70" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="144" y="400" width="984" height="148" rx="22" fill="#f0f5ff" stroke="#346fce" stroke-width="2" filter="url(#shadow)"/>
+<rect x="168" y="425" width="52" height="52" rx="15" fill="#346fce" stroke="#346fce" stroke-width="2"/>
+<text x="194" y="461" font-size="28" font-weight="700" text-anchor="middle" style="fill:white">02</text>
+<text x="240" y="453" font-size="33" font-weight="700" text-anchor="start" style="fill:#173347">Python 应用与会话</text>
+<text x="240" y="493" font-size="25" font-weight="400" text-anchor="start" style="fill:#5b7180">历史消息 + 当前 Agent + 会话 / 请求标识</text>
+<text x="240" y="527" font-size="25" font-weight="400" text-anchor="start" style="fill:#5b7180">缺信息先追问；同会话补充接续；新会话重建上下文</text>
+<path d="M636 548 V594" fill="none" stroke="#147e70" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="112" y="594" width="1048" height="520" rx="22" fill="white" stroke="#98bcb2" stroke-width="2" filter="url(#shadow)"/>
+<text x="148" y="643" font-size="34" font-weight="700" text-anchor="start" style="fill:#147e70">03  OpenAI Agents SDK / Runner</text>
+<text x="148" y="683" font-size="25" font-weight="400" text-anchor="start" style="fill:#5b7180">请求模型 → 执行交接或工具 → 按需继续 → 返回本轮结果</text>
+<rect x="390" y="723" width="468" height="120" rx="22" fill="#eef4ff" stroke="#6a96e2" stroke-width="2" filter="url(#shadow)"/>
+<text x="624" y="770" font-size="34" font-weight="700" text-anchor="middle">Triage Agent</text>
+<text x="624" y="810" font-size="25" font-weight="400" text-anchor="middle" style="fill:#5b7180">识别请求，交给对应专员</text>
+<path d="M490 843 V892 H343 V936" fill="none" stroke="#147e70" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M758 843 V892 H913 V936" fill="none" stroke="#147e70" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<text x="278" y="880" font-size="23" font-weight="400" text-anchor="middle" style="fill:#147e70">政策问题</text>
+<text x="978" y="880" font-size="23" font-weight="400" text-anchor="middle" style="fill:#147e70">订单问题</text>
+<rect x="144" y="936" width="398" height="125" rx="22" fill="#eaf5ef" stroke="#67a594" stroke-width="2" filter="url(#shadow)"/>
+<text x="343" y="982" font-size="33" font-weight="700" text-anchor="middle">FAQ Agent</text>
+<text x="343" y="1024" font-size="25" font-weight="400" text-anchor="middle" style="fill:#5b7180">查询退货规则与政策</text>
+<rect x="714" y="936" width="398" height="125" rx="22" fill="#eaf5ef" stroke="#67a594" stroke-width="2" filter="url(#shadow)"/>
+<text x="913" y="982" font-size="33" font-weight="700" text-anchor="middle">Order Agent</text>
+<text x="913" y="1024" font-size="24" font-weight="400" text-anchor="middle" style="fill:#5b7180">追问编号，查询订单与物流</text>
+<text x="636" y="1094" font-size="23" font-weight="400" text-anchor="middle" style="fill:#147e70">专员切换：先返回 Triage，再交给另一位专员</text>
+<path d="M343 1061 V1162" fill="none" stroke="#147e70" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M913 1061 V1162" fill="none" stroke="#147e70" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="144" y="1162" width="398" height="125" rx="22" fill="#f2f6f4" stroke="#9ab2a9" stroke-width="2" filter="url(#shadow)"/>
+<text x="343" y="1197" font-size="22" font-weight="400" text-anchor="middle" style="fill:#5b7180">04  Python 查询工具</text>
+<text x="343" y="1236" font-size="27" font-weight="650" text-anchor="middle" class="mono">lookup_faq(query)</text>
+<text x="343" y="1269" font-size="23" font-weight="400" text-anchor="middle" style="fill:#5b7180">查询政策，返回状态与依据</text>
+<rect x="714" y="1162" width="398" height="125" rx="22" fill="#f2f6f4" stroke="#9ab2a9" stroke-width="2" filter="url(#shadow)"/>
+<text x="913" y="1197" font-size="22" font-weight="400" text-anchor="middle" style="fill:#5b7180">04  Python 查询工具</text>
+<text x="913" y="1236" font-size="26" font-weight="650" text-anchor="middle" class="mono">query_order(order_id)</text>
+<text x="913" y="1269" font-size="23" font-weight="400" text-anchor="middle" style="fill:#5b7180">规范编号，查询当前模拟记录</text>
+<text x="628" y="1208" font-size="20" font-weight="400" text-anchor="middle" style="fill:#5b7180">Runner</text>
+<text x="628" y="1240" font-size="20" font-weight="400" text-anchor="middle" style="fill:#5b7180">执行工具</text>
+<path d="M343 1287 V1342" fill="none" stroke="#147e70" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M913 1287 V1342" fill="none" stroke="#147e70" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<rect x="144" y="1342" width="398" height="127" rx="22" fill="#f2f6f4" stroke="#9ab2a9" stroke-width="2" filter="url(#shadow)"/>
+<text x="343" y="1375" font-size="24" font-weight="650" text-anchor="middle" style="fill:#147e70">05  本地模拟政策</text>
+<text x="343" y="1412" font-size="26" font-weight="650" text-anchor="middle" class="mono">policies.json</text>
+<text x="343" y="1446" font-size="23" font-weight="400" text-anchor="middle" style="fill:#5b7180">RET-001 · 退货申请规则</text>
+<rect x="714" y="1342" width="398" height="127" rx="22" fill="#f2f6f4" stroke="#9ab2a9" stroke-width="2" filter="url(#shadow)"/>
+<text x="913" y="1375" font-size="24" font-weight="650" text-anchor="middle" style="fill:#147e70">05  本地模拟订单</text>
+<text x="913" y="1412" font-size="26" font-weight="650" text-anchor="middle" class="mono">orders.json</text>
+<text x="913" y="1446" font-size="23" font-weight="400" text-anchor="middle" style="fill:#5b7180">A1001 / A1002 / A1003</text>
+<path d="M343 1469 V1514 H636 V1576" fill="none" stroke="#147e70" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M913 1469 V1514 H636" fill="none" stroke="#147e70" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="414" y="1497" width="444" height="35" rx="8" fill="#f8faf8" stroke="#f8faf8" stroke-width="2"/>
+<text x="636" y="1522" font-size="22" font-weight="400" text-anchor="middle" style="fill:#147e70">查询结果回传 Runner → 再请求模型</text>
+<rect x="144" y="1576" width="984" height="148" rx="22" fill="#f0f5ff" stroke="#346fce" stroke-width="2" filter="url(#shadow)"/>
+<rect x="168" y="1601" width="52" height="52" rx="15" fill="#346fce" stroke="#346fce" stroke-width="2"/>
+<text x="194" y="1637" font-size="28" font-weight="700" text-anchor="middle" style="fill:white">06</text>
+<text x="240" y="1629" font-size="33" font-weight="700" text-anchor="start" style="fill:#173347">答复与实际事件返回页面</text>
+<text x="240" y="1669" font-size="25" font-weight="400" text-anchor="start" style="fill:#5b7180">模型依据工具结果回答；保存历史与当前 Agent</text>
+<text x="240" y="1703" font-size="25" font-weight="400" text-anchor="start" style="fill:#5b7180">本轮结束后等待用户下一条输入</text>
+<path d="M144 1650 H80 V287 H144" fill="none" stroke="#147e70" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="44" y="1190" font-size="23" font-weight="600" style="fill:#147e70" transform="rotate(-90 44 1190)">回到界面，继续下一轮对话</text>
+<rect x="1224" y="222" width="392" height="300" rx="22" fill="#f0f4f2" stroke="#b6c8c0" stroke-width="2" filter="url(#shadow)"/>
+<text x="1252" y="271" font-size="31" font-weight="700" text-anchor="start">运行与配置</text>
+<text x="1252" y="321" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">Python + 项目 venv</text>
+<text x="1252" y="358" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">依赖与版本记录</text>
+<text x="1252" y="395" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">服务地址与模型名</text>
+<text x="1252" y="432" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">API 密钥仅在服务端</text>
+<text x="1252" y="469" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">当前由终端隐藏输入</text>
+<path d="M1224 465 H1128" fill="none" stroke="#7c93a0" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#sidearrow)" stroke-dasharray="7 7"/>
+<rect x="1224" y="594" width="392" height="255" rx="22" fill="#eef4ff" stroke="#87a8df" stroke-width="2" filter="url(#shadow)"/>
+<text x="1252" y="644" font-size="32" font-weight="700" text-anchor="start">DeepSeek API</text>
+<text x="1252" y="684" font-size="23" font-weight="400" text-anchor="start" style="fill:#346fce">远端模型：deepseek-flash</text>
+<text x="1252" y="728" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">理解问题，选择交接或工具</text>
+<text x="1252" y="765" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">根据工具结果组织答复</text>
+<text x="1252" y="802" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">三个角色共用同一模型配置</text>
+<path d="M1160 746 H1224" fill="none" stroke="#7c93a0" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#sidearrow)" marker-start="url(#sidearrow)" stroke-dasharray="7 7"/>
+<text x="1192" y="726" font-size="18" font-weight="400" text-anchor="middle" style="fill:#5b7180">API</text>
+<rect x="1224" y="906" width="392" height="255" rx="22" fill="#f0f4f2" stroke="#b6c8c0" stroke-width="2" filter="url(#shadow)"/>
+<text x="1252" y="956" font-size="31" font-weight="700" text-anchor="start">实际事件与证据</text>
+<text x="1252" y="1006" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">内部交接、工具参数与结果</text>
+<text x="1252" y="1043" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">会话 / 请求、版本与耗时</text>
+<text x="1252" y="1080" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">记录实际模型请求和 usage</text>
+<text x="1252" y="1117" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">页面可展开，便于核对来源</text>
+<path d="M1160 1031 H1224" fill="none" stroke="#7c93a0" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#sidearrow)" stroke-dasharray="7 7"/>
+<rect x="1224" y="1218" width="392" height="251" rx="22" fill="#fff7e9" stroke="#d4b078" stroke-width="2" filter="url(#shadow)"/>
+<text x="1252" y="1268" font-size="31" font-weight="700" text-anchor="start" style="fill:#9a641c">业务边界</text>
+<text x="1252" y="1317" font-size="24" font-weight="400" text-anchor="start" style="fill:#9a641c">只读模拟订单与政策</text>
+<text x="1252" y="1354" font-size="24" font-weight="400" text-anchor="start" style="fill:#9a641c">退货申请需人工审核</text>
+<text x="1252" y="1391" font-size="24" font-weight="400" text-anchor="start" style="fill:#9a641c">无退款执行 / 真人接入</text>
+<text x="1252" y="1428" font-size="24" font-weight="400" text-anchor="start" style="fill:#9a641c">无签收日期 / 预计送达</text>
+<rect x="1224" y="1530" width="392" height="194" rx="22" fill="#f7f3fa" stroke="#a68cc4" stroke-width="2" stroke-dasharray="9 7" filter="url(#shadow)"/>
+<text x="1252" y="1577" font-size="29" font-weight="700" text-anchor="start" style="fill:#8868b4">后续规划 · 未实现</text>
+<text x="1252" y="1622" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">公网部署 / 架构展示栏目</text>
+<text x="1252" y="1661" font-size="24" font-weight="400" text-anchor="start" style="fill:#5b7180">模拟工单（后续可选）</text>
+<rect x="64" y="1790" width="1552" height="231" rx="22" fill="white" stroke="#c5d8cf" stroke-width="2" filter="url(#shadow)"/>
+<text x="98" y="1840" font-size="32" font-weight="700" text-anchor="start" style="fill:#147e70">验证与持续改进</text>
+<text x="98" y="1883" font-size="25" font-weight="400" text-anchor="start" style="fill:#5b7180">已实现：订单与政策查询 · 多轮补充 · 内部交接 · 新会话与页面隔离 · 实际事件</text>
+<rect x="98" y="1913" width="260" height="40" rx="20" fill="#e8f3ed" stroke="#e8f3ed" stroke-width="2"/>
+<text x="228.0" y="1941" font-size="21" font-weight="600" text-anchor="middle" style="fill:#147e70">开发集 15/15</text>
+<rect x="390" y="1913" width="300" height="40" rx="20" fill="#e8f3ed" stroke="#e8f3ed" stroke-width="2"/>
+<text x="540.0" y="1941" font-size="21" font-weight="600" text-anchor="middle" style="fill:#147e70">留出重测 10/10</text>
+<rect x="722" y="1913" width="402" height="40" rx="20" fill="#edf3fc" stroke="#edf3fc" stroke-width="2"/>
+<text x="923.0" y="1941" font-size="21" font-weight="600" text-anchor="middle" style="fill:#346fce">最新本机页面关键复查 5/5</text>
+<text x="98" y="1992" font-size="22" font-weight="400" text-anchor="start" style="fill:#5b7180">固定样本；首轮中断与修复记录保留。不同证据对应各自被测版本，不代表云端已验收。</text>
+<text x="66" y="2070" font-size="22" font-weight="400" text-anchor="start" style="fill:#5b7180">实线：主要处理与交接 / 返回    虚线：模型请求与支撑关系    紫色虚线卡片：后续规划</text>
+</svg>

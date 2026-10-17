@@ -1,0 +1,68 @@
+test_architecture_is_original_complete_svg_with_only_date_removed (test_code_guide.CodeGuideTests.test_architecture_is_original_complete_svg_with_only_date_removed) ... ok
+test_cached_old_display_modules_refresh_without_replacing_conversation (test_code_guide.CodeGuideTests.test_cached_old_display_modules_refresh_without_replacing_conversation) ... 2026-10-17 15:34:23.523 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-17 15:34:23.523 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_not_arbitrary_file_access_and_detects_corruption (test_code_guide.CodeGuideTests.test_not_arbitrary_file_access_and_detects_corruption) ... ok
+test_public_copy_has_no_calendar_dates_or_self_assessment (test_code_guide.CodeGuideTests.test_public_copy_has_no_calendar_dates_or_self_assessment) ... 2026-10-17 15:34:25.287 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-17 15:34:25.287 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_reading_and_file_changes_leave_chat_and_backend_untouched (test_code_guide.CodeGuideTests.test_reading_and_file_changes_leave_chat_and_backend_untouched) ... 2026-10-17 15:34:25.670 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-17 15:34:25.670 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_snapshot_complete_matches_real_files_and_all_excerpts (test_code_guide.CodeGuideTests.test_snapshot_complete_matches_real_files_and_all_excerpts) ... ok
+test_freeze_rejects_drift_and_partial_or_pending_development (test_evaluation.EvaluationTests.test_freeze_rejects_drift_and_partial_or_pending_development) ... ok
+test_manifest_sessions_whitespace_and_predefined_splits (test_evaluation.EvaluationTests.test_manifest_sessions_whitespace_and_predefined_splits) ... ok
+test_tool_success_without_correlated_call_or_wrong_order_is_rejected (test_evaluation.EvaluationTests.test_tool_success_without_correlated_call_or_wrong_order_is_rejected) ... ok
+test_same_session_success_then_source_failure_and_FAQ_outage (test_evaluation.MutableFaultTests.test_same_session_success_then_source_failure_and_FAQ_outage) ... Executing <Task pending name='Task-2' coro=<MutableFaultTests.test_same_session_success_then_source_failure_and_FAQ_outage() running at C:\Users\Lenovo\Desktop\vibe coding\ServicePilot\artifacts\deployment\handoff-20261017-153236\source\ServicePilot\tests\test_evaluation.py:63> wait_for=<Task pending name='Task-3' coro=<run_single_turn() running at C:\Users\Lenovo\Desktop\vibe coding\openai-agents-python-main\.venv\Lib\site-packages\agents\run_internal\run_loop.py:2448> cb=[Task.task_wakeup()] created at C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py:419> cb=[_run_until_complete_cb() at C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py:181] created at C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py:101> took 0.101 seconds
+ok
+test_persistent_lock_is_bounded_and_old_record_survives (test_evidence_io.EvidenceWriteTests.test_persistent_lock_is_bounded_and_old_record_survives) ... ok
+test_real_reader_lock_release_retries_disk_only_and_keeps_redaction (test_evidence_io.EvidenceWriteTests.test_real_reader_lock_release_retries_disk_only_and_keeps_redaction) ... ok
+test_empty_question_does_not_read_source (test_faq_workflow.FAQQueryTests.test_empty_question_does_not_read_source) ... ok
+test_reads_current_file_and_rejects_broken_records (test_faq_workflow.FAQQueryTests.test_reads_current_file_and_rejects_broken_records) ... ok
+test_sdk_schema_only_exposes_query (test_faq_workflow.FAQQueryTests.test_sdk_schema_only_exposes_query) ... ok
+test_source_failure_is_not_no_match (test_faq_workflow.FAQQueryTests.test_source_failure_is_not_no_match) ... ok
+test_supported_question_category_and_policy_id_return_facts (test_faq_workflow.FAQQueryTests.test_supported_question_category_and_policy_id_return_facts) ... ok
+test_unrecorded_fees_and_payment_time_are_no_match (test_faq_workflow.FAQQueryTests.test_unrecorded_fees_and_payment_time_are_no_match) ... ok
+test_FAQ_outage_returns_unavailable_through_runner (test_faq_workflow.FAQWorkflowTests.test_FAQ_outage_returns_unavailable_through_runner) ... ok
+test_policy_order_and_reverse_switch_use_correct_tools (test_faq_workflow.FAQWorkflowTests.test_policy_order_and_reverse_switch_use_correct_tools) ... ok
+test_triage_required_choice_survives_handoff_and_run_config (test_faq_workflow.FAQWorkflowTests.test_triage_required_choice_survives_handoff_and_run_config) ... ok
+test_fault_is_only_injected_in_its_own_session (test_order_batch.BatchTests.test_fault_is_only_injected_in_its_own_session) ... ok
+test_missing_number_then_supplement_reuses_one_session (test_order_batch.BatchTests.test_missing_number_then_supplement_reuses_one_session) ... ok
+test_review_must_target_the_current_case (test_order_batch.BatchTests.test_review_must_target_the_current_case) ... ok
+test_each_query_reads_current_file (test_order_workflow.QueryTests.test_each_query_reads_current_file) ... ok
+test_invalid_numbers_do_not_access_source (test_order_workflow.QueryTests.test_invalid_numbers_do_not_access_source) ... ok
+test_not_found_is_distinct_from_source_failure (test_order_workflow.QueryTests.test_not_found_is_distinct_from_source_failure) ... ok
+test_order_facts_and_normalization (test_order_workflow.QueryTests.test_order_facts_and_normalization) ... ok
+test_other_records_have_no_invented_logistics (test_order_workflow.QueryTests.test_other_records_have_no_invented_logistics) ... ok
+test_source_can_be_replaced (test_order_workflow.QueryTests.test_source_can_be_replaced) ... ok
+test_tool_schema_only_exposes_order_number (test_order_workflow.QueryTests.test_tool_schema_only_exposes_order_number) ... ok
+test_failed_model_attempt_keeps_evidence (test_order_workflow.WorkflowTests.test_failed_model_attempt_keeps_evidence) ... ok
+test_runner_handoff_tool_result_and_history (test_order_workflow.WorkflowTests.test_runner_handoff_tool_result_and_history) ... ok
+test_backend_keeps_one_async_loop_and_recreates_order_context (test_web_workflow.ControllerTests.test_backend_keeps_one_async_loop_and_recreates_order_context) ... ok
+test_duplicate_busy_empty_old_owner_and_reset (test_web_workflow.ControllerTests.test_duplicate_busy_empty_old_owner_and_reset) ... ok
+test_empty_and_failed_response_redaction_and_business_status (test_web_workflow.ControllerTests.test_empty_and_failed_response_redaction_and_business_status) ... ok
+test_isolation_reset_failure_and_stale_response_guard (test_web_workflow.ControllerTests.test_isolation_reset_failure_and_stale_response_guard) ... ok
+test_chinese_input_loading_duplicate_and_reset_confirmation (test_web_workflow.OfflinePageTests.test_chinese_input_loading_duplicate_and_reset_confirmation) ... 2026-10-17 15:34:32.038 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-17 15:34:32.039 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_not_found_and_unavailable_are_completed_business_results (test_web_workflow.OfflinePageTests.test_not_found_and_unavailable_are_completed_business_results) ... 2026-10-17 15:34:32.981 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-17 15:34:32.981 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-17 15:34:33.524 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-17 15:34:33.524 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_request_failure_retry_is_a_new_attempt (test_web_workflow.OfflinePageTests.test_request_failure_retry_is_a_new_attempt) ... 2026-10-17 15:34:34.047 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-17 15:34:34.047 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_demo_limits_are_process_wide_and_release_does_not_reset_budget (test_workbench.WorkbenchTests.test_demo_limits_are_process_wide_and_release_does_not_reset_budget) ... ok
+test_examples_fill_only_and_rerender_does_not_query (test_workbench.WorkbenchTests.test_examples_fill_only_and_rerender_does_not_query) ... 2026-10-17 15:34:34.640 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-17 15:34:34.640 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_failed_turn_cannot_display_success_facts (test_workbench.WorkbenchTests.test_failed_turn_cannot_display_success_facts) ... ok
+test_no_provider_still_exposes_static_columns (test_workbench.WorkbenchTests.test_no_provider_still_exposes_static_columns) ... 2026-10-17 15:34:35.130 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_version_without_git_does_not_claim_commit (test_workbench.WorkbenchTests.test_version_without_git_does_not_claim_commit) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 12.022s
+
+OK
